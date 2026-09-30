@@ -1,0 +1,11 @@
+{
+  "title": "CaserIA 2",
+  "description": "Simplifies app creation by generating tailored applications based on user-provided descriptions, enabling quick and easy development for all users.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
