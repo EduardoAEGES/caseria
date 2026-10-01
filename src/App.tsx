@@ -1,49 +1,19 @@
 import { useState, useEffect } from "react";
+import { CATEGORIES, PRODUCTS, STORES, getPrice, referencePrice, searchBestOffers, type Cart, type Category, type StoreOffer } from "@/data/catalog";
 import caseriLogo from "@/imports/annotation-reference.png";
 
 type Screen =
   | "intro" | "onboarding1" | "onboarding2" | "onboarding3" | "splash" | "permission" | "register" | "home"
-  | "monthlybudget" | "purchasebudget" | "select" | "quantbudget" | "budget" | "loading" | "results"
+  | "select" | "quantities" | "loading" | "results"
   | "stallstandard" | "stallpremium" | "stallmap"
   | "mislistas" | "buyerprofile" | "scanner";
 
 type District = "paucarpata";
 
-const PRODUCTS = [
-  { id: 1, name: "Arroz 1kg",    unit: "kg",      cat: "Abarrotes", emoji: "🍚", price: 3.5  },
-  { id: 2, name: "Pollo",        unit: "kg",      cat: "Carnes",    emoji: "🍗", price: 10.5 },
-  { id: 3, name: "Huevos x30",   unit: "plancha", cat: "Lácteos",   emoji: "🥚", price: 16.0 },
-  { id: 4, name: "Papa Canchan", unit: "kg",      cat: "Verduras",  emoji: "🥔", price: 2.0  },
-  { id: 5, name: "Tomate",       unit: "kg",      cat: "Verduras",  emoji: "🍅", price: 2.8  },
-  { id: 6, name: "Avena",        unit: "kg",      cat: "Abarrotes", emoji: "🌾", price: 4.2  },
-  { id: 7, name: "Leche",        unit: "lt",      cat: "Lácteos",   emoji: "🥛", price: 3.0  },
-  { id: 8, name: "Plátano",      unit: "kg",      cat: "Frutas",    emoji: "🍌", price: 1.5  },
-  { id: 9, name: "Cebolla",      unit: "kg",      cat: "Verduras",  emoji: "🧅", price: 2.2  },
-  { id: 10,name: "Aceite",       unit: "lt",      cat: "Abarrotes", emoji: "🫙", price: 7.0  },
-  { id: 11,name: "Fideos",       unit: "paquete", cat: "Abarrotes", emoji: "🍝", price: 4.8  },
-  { id: 12,name: "Atún",         unit: "lata",    cat: "Abarrotes", emoji: "🥫", price: 6.5  },
-  { id: 13,name: "Azúcar",       unit: "kg",      cat: "Abarrotes", emoji: "🍬", price: 4.0  },
-];
-
-const CATEGORIES = ["Todos", "🥩 Carnes", "🥬 Verduras", "🍚 Abarrotes", "🥛 Lácteos", "🍎 Frutas"];
-
-type CompareOption = {
-  rank: string; name: string; total: string; totalNum: number;
-  badge: string; type: string; savings?: string;
-  distance: string; distMin: number;
-  freshness: string; freshnessLevel: "ok" | "warn" | "bad";
-  available: boolean; allProducts: boolean;
-  address: string; district: string;
-  x: number; y: number;
-};
-
-type Purchase = { date: string; store: string; amount: number };
-
 type DistrictInfo = {
   label: string;
   supermarkets: { name: string; tag: string; emoji: string }[];
   minimarkets:  { name: string; tag: string; emoji: string }[];
-  options: CompareOption[];
 };
 
 const DISTRICT_DATA: Record<District, DistrictInfo> = {
@@ -58,27 +28,8 @@ const DISTRICT_DATA: Record<District, DistrictInfo> = {
       { name: "Tiendas Mass – Porongoche", tag: "Tienda de descuento", emoji: "🏷️" },
       { name: "Tiendas Mass – Los Andes",  tag: "Tienda de descuento", emoji: "🏷️" },
     ],
-    options: [
-      { rank: "🏆", name: "Tiendas Mass – Porongoche", total: "S/ 76.50", totalNum: 76.50, badge: "Descuento", type: "discount", savings: "S/ 23.50", distance: "600 m · 8 min",   distMin: 8,  freshness: "Actualizado hoy",  freshnessLevel: "ok",   available: true, allProducts: true,  address: "Av. Los Incas 320, Paucarpata",          district: "Paucarpata", x: 28, y: 38 },
-      { rank: "🥈", name: "Tiendas Mass – Los Andes",  total: "S/ 78.00", totalNum: 78.00, badge: "Descuento", type: "discount",               distance: "1.1 km · 14 min", distMin: 14, freshness: "Actualizado hoy",  freshnessLevel: "ok",   available: true, allProducts: false, address: "Av. Los Andes 210, Paucarpata",          district: "Paucarpata", x: 20, y: 60 },
-      { rank: "🥉", name: "Franco Supermercados",       total: "S/ 82.00", totalNum: 82.00, badge: "Super",     type: "super",                  distance: "900 m · 12 min",  distMin: 12, freshness: "Actualizado hoy",  freshnessLevel: "ok",   available: true, allProducts: true,  address: "Av. Porongoche 450, Paucarpata",         district: "Paucarpata", x: 62, y: 28 },
-      { rank: "4",  name: "Plaza Vea",                  total: "S/ 87.50", totalNum: 87.50, badge: "Super",     type: "super",                  distance: "1.4 km · 17 min", distMin: 17, freshness: "Actualizado ayer", freshnessLevel: "warn", available: true, allProducts: true,  address: "C.C. Porongoche, Paucarpata",            district: "Paucarpata", x: 45, y: 55 },
-      { rank: "5",  name: "Tottus Porongoche",          total: "S/ 94.00", totalNum: 94.00, badge: "Super",     type: "super",                  distance: "1.8 km · 22 min", distMin: 22, freshness: "Actualizado ayer", freshnessLevel: "warn", available: true, allProducts: true,  address: "C.C. Real Plaza Porongoche, Paucarpata", district: "Paucarpata", x: 70, y: 45 },
-    ],
   },
 };
-
-const STORE_PRICE_FACTORS: Record<string, number[]> = {
-  "Tottus Porongoche": [1.08, 0.98, 1.04, 1.06, 1.03, 1.04, 1.02, 1.05, 1.02, 1.06, 1.04, 1.03, 1.02],
-  "Plaza Vea": [1.00, 1.05, 0.99, 1.02, 0.97, 1.03, 0.98, 1.01, 1.04, 1.00, 0.98, 1.02, 1.04],
-  "Franco Supermercados": [0.97, 0.94, 0.96, 0.98, 1.01, 0.95, 0.99, 0.97, 0.95, 0.99, 1.01, 0.96, 0.98],
-  "Tiendas Mass – Porongoche": [0.93, 1.03, 0.98, 1.04, 1.05, 0.97, 0.95, 0.94, 0.96, 0.92, 0.93, 1.04, 0.94],
-};
-
-function comparisonTotal(store: string, selected: number[], quantities: Record<number, number>) {
-  const factors = STORE_PRICE_FACTORS[store];
-  return PRODUCTS.filter(product => selected.includes(product.id)).reduce((total, product) => total + product.price * (quantities[product.id] ?? 1) * factors[product.id - 1], 0);
-}
 
 // ─── Shared UI ────────────────────────────────────────────────────────────────
 function StatusBar({ dark = false }: { dark?: boolean }) {
@@ -95,160 +46,20 @@ function GreenBadge({ label }: { label: string }) {
 function OrangeBadge({ label }: { label: string }) {
   return <span className="text-xs font-bold text-[#C05621] bg-[#FFF3E0] px-2.5 py-1 rounded-full">{label}</span>;
 }
-function BudgetDonut({ budgetVal, estimatedCost }: { budgetVal: number; estimatedCost: number }) {
-  const r = 52, circ = 2 * Math.PI * r;
-  const usedPct = budgetVal > 0 ? (estimatedCost / budgetVal) * 100 : 0;
-  const pct = Math.min(usedPct / 100, 1);
-  const arc = circ * pct;
-  const available = budgetVal - estimatedCost;
-  const isOver = estimatedCost > budgetVal;
-  const isTight = !isOver && budgetVal > 0 && available < budgetVal * 0.1;
-  const arcColor = isOver ? "#EF4444" : isTight ? "#F59E0B" : "#22C55E";
-  const centerColor = isOver ? "#EF4444" : "#1E293B";
-  const trackColor = isOver ? "#FEE2E2" : "#E2E8F0";
-  return (
-    <svg width="140" height="140" viewBox="0 0 140 140">
-      <circle cx="70" cy="70" r={r} fill="none" stroke={trackColor} strokeWidth="14" />
-      {budgetVal > 0 && (
-        <circle cx="70" cy="70" r={r} fill="none" stroke={arcColor} strokeWidth="14"
-          strokeDasharray={`${arc} ${circ - arc}`} strokeLinecap="round"
-          transform="rotate(-90 70 70)" />
-      )}
-      <text x="70" y="63" textAnchor="middle" fill={centerColor} fontSize="13" fontWeight="800" fontFamily="Inter">
-        {budgetVal > 0 ? `${Math.round(usedPct)}%` : "S/ —"}
-      </text>
-      <text x="70" y="78" textAnchor="middle" fill="#94A3B8" fontSize="10" fontFamily="Inter">
-        {budgetVal > 0 ? "del presupuesto" : "sin definir"}
-      </text>
-    </svg>
-  );
-}
-
-function BudgetEditorSheet({ budget, onSave, onClose }: { budget: string; onSave: (value: string) => void; onClose: () => void }) {
-  const [draft, setDraft] = useState(budget);
-  const validAmount = Number.parseFloat(draft) > 0;
-
-  const save = () => {
-    if (!validAmount) return;
-    onSave(draft);
-    onClose();
-  };
-
-  return (
-    <div className="absolute inset-0 z-50 flex items-end bg-black/50" onClick={onClose}>
-      <div className="w-full rounded-t-3xl bg-white px-6 pb-7 pt-3 shadow-2xl slide-up" onClick={event => event.stopPropagation()}>
-        <div className="mx-auto mb-5 h-1 w-12 rounded-full bg-[#E2E8F0]" />
-        <div className="mb-5 flex items-start justify-between">
-          <div>
-            <h2 className="text-lg font-black text-[#1E293B]">Define tu presupuesto</h2>
-            <p className="mt-1 text-sm text-[#64748B]">¿Cuánto deseas gastar en esta compra?</p>
-          </div>
-          <button onClick={onClose} aria-label="Cerrar" className="flex h-8 w-8 items-center justify-center rounded-full bg-[#F1F5F9] font-bold text-[#64748B]">✕</button>
-        </div>
-        <label className="mb-4 flex items-center gap-2 rounded-2xl border-2 border-[#0B63E5]/25 bg-[#EEF4FF]/40 px-4 py-3 focus-within:border-[#0B63E5]">
-          <span className="text-2xl font-black text-[#0B63E5]">S/</span>
-          <input
-            autoFocus
-            inputMode="decimal"
-            type="number"
-            min="0"
-            step="0.01"
-            value={draft}
-            onChange={event => setDraft(event.target.value)}
-            placeholder="0.00"
-            className="min-w-0 flex-1 bg-transparent text-3xl font-black text-[#1E293B] outline-none"
-          />
-        </label>
-        <p className="mb-2 text-xs font-bold uppercase tracking-wide text-[#64748B]">Montos rápidos</p>
-        <div className="mb-6 grid grid-cols-4 gap-2">
-          {["50", "100", "150", "200"].map(amount => (
-            <button key={amount} onClick={() => setDraft(amount)} className={`rounded-xl py-2.5 text-sm font-bold transition-all active:scale-95 ${draft === amount ? "bg-[#0B63E5] text-white shadow shadow-[#0B63E5]/30" : "bg-[#F1F5F9] text-[#475569]"}`}>
-              S/ {amount}
-            </button>
-          ))}
-        </div>
-        <button onClick={save} disabled={!validAmount} className="w-full rounded-2xl bg-[#0B63E5] py-4 text-base font-bold text-white shadow-lg shadow-[#0B63E5]/25 transition-transform active:scale-95 disabled:opacity-40">
-          Guardar presupuesto
-        </button>
-      </div>
-    </div>
-  );
-}
-function HomeDonut({ usedPct, isOver }: { usedPct: number; isOver: boolean }) {
-  const r = 30, circ = 2 * Math.PI * r;
-  const arc = circ * Math.min(usedPct / 100, 1);
-  const color = isOver ? "#EF4444" : usedPct > 90 ? "#F59E0B" : "#22C55E";
-  return (
-    <svg width="72" height="72" viewBox="0 0 72 72">
-      <circle cx="36" cy="36" r={r} fill="none" stroke={isOver ? "#FEE2E2" : "#E2E8F0"} strokeWidth="9" />
-      <circle cx="36" cy="36" r={r} fill="none" stroke={color} strokeWidth="9"
-        strokeDasharray={`${arc} ${circ - arc}`} strokeLinecap="round" transform="rotate(-90 36 36)" />
-      <text x="36" y="33" textAnchor="middle" fill={color} fontSize="11" fontWeight="800" fontFamily="Inter">
-        {Math.round(Math.min(usedPct, 999))}%
-      </text>
-      <text x="36" y="44" textAnchor="middle" fill="#94A3B8" fontSize="7.5" fontFamily="Inter">usado</text>
-    </svg>
-  );
-}
-
-function MonthlyDonut({ monthlyBudget, spent }: { monthlyBudget: number; spent: number }) {
-  const r = 58, circ = 2 * Math.PI * r;
-  const rawPct = monthlyBudget > 0 ? (spent / monthlyBudget) * 100 : 0;
-  const pct = Math.min(rawPct, 100);
-  const remaining = monthlyBudget - spent;
-  const over = spent > monthlyBudget;
-  const tight = !over && monthlyBudget > 0 && remaining < monthlyBudget * 0.2;
-  const color = over ? "#EF4444" : tight ? "#F59E0B" : "#0B63E5";
-  return (
-    <div className="flex flex-col items-center">
-      <svg width="164" height="164" viewBox="0 0 164 164">
-        <circle cx="82" cy="82" r={r} fill="none" stroke={over ? "#FEE2E2" : "#E2E8F0"} strokeWidth="15" />
-        <circle cx="82" cy="82" r={r} fill="none" stroke={color} strokeWidth="15" strokeLinecap="round"
-          strokeDasharray={`${circ * pct / 100} ${circ - circ * pct / 100}`} transform="rotate(-90 82 82)" />
-        <text x="82" y="78" textAnchor="middle" fill={color} fontSize="24" fontWeight="800" fontFamily="Inter">{Math.round(rawPct)}%</text>
-        <text x="82" y="98" textAnchor="middle" fill="#64748B" fontSize="11" fontFamily="Inter">utilizado este mes</text>
-      </svg>
-      <p className={`-mt-2 text-sm font-black ${over ? "text-[#EF4444]" : "text-[#15803D]"}`}>{over ? `Excede S/ ${Math.abs(remaining).toFixed(2)}` : `S/ ${remaining.toFixed(2)} disponibles`}</p>
-    </div>
-  );
-}
-
-function PurchaseBudgetScreen({ monthlyAvailable, budget, setBudget, onNext, onBack }: { monthlyAvailable: number; budget: string; setBudget: (value: string) => void; onNext: () => void; onBack: () => void }) {
-  const value = Number.parseFloat(budget) || 0;
-  const exceedsMonth = value > monthlyAvailable;
-  return <div className="flex h-full flex-col overflow-hidden bg-[#F8FAFC]">
-    <StatusBar />
-    <div className="flex items-center gap-3 border-b border-[#E2E8F0] bg-white px-6 pb-4 pt-3"><button onClick={onBack} className="text-lg text-[#1E293B]">←</button><div><p className="text-xs font-medium text-[#94A3B8]">Nueva canasta</p><h1 className="text-base font-bold text-[#1E293B]">Define tu compra</h1></div></div>
-    <div className="flex-1 overflow-y-auto px-6 py-5 hide-scrollbar">
-      <div className="mb-5 rounded-2xl border border-[#0B63E5]/15 bg-[#EEF4FF] p-4"><p className="text-xs font-semibold text-[#0B63E5]">Disponible este mes</p><p className="mt-1 text-2xl font-black text-[#1E293B]">S/ {monthlyAvailable.toFixed(2)}</p><p className="mt-1 text-xs text-[#64748B]">Este monto solo se descuenta cuando confirmes una compra real.</p></div>
-      <div className="rounded-2xl border-2 border-[#0B63E5]/20 bg-white p-5 shadow-sm"><p className="mb-4 text-center text-sm font-bold text-[#475569]">¿Cuánto deseas gastar en esta compra?</p><label className="mb-3 flex items-center justify-center gap-2 border-b-4 border-[#0B63E5]/25 pb-2 focus-within:border-[#0B63E5]"><span className="text-3xl font-black text-[#0B63E5]">S/</span><input type="number" min="0" step="0.01" inputMode="decimal" value={budget} onChange={e => setBudget(e.target.value)} className="w-44 bg-transparent text-center text-5xl font-black text-[#1E293B] outline-none" placeholder="0" /></label><p className="mb-5 text-center text-xs text-[#94A3B8]">Presupuesto para esta compra</p><div className="grid grid-cols-4 gap-2">{["50","100","150","200"].map(amount => <button key={amount} onClick={() => setBudget(amount)} className={`rounded-xl py-2.5 text-sm font-bold ${budget===amount ? "bg-[#0B63E5] text-white" : "bg-[#F1F5F9] text-[#475569]"}`}>S/ {amount}</button>)}</div></div>
-      {exceedsMonth && <div className="mt-4 rounded-2xl border border-[#F59E0B]/25 bg-[#FFF3E0] p-4 text-sm font-semibold text-[#92400E]">Tu presupuesto para esta compra supera los S/ {monthlyAvailable.toFixed(2)} disponibles este mes.</div>}
-    </div>
-    <div className="border-t border-[#E2E8F0] bg-white px-6 pb-2 pt-3"><button disabled={value <= 0} onClick={onNext} className="w-full rounded-2xl bg-[#0B63E5] py-4 font-bold text-white shadow-lg shadow-[#0B63E5]/25 disabled:opacity-40">Elegir productos →</button></div>
-  </div>;
-}
-
-function MonthlyBudgetScreen({ monthlyBudget, spent, purchases, setMonthlyBudget, onBack }: { monthlyBudget: string; spent: number; purchases: Purchase[]; setMonthlyBudget: (value: string) => void; onBack: () => void }) {
-  const [editing, setEditing] = useState(false);
-  const value = Number.parseFloat(monthlyBudget) || 0;
-  const available = value - spent;
-  return <div className="flex h-full flex-col overflow-hidden bg-[#F8FAFC]"><StatusBar /><div className="flex items-center gap-3 border-b border-[#E2E8F0] bg-white px-6 pb-4 pt-3"><button onClick={onBack} className="text-lg text-[#1E293B]">←</button><div><p className="text-xs text-[#94A3B8]">Control mensual</p><h1 className="text-base font-bold text-[#1E293B]">Mi presupuesto</h1></div></div><div className="flex-1 overflow-y-auto px-6 py-5 hide-scrollbar"><div className="rounded-3xl bg-white p-5 shadow-sm border border-[#E2E8F0]"><p className="text-xs font-bold uppercase tracking-wide text-[#475569]">Mi presupuesto de alimentos</p><div className="my-4 flex justify-center"><MonthlyDonut monthlyBudget={value} spent={spent} /></div><div className="space-y-3 border-t border-[#F1F5F9] pt-4 text-sm"><div className="flex justify-between"><span className="text-[#64748B]">Presupuesto mensual</span><strong>S/ {value.toFixed(2)}</strong></div><div className="flex justify-between"><span className="text-[#64748B]">Gastado este mes</span><strong>S/ {spent.toFixed(2)}</strong></div><div className="flex justify-between"><span className="text-[#64748B]">Disponible</span><strong className={available < 0 ? "text-[#EF4444]" : "text-[#15803D]"}>{available < 0 ? `Excede S/ ${Math.abs(available).toFixed(2)}` : `S/ ${available.toFixed(2)}`}</strong></div></div><button onClick={() => setEditing(true)} className="mt-5 w-full rounded-2xl border-2 border-[#0B63E5] py-3 text-sm font-bold text-[#0B63E5]">Editar presupuesto mensual</button></div><div className="mt-5 rounded-2xl border border-[#E2E8F0] bg-white p-4"><div className="mb-3 flex items-center justify-between"><p className="font-bold text-[#1E293B]">Compras de este mes</p><span className="text-xs font-semibold text-[#0B63E5]">S/ {spent.toFixed(2)}</span></div>{purchases.length ? purchases.map((purchase, i) => <div key={`${purchase.date}-${i}`} className="flex items-center justify-between border-t border-[#F1F5F9] py-3"><div><p className="text-sm font-semibold text-[#1E293B]">{purchase.store}</p><p className="text-xs text-[#94A3B8]">{purchase.date}</p></div><strong className="text-sm">S/ {purchase.amount.toFixed(2)}</strong></div>) : <p className="text-sm text-[#64748B]">Aún no registras compras este mes.</p>}</div></div>{editing && <BudgetEditorSheet budget={monthlyBudget} onSave={setMonthlyBudget} onClose={() => setEditing(false)} />}</div>;
-}
-
 // ─── Bottom Nav ───────────────────────────────────────────────────────────────
 function BuyerNav({ screen, onNav }: { screen: Screen; onNav: (s: Screen) => void }) {
   const items = [
     { label: "Inicio", icon: "🏠", s: "home" as Screen },
-    { label: "Presupuesto", icon: "💰", s: "monthlybudget" as Screen },
-    { label: "Mi canasta", icon: "🛒", s: "purchasebudget" as Screen },
+    { label: "Categorías", icon: "🗂️", s: "select" as Screen },
+    { label: "Listas", icon: "📝", s: "mislistas" as Screen },
     { label: "Comparar", icon: "📊", s: "results" as Screen },
     { label: "Perfil", icon: "👤", s: "buyerprofile" as Screen },
   ];
   const isActive = (s: Screen) =>
     s === "home"    ? screen === "home" :
-    s === "monthlybudget" ? screen === "monthlybudget" :
-    s === "purchasebudget" ? ["purchasebudget","select","quantbudget","budget","loading"].includes(screen) :
-    s === "results" ? ["results","stallstandard","stallpremium","stallmap","mislistas"].includes(screen) :
+    s === "select"  ? ["select","quantities","loading"].includes(screen) :
+    s === "mislistas" ? screen === "mislistas" :
+    s === "results" ? ["results","stallstandard","stallpremium","stallmap"].includes(screen) :
     ["buyerprofile","scanner"].includes(screen);
 
   return (
@@ -412,12 +223,12 @@ function OnboardingIllustration({ step }: { step: OnboardingStep }) {
   if (step === 2) {
     return (
       <div className="relative h-72 w-full max-w-[320px]" aria-hidden="true">
-        <div className="absolute left-1/2 top-1 -translate-x-1/2 rounded-full border border-[#8DD8FF]/35 bg-[#0D3A7B]/80 px-5 py-2 text-sm font-black tracking-wide text-white shadow-xl shadow-black/20">S/ 100.00</div>
-        <div className="absolute left-1/2 top-12 h-24 w-24 -translate-x-1/2 rounded-full border-[9px] border-[#123E82] border-t-[#35BDF8] border-r-[#35BDF8] bg-[#071D43] shadow-[0_0_38px_rgba(40,180,255,0.3)]"><span className="absolute inset-0 flex items-center justify-center text-xs font-black text-white">68%</span></div>
+        <div className="absolute left-1/2 top-1 flex -translate-x-1/2 gap-1.5">{["🥩 Carnes","🥬 Verduras","🍚 Abarrotes"].map(c => <span key={c} className="whitespace-nowrap rounded-full border border-[#8DD8FF]/35 bg-[#0D3A7B]/80 px-3 py-1.5 text-[11px] font-bold text-white shadow-xl shadow-black/20">{c}</span>)}</div>
+        <div className="absolute left-1/2 top-14 flex h-20 w-20 -translate-x-1/2 items-center justify-center rounded-[24px] border border-white/15 bg-[#123E82]/80 text-4xl shadow-xl">🥚</div>
         <div className="absolute left-7 top-[125px] flex h-20 w-20 items-center justify-center rounded-[24px] border border-white/15 bg-[#123E82]/80 text-4xl shadow-xl">🥬</div>
         <div className="absolute right-7 top-[125px] flex h-20 w-20 items-center justify-center rounded-[24px] border border-white/15 bg-[#123E82]/80 text-4xl shadow-xl">🍗</div>
         <div className="absolute bottom-4 left-1/2 flex h-28 w-40 -translate-x-1/2 items-end justify-center rounded-b-[32px] border-[6px] border-t-0 border-[#70C8FF] bg-[#0A4FB5]/35 pb-3 text-5xl shadow-[0_15px_30px_rgba(0,0,0,0.25)]">🛒</div>
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 rounded-full border border-[#21C879]/30 bg-[#0B3A39] px-3 py-1 text-[10px] font-bold text-[#79F2B2]">S/ 32.00 disponibles</div>
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-[#21C879]/30 bg-[#0B3A39] px-3 py-1 text-[10px] font-bold text-[#79F2B2]">Mejor oferta: Franco · S/ 41.20</div>
       </div>
     );
   }
@@ -440,7 +251,7 @@ function OnboardingIllustration({ step }: { step: OnboardingStep }) {
 function OnboardingScreen({ step, onNext, onSkip }: { step: OnboardingStep; onNext: () => void; onSkip: () => void }) {
   const content = {
     1: { title: "Compara y ahorra", description: "Compara precios entre supermercados y tiendas de Paucarpata y descubre dónde te conviene comprar.", action: "Siguiente" },
-    2: { title: "Compra según tu presupuesto", description: "Ingresa cuánto deseas gastar y Ca$erIA te ayuda a organizar una canasta que se adapte a tu dinero.", action: "Siguiente" },
+    2: { title: "Arma tu canasta por categorías", description: "Elige carnes, verduras, abarrotes y más. Ca$erIA busca tu combinación en cada tienda y te muestra la mejor oferta.", action: "Siguiente" },
     3: { title: "Compra de forma más inteligente", description: "Usa el escáner con IA para reconocer alimentos, agregarlos a tu canasta y encontrar mejores opciones de compra.", action: "Empezar ahora" },
   }[step];
 
@@ -497,7 +308,7 @@ function SplashScreen({ onNext }: { onNext: (name: string, email: string) => voi
 
         <div className="bg-[#EEF4FF] border border-[#0B63E5]/15 rounded-2xl px-4 py-3 mb-5">
           <p className="text-xs font-bold text-[#0B63E5] text-center mb-1.5">¿Qué hace Ca$erIA?</p>
-          <p className="text-xs text-[#475569] text-center leading-relaxed">Organiza tu presupuesto, crea tu canasta y <span className="font-semibold text-[#1E293B]">compara opciones de compra</span> en supermercados y tiendas de Paucarpata.</p>
+          <p className="text-xs text-[#475569] text-center leading-relaxed">Arma tu canasta por categorías y <span className="font-semibold text-[#1E293B]">compara opciones de compra</span> en supermercados y tiendas de Paucarpata.</p>
         </div>
 
         <div className="flex flex-col gap-3 mb-4">
@@ -608,7 +419,7 @@ function RegisterScreen({ onNext }: { onNext: () => void }) {
         </div>
 
         <p className="text-sm text-[#475569] leading-relaxed mb-6">
-          Ca$erIA está diseñada para ayudarte a organizar tu presupuesto, crear tu canasta y comparar opciones de compra en Paucarpata.
+          Ca$erIA está diseñada para ayudarte a armar tu canasta por categorías y comparar opciones de compra en Paucarpata.
         </p>
 
         <div className="flex-1 flex flex-col gap-4">
@@ -652,23 +463,20 @@ function RegisterScreen({ onNext }: { onNext: () => void }) {
 }
 
 // ─── Home Screen ──────────────────────────────────────────────────────────────
-function HomeScreen({ name, district, trialUsed, monthlyBudget, monthlySpent, onDistrictSwitch, onBasket, onBudget, onScanner }: {
+const QUICK_BASKETS: { emoji: string; name: string; desc: string; items: Cart }[] = [
+  { emoji: "🎒", name: "Canasta Estudiante", desc: "Rápida y económica", items: [{ productId: 1, qty: 1 }, { productId: 11, qty: 2 }, { productId: 12, qty: 2 }, { productId: 3, qty: 1 }] },
+  { emoji: "💪", name: "Canasta Deportista", desc: "Alta en proteínas",  items: [{ productId: 2, qty: 2 }, { productId: 3, qty: 1 }, { productId: 6, qty: 1 }, { productId: 8, qty: 1 }, { productId: 22, qty: 1 }] },
+  { emoji: "🏠", name: "Canasta Roomies",    desc: "Para compartir",     items: [{ productId: 1, qty: 2 }, { productId: 4, qty: 2 }, { productId: 9, qty: 1 }, { productId: 10, qty: 1 }, { productId: 14, qty: 1 }, { productId: 28, qty: 1 }, { productId: 30, qty: 1 }] },
+  { emoji: "🕒", name: "Canasta Express",    desc: "Del apuro",          items: [{ productId: 11, qty: 1 }, { productId: 5, qty: 1 }, { productId: 25, qty: 1 }] },
+];
+
+function HomeScreen({ name, district, trialUsed, onDistrictSwitch, onCategory, onQuickBasket, onScanner }: {
   name: string; district: District; trialUsed: boolean;
-  monthlyBudget: string; monthlySpent: number;
-  onDistrictSwitch: () => void; onBasket: () => void; onBudget: () => void; onScanner: () => void;
+  onDistrictSwitch: () => void; onCategory: (cat: Category | "Todos") => void;
+  onQuickBasket: (items: Cart) => void; onScanner: () => void;
 }) {
   const [catalogTab, setCatalogTab] = useState<"super"|"mass">("super");
-  const budgetVal = parseFloat(monthlyBudget) || 0;
-  const available = +(budgetVal - monthlySpent).toFixed(2);
-  const usedPct = budgetVal > 0 ? Math.min((monthlySpent / budgetVal) * 100, 999) : 0;
-  const isOver = budgetVal > 0 && monthlySpent > budgetVal;
   const d = DISTRICT_DATA[district];
-  const baskets = [
-    { emoji: "🎒", name: "Canasta Estudiante", price: "S/ 50",  desc: "Rápida y económica" },
-    { emoji: "💪", name: "Canasta Deportista", price: "S/ 80",  desc: "Alta en proteínas"  },
-    { emoji: "🏠", name: "Canasta Roomies",    price: "S/ 150", desc: "Para compartir"     },
-    { emoji: "🕒", name: "Canasta Express",    price: "S/ 30",  desc: "Del apuro"          },
-  ];
   const catalog = catalogTab === "super" ? d.supermarkets : d.minimarkets;
 
   return (
@@ -694,54 +502,32 @@ function HomeScreen({ name, district, trialUsed, monthlyBudget, monthlySpent, on
         <div className="mx-6 mb-4 bg-gradient-to-r from-[#EEF4FF] to-[#DBEAFE] rounded-2xl p-4 border border-[#0B63E5]/15 flex items-start gap-3">
           <span className="text-2xl flex-shrink-0">📊</span>
           <div>
-            <p className="text-xs font-bold text-[#0B63E5] mb-0.5">Compara opciones en Paucarpata</p>
-            <p className="text-xs text-[#475569] leading-snug">Encuentra alternativas entre Tottus, Plaza Vea, Franco Supermercados y Tiendas Mass.</p>
+            <p className="text-xs font-bold text-[#0B63E5] mb-0.5">Encuentra la mejor oferta en Paucarpata</p>
+            <p className="text-xs text-[#475569] leading-snug">Elige tus productos y buscamos tu combinación en Tottus, Plaza Vea, Franco Supermercados y Tiendas Mass.</p>
           </div>
         </div>
 
-        {/* Budget mini-widget */}
-        <div className="mx-6 mb-4 bg-white rounded-2xl border border-[#E2E8F0] shadow-sm overflow-hidden">
-          <div className="px-4 pt-3 pb-2 border-b border-[#F1F5F9] flex items-center justify-between">
-            <p className="text-xs font-bold text-[#475569] uppercase tracking-wide">Mi presupuesto</p>
-            <button onClick={onBudget} className="flex items-center gap-1 text-xs font-semibold text-[#0B63E5]">
-              Ver presupuesto →
+        {/* Categories */}
+        <div className="mx-6 mb-4">
+          <div className="flex items-center justify-between mb-2">
+            <p className="text-sm font-bold text-[#1E293B]">🗂️ Compra por categoría</p>
+            <button onClick={() => onCategory("Todos")} className="text-xs text-[#0B63E5] font-semibold">Ver todo →</button>
+          </div>
+          <div className="grid grid-cols-4 gap-2">
+            {CATEGORIES.map(c => (
+              <button key={c.key} onClick={() => onCategory(c.key)}
+                className="bg-white rounded-2xl border border-[#E2E8F0] shadow-sm py-3 flex flex-col items-center gap-1 active:scale-95 transition-transform">
+                <span className="text-2xl">{c.emoji}</span>
+                <span className="text-[11px] font-semibold text-[#475569]">{c.key}</span>
+                <span className="text-[10px] text-[#94A3B8]">{PRODUCTS.filter(p => p.cat === c.key).length} prod.</span>
+              </button>
+            ))}
+            <button onClick={() => onCategory("Todos")}
+              className="bg-[#0B63E5] rounded-2xl shadow-sm py-3 flex flex-col items-center justify-center gap-1 active:scale-95 transition-transform">
+              <span className="text-2xl">🛒</span>
+              <span className="text-[11px] font-bold text-white">Todos</span>
             </button>
           </div>
-
-          {budgetVal > 0 ? (
-            <>
-              <div className="px-4 pt-3 pb-3 flex items-center gap-3">
-                <HomeDonut usedPct={usedPct} isOver={isOver} />
-                <div className="flex-1">
-                  <p className="text-xl font-black text-[#1E293B]">S/ {budgetVal.toFixed(2)}</p>
-                  <p className="text-xs text-[#94A3B8] mb-2">Presupuesto mensual</p>
-                  <div className="flex items-center justify-between text-xs mb-1">
-                    <span className="text-[#64748B]">Gastado este mes</span>
-                    <span className="font-bold text-[#1E293B]">S/ {monthlySpent.toFixed(2)}</span>
-                  </div>
-                  <div className="h-2 bg-[#F1F5F9] rounded-full overflow-hidden">
-                    <div className="h-full rounded-full transition-all duration-500"
-                      style={{ width: `${Math.min(usedPct, 100)}%`, background: isOver ? "#EF4444" : usedPct > 90 ? "#F59E0B" : "#22C55E" }} />
-                  </div>
-                  <p className={`mt-2 text-xs font-bold ${isOver ? "text-[#EF4444]" : usedPct > 90 ? "text-[#A16207]" : "text-[#15803D]"}`}>
-                    {isOver ? `Excede S/ ${Math.abs(available).toFixed(2)}` : `Disponible: S/ ${available.toFixed(2)}`}
-                  </p>
-                </div>
-              </div>
-              <div className="px-4 py-2.5 flex items-center gap-2 bg-[#EEF4FF]">
-                <span className="text-sm">💡</span>
-                <p className="text-xs text-[#0B63E5] font-medium leading-snug">
-                  Tu presupuesto mensual solo cambia cuando confirmas una compra real.
-                </p>
-              </div>
-            </>
-          ) : (
-            <button onClick={onBudget}
-              className="w-full px-4 py-5 flex items-center justify-center gap-2 text-[#0B63E5] font-semibold text-sm active:opacity-70">
-              <span className="text-lg">💰</span>
-              <span>+ Definir presupuesto mensual</span>
-            </button>
-          )}
         </div>
 
         {!trialUsed && (
@@ -753,6 +539,26 @@ function HomeScreen({ name, district, trialUsed, monthlyBudget, monthlySpent, on
             <button onClick={onScanner} className="flex-shrink-0 bg-white text-[#4F46E5] font-bold text-xs px-3 py-2 rounded-xl active:scale-95 transition-transform">Probar</button>
           </div>
         )}
+
+        <div className="mb-4">
+          <div className="flex items-center justify-between px-6 mb-2">
+            <p className="text-sm font-bold text-[#1E293B]">⭐ Canastas Rápidas</p>
+          </div>
+          <div className="flex gap-3 px-6 overflow-x-auto hide-scrollbar pb-1">
+            {QUICK_BASKETS.map(b => {
+              const best = searchBestOffers(b.items).bestSingle;
+              return (
+                <button key={b.name} onClick={() => onQuickBasket(b.items)} style={{ width: 132 }}
+                  className="flex-shrink-0 bg-white rounded-2xl p-3.5 border border-[#E2E8F0] shadow-sm text-left active:scale-95 transition-transform">
+                  <span className="text-3xl block mb-2">{b.emoji}</span>
+                  <p className="text-xs font-bold text-[#1E293B] leading-tight mb-0.5">{b.name}</p>
+                  <p className="text-xs text-[#94A3B8] mb-2">{b.items.length} productos · {b.desc}</p>
+                  {best && <span className="text-xs font-black text-[#0B63E5]">desde S/ {best.total.toFixed(2)}</span>}
+                </button>
+              );
+            })}
+          </div>
+        </div>
 
         <div className="mx-6 bg-white rounded-2xl border border-[#E2E8F0] shadow-sm overflow-hidden mb-4">
           <div className="flex border-b border-[#F1F5F9]">
@@ -780,31 +586,13 @@ function HomeScreen({ name, district, trialUsed, monthlyBudget, monthlySpent, on
           </div>
         </div>
 
-        <div className="mb-4">
-          <div className="flex items-center justify-between px-6 mb-2">
-            <p className="text-sm font-bold text-[#1E293B]">⭐ Canastas Rápidas</p>
-            <span className="text-xs text-[#0B63E5] font-semibold">Ver todas</span>
-          </div>
-          <div className="flex gap-3 px-6 overflow-x-auto hide-scrollbar pb-1">
-            {baskets.map(b => (
-              <button key={b.name} onClick={onBasket} style={{ width: 126 }}
-                className="flex-shrink-0 bg-white rounded-2xl p-3.5 border border-[#E2E8F0] shadow-sm text-left active:scale-95 transition-transform">
-                <span className="text-3xl block mb-2">{b.emoji}</span>
-                <p className="text-xs font-bold text-[#1E293B] leading-tight mb-0.5">{b.name}</p>
-                <p className="text-xs text-[#94A3B8] mb-2">{b.desc}</p>
-                <span className="text-sm font-black text-[#0B63E5]">{b.price}</span>
-              </button>
-            ))}
-          </div>
-        </div>
-
         <div className="px-6">
           <div className="bg-gradient-to-r from-[#0B63E5] to-[#1D4ED8] rounded-2xl p-4 flex items-center justify-between">
             <div>
               <p className="text-xs text-white/70 mb-0.5">🛒 Personaliza tu compra</p>
               <p className="font-bold text-white text-sm">¿Armas tu propia canasta?</p>
             </div>
-            <button onClick={onBasket} className="bg-white text-[#0B63E5] font-bold text-sm px-4 py-2.5 rounded-xl active:scale-95 transition-transform">+ Crear</button>
+            <button onClick={() => onCategory("Todos")} className="bg-white text-[#0B63E5] font-bold text-sm px-4 py-2.5 rounded-xl active:scale-95 transition-transform">+ Crear</button>
           </div>
         </div>
       </div>
@@ -812,36 +600,55 @@ function HomeScreen({ name, district, trialUsed, monthlyBudget, monthlySpent, on
   );
 }
 
-// ─── Product Selection ────────────────────────────────────────────────────────
-function SelectScreen({ selected, onToggle, onNext, onBack }: {
+// ─── Product Selection (Paso 1 de 2) ──────────────────────────────────────────
+function SelectScreen({ initialCategory, selected, onToggle, onNext, onBack }: {
+  initialCategory: Category | "Todos";
   selected: number[]; onToggle: (id: number) => void; onNext: () => void; onBack: () => void;
 }) {
-  const [cat, setCat] = useState("Todos");
-  const filtered = cat === "Todos" ? PRODUCTS
-    : PRODUCTS.filter(p => p.cat.toLowerCase().includes(cat.replace(/^[^\w\s]+\s*/, "").toLowerCase()));
+  const [cat, setCat] = useState<Category | "Todos">(initialCategory);
+  const [query, setQuery] = useState("");
+  const q = query.trim().toLowerCase();
+  const filtered = PRODUCTS.filter(p => (cat === "Todos" || p.cat === cat) && (!q || p.name.toLowerCase().includes(q)));
+  const countIn = (c: Category | "Todos") => PRODUCTS.filter(p => selected.includes(p.id) && (c === "Todos" || p.cat === c)).length;
+  const tabs: { key: Category | "Todos"; label: string }[] = [{ key: "Todos", label: "Todos" }, ...CATEGORIES.map(c => ({ key: c.key, label: `${c.emoji} ${c.key}` }))];
 
   return (
     <div className="flex flex-col h-full bg-[#F8FAFC] overflow-hidden">
       <StatusBar />
-      <div className="px-6 pt-3 pb-4 bg-white border-b border-[#E2E8F0] flex items-center gap-3">
+      <div className="px-6 pt-3 pb-3 bg-white flex items-center gap-3">
         <button onClick={onBack} className="w-8 h-8 flex items-center justify-center text-[#1E293B] text-lg">←</button>
         <div className="flex-1">
-          <p className="text-xs text-[#94A3B8] font-medium">Paso 1 de 3</p>
-          <h1 className="text-base font-bold text-[#1E293B]">¿Qué necesitas comprar?</h1>
+          <p className="text-xs text-[#94A3B8] font-medium">Paso 1 de 2</p>
+          <h1 className="text-base font-bold text-[#1E293B]">Elige tus productos</h1>
         </div>
         <div className="flex gap-1">
-          {[1,2,3].map(i => <div key={i} className={`w-6 h-1.5 rounded-full ${i===1 ? "bg-[#0B63E5]" : "bg-[#E2E8F0]"}`} />)}
+          {[1,2].map(i => <div key={i} className={`w-6 h-1.5 rounded-full ${i===1 ? "bg-[#0B63E5]" : "bg-[#E2E8F0]"}`} />)}
         </div>
       </div>
-      <div className="flex gap-2 px-6 py-3 overflow-x-auto hide-scrollbar bg-white border-b border-[#E2E8F0]">
-        {CATEGORIES.map(c => (
-          <button key={c} onClick={() => setCat(c)} className={`flex-shrink-0 px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${cat===c ? "bg-[#0B63E5] text-white" : "bg-[#F1F5F9] text-[#64748B]"}`}>{c}</button>
-        ))}
+      <div className="px-6 pb-3 bg-white">
+        <label className="flex items-center gap-2 rounded-xl bg-[#F1F5F9] px-3 py-2.5">
+          <span className="text-sm">🔍</span>
+          <input value={query} onChange={e => setQuery(e.target.value)} placeholder="Buscar producto..." className="min-w-0 flex-1 bg-transparent text-sm text-[#1E293B] outline-none placeholder:text-[#94A3B8]" />
+          {query && <button onClick={() => setQuery("")} className="text-xs font-bold text-[#94A3B8]">✕</button>}
+        </label>
+      </div>
+      <div className="flex gap-2 px-6 py-3 overflow-x-auto hide-scrollbar bg-white border-y border-[#E2E8F0]">
+        {tabs.map(t => {
+          const n = countIn(t.key);
+          return (
+            <button key={t.key} onClick={() => setCat(t.key)} className={`flex-shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${cat===t.key ? "bg-[#0B63E5] text-white" : "bg-[#F1F5F9] text-[#64748B]"}`}>
+              {t.label}
+              {n > 0 && <span className={`rounded-full px-1.5 text-[10px] font-black ${cat===t.key ? "bg-white text-[#0B63E5]" : "bg-[#0B63E5] text-white"}`}>{n}</span>}
+            </button>
+          );
+        })}
       </div>
       <div className="flex-1 overflow-y-auto hide-scrollbar px-6 py-4">
+        {filtered.length === 0 && <p className="py-10 text-center text-sm text-[#94A3B8]">No encontramos productos con ese nombre.</p>}
         <div className="grid grid-cols-2 gap-3">
           {filtered.map(p => {
             const sel = selected.includes(p.id);
+            const storesWith = STORES.filter(s => getPrice(s.id, p.id) !== null).length;
             return (
               <button key={p.id} onClick={() => onToggle(p.id)} className={`p-4 rounded-2xl border-2 text-left transition-all active:scale-95 ${sel ? "border-[#0B63E5] bg-[#EEF4FF]" : "border-[#E2E8F0] bg-white"}`}>
                 <div className="flex items-center justify-between mb-2">
@@ -850,8 +657,9 @@ function SelectScreen({ selected, onToggle, onNext, onBack }: {
                     {sel && <span className="text-white text-xs font-bold">✓</span>}
                   </div>
                 </div>
-                <p className="font-bold text-[#1E293B] text-sm">{p.name}</p>
-                <p className="text-xs text-[#94A3B8]">S/ {p.price}/{p.unit}</p>
+                <p className="font-bold text-[#1E293B] text-sm leading-tight">{p.name}</p>
+                <p className="mt-1 text-xs text-[#94A3B8]">desde <span className="font-bold text-[#15803D]">S/ {referencePrice(p.id).toFixed(2)}</span>/{p.unit}</p>
+                <p className="text-[10px] text-[#94A3B8]">En {storesWith} de {STORES.length} tiendas</p>
               </button>
             );
           })}
@@ -861,7 +669,7 @@ function SelectScreen({ selected, onToggle, onNext, onBack }: {
         <div className="px-6 pt-3 pb-1 bg-white border-t border-[#E2E8F0]">
           <button onClick={onNext} className="w-full py-4 rounded-2xl bg-[#0B63E5] text-white font-bold text-base shadow-lg shadow-[#0B63E5]/25 active:scale-95 transition-transform flex items-center justify-center gap-2">
             <span className="bg-white/20 px-2 py-0.5 rounded-full text-sm">{selected.length}</span>
-            productos seleccionados → Definir Cantidades
+            productos → Definir cantidades
           </button>
         </div>
       )}
@@ -869,34 +677,30 @@ function SelectScreen({ selected, onToggle, onNext, onBack }: {
   );
 }
 
-// ─── Quantities (Paso 2 de 3) ─────────────────────────────────────────────────
-function QuantBudgetScreen({ selected, quantities, budget, onQty, onNext, onBack }: {
+// ─── Quantities (Paso 2 de 2) ─────────────────────────────────────────────────
+function QuantitiesScreen({ selected, quantities, onQty, onRemove, onNext, onBack }: {
   selected: number[]; quantities: Record<number, number>;
-  budget: string;
-  onQty: (id: number, delta: number) => void;
+  onQty: (id: number, delta: number) => void; onRemove: (id: number) => void;
   onNext: () => void; onBack: () => void;
 }) {
   const prods = PRODUCTS.filter(p => selected.includes(p.id));
-  const subtotal = prods.reduce((s, p) => s + p.price * (quantities[p.id] ?? 1), 0);
-  const purchaseBudget = Number.parseFloat(budget) || 0;
-  const remaining = purchaseBudget - subtotal;
-  const over = subtotal > purchaseBudget;
   return (
     <div className="flex flex-col h-full bg-[#F8FAFC] overflow-hidden">
       <StatusBar />
       <div className="px-6 pt-3 pb-4 bg-white border-b border-[#E2E8F0] flex items-center gap-3">
         <button onClick={onBack} className="w-8 h-8 flex items-center justify-center text-[#1E293B] text-lg">←</button>
         <div className="flex-1">
-          <p className="text-xs text-[#94A3B8] font-medium">Paso 2 de 3</p>
+          <p className="text-xs text-[#94A3B8] font-medium">Paso 2 de 2</p>
           <h1 className="text-base font-bold text-[#1E293B]">Ajusta las cantidades</h1>
         </div>
-        <div className="flex gap-1">{[1,2,3].map(i => <div key={i} className={`w-6 h-1.5 rounded-full ${i<=2 ? "bg-[#0B63E5]" : "bg-[#E2E8F0]"}`} />)}</div>
+        <div className="flex gap-1">{[1,2].map(i => <div key={i} className="w-6 h-1.5 rounded-full bg-[#0B63E5]" />)}</div>
       </div>
       <div className="flex-1 overflow-y-auto hide-scrollbar px-6 py-4">
-        <div className="bg-[#FFF3E0] border border-[#FF9800]/20 rounded-2xl p-3 mb-4 flex items-start gap-2">
-          <span className="text-base flex-shrink-0">💡</span>
-          <p className="text-xs text-[#92400E] font-medium leading-relaxed">Total provisional basado en precios de referencia. La comparación usará exactamente estos productos y cantidades.</p>
+        <div className="bg-[#EEF4FF] border border-[#0B63E5]/15 rounded-2xl p-3 mb-4 flex items-start gap-2">
+          <span className="text-base flex-shrink-0">🤖</span>
+          <p className="text-xs text-[#0B63E5] font-medium leading-relaxed">Buscaremos esta combinación exacta en la base de precios de cada tienda y te mostraremos la mejor oferta.</p>
         </div>
+        {prods.length === 0 && <p className="py-10 text-center text-sm text-[#94A3B8]">Tu canasta está vacía. Vuelve y elige productos.</p>}
         <div className="flex flex-col gap-2.5 mb-4">
           {prods.map(p => {
             const qty = quantities[p.id] ?? 1;
@@ -905,167 +709,29 @@ function QuantBudgetScreen({ selected, quantities, budget, onQty, onNext, onBack
                 <span className="text-xl flex-shrink-0">{p.emoji}</span>
                 <div className="flex-1 min-w-0">
                   <p className="font-bold text-[#1E293B] text-sm truncate">{p.name}</p>
-                  <p className="text-xs text-[#94A3B8]">S/ {(p.price * qty).toFixed(2)} estimado</p>
+                  <p className="text-xs text-[#94A3B8]">{p.cat} · {qty} {p.unit}</p>
                 </div>
-                <div className="flex items-center gap-2.5">
-                  <button onClick={() => onQty(p.id,-1)} className="w-7 h-7 rounded-full bg-[#F1F5F9] flex items-center justify-center font-bold text-[#1E293B] active:scale-90 text-sm">−</button>
-                  <span className="w-10 text-center font-bold text-[#1E293B] text-sm">{qty}</span>
-                  <button onClick={() => onQty(p.id,1)}  className="w-7 h-7 rounded-full bg-[#0B63E5] flex items-center justify-center font-bold text-white active:scale-90 text-sm">+</button>
+                <div className="flex items-center gap-2">
+                  <button onClick={() => qty === 1 ? onRemove(p.id) : onQty(p.id,-1)} aria-label={qty === 1 ? "Quitar" : "Restar"} className="w-7 h-7 rounded-full bg-[#F1F5F9] flex items-center justify-center font-bold text-[#1E293B] active:scale-90 text-sm">{qty === 1 ? "🗑" : "−"}</button>
+                  <span className="w-7 text-center font-bold text-[#1E293B] text-sm">{qty}</span>
+                  <button onClick={() => onQty(p.id,1)} aria-label="Sumar" className="w-7 h-7 rounded-full bg-[#0B63E5] flex items-center justify-center font-bold text-white active:scale-90 text-sm">+</button>
                 </div>
               </div>
             );
           })}
         </div>
-        <div className="bg-white rounded-2xl border border-[#E2E8F0] px-4 py-3">
-          <div className="flex items-center justify-between"><p className="text-sm font-semibold text-[#475569]">Total provisional</p><p className="text-lg font-black text-[#1E293B]">S/ {subtotal.toFixed(2)}</p></div>
-          <p className={`mt-2 text-xs font-bold ${over ? "text-[#EF4444]" : "text-[#15803D]"}`}>{over ? `Sobrepasaste tu presupuesto en S/ ${Math.abs(remaining).toFixed(2)}.` : `Te quedan S/ ${remaining.toFixed(2)} de tu presupuesto para esta compra.`}</p>
-        </div>
-        {over && <div className="mt-3 rounded-2xl border border-[#EF4444]/20 bg-[#FEE2E2] p-3"><p className="text-xs text-[#B91C1C]">Puedes quitar un producto, reducir una cantidad o dejar que CaSerIA busque opciones más económicas.</p><div className="mt-3 flex gap-2"><button onClick={onBack} className="flex-1 rounded-xl border border-[#EF4444] py-2 text-xs font-bold text-[#B91C1C]">Ajustar mi canasta</button><button onClick={onNext} className="flex-1 rounded-xl bg-[#0B63E5] py-2 text-xs font-bold text-white">Buscar opciones más económicas</button></div></div>}
+        <button onClick={onBack} className="w-full rounded-2xl border-2 border-dashed border-[#CBD5E1] py-3 text-sm font-bold text-[#64748B]">+ Agregar más productos</button>
       </div>
       <div className="px-6 pt-3 pb-1 bg-white border-t border-[#E2E8F0]">
-        <button onClick={onNext}
-          className="w-full py-4 rounded-2xl bg-[#0B63E5] text-white font-bold text-base shadow-lg shadow-[#0B63E5]/25 active:scale-95 transition-transform">
-          Comparar mi canasta →
+        <button onClick={onNext} disabled={prods.length === 0}
+          className="w-full py-4 rounded-2xl bg-[#0B63E5] text-white font-bold text-base shadow-lg shadow-[#0B63E5]/25 active:scale-95 transition-transform disabled:opacity-40">
+          🔍 Buscar la mejor oferta
         </button>
       </div>
     </div>
   );
 }
 
-// ─── Budget (Paso 3 de 3) ─────────────────────────────────────────────────────
-function BudgetScreen({ selected, quantities, budget, setBudget, onNext, onBack }: {
-  selected: number[]; quantities: Record<number, number>;
-  budget: string; setBudget: (v: string) => void;
-  onNext: () => void; onBack: () => void;
-}) {
-  const budgetVal = parseFloat(budget) || 0;
-  const estimatedCost = PRODUCTS
-    .filter(p => selected.includes(p.id))
-    .reduce((sum, p) => sum + p.price * (quantities[p.id] ?? 1), 0);
-  const available = budgetVal - estimatedCost;
-  const usedPct = budgetVal > 0 ? (estimatedCost / budgetVal) * 100 : 0;
-  const isOver = estimatedCost > budgetVal && budgetVal > 0;
-  const isTight = !isOver && budgetVal > 0 && available < budgetVal * 0.1;
-
-  return (
-    <div className="flex flex-col h-full bg-[#F8FAFC] overflow-hidden">
-      <StatusBar />
-      <div className="px-6 pt-3 pb-4 bg-white border-b border-[#E2E8F0] flex items-center gap-3">
-        <button onClick={onBack} className="w-8 h-8 flex items-center justify-center text-[#1E293B] text-lg">←</button>
-        <div className="flex-1">
-          <p className="text-xs text-[#94A3B8] font-medium">Paso 3 de 3</p>
-          <h1 className="text-base font-bold text-[#1E293B]">Define tu presupuesto</h1>
-          <p className="text-xs text-[#94A3B8]">Indica cuánto deseas gastar en esta compra.</p>
-        </div>
-        <div className="flex gap-1">{[1,2,3].map(i => <div key={i} className="w-6 h-1.5 rounded-full bg-[#0B63E5]" />)}</div>
-      </div>
-
-      <div className="flex-1 overflow-y-auto hide-scrollbar px-6 py-5">
-        {/* Large budget input */}
-        <div className="bg-white rounded-2xl border-2 border-[#0B63E5]/20 shadow-sm overflow-hidden mb-4">
-          <div className="px-5 pt-5 pb-4">
-            <p className="text-xs font-bold text-[#475569] uppercase tracking-wide text-center mb-4">Tu presupuesto para esta compra</p>
-            <div className="flex items-center justify-center gap-2 mb-3">
-              <span className="text-4xl font-black text-[#0B63E5]">S/</span>
-              <input
-                type="number"
-                min="0"
-                step="0.01"
-                inputMode="decimal"
-                value={budget}
-                onChange={e => setBudget(e.target.value)}
-                className="text-6xl font-black text-[#1E293B] bg-transparent outline-none w-44 text-center border-b-4 border-[#0B63E5]/30 focus:border-[#0B63E5] transition-colors pb-1"
-                placeholder="0"
-              />
-            </div>
-            <p className="text-xs text-[#94A3B8] text-center mb-5">Soles peruanos (S/)</p>
-            <div className="grid grid-cols-4 gap-2">
-              {["50","100","150","200"].map(p => (
-                <button key={p} onClick={() => setBudget(p)}
-                  className={`py-2.5 rounded-xl text-sm font-bold transition-all active:scale-95 ${budget===p ? "bg-[#0B63E5] text-white shadow shadow-[#0B63E5]/30" : "bg-[#F1F5F9] text-[#475569]"}`}>
-                  S/{p}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Donut + summary card */}
-        <div className="bg-white rounded-2xl border border-[#E2E8F0] shadow-sm overflow-hidden mb-4">
-          <div className="px-4 pt-3 pb-2 border-b border-[#F1F5F9]">
-            <p className="text-xs font-bold text-[#475569] uppercase tracking-wide">Resumen de tu compra</p>
-          </div>
-          <div className="px-4 pt-4 pb-4 flex items-center gap-4">
-            <div className="flex flex-col items-center">
-              <BudgetDonut budgetVal={budgetVal} estimatedCost={estimatedCost} />
-              {isOver && <p className="-mt-1 text-xs font-bold text-[#EF4444]">Excede S/ {Math.abs(available).toFixed(2)}</p>}
-            </div>
-            <div className="flex-1 flex flex-col gap-2.5">
-              <div className="flex items-center justify-between">
-                <p className="text-xs text-[#64748B]">Presupuesto</p>
-                <p className="text-sm font-black text-[#1E293B]">{budgetVal > 0 ? `S/ ${budgetVal.toFixed(2)}` : "—"}</p>
-              </div>
-              <div className="h-px bg-[#F1F5F9]" />
-              <div className="flex items-center justify-between">
-                <p className="text-xs text-[#64748B]">Costo estimado</p>
-                <p className="text-sm font-black text-[#1E293B]">S/ {estimatedCost.toFixed(2)}</p>
-              </div>
-              <div className="h-px bg-[#F1F5F9]" />
-              <div className="flex items-center justify-between">
-                <p className="text-xs text-[#64748B]">{isOver ? "Te faltan" : "Te quedan"}</p>
-                <p className={`text-sm font-black ${isOver ? "text-[#EF4444]" : "text-[#15803D]"}`}>
-                  {budgetVal > 0 ? `S/ ${Math.abs(available).toFixed(2)}` : "—"}
-                </p>
-              </div>
-              {budgetVal > 0 && (
-                <>
-                  <div className="h-px bg-[#F1F5F9]" />
-                  <div className="h-2 bg-[#F1F5F9] rounded-full overflow-hidden">
-                    <div className="h-full rounded-full transition-all duration-500"
-                      style={{ width: `${Math.min(usedPct, 100)}%`, background: isOver ? "#EF4444" : isTight ? "#F59E0B" : "#22C55E" }} />
-                  </div>
-                </>
-              )}
-            </div>
-          </div>
-        </div>
-
-        {/* Dynamic state feedback */}
-        {budgetVal > 0 && (
-          <div className={`rounded-2xl p-4 flex items-start gap-3 mb-2 ${isOver ? "bg-[#FEE2E2] border border-[#EF4444]/20" : isTight ? "bg-[#FEF9C3] border border-[#F59E0B]/20" : "bg-[#DCFCE7] border border-[#22C55E]/20"}`}>
-            <span className="text-xl flex-shrink-0">{isOver ? "🔴" : isTight ? "🟡" : "🟢"}</span>
-            <div>
-              {isOver ? (
-                <>
-                  <p className="text-sm font-black text-[#991B1B] mb-0.5">Tu selección supera el presupuesto</p>
-                  <p className="text-xs text-[#B91C1C] leading-snug">Te faltan <strong>S/ {Math.abs(available).toFixed(2)}</strong>. CaSerIA buscará alternativas para acercar tu compra al monto disponible.</p>
-                </>
-              ) : isTight ? (
-                <>
-                  <p className="text-sm font-black text-[#92400E] mb-0.5">Presupuesto muy ajustado</p>
-                  <p className="text-xs text-[#A16207] leading-snug">Te quedan <strong>S/ {available.toFixed(2)}</strong> de margen. CaSerIA buscará alternativas para ayudarte a aprovechar mejor tu presupuesto.</p>
-                </>
-              ) : (
-                <>
-                  <p className="text-sm font-black text-[#15803D] mb-0.5">¡Presupuesto suficiente!</p>
-                  <p className="text-xs text-[#166534] leading-snug">Te quedan <strong>S/ {available.toFixed(2)}</strong>. CaSerIA buscará alternativas para ayudarte a aprovechar mejor tu presupuesto.</p>
-                </>
-              )}
-            </div>
-          </div>
-        )}
-      </div>
-
-      <div className="px-6 pt-3 pb-1 bg-white border-t border-[#E2E8F0]">
-        <button onClick={onNext} disabled={!budget || parseFloat(budget) <= 0}
-          className="w-full py-4 rounded-2xl bg-[#0B63E5] text-white font-bold text-base shadow-lg shadow-[#0B63E5]/25 disabled:opacity-40 active:scale-95 transition-transform">
-          Buscar mejores opciones
-        </button>
-        <p className="text-xs text-[#94A3B8] text-center mt-2 mb-1">Compararemos opciones disponibles en Paucarpata.</p>
-      </div>
-    </div>
-  );
-}
 
 // ─── Loading ──────────────────────────────────────────────────────────────────
 function LoadingScreen({ district, onNext }: { district: District; onNext: () => void }) {
@@ -1102,7 +768,7 @@ function LoadingScreen({ district, onNext }: { district: District; onNext: () =>
           {[
             "Consultando precios en Franco Supermercados y Tiendas Mass...",
             "Comparando con Plaza Vea y Tottus Porongoche...",
-            "Calculando la mejor opción para tu presupuesto...",
+            "Calculando la mejor oferta para tu canasta...",
           ].map((c, i) => (
             <div key={i} className={`flex items-center gap-3 transition-opacity duration-500 ${i<step?"opacity-100":"opacity-30"}`}>
               <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold ${i<step?"bg-[#22C55E] text-white":i===step?"bg-[#FF9800] text-white":"bg-white/10 text-white/30"}`}>
@@ -1123,7 +789,10 @@ function LoadingScreen({ district, onNext }: { district: District; onNext: () =>
 }
 
 // ─── Results ──────────────────────────────────────────────────────────────────
-type CompareCriteria = "ahorro" | "lugar" | "cerca";
+type CompareCriteria = "precio" | "cerca";
+
+const STORE_SHORT: Record<string, string> = { tottus: "Tottus", plazavea: "P. Vea", franco: "Franco", massporo: "Mass P.", massande: "Mass A." };
+const typeColor: Record<string, string> = { discount: "#22C55E", super: "#0B63E5" };
 
 function FreshnessTag({ level, label }: { level: "ok"|"warn"|"bad"; label: string }) {
   const styles = {
@@ -1134,44 +803,31 @@ function FreshnessTag({ level, label }: { level: "ok"|"warn"|"bad"; label: strin
   return <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${styles[level]}`}>{label}</span>;
 }
 
-function ResultsScreen({ district, budget, selected, quantities, onRegisterPurchase, onStallStandard, onStallPremium, onWebRedirect, onBack }: {
-  district: District; onStallStandard: () => void; onStallPremium: () => void;
-  budget: string;
-  selected: number[]; quantities: Record<number, number>; onRegisterPurchase: (store: string, amount: number) => void;
-  onWebRedirect: (name: string) => void; onBack: () => void;
+function Sheet({ onClose, children }: { onClose: () => void; children: React.ReactNode }) {
+  return (
+    <div className="absolute inset-0 z-40 flex items-end bg-black/50" onClick={onClose}>
+      <div className="max-h-[80%] w-full overflow-y-auto rounded-t-3xl bg-white p-5 slide-up hide-scrollbar" onClick={e => e.stopPropagation()}>{children}</div>
+    </div>
+  );
+}
+
+function ResultsScreen({ district, cart, onDirections, onBack }: {
+  district: District; cart: Cart; onDirections: () => void; onBack: () => void;
 }) {
   const [view,     setView]     = useState<"list"|"map">("list");
   const [pinSel,   setPinSel]   = useState<number | null>(null);
-  const [criteria, setCriteria] = useState<CompareCriteria>("ahorro");
-  const [showDetail, setShowDetail] = useState(false);
-  const [selectedStore, setSelectedStore] = useState<CompareOption | null>(null);
-  const [confirming, setConfirming] = useState(false);
-  const [realAmount, setRealAmount] = useState("");
+  const [criteria, setCriteria] = useState<CompareCriteria>("precio");
+  const [showTable, setShowTable] = useState(false);
+  const [listFor,  setListFor]  = useState<StoreOffer | null>(null);
+  const [showCombined, setShowCombined] = useState(false);
   const d = DISTRICT_DATA[district];
 
-  const calculatedOptions = ["Tottus Porongoche", "Plaza Vea", "Franco Supermercados", "Tiendas Mass – Porongoche"].map(name => d.options.find(option => option.name === name)!).map(option => {
-    const totalNum = comparisonTotal(option.name, selected, quantities);
-    return { ...option, totalNum, total: `S/ ${totalNum.toFixed(2)}`, allProducts: true };
-  });
-  const sorted = [...calculatedOptions].sort((a, b) =>
-    criteria === "ahorro" ? a.totalNum - b.totalNum :
-    criteria === "cerca"  ? a.distMin  - b.distMin  :
-    a.totalNum - b.totalNum
-  );
-  const opts = criteria === "lugar"
-    ? sorted.filter(o => o.allProducts)
-    : sorted;
-  const nearest = [...calculatedOptions].sort((a, b) => a.distMin - b.distMin)[0];
-  const combinedTotal = PRODUCTS.filter(product => selected.includes(product.id)).reduce((sum, product) => {
-    const unitPrice = Math.min(...Object.values(STORE_PRICE_FACTORS).map(factors => product.price * factors[product.id - 1]));
-    return sum + unitPrice * (quantities[product.id] ?? 1);
-  }, 0);
-  const purchaseBudget = Number.parseFloat(budget) || 0;
-
-  const typeColor: Record<string, string> = {
-    discount: "#22C55E",
-    super:    "#0B63E5",
-  };
+  const { offers, bestSingle, combined } = searchBestOffers(cart);
+  const sorted = criteria === "precio" ? offers : [...offers].sort((a, b) => a.store.distMin - b.store.distMin);
+  const priciestComplete = offers.filter(o => o.complete).at(-1);
+  const singleSavings = bestSingle && priciestComplete ? priciestComplete.total - bestSingle.total : 0;
+  const combinedSavings = bestSingle ? bestSingle.total - combined.total : 0;
+  const cartProducts = cart.map(item => PRODUCTS.find(p => p.id === item.productId)).filter(p => p !== undefined);
 
   return (
     <div className="flex flex-col h-full bg-[#F8FAFC] overflow-hidden">
@@ -1179,144 +835,227 @@ function ResultsScreen({ district, budget, selected, quantities, onRegisterPurch
       <div className="px-6 pt-3 pb-4 bg-white border-b border-[#E2E8F0] flex items-center gap-3">
         <button onClick={onBack} className="w-8 h-8 flex items-center justify-center text-[#1E293B] text-lg">←</button>
         <div className="flex-1">
-          <h1 className="text-base font-bold text-[#1E293B]">Resultados para tu Canasta</h1>
-          <p className="text-xs text-[#94A3B8]">Presupuesto: S/ {(Number.parseFloat(budget) || 0).toFixed(2)} · <span className="text-[#0B63E5] font-semibold">{d.label}</span></p>
+          <h1 className="text-base font-bold text-[#1E293B]">Mejor oferta para tu canasta</h1>
+          <p className="text-xs text-[#94A3B8]">{cart.length} productos · {STORES.length} tiendas consultadas · <span className="text-[#0B63E5] font-semibold">{d.label}</span></p>
         </div>
       </div>
 
-      <div className="px-4 py-3 bg-white border-b border-[#E2E8F0] flex flex-col gap-2">
-        <div className="flex gap-1.5">
-          {([
-            { key: "ahorro" as const, label: "💰 Máx. ahorro" },
-            { key: "lugar"  as const, label: "🏪 Todo en 1 lugar" },
-            { key: "cerca"  as const, label: "📍 Más cerca" },
-          ]).map(c => (
-            <button key={c.key} onClick={() => setCriteria(c.key)}
-              className={`flex-1 py-2 rounded-xl text-xs font-bold border-2 transition-all ${criteria===c.key ? "border-[#0B63E5] bg-[#EEF4FF] text-[#0B63E5]" : "border-[#E2E8F0] text-[#94A3B8]"}`}>
-              {c.label}
-            </button>
+      <div className="px-4 py-3 bg-white border-b border-[#E2E8F0] flex gap-2">
+        <div className="flex flex-1 bg-[#F1F5F9] rounded-xl p-1">
+          {([{ key: "precio" as const, label: "💰 Precio" }, { key: "cerca" as const, label: "📍 Cercanía" }]).map(c => (
+            <button key={c.key} onClick={() => setCriteria(c.key)} className={`flex-1 py-1.5 rounded-lg text-xs font-bold transition-all ${criteria===c.key ? "bg-white text-[#1E293B] shadow" : "text-[#94A3B8]"}`}>{c.label}</button>
           ))}
         </div>
-        <div className="flex bg-[#F1F5F9] rounded-xl p-1">
+        <div className="flex flex-1 bg-[#F1F5F9] rounded-xl p-1">
           <button onClick={() => setView("list")} className={`flex-1 py-1.5 rounded-lg text-xs font-bold transition-all ${view==="list" ? "bg-white text-[#1E293B] shadow" : "text-[#94A3B8]"}`}>📋 Lista</button>
           <button onClick={() => setView("map")}  className={`flex-1 py-1.5 rounded-lg text-xs font-bold transition-all ${view==="map"  ? "bg-white text-[#1E293B] shadow" : "text-[#94A3B8]"}`}>🗺️ Mapa</button>
         </div>
       </div>
 
       {view === "list" ? (
-        <div className="flex-1 overflow-y-auto hide-scrollbar px-4 py-3 flex flex-col gap-3">
-          <div className="rounded-2xl border border-[#0B63E5]/15 bg-[#EEF4FF] p-3">
-            <p className="text-xs font-bold text-[#0B63E5]">Comparación basada en tu canasta</p>
-            <p className="mt-1 text-xs text-[#475569]">{selected.length} productos · presupuesto de compra: S/ {purchaseBudget.toFixed(2)}</p>
-          </div>
-          {opts.map((opt, i) => {
-            const isBest = i === 0;
-            return (
-              <div key={opt.name} className={`rounded-2xl border-2 overflow-hidden transition-all ${isBest ? "border-[#F59E0B] shadow-lg shadow-[#F59E0B]/10" : "border-[#E2E8F0] shadow-sm"}`}>
-                {isBest && (
-                  <div className="bg-[#F59E0B] px-4 py-1.5 flex items-center justify-between">
-                    <span className="text-white text-xs font-black">🏆 Más económica · Mejor precio total</span>
-                    {opt.savings && <span className="text-white text-xs font-bold">Ahorras {opt.savings}</span>}
+        <div className="flex-1 overflow-y-auto hide-scrollbar px-4 py-3 flex flex-col gap-3 [&>*]:flex-shrink-0">
+          {/* Best offer in one store */}
+          {bestSingle ? (
+            <div className="rounded-2xl border-2 border-[#F59E0B] shadow-lg shadow-[#F59E0B]/10 overflow-hidden">
+              <div className="bg-[#F59E0B] px-4 py-1.5 flex items-center justify-between">
+                <span className="text-white text-xs font-black">🏆 MEJOR OFERTA · TODO EN 1 TIENDA</span>
+                {singleSavings > 0.005 && <span className="text-white text-xs font-bold">Ahorras S/ {singleSavings.toFixed(2)}</span>}
+              </div>
+              <div className="px-4 py-3 bg-gradient-to-br from-[#FFFBEB] to-white">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <p className="font-black text-[#1E293B]">{bestSingle.store.name}</p>
+                    <p className="text-xs text-[#64748B]">🚶 {bestSingle.store.distance} · {bestSingle.store.address}</p>
                   </div>
-                )}
-                <div className={`px-4 py-3 ${isBest ? "bg-gradient-to-br from-[#FFFBEB] to-white" : "bg-white"}`}>
-                  <div className="flex items-start justify-between mb-2">
-                    <div className="flex items-center gap-1.5 flex-1 min-w-0">
-                      <span className="text-base flex-shrink-0">{opt.rank}</span>
-                      <p className="font-bold text-[#1E293B] text-sm leading-tight">{opt.name}</p>
-                    </div>
-                    <p className={`text-lg font-black flex-shrink-0 ml-2 ${isBest ? "text-[#22C55E]" : "text-[#1E293B]"}`}>{opt.total}</p>
-                  </div>
-                  <div className="flex flex-wrap gap-1.5 mb-2">
-                    <span className="text-xs font-semibold px-2 py-0.5 rounded-full"
-                      style={{ color: typeColor[opt.type] ?? "#0B63E5", background: (typeColor[opt.type] ?? "#0B63E5") + "18" }}>{opt.badge}</span>
-                    <FreshnessTag level={opt.freshnessLevel} label={opt.freshness} />
-                    {!opt.allProducts
-                      ? <span className="text-xs font-semibold text-[#92400E] bg-[#FEF3C7] px-2 py-0.5 rounded-full">⚠ Disponibilidad parcial</span>
-                      : <span className="text-xs font-semibold text-[#15803D] bg-[#DCFCE7] px-2 py-0.5 rounded-full">✓ Disponible</span>
-                    }
-                  </div>
-                  <div className="flex items-center gap-3 mb-2.5 text-xs text-[#64748B]">
-                    <span>📍 {opt.district}</span>
-                    <span className="w-px h-3 bg-[#E2E8F0]" />
-                    <span>🚶 {opt.distance}</span>
-                    <span className="w-px h-3 bg-[#E2E8F0]" />
-                    <span className="truncate text-[#94A3B8]">{opt.address}</span>
-                  </div>
-                  <div className="flex gap-2">
-                    <button onClick={() => { setSelectedStore(opt); setRealAmount(opt.totalNum.toFixed(2)); }} className={`flex-1 py-2.5 rounded-xl font-bold text-xs active:scale-95 transition-transform ${i === 0 ? "bg-[#0B63E5] text-white shadow shadow-[#0B63E5]/25" : "border-2 border-[#0B63E5] text-[#0B63E5]"}`}>Elegir esta opción</button>
-                    <button onClick={() => setShowDetail(true)} className="rounded-xl border border-[#E2E8F0] px-3 py-2.5 text-xs font-bold text-[#64748B]">Ver detalle</button>
-                  </div>
+                  <p className="ml-2 whitespace-nowrap text-2xl font-black text-[#22C55E]">S/ {bestSingle.total.toFixed(2)}</p>
+                </div>
+                {singleSavings > 0.005 && priciestComplete && <p className="mt-1 text-xs text-[#92400E]">Frente a {priciestComplete.store.name} (S/ {priciestComplete.total.toFixed(2)}).</p>}
+                <div className="mt-3 flex gap-2">
+                  <button onClick={() => setListFor(bestSingle)} className="flex-1 py-2.5 rounded-xl bg-[#0B63E5] text-white font-bold text-xs shadow shadow-[#0B63E5]/25 active:scale-95 transition-transform">Ver mi lista de compra</button>
+                  <button onClick={onDirections} className="rounded-xl border border-[#E2E8F0] px-3 py-2.5 text-xs font-bold text-[#64748B]">🗺️ Cómo llegar</button>
                 </div>
               </div>
-            );
-          })}
-          <div className="rounded-2xl border border-[#22C55E]/25 bg-[#DCFCE7]/50 p-4"><p className="text-xs font-black text-[#15803D]">💰 MÁXIMO AHORRO COMBINADO</p><p className="mt-1 text-lg font-black text-[#1E293B]">S/ {combinedTotal.toFixed(2)}</p><p className="mt-1 text-xs text-[#166534]">Ahorras S/ {(sorted[0].totalNum - combinedTotal).toFixed(2)} adicionales, pero tendrás que comprar en más de un establecimiento.</p></div>
-          {nearest && <div className="rounded-2xl border border-[#E2E8F0] bg-white p-4"><p className="text-xs font-black text-[#0B63E5]">📍 MÁS CERCANA</p><p className="mt-1 text-sm font-bold text-[#1E293B]">{nearest.name}</p><p className="text-xs text-[#64748B]">{nearest.totalNum === sorted[0].totalNum ? `${nearest.distance} · Mejor precio y más cercana.` : `${nearest.distance} · S/ ${(nearest.totalNum - sorted[0].totalNum).toFixed(2)} más que la opción económica.`}</p></div>}
+            </div>
+          ) : (
+            <div className="rounded-2xl border border-[#F59E0B]/30 bg-[#FFFBEB] p-4">
+              <p className="text-xs font-black text-[#92400E]">⚠ Ninguna tienda tiene toda tu canasta</p>
+              <p className="mt-1 text-xs text-[#92400E]">La mejor oferta es combinar tiendas (abajo).</p>
+            </div>
+          )}
+
+          {/* Best combined offer */}
+          {combined.stops.length > 1 || !bestSingle ? (
+            <button onClick={() => setShowCombined(true)} className="text-left rounded-2xl border border-[#22C55E]/30 bg-[#DCFCE7]/50 p-4">
+              <div className="flex items-start justify-between">
+                <div>
+                  <p className="text-xs font-black text-[#15803D]">💰 MÁXIMO AHORRO COMBINANDO TIENDAS</p>
+                  <p className="mt-0.5 text-xs text-[#166534]">{combined.stops.map(s => s.store.name).join(" + ")}</p>
+                </div>
+                <p className="ml-2 whitespace-nowrap text-lg font-black text-[#1E293B]">S/ {combined.total.toFixed(2)}</p>
+              </div>
+              <p className="mt-2 text-xs text-[#166534]">
+                {bestSingle && combinedSavings > 0.005
+                  ? <>Ahorras <strong>S/ {combinedSavings.toFixed(2)}</strong> más que en {bestSingle.store.name}, comprando en {combined.stops.length} tiendas.</>
+                  : <>Compra cada producto donde está más barato.</>}
+                <span className="ml-1 font-bold underline">Ver reparto →</span>
+              </p>
+            </button>
+          ) : (
+            <div className="rounded-2xl border border-[#22C55E]/30 bg-[#DCFCE7]/50 p-3">
+              <p className="text-xs font-bold text-[#15803D]">✓ {bestSingle.store.name} tiene el precio más bajo en todos tus productos. No necesitas ir a otra tienda.</p>
+            </div>
+          )}
+
+          <div className="flex items-center justify-between pt-1">
+            <p className="text-sm font-bold text-[#1E293B]">Todas las tiendas</p>
+            <button onClick={() => setShowTable(true)} className="text-xs font-bold text-[#0B63E5]">Comparar precio por producto →</button>
+          </div>
+
+          {sorted.map((offer, i) => (
+            <div key={offer.store.id} className="rounded-2xl border border-[#E2E8F0] bg-white shadow-sm px-4 py-3">
+              <div className="flex items-start justify-between mb-2">
+                <div className="flex items-center gap-1.5 flex-1 min-w-0">
+                  <span className="w-5 text-sm font-black text-[#94A3B8]">{i + 1}</span>
+                  <p className="font-bold text-[#1E293B] text-sm leading-tight">{offer.store.name}</p>
+                </div>
+                <div className="text-right ml-2">
+                  <p className={`whitespace-nowrap text-lg font-black ${offer === bestSingle ? "text-[#22C55E]" : "text-[#1E293B]"}`}>S/ {offer.total.toFixed(2)}</p>
+                  {!offer.complete && <p className="text-[10px] text-[#94A3B8]">sin {offer.missing.length} prod.</p>}
+                </div>
+              </div>
+              <div className="flex flex-wrap gap-1.5 mb-2">
+                <span className="text-xs font-semibold px-2 py-0.5 rounded-full" style={{ color: typeColor[offer.store.type], background: typeColor[offer.store.type] + "18" }}>{offer.store.badge}</span>
+                <FreshnessTag level={offer.store.freshnessLevel} label={offer.store.updated} />
+                {offer.complete
+                  ? <span className="text-xs font-semibold text-[#15803D] bg-[#DCFCE7] px-2 py-0.5 rounded-full">✓ Tiene todo</span>
+                  : <span className="text-xs font-semibold text-[#92400E] bg-[#FEF3C7] px-2 py-0.5 rounded-full">⚠ Falta: {offer.missing.map(p => p.name).join(", ")}</span>}
+              </div>
+              <p className="mb-2.5 text-xs text-[#64748B]">🚶 {offer.store.distance} · <span className="text-[#94A3B8]">{offer.store.address}</span></p>
+              <div className="flex gap-2">
+                <button onClick={() => setListFor(offer)} className="flex-1 py-2 rounded-xl border-2 border-[#0B63E5] text-[#0B63E5] font-bold text-xs active:scale-95 transition-transform">Ver lista</button>
+                <button onClick={onDirections} className="rounded-xl border border-[#E2E8F0] px-3 py-2 text-xs font-bold text-[#64748B]">🗺️ Cómo llegar</button>
+              </div>
+            </div>
+          ))}
         </div>
       ) : (
         <div className="flex-1 flex flex-col px-6 py-4 gap-4">
           <div className="flex-1 bg-[#EEF4FF] rounded-2xl border border-[#0B63E5]/15 relative overflow-hidden min-h-0">
             <svg className="absolute inset-0 w-full h-full opacity-10">
-              {Array.from({length:6}).map((_,i) => (
-                <line key={`v${i}`} x1={`${i*20}%`} y1="0%" x2={`${i*20}%`} y2="100%" stroke="#0B63E5" strokeWidth="1" />
-              ))}
-              {Array.from({length:5}).map((_,i) => (
-                <line key={`h${i}`} x1="0%" y1={`${i*25}%`} x2="100%" y2={`${i*25}%`} stroke="#0B63E5" strokeWidth="1" />
-              ))}
-            </svg>
-            <svg className="absolute inset-0 w-full h-full">
-              <path d="M 0% 50% Q 50% 40% 100% 50%" stroke="#CBD5E1" strokeWidth="3" fill="none" />
-              <path d="M 45% 0% L 45% 100%" stroke="#CBD5E1" strokeWidth="2.5" fill="none" />
-              <path d="M 0% 70% L 100% 65%" stroke="#CBD5E1" strokeWidth="2" fill="none" />
+              {Array.from({length:6}).map((_,i) => <line key={`v${i}`} x1={`${i*20}%`} y1="0%" x2={`${i*20}%`} y2="100%" stroke="#0B63E5" strokeWidth="1" />)}
+              {Array.from({length:5}).map((_,i) => <line key={`h${i}`} x1="0%" y1={`${i*25}%`} x2="100%" y2={`${i*25}%`} stroke="#0B63E5" strokeWidth="1" />)}
             </svg>
             <div className="absolute top-2 left-3 bg-white/80 rounded-lg px-2 py-1">
-              <p className="text-xs font-bold text-[#0B63E5]/60">{d.label} — Opciones de compra</p>
+              <p className="text-xs font-bold text-[#0B63E5]/60">{d.label} — Tiendas consultadas</p>
             </div>
-            {opts.map((opt, i) => (
-              <button key={i}
-                onClick={() => setPinSel(pinSel === i ? null : i)}
+            {sorted.map((offer, i) => (
+              <button key={offer.store.id} onClick={() => setPinSel(pinSel === i ? null : i)}
                 className="absolute transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center transition-all"
-                style={{ left: `${opt.x}%`, top: `${opt.y}%` }}>
+                style={{ left: `${offer.store.x}%`, top: `${offer.store.y}%` }}>
                 <div className={`w-9 h-9 rounded-full border-2 border-white shadow-lg flex items-center justify-center text-sm font-black text-white transition-all ${pinSel===i ? "scale-125" : ""}`}
-                  style={{ background: i===0 ? "#F59E0B" : (typeColor[opt.type] ?? "#0B63E5") }}>
+                  style={{ background: offer === bestSingle ? "#F59E0B" : typeColor[offer.store.type] }}>
                   {i+1}
                 </div>
                 {pinSel === i && (
                   <div className="absolute -bottom-12 bg-white rounded-xl px-2 py-1.5 shadow-lg border border-[#E2E8F0] whitespace-nowrap z-10">
-                    <p className="text-xs font-bold text-[#1E293B]">{opt.name}</p>
-                    <p className={`text-xs font-black ${i===0?"text-[#22C55E]":"text-[#1E293B]"}`}>{opt.total}</p>
+                    <p className="text-xs font-bold text-[#1E293B]">{offer.store.name}</p>
+                    <p className={`text-xs font-black ${offer === bestSingle ? "text-[#22C55E]" : "text-[#1E293B]"}`}>S/ {offer.total.toFixed(2)}{!offer.complete && " (incompleta)"}</p>
                   </div>
                 )}
               </button>
             ))}
           </div>
-
-          <div className="bg-white rounded-2xl border border-[#E2E8F0] p-3 flex-shrink-0">
-            <div className="flex flex-wrap gap-2">
-              {[
-                { color: "#F59E0B", label: "1 · Mejor precio" },
-                { color: "#22C55E", label: "Tiendas Mass" },
-                { color: "#0B63E5", label: "Supermercados" },
-              ].map((l, i) => (
-                <div key={i} className="flex items-center gap-1.5">
-                  <div className="w-4 h-4 rounded-full flex-shrink-0" style={{ background: l.color }} />
-                  <span className="text-xs text-[#475569] font-medium">{l.label}</span>
-                </div>
-              ))}
-            </div>
+          <div className="bg-white rounded-2xl border border-[#E2E8F0] p-3 flex-shrink-0 flex flex-wrap gap-2">
+            {[{ color: "#F59E0B", label: "Mejor oferta" }, { color: "#22C55E", label: "Tiendas Mass" }, { color: "#0B63E5", label: "Supermercados" }].map(l => (
+              <div key={l.label} className="flex items-center gap-1.5">
+                <div className="w-4 h-4 rounded-full flex-shrink-0" style={{ background: l.color }} />
+                <span className="text-xs text-[#475569] font-medium">{l.label}</span>
+              </div>
+            ))}
           </div>
-
-          <button onClick={onStallPremium} className="w-full py-4 rounded-2xl bg-[#0B63E5] text-white font-bold text-sm shadow-lg shadow-[#0B63E5]/25 active:scale-95 transition-transform flex-shrink-0">
+          <button onClick={onDirections} className="w-full py-4 rounded-2xl bg-[#0B63E5] text-white font-bold text-sm shadow-lg shadow-[#0B63E5]/25 active:scale-95 transition-transform flex-shrink-0">
             Ver establecimientos y cómo llegar →
           </button>
         </div>
       )}
-      {showDetail && <div className="absolute inset-0 z-40 flex items-end bg-black/50" onClick={() => setShowDetail(false)}><div className="max-h-[78%] w-full overflow-y-auto rounded-t-3xl bg-white p-5 slide-up" onClick={e => e.stopPropagation()}><div className="mb-4 flex items-center justify-between"><div><h2 className="font-black text-[#1E293B]">Detalle de precios</h2><p className="text-xs text-[#64748B]">El menor precio de cada producto está en verde.</p></div><button onClick={() => setShowDetail(false)} className="rounded-full bg-[#F1F5F9] px-3 py-1.5 font-bold text-[#64748B]">✕</button></div>{PRODUCTS.filter(product => selected.includes(product.id)).map(product => { const prices = ["Tottus Porongoche", "Plaza Vea", "Franco Supermercados", "Tiendas Mass – Porongoche"].map(store => product.price * STORE_PRICE_FACTORS[store][product.id - 1]); const min = Math.min(...prices); return <div key={product.id} className="border-t border-[#F1F5F9] py-3"><p className="mb-2 text-sm font-bold text-[#1E293B]">{product.name}</p><div className="grid grid-cols-4 gap-1">{prices.map((price, index) => <span key={index} className={`rounded-lg px-1 py-1.5 text-center text-[10px] ${price === min ? "bg-[#DCFCE7] font-black text-[#15803D]" : "bg-[#F8FAFC] text-[#64748B]"}`}>S/{price.toFixed(2)}</span>)}</div></div>; })}</div></div>}
-      {selectedStore && <div className="absolute inset-0 z-40 flex items-end bg-black/50" onClick={() => setSelectedStore(null)}><div className="w-full rounded-t-3xl bg-white p-6 slide-up" onClick={e => e.stopPropagation()}>{!confirming ? <><h2 className="text-lg font-black text-[#1E293B]">¿Realizaste esta compra?</h2><p className="mt-1 text-sm text-[#64748B]">{selectedStore.name}</p><p className="my-4 text-3xl font-black text-[#1E293B]">S/ {selectedStore.totalNum.toFixed(2)}</p><button onClick={() => setConfirming(true)} className="w-full rounded-2xl bg-[#0B63E5] py-4 font-bold text-white">Sí, registrar compra</button><button onClick={() => setSelectedStore(null)} className="mt-2 w-full py-3 text-sm font-bold text-[#64748B]">Todavía no</button></> : <><h2 className="text-lg font-black text-[#1E293B]">¿Este fue el monto final que pagaste?</h2><label className="my-5 flex items-center gap-2 rounded-2xl border-2 border-[#0B63E5]/20 px-4 py-3"><span className="text-xl font-black text-[#0B63E5]">S/</span><input type="number" min="0" step="0.01" value={realAmount} onChange={e => setRealAmount(e.target.value)} className="min-w-0 flex-1 bg-transparent text-2xl font-black outline-none" /></label><button onClick={() => { const amount = Number.parseFloat(realAmount); if (amount > 0) { onRegisterPurchase(selectedStore.name, amount); setSelectedStore(null); setConfirming(false); } }} className="w-full rounded-2xl bg-[#0B63E5] py-4 font-bold text-white">Sí, registrar S/ {Number.parseFloat(realAmount || "0").toFixed(2)}</button><button onClick={() => setConfirming(false)} className="mt-2 w-full py-3 text-sm font-bold text-[#64748B]">Editar monto real</button></>}</div></div>}
+
+      {showTable && (
+        <Sheet onClose={() => setShowTable(false)}>
+          <div className="mb-4 flex items-center justify-between">
+            <div><h2 className="font-black text-[#1E293B]">Precio por producto</h2><p className="text-xs text-[#64748B]">Precio unitario. El más bajo está en verde; — = no disponible.</p></div>
+            <button onClick={() => setShowTable(false)} className="rounded-full bg-[#F1F5F9] px-3 py-1.5 font-bold text-[#64748B]">✕</button>
+          </div>
+          <div className="grid grid-cols-5 gap-1 pb-1">
+            {STORES.map(s => <span key={s.id} className="text-center text-[10px] font-bold text-[#64748B]">{STORE_SHORT[s.id]}</span>)}
+          </div>
+          {cartProducts.map(product => {
+            const prices = STORES.map(s => getPrice(s.id, product.id));
+            const available = prices.filter((x): x is number => x !== null);
+            const min = available.length ? Math.min(...available) : null;
+            return (
+              <div key={product.id} className="border-t border-[#F1F5F9] py-2.5">
+                <p className="mb-1.5 text-sm font-bold text-[#1E293B]">{product.emoji} {product.name}</p>
+                <div className="grid grid-cols-5 gap-1">
+                  {prices.map((price, index) => <span key={index} className={`rounded-lg px-1 py-1.5 text-center text-[10px] ${price === null ? "bg-[#F8FAFC] text-[#CBD5E1]" : price === min ? "bg-[#DCFCE7] font-black text-[#15803D]" : "bg-[#F8FAFC] text-[#64748B]"}`}>{price === null ? "—" : `S/${price.toFixed(2)}`}</span>)}
+                </div>
+              </div>
+            );
+          })}
+        </Sheet>
+      )}
+
+      {listFor && (
+        <Sheet onClose={() => setListFor(null)}>
+          <div className="mb-3 flex items-start justify-between">
+            <div><p className="text-xs font-semibold text-[#94A3B8]">Lista de compra</p><h2 className="font-black text-[#1E293B]">{listFor.store.name}</h2></div>
+            <button onClick={() => setListFor(null)} className="rounded-full bg-[#F1F5F9] px-3 py-1.5 font-bold text-[#64748B]">✕</button>
+          </div>
+          {listFor.lines.map(line => (
+            <div key={line.product.id} className="flex items-center justify-between border-t border-[#F1F5F9] py-2.5 text-sm">
+              <div><p className="font-semibold text-[#1E293B]">{line.product.emoji} {line.product.name}</p><p className="text-xs text-[#94A3B8]">{line.qty} × S/ {line.unitPrice.toFixed(2)}</p></div>
+              <strong>S/ {line.subtotal.toFixed(2)}</strong>
+            </div>
+          ))}
+          {listFor.missing.map(product => (
+            <div key={product.id} className="flex items-center justify-between border-t border-[#F1F5F9] py-2.5 text-sm text-[#94A3B8]">
+              <p>{product.emoji} {product.name}</p><span className="text-xs font-semibold text-[#92400E]">No disponible</span>
+            </div>
+          ))}
+          <div className="mt-2 flex items-center justify-between rounded-2xl bg-[#EEF4FF] px-4 py-3">
+            <span className="text-sm font-bold text-[#0B63E5]">Total</span><span className="text-xl font-black text-[#1E293B]">S/ {listFor.total.toFixed(2)}</span>
+          </div>
+          <button onClick={() => { setListFor(null); onDirections(); }} className="mt-3 w-full rounded-2xl bg-[#0B63E5] py-3.5 font-bold text-white">🗺️ Cómo llegar</button>
+        </Sheet>
+      )}
+
+      {showCombined && (
+        <Sheet onClose={() => setShowCombined(false)}>
+          <div className="mb-3 flex items-start justify-between">
+            <div><p className="text-xs font-semibold text-[#15803D]">Máximo ahorro</p><h2 className="font-black text-[#1E293B]">Qué comprar en cada tienda</h2></div>
+            <button onClick={() => setShowCombined(false)} className="rounded-full bg-[#F1F5F9] px-3 py-1.5 font-bold text-[#64748B]">✕</button>
+          </div>
+          {combined.stops.map(stop => (
+            <div key={stop.store.id} className="mb-3 rounded-2xl border border-[#E2E8F0] p-3">
+              <div className="mb-1 flex items-center justify-between"><p className="text-sm font-black text-[#1E293B]">{stop.store.name}</p><strong className="text-sm">S/ {stop.subtotal.toFixed(2)}</strong></div>
+              <p className="mb-1 text-xs text-[#94A3B8]">🚶 {stop.store.distance}</p>
+              {stop.lines.map(line => (
+                <div key={line.product.id} className="flex justify-between border-t border-[#F1F5F9] py-1.5 text-xs">
+                  <span className="text-[#475569]">{line.product.emoji} {line.product.name} · {line.qty} × S/ {line.unitPrice.toFixed(2)}</span>
+                  <span className="font-semibold">S/ {line.subtotal.toFixed(2)}</span>
+                </div>
+              ))}
+            </div>
+          ))}
+          {combined.missing.length > 0 && <p className="mb-3 text-xs text-[#92400E]">No encontrado en ninguna tienda: {combined.missing.map(p => p.name).join(", ")}</p>}
+          <div className="flex items-center justify-between rounded-2xl bg-[#DCFCE7] px-4 py-3">
+            <span className="text-sm font-bold text-[#15803D]">Total combinado</span><span className="text-xl font-black text-[#1E293B]">S/ {combined.total.toFixed(2)}</span>
+          </div>
+        </Sheet>
+      )}
     </div>
   );
 }
+
 
 // ─── Establishment Detail — Standard ─────────────────────────────────────────
 function StallStandardScreen({ onBack }: { onBack: () => void }) {
@@ -1482,7 +1221,7 @@ function StallPremiumScreen({ onBack, onMap }: { onBack: () => void; onMap?: () 
             🗺️ Cómo llegar
           </button>
           <button className="w-full py-3.5 rounded-2xl border-2 border-[#E2E8F0] text-[#475569] font-bold text-sm active:scale-95 transition-transform flex items-center justify-center gap-2">
-            🔍 Buscar por presupuesto específico
+            🔍 Ver más ofertas de esta tienda
           </button>
         </div>
       </div>
@@ -1826,7 +1565,7 @@ function BuyerProfileScreen({ name, email, district, trialUsed, onScanner }: {
             <div className="flex items-center gap-2"><span className="text-xl">⭐</span><p className="font-black text-[#1E293B] text-base">Ca$erIA Premium</p></div>
             <div className="text-right"><p className="font-black text-[#FF9800]">S/ 9.90</p><p className="text-xs text-[#94A3B8]">/mes</p></div>
           </div>
-          {["✓ Asistente nutricional con IA","✓ Escáner de alimentos ilimitado","✓ Canastas personalizadas","✓ Personalización de presupuesto","✓ Alertas de precios y promociones","✓ Historial y análisis de gastos"].map((b,i) => (
+          {["✓ Asistente nutricional con IA","✓ Escáner de alimentos ilimitado","✓ Canastas personalizadas","✓ Comparación de precios ilimitada","✓ Alertas de precios y promociones","✓ Historial y análisis de gastos"].map((b,i) => (
             <p key={i} className="text-xs text-[#475569] mb-1">{b}</p>
           ))}
           <button className="w-full mt-3 py-3 rounded-xl bg-[#0B63E5] text-white font-bold text-sm active:scale-95 transition-transform shadow shadow-[#0B63E5]/25">Obtener Premium</button>
@@ -1944,7 +1683,7 @@ function ScannerScreen({ onDone }: { onDone: () => void }) {
 }
 
 // ─── App ───────────────────────────────────────────────────────────────────────
-const BUYER_NAV_SCREENS: Screen[] = ["home","monthlybudget","purchasebudget","select","quantbudget","budget","loading","results","stallstandard","stallpremium","stallmap","mislistas","buyerprofile","scanner"];
+const BUYER_NAV_SCREENS: Screen[] = ["home","select","quantities","loading","results","stallstandard","stallpremium","stallmap","mislistas","buyerprofile","scanner"];
 
 export default function App() {
   const [screen,     setScreen]     = useState<Screen>("intro");
@@ -1952,10 +1691,8 @@ export default function App() {
   const [userEmail,  setUserEmail]  = useState("");
   const [district]                  = useState<District>("paucarpata");
   const [selected,   setSelected]   = useState<number[]>([2,3,6]);
-  const [quantities, setQuantities] = useState<Record<number,number>>({ 2:2, 3:30, 6:1 });
-  const [budget,     setBudget]     = useState("100");
-  const [monthlyBudget, setMonthlyBudget] = useState("500");
-  const [purchases, setPurchases] = useState<Purchase[]>([{ date: "12 septiembre", store: "Franco Supermercados", amount: 200 }]);
+  const [quantities, setQuantities] = useState<Record<number,number>>({ 2:2, 3:1, 6:1 });
+  const [startCategory, setStartCategory] = useState<Category | "Todos">("Todos");
   const [trialUsed,  setTrialUsed]  = useState(false);
   const [showDistrictModal, setShowDistrictModal] = useState(false);
   const [webModalName,     setWebModalName]     = useState<string | null>(null);
@@ -1964,16 +1701,14 @@ export default function App() {
     setSelected(prev => prev.includes(id) ? prev.filter(p => p !== id) : [...prev, id]);
   const changeQty = (id: number, delta: number) =>
     setQuantities(prev => ({ ...prev, [id]: Math.max(1, (prev[id] ?? 1) + delta) }));
-
-  const estimatedCost = PRODUCTS
-    .filter(p => selected.includes(p.id))
-    .reduce((sum, p) => sum + p.price * (quantities[p.id] ?? 1), 0);
-  const monthlySpent = purchases.reduce((sum, purchase) => sum + purchase.amount, 0);
-  const monthlyAvailable = (Number.parseFloat(monthlyBudget) || 0) - monthlySpent;
-  const registerPurchase = (store: string, amount: number) => {
-    setPurchases(previous => [...previous, { date: "29 septiembre", store, amount }]);
-    setScreen("monthlybudget");
+  const removeProduct = (id: number) => setSelected(prev => prev.filter(p => p !== id));
+  const openCategory = (cat: Category | "Todos") => { setStartCategory(cat); setScreen("select"); };
+  const loadQuickBasket = (items: Cart) => {
+    setSelected(items.map(item => item.productId));
+    setQuantities(Object.fromEntries(items.map(item => [item.productId, item.qty])));
+    setScreen("quantities");
   };
+  const cart: Cart = selected.map(productId => ({ productId, qty: quantities[productId] ?? 1 }));
 
   const showBuyerNav = BUYER_NAV_SCREENS.includes(screen);
 
@@ -2007,36 +1742,26 @@ export default function App() {
           )}
           {screen === "home" && (
             <HomeScreen name={userName} district={district} trialUsed={trialUsed}
-              monthlyBudget={monthlyBudget} monthlySpent={monthlySpent}
               onDistrictSwitch={() => setShowDistrictModal(true)}
-              onBasket={() => setScreen("purchasebudget")}
-              onBudget={() => setScreen("monthlybudget")}
+              onCategory={openCategory}
+              onQuickBasket={loadQuickBasket}
               onScanner={() => setScreen("scanner")} />
           )}
-          {screen === "monthlybudget" && <MonthlyBudgetScreen monthlyBudget={monthlyBudget} spent={monthlySpent} purchases={purchases} setMonthlyBudget={setMonthlyBudget} onBack={() => setScreen("home")} />}
-          {screen === "purchasebudget" && <PurchaseBudgetScreen monthlyAvailable={monthlyAvailable} budget={budget} setBudget={setBudget} onNext={() => setScreen("select")} onBack={() => setScreen("home")} />}
           {screen === "select" && (
-            <SelectScreen selected={selected} onToggle={toggleProduct}
-              onNext={() => setScreen("quantbudget")} onBack={() => setScreen("purchasebudget")} />
+            <SelectScreen key={startCategory} initialCategory={startCategory} selected={selected} onToggle={toggleProduct}
+              onNext={() => setScreen("quantities")} onBack={() => setScreen("home")} />
           )}
-          {screen === "quantbudget" && (
-            <QuantBudgetScreen selected={selected} quantities={quantities} budget={budget} onQty={changeQty}
+          {screen === "quantities" && (
+            <QuantitiesScreen selected={selected} quantities={quantities} onQty={changeQty} onRemove={removeProduct}
               onNext={() => setScreen("loading")} onBack={() => setScreen("select")} />
-          )}
-          {screen === "budget" && (
-            <BudgetScreen selected={selected} quantities={quantities}
-              budget={budget} setBudget={setBudget}
-              onNext={() => setScreen("loading")} onBack={() => setScreen("quantbudget")} />
           )}
           {screen === "loading" && (
             <LoadingScreen district={district} onNext={() => setScreen("results")} />
           )}
           {screen === "results" && (
-            <ResultsScreen district={district} budget={budget} selected={selected} quantities={quantities} onRegisterPurchase={registerPurchase}
-              onStallStandard={() => setScreen("stallstandard")}
-              onStallPremium={() => setScreen("stallpremium")}
-              onWebRedirect={name => setWebModalName(name)}
-              onBack={() => setScreen("home")} />
+            <ResultsScreen district={district} cart={cart}
+              onDirections={() => setScreen("stallpremium")}
+              onBack={() => setScreen("quantities")} />
           )}
           {screen === "stallstandard" && (
             <StallStandardScreen onBack={() => setScreen("results")} />
