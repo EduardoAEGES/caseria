@@ -1,0 +1,247 @@
+/* ==========================================================================
+   Establecimientos: fichas de tienda y mapa
+   ========================================================================== */
+
+/* ── Cabecera de la ficha ──────────────────────────────────────────────── */
+.stall-hero { position: relative; flex-shrink: 0; height: 144px; }
+.stall-hero--gray { background: linear-gradient(to bottom right, var(--ink-2), var(--ink)); }
+.stall-hero--blue { background: linear-gradient(to bottom right, var(--blue), #1E3A8A); }
+.stall-hero__emoji { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 48px; }
+.stall-hero__back {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgb(0 0 0 / 0.2);
+  color: var(--white);
+}
+.stall-hero__caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background: linear-gradient(to top, rgb(0 0 0 / 0.5), transparent);
+}
+.stall-hero__title-row { display: flex; align-items: center; gap: 8px; }
+.stall-hero__name { font-size: 16px; font-weight: 900; color: var(--white); }
+.stall-hero__address { font-size: 12px; color: rgb(255 255 255 / 0.7); }
+.stall-hero__badge {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.1);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  color: rgb(255 255 255 / 0.7);
+}
+.stall-hero__badge--best { background: rgb(255 152 0 / 0.2); color: var(--orange); }
+
+.card .note--amber { margin-top: 12px; }
+.stall-actions { display: flex; flex-direction: column; gap: 12px; }
+
+/* ── Mejor opción ──────────────────────────────────────────────────────── */
+.savings-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid rgb(34 197 94 / 0.3);
+  border-radius: 16px;
+  background: linear-gradient(to right, rgb(34 197 94 / 0.1), var(--green-50));
+}
+.savings-banner__icon { font-size: 20px; }
+.savings-banner__title { font-size: 14px; font-weight: 700; color: var(--green-dark); }
+.savings-banner__text { font-size: 12px; color: var(--green-darker); }
+
+.stat-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.stat-chip {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--line-soft);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.stat-chip--green { border: 1px solid rgb(34 197 94 / 0.3); background: var(--green-50); font-weight: 700; color: var(--green-dark); }
+.stat-chip--blue { background: var(--blue-50); }
+
+/* ── Mapa de establecimientos ──────────────────────────────────────────── */
+.screen--map { background: #F0F4F8; }
+
+.map-header { flex-shrink: 0; padding: 4px 16px 12px; background: var(--white); border-bottom: 1px solid var(--line); }
+.map-header__row { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.map-header__title { font-size: 14px; font-weight: 700; color: var(--ink); }
+
+.stall-map { position: relative; flex: 1; min-height: 0; overflow: hidden; }
+.stall-map__svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transition: transform 0.2s;
+}
+.stall-map__svg text { font-family: 'Inter', sans-serif; }
+.stall-map__svg .gps-pulse,
+.stall-map__svg .gps-pulse-2 { transform-box: fill-box; transform-origin: center; }
+.stall-map__pin { cursor: pointer; }
+
+.map-eta {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgb(255 255 255 / 0.95);
+  box-shadow: var(--shadow-lg);
+  font-size: 12px;
+}
+.map-eta__time { font-weight: 900; color: var(--ink); }
+.map-eta__address { color: var(--muted); }
+
+.map-zoom { position: absolute; top: 12px; right: 12px; display: flex; flex-direction: column; gap: 8px; }
+.map-zoom__btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgb(255 255 255 / 0.95);
+  box-shadow: var(--shadow-lg);
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--ink);
+  transition: transform 0.15s;
+}
+.map-zoom__btn:active { transform: scale(0.9); }
+.map-zoom__btn--emoji { font-size: 18px; }
+.map-zoom__btn--muted { color: var(--muted); }
+
+.map-chips { position: absolute; bottom: 176px; left: 0; right: 0; padding: 0 12px; }
+.map-chips__track { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
+.map-chip {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink-2);
+  transition: all 0.15s;
+}
+.map-chip.is-active { border-color: var(--blue); background: var(--blue); color: var(--white); }
+
+/* Hoja inferior del mapa (se expande al tocar la barrita) */
+.map-sheet {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 176px;
+  border-radius: 24px 24px 0 0;
+  background: var(--white);
+  box-shadow: var(--shadow-2xl);
+  transition: height 0.3s;
+}
+.map-sheet.is-expanded { height: 288px; }
+.map-sheet__handle { width: 100%; display: flex; justify-content: center; padding: 12px 0 8px; }
+.map-sheet__handle span { width: 40px; height: 4px; border-radius: 999px; background: var(--line); }
+.map-sheet__body { padding: 0 20px; overflow: hidden; }
+.map-sheet__head { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 8px; }
+.map-sheet__info { flex: 1; min-width: 0; }
+.map-sheet__title-row { display: flex; align-items: center; gap: 8px; margin-bottom: 2px; }
+.map-sheet__number { padding: 2px 8px; border-radius: 8px; font-size: 12px; font-weight: 900; color: var(--white); }
+.map-sheet__name { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 14px; font-weight: 900; color: var(--ink); }
+.map-sheet__meta { font-size: 12px; line-height: 1.375; color: var(--muted); }
+.map-sheet__rating { flex-shrink: 0; display: flex; align-items: center; gap: 4px; margin-left: 8px; font-size: 14px; }
+.map-sheet__rating strong { font-weight: 900; color: var(--ink); }
+.map-sheet__rating span { font-size: 12px; color: var(--muted); }
+.map-sheet__status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  border: 1px solid rgb(34 197 94 / 0.3);
+  border-radius: 12px;
+  background: var(--green-50);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.375;
+  color: var(--green-dark);
+}
+.map-sheet__status strong { font-weight: 900; }
+
+.map-sheet__actions { display: flex; gap: 8px; }
+.map-sheet__actions--expanded { display: none; flex-direction: column; }
+.map-sheet.is-expanded .map-sheet__actions--expanded { display: flex; }
+.map-sheet.is-expanded .map-sheet__actions--collapsed { display: none; }
+.map-sheet__row { display: flex; gap: 8px; }
+.map-sheet__go { padding: 12px; }
+.map-sheet__dark-text { color: var(--ink); }
+.map-sheet__icon-btn {
+  width: 48px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--line);
+  border-radius: 12px;
+  font-size: 18px;
+  transition: transform 0.15s;
+}
+.map-sheet__icon-btn:active { transform: scale(0.95); }
+.map-sheet__icon-btn--blue { border-color: var(--blue); }
+
+/* Vista lista del mapa */
+.est-card {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid var(--line);
+  border-radius: 16px;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  text-align: left;
+  transition: all 0.15s;
+}
+.est-card:active { transform: scale(0.95); }
+.est-card.is-selected { border-color: var(--blue); }
+.est-card__head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+.est-card__title { display: flex; align-items: center; gap: 8px; }
+.est-card__number {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 900;
+  color: var(--white);
+}
+.est-card__name { font-size: 14px; font-weight: 700; color: var(--ink); }
+.est-card__rating { font-size: 12px; }
+.est-card__sub { margin: 0 0 4px 40px; font-size: 12px; color: var(--muted); }
+.est-card__foot { display: flex; align-items: center; gap: 8px; margin-left: 40px; font-size: 12px; }
+.est-card__total { font-weight: 900; color: var(--green); }
+.est-card__distance { color: var(--ink-3); }

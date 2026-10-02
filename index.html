@@ -1,16 +1,81 @@
 <!doctype html>
-<html lang="<!-- figma:lang -->">
+<html lang="es">
   <head>
-    <!-- figma:head-start -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><!-- figma:title --></title>
-    <!-- figma:head-end -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Ca$erIA</title>
+
+    <!-- Para que se comporte como app al agregarla a la pantalla de inicio del celular -->
+    <meta name="theme-color" content="#FFFFFF" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Ca$erIA" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <link rel="apple-touch-icon" href="img/logo.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" />
+
+    <!-- Estilos: base → componentes → pantallas → responsive (siempre al final) -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/screens/welcome.css" />
+    <link rel="stylesheet" href="css/screens/home.css" />
+    <link rel="stylesheet" href="css/screens/basket.css" />
+    <link rel="stylesheet" href="css/screens/results.css" />
+    <link rel="stylesheet" href="css/screens/establishments.css" />
+    <link rel="stylesheet" href="css/screens/account.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
-    <!-- figma:body-start -->
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-    <!-- figma:body-end -->
+    <main class="stage">
+      <div id="phone" class="phone">
+        <div class="phone__notch"></div>
+        <div id="screen" class="phone__content"></div>
+        <div id="overlay"></div>
+        <div class="phone__home-bar"></div>
+      </div>
+    </main>
+
+    <!-- Scripts de Inteligencia Artificial (TensorFlow.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@latest"></script>
+
+    <!-- Scripts normales (no módulos) para que funcione abriendo el archivo con doble clic.
+         El orden importa: datos → núcleo → componentes → pantallas → main. -->
+    <script src="js/data/catalog.js"></script>
+    <script src="js/data/content.js"></script>
+
+    <script src="js/core/utils.js"></script>
+    <script src="js/core/storage.js"></script>
+    <script src="js/core/state.js"></script>
+    <script src="js/core/router.js"></script>
+
+    <script src="js/components/common.js"></script>
+    <script src="js/components/modals.js"></script>
+    <script src="js/components/establishment.js"></script>
+
+    <script src="js/screens/mode.js"></script>
+    <script src="js/screens/intro.js"></script>
+    <script src="js/screens/onboarding.js"></script>
+    <script src="js/screens/splash.js"></script>
+    <script src="js/screens/permission.js"></script>
+    <script src="js/screens/register.js"></script>
+    <script src="js/screens/home.js"></script>
+    <script src="js/screens/select.js"></script>
+    <script src="js/screens/quantities.js"></script>
+    <script src="js/screens/loading.js"></script>
+    <script src="js/screens/results.js"></script>
+    <script src="js/screens/stall-standard.js"></script>
+    <script src="js/screens/stall-premium.js"></script>
+    <script src="js/screens/stall-map.js"></script>
+    <script src="js/screens/my-lists.js"></script>
+    <script src="js/screens/profile.js"></script>
+    <script src="js/screens/scanner.js"></script>
+
+    <script src="js/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,211 @@
+/* ==========================================================================
+   Base: variables de diseño, reset, marco del celular y animaciones
+   ========================================================================== */
+
+:root {
+  /* Marca */
+  --blue: #0B63E5;
+  --blue-dark: #0952C6;
+  --blue-deep: #1D4ED8;
+  --blue-50: #EEF4FF;
+  --blue-100: #DBEAFE;
+  --orange: #FF9800;
+  --orange-50: #FFF3E0;
+  --gold: #F59E0B;
+
+  /* Texto y superficies */
+  --ink: #1E293B;
+  --ink-2: #475569;
+  --ink-3: #64748B;
+  --muted: #94A3B8;
+  --slate-300: #CBD5E1;
+  --line: #E2E8F0;
+  --line-soft: #F1F5F9;
+  --bg: #F8FAFC;
+  --white: #FFFFFF;
+  --dark: #0F172A;
+
+  /* Estados */
+  --green: #22C55E;
+  --green-dark: #15803D;
+  --green-darker: #166534;
+  --green-50: #DCFCE7;
+  --amber-text: #92400E;
+  --amber-50: #FFFBEB;
+  --amber-100: #FEF3C7;
+  --yellow-100: #FEF9C3;
+  --red: #EF4444;
+  --red-text: #991B1B;
+  --red-50: #FEE2E2;
+  --purple: #7C3AED;
+  --indigo: #4F46E5;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --shadow-blue: 0 10px 15px -3px rgb(11 99 229 / 0.25), 0 4px 6px -4px rgb(11 99 229 / 0.25);
+}
+
+/* ── Reset ─────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body { height: 100%; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--slate-300);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, p { font-size: inherit; font-weight: inherit; }
+
+button, input {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+}
+
+button { cursor: pointer; touch-action: manipulation; }
+button:disabled { cursor: default; }
+input { outline: none; }
+img, svg { display: block; max-width: 100%; }
+strong { font-weight: 700; }
+
+.hide-scrollbar,
+.screen__body { scrollbar-width: none; -ms-overflow-style: none; }
+.hide-scrollbar::-webkit-scrollbar,
+.screen__body::-webkit-scrollbar { display: none; }
+
+/* ── Marco del celular (en computadora) ────────────────────────────────── */
+.stage {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.phone {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 393px;
+  height: 852px;
+  max-height: calc(100vh - 48px);   /* en pantallas bajas el marco se achica */
+  max-height: calc(100dvh - 48px);
+  border-radius: 44px;
+  overflow: hidden;
+  background: var(--bg);
+  box-shadow: var(--shadow-2xl);
+}
+
+.phone__notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 112px;
+  height: 28px;
+  border-radius: 0 0 16px 16px;
+  background: var(--dark);
+  z-index: 60;
+}
+
+.phone__content {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-top: 28px;
+}
+
+.phone__home-bar {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 112px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgb(30 41 59 / 0.15);
+}
+
+/* ── Pantalla genérica ─────────────────────────────────────────────────── */
+.screen {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.screen--white { background: var(--white); }
+.screen--dark { background: var(--dark); }
+
+/* Zona con scroll dentro de una pantalla */
+.screen__body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 24px;
+}
+
+.screen__body > * { flex-shrink: 0; }
+.screen__body--tight { gap: 12px; padding: 12px 16px; }
+
+.empty {
+  padding: 40px 0;
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ── Animaciones ───────────────────────────────────────────────────────── */
+@keyframes radar-scan {
+  0% { transform: scale(0.3); opacity: 0.8; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+@keyframes slide-up {
+  from { transform: translateY(16px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+@keyframes gps-pulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  70% { transform: scale(2.4); opacity: 0; }
+  100% { transform: scale(1); opacity: 0; }
+}
+@keyframes onboarding-enter {
+  from { transform: translateX(18px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.radar-ring { animation: radar-scan 2s ease-out infinite; }
+.radar-ring-2 { animation: radar-scan 2s ease-out 0.66s infinite; }
+.radar-ring-3 { animation: radar-scan 2s ease-out 1.33s infinite; }
+.slide-up { animation: slide-up 0.35s ease forwards; }
+.pulse-1 { animation: pulse-dot 1.4s ease-in-out infinite; }
+.pulse-2 { animation: pulse-dot 1.4s ease-in-out 0.2s infinite; }
+.pulse-3 { animation: pulse-dot 1.4s ease-in-out 0.4s infinite; }
+.gps-pulse { animation: gps-pulse 1.8s ease-out infinite; }
+.gps-pulse-2 { animation: gps-pulse 1.8s ease-out 0.6s infinite; }
+.onboarding-enter { animation: onboarding-enter 0.34s cubic-bezier(0.22, 1, 0.36, 1) both; }

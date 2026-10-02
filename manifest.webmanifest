@@ -1,0 +1,15 @@
+{
+  "name": "Ca$erIA",
+  "short_name": "Ca$erIA",
+  "description": "Compara precios de tu canasta en Paucarpata y ahorra.",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF",
+  "icons": [
+    { "src": "img/logo.png", "sizes": "557x555", "type": "image/png", "purpose": "any" }
+  ]
+}

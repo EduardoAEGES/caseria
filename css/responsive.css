@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Responsive: se carga al final para poder ajustar cualquier componente
+   ========================================================================== */
+
+/* ── En un celular: la app ocupa toda la pantalla, como una app nativa ─── */
+@media (max-width: 500px) {
+  body { background: var(--bg); overscroll-behavior: none; }
+
+  .stage { display: block; min-height: 0; padding: 0; }
+
+  .phone {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;           /* alto real visible (sin la barra del navegador) */
+    max-height: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  /* El celular ya tiene su propia muesca, hora y barra de gestos */
+  .phone__notch,
+  .phone__home-bar,
+  .status-bar { display: none; }
+
+  .phone__content { margin-top: 0; }
+
+  /* Respeta la muesca y la barra de gestos (iPhone/Android con pantalla completa).
+     :where() deja la especificidad en 0, así las pantallas con padding propio (intro) lo conservan. */
+  :where(.screen) { padding-top: max(12px, env(safe-area-inset-top)); }
+  :where(.phone__content:not(.has-nav) .screen) { padding-bottom: env(safe-area-inset-bottom); }
+  .bottom-nav { padding-bottom: max(8px, env(safe-area-inset-bottom)); }
+  .sheet { padding-bottom: calc(20px + env(safe-area-inset-bottom)); }
+
+  /* Con 16px el iPhone no hace zoom al tocar un campo de texto */
+  .field__input,
+  .search__input { font-size: 16px; }
+}
+
+/* ── Celulares angostos (≈320–360px) ───────────────────────────────────── */
+@media (max-width: 360px) {
+  .bottom-nav__label { font-size: 10px; }
+  .screen__body { padding-left: 16px; padding-right: 16px; }
+  .home { padding-left: 0; padding-right: 0; }
+  .home__section, .home__header { padding-left: 16px; padding-right: 16px; }
+  .basket-strip { padding-left: 16px; padding-right: 16px; }
+  .topbar { padding-left: 16px; padding-right: 16px; }
+  .category-tile__name { font-size: 10px; }
+  .segmented__btn { font-size: 11px; }
+}

@@ -1,0 +1,143 @@
+/* ==========================================================================
+   Inicio
+   ========================================================================== */
+
+.home { padding: 8px 0; }
+.home__section { padding: 0 24px; }
+
+.home__header { display: flex; align-items: center; justify-content: space-between; padding: 0 24px; }
+.home__welcome { font-size: 12px; color: var(--muted); }
+.home__hello { font-size: 20px; line-height: 28px; font-weight: 900; color: var(--ink); }
+.home__header-actions { display: flex; align-items: center; gap: 8px; }
+
+.district-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid rgb(11 99 229 / 0.2);
+  border-radius: 999px;
+  background: var(--blue-50);
+  font-size: 12px;
+  color: var(--blue);
+}
+.district-btn__label { font-weight: 600; }
+
+/* Banner "Encuentra la mejor oferta" */
+.home-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid rgb(11 99 229 / 0.15);
+  border-radius: 16px;
+  background: linear-gradient(to right, var(--blue-50), var(--blue-100));
+}
+.home-banner__icon { flex-shrink: 0; font-size: 24px; }
+.home-banner__title { margin-bottom: 2px; font-size: 12px; font-weight: 700; color: var(--blue); }
+.home-banner__text { font-size: 12px; line-height: 1.375; color: var(--ink-2); }
+
+/* Categorías */
+.category-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.category-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 12px 0;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s;
+}
+.category-tile:active { transform: scale(0.95); }
+.category-tile__emoji { font-size: 24px; line-height: 32px; }
+.category-tile__name { font-size: 11px; font-weight: 600; color: var(--ink-2); }
+.category-tile__count { font-size: 10px; color: var(--muted); }
+.category-tile--all { border-color: var(--blue); background: var(--blue); }
+.category-tile--all .category-tile__name { font-weight: 700; color: var(--white); }
+
+/* Prueba gratis del escáner */
+.promo-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 16px;
+  background: linear-gradient(to right, var(--purple), var(--indigo));
+}
+.promo-banner__icon { flex-shrink: 0; font-size: 24px; }
+.promo-banner__text { flex: 1; font-size: 14px; font-weight: 700; line-height: 1.25; color: var(--white); }
+.promo-banner__btn {
+  flex-shrink: 0;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: var(--white);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--indigo);
+  transition: transform 0.15s;
+}
+.promo-banner__btn:active { transform: scale(0.95); }
+
+/* Canastas rápidas (carrusel horizontal) */
+.basket-strip { display: flex; gap: 12px; overflow-x: auto; padding: 0 24px 4px; }
+.basket-tile {
+  flex-shrink: 0;
+  width: 132px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  text-align: left;
+  transition: transform 0.15s;
+}
+.basket-tile:active { transform: scale(0.95); }
+.basket-tile__emoji { display: block; margin-bottom: 8px; font-size: 30px; line-height: 36px; }
+.basket-tile__name { margin-bottom: 2px; font-size: 12px; font-weight: 700; line-height: 1.25; color: var(--ink); }
+.basket-tile__desc { margin-bottom: 8px; font-size: 12px; color: var(--muted); }
+.basket-tile__price { font-size: 12px; font-weight: 900; color: var(--blue); }
+
+/* Tiendas del distrito */
+.store-tabs { display: flex; border-bottom: 1px solid var(--line-soft); }
+.store-tabs__btn {
+  flex: 1;
+  padding: 10px 0;
+  border-bottom: 2px solid transparent;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  transition: all 0.15s;
+}
+.store-tabs__btn.is-active { border-color: var(--blue); color: var(--blue); }
+.store-list { display: flex; flex-direction: column; gap: 10px; padding: 12px 16px; }
+.store-list__row { display: flex; align-items: center; gap: 12px; }
+.store-list__text { flex: 1; }
+.store-list__name { font-size: 14px; font-weight: 600; color: var(--ink); }
+.store-list__tag { font-size: 12px; color: var(--muted); }
+.store-list__chevron { color: var(--slate-300); }
+
+/* Banner "¿Armas tu propia canasta?" */
+.create-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-radius: 16px;
+  background: linear-gradient(to right, var(--blue), var(--blue-deep));
+}
+.create-banner__eyebrow { margin-bottom: 2px; font-size: 12px; color: rgb(255 255 255 / 0.7); }
+.create-banner__title { font-size: 14px; font-weight: 700; color: var(--white); }
+.create-banner__btn {
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: var(--white);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--blue);
+  transition: transform 0.15s;
+}
+.create-banner__btn:active { transform: scale(0.95); }

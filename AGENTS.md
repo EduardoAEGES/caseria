@@ -1,41 +1,72 @@
-# figma-make-app
+# Ca$erIA
 
-React + Vite + Tailwind CSS project running inside Figma Make.
+Prototipo de app móvil para comparar precios de canastas en Paucarpata (Arequipa).
+HTML, CSS y JavaScript puros: sin frameworks, sin build y sin `npm install`.
 
-## Development Server
+## Cómo ejecutarlo
 
-A Vite development server is **already running** on `$PORT` (default 8443). You don't need to start it manually.
+Abrir `index.html` con doble clic, o servir la carpeta con cualquier servidor estático
+(p. ej. Live Server de VS Code, o `python -m http.server`).
 
-- Preview URL: The user can access the running app through the preview panel
-- Hot reload: Changes to source files are reflected immediately
+Los scripts son `<script>` normales (no módulos ES) a propósito, para que funcione
+también desde `file://`. Todas las funciones y constantes son globales y se cargan
+en el orden declarado en `index.html`: datos → núcleo → componentes → pantallas → `main.js`.
 
-## Project Structure
+## Flujo al abrir y modos de simulación
 
-This is the canonical project structure. Start with task-relevant files below. Only follow imports or inspect other files when required, when a documented path is missing, or when the repository contradicts this guide.
+1. `mode` — selector de demo: **Primera vez** o **Ya tengo cuenta**.
+2. `intro` — presentación de carga; se muestra siempre.
+3. Primera vez: `onboarding1-3` → `splash` (nombre y correo) → `permission` → `register` → `home`.
+   Al terminar el registro la cuenta se guarda en `localStorage` (`js/core/storage.js`).
+4. Ya tengo cuenta: directo a `home` con la cuenta guardada, o con el usuario de prueba "Mateo".
 
-- `src/main.tsx` - React entrypoint; imports `src/index.css` and mounts `src/App.tsx` into the `#root` element
-- `src/App.tsx` - Primary application component and the usual starting point for UI work
-- `src/index.css` - Global CSS entrypoint and Tailwind CSS v4 import
-- `index.html` - Vite HTML shell containing the `#root` element and loading `src/main.tsx`
-- `package.json` - Project dependencies and the Vite build, development, preview, and formatting scripts
-- `vite.config.ts` - Vite configuration with React, Tailwind CSS v4, and Figma Make plugins plus the `@` alias for `src`
-- `.mise.toml` - Toolchain versions for Node.js and pnpm
+"Cerrar Sesión" en el perfil vuelve al selector de modo (la cuenta queda guardada).
 
-## Dependencies
+## Responsive
 
-- Runtime: React 19 and React DOM 19
-- Styling: Tailwind CSS v4 with the `@tailwindcss/vite` plugin
-- Build tooling: Vite 8, TypeScript 5.7, and `@vitejs/plugin-react`
-- Formatting: oxfmt
+- En computadora la app se ve dentro de un marco de celular que se achica si la ventana es baja.
+- En pantallas de hasta 500px (`css/responsive.css`, cargado al final) ocupa toda la pantalla,
+  oculta la muesca y la hora falsas y respeta las zonas seguras (`env(safe-area-inset-*)`).
+- `manifest.webmanifest` permite agregarla a la pantalla de inicio como app (requiere servirla por http/https).
 
-## Styling
+## Estructura
 
-This project uses **Tailwind CSS v4** through the `@tailwindcss/vite` plugin configured in `vite.config.ts`. `src/index.css` imports Tailwind with `@import 'tailwindcss';`. Use Tailwind utility classes directly in JSX and put global CSS or Tailwind v4 theme customization in `src/index.css`. This scaffold does not need a Tailwind config file or PostCSS config.
+- `index.html` — marco del celular (`#phone`, `#screen`, `#overlay`) y carga de CSS/JS
+- `css/base.css` — variables de diseño (colores, sombras), reset, marco del celular, animaciones
+- `css/components.css` — botones, tarjetas, pills, pestañas, barra inferior, hojas y modales
+- `css/screens/*.css` — estilos propios de cada grupo de pantallas
+- `css/responsive.css` — ajustes para celulares (siempre el último CSS)
+- `js/data/catalog.js` — productos, tiendas, tabla de precios y `searchBestOffers`
+- `js/data/content.js` — distrito, canastas rápidas y datos de demostración
+- `js/core/storage.js` — guardar/leer la cuenta en `localStorage`
+- `js/core/state.js` — estado global (`state`), modos de sesión y helpers de la canasta
+- `js/core/router.js` — `defineScreen`, `navigate`, `render` y delegación de eventos
+- `js/core/utils.js` — `esc`, `money`, `each`
+- `js/components/` — piezas de HTML reutilizables (StatusBar, BottomNav, Sheet, modales…)
+- `js/screens/` — una pantalla por archivo
+- `img/logo.png` — logo
+- `docs/` — notas de diseño originales
 
-`src/main.tsx` imports `src/index.css`, so global font wiring belongs in `src/index.css`. Keep CSS `@import` statements first, then add any `@font-face` rules and font-family defaults there.
+## Cómo funciona una pantalla
 
-## Code quality
+```js
+defineScreen("nombre", {
+  nav: true,                       // muestra la barra inferior
+  ui: () => ({ tab: "a" }),        // estado local, se reinicia al entrar
+  render: ui => `<section class="screen">…</section>`,
+  actions: {                       // clic en [data-action] o input en [data-input]
+    setTab: (ui, el) => { ui.tab = el.dataset.value; },
+  },
+  enter(ui) { /* timers */ return () => { /* limpieza */ }; },
+});
+```
 
-- Use double quotes for strings containing apostrophes (`"We're here to help"`), or escape them in single-quoted strings. An unescaped apostrophe in a single-quoted string breaks the build.
-- Ensure JSX tags are closed and braces are balanced.
-- Export components as default exports.
+Tras cada acción la pantalla se redibuja sola (conservando scroll y foco de los
+elementos con `data-scroll` / `id`). Una acción que devuelve `false` no redibuja.
+
+## Convenciones
+
+- CSS con clases semánticas estilo BEM (`.bloque__elemento--modificador`, estados con `.is-*`).
+  Los colores salen de las variables de `:root` en `css/base.css`.
+- Todo texto ingresado por el usuario se escapa con `esc()` antes de insertarlo en el HTML.
+- Usar comillas dobles en strings con apóstrofos.
