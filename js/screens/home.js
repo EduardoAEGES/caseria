@@ -74,14 +74,14 @@ defineScreen("home", {
             <div class="home__section">
               <div class="promo-banner promo-banner--premium">
                 <span class="promo-banner__icon">${Icon("crown", { size: 22 })}</span>
-                <p class="promo-banner__text">Premium activo · escáner IA y nutrición sin límites</p>
+                <p class="promo-banner__text">Premium activo · identificador de fruta sin límites</p>
                 <button class="promo-banner__btn" data-action="go" data-to="scanner">Escanear</button>
               </div>
             </div>` : state.trialUsed ? "" : `
             <div class="home__section">
               <div class="promo-banner">
                 <span class="promo-banner__icon">${Icon("sparkles", { size: 22 })}</span>
-                <p class="promo-banner__text">Tienes 1 prueba gratis del escáner IA y nutrición</p>
+                <p class="promo-banner__text">Tienes 1 prueba gratis del identificador de fruta</p>
                 <button class="promo-banner__btn" data-action="go" data-to="scanner">Probar</button>
               </div>
             </div>`}

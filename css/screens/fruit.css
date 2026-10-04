@@ -1,0 +1,239 @@
+/* ==========================================================================
+   Identificador de fruta: visor, resultado y modelo propio
+   ========================================================================== */
+
+.fruit { padding: 16px; }
+.fruit [hidden] { display: none !important; }
+.fruit__step { display: flex; flex-direction: column; gap: 14px; }
+.fruit__step > * { flex-shrink: 0; }
+
+.fruit-badge {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--green-50);
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--green-dark);
+}
+.fruit-badge--premium { background: var(--amber-100); color: var(--amber-text); }
+
+/* ── Visor 4:3 con recuadro punteado ─────────────────────────────────── */
+.fruit-viewport {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--dark);
+  box-shadow: var(--shadow-lg);
+}
+.fruit-viewport.is-drop { outline: 3px solid var(--blue); outline-offset: 2px; }
+.fruit-viewport video,
+.fruit-viewport img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* El recuadro es el cuadrado central: es la parte de la foto que se analiza. */
+.fruit-viewport__guide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 84%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 10px;
+  border: 3px dashed rgb(255 255 255 / 0.85);
+  border-radius: 18px;
+  box-shadow: 0 0 0 999px rgb(15 23 42 / 0.35);
+  pointer-events: none;
+}
+.fruit-viewport__guide span {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgb(15 23 42 / 0.6);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--white);
+  text-align: center;
+}
+.fruit-viewport__guide.is-empty { align-items: center; padding-bottom: 0; box-shadow: none; }
+.fruit-viewport__guide.is-empty span { background: none; font-size: 14px; }
+
+.fruit-viewport__busy {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px;
+  background: rgb(15 23 42 / 0.72);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+  text-align: center;
+}
+.fruit-spinner {
+  width: 36px;
+  height: 36px;
+  border: 4px solid rgb(255 255 255 / 0.25);
+  border-top-color: var(--white);
+  border-radius: 999px;
+  animation: fruit-spin 0.8s linear infinite;
+}
+@keyframes fruit-spin { to { transform: rotate(360deg); } }
+
+.fruit-status {
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--blue-50);
+  font-size: 13px;
+  color: var(--blue);
+}
+.fruit-status--warn { background: var(--amber-50); color: var(--amber-text); }
+.fruit-status--error { background: var(--red-50); color: var(--red-text); }
+
+.fruit-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.fruit-actions .btn { min-width: 0; }
+.fruit-upload { position: relative; cursor: pointer; }
+.fruit-upload input { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.fruit-upload:focus-within { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+.fruit-hint { font-size: 12px; color: var(--muted); text-align: center; }
+
+.fruit-note { display: flex; gap: 6px; font-size: 12px; line-height: 1.5; color: var(--ink-3); text-align: left; }
+.fruit-note .icon { flex-shrink: 0; margin-top: 2px; }
+.fruit-note--warn { padding: 10px 12px; border-radius: 12px; background: var(--amber-50); color: var(--amber-text); }
+.fruit-note--trial { padding: 10px 12px; border-radius: 12px; background: var(--blue-50); color: var(--blue); }
+
+/* ── Mejorar el reconocimiento (modelo propio) ───────────────────────── */
+.fruit-more { border: 1px solid var(--line); border-radius: 16px; background: var(--white); }
+.fruit-more summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  cursor: pointer;
+  list-style: none;
+}
+.fruit-more summary::-webkit-details-marker { display: none; }
+.fruit-more summary .icon { color: var(--purple); }
+.fruit-more__body { display: flex; flex-direction: column; gap: 10px; padding: 0 16px 16px; font-size: 13px; color: var(--ink-2); }
+.fruit-more__body ol { padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
+.fruit-more__body a { color: var(--blue); font-weight: 600; }
+.fruit-more__field { padding: 10px 12px; }
+.fruit-more__field .field__input { font-size: 14px; }
+.fruit-more__actions { display: flex; gap: 8px; }
+.fruit-more__state { font-size: 12px; color: var(--muted); }
+
+.fruit-switch { display: flex; align-items: center; gap: 10px; padding-top: 6px; border-top: 1px solid var(--line-soft); cursor: pointer; }
+.fruit-switch input { position: absolute; opacity: 0; pointer-events: none; }
+.fruit-switch small { color: var(--muted); }
+.fruit-switch__track {
+  position: relative;
+  flex-shrink: 0;
+  width: 40px;
+  height: 24px;
+  border-radius: 999px;
+  background: var(--slate-300);
+  transition: background-color 0.15s;
+}
+.fruit-switch__track::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s;
+}
+.fruit-switch input:checked + .fruit-switch__track { background: var(--blue); }
+.fruit-switch input:checked + .fruit-switch__track::after { transform: translateX(16px); }
+.fruit-switch input:focus-visible + .fruit-switch__track { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+/* ── Resultado ───────────────────────────────────────────────────────── */
+.fruit-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 24px 18px 18px;
+  border-radius: 24px;
+  background: var(--white);
+  box-shadow: var(--shadow-xl);
+  text-align: center;
+}
+.fruit-card__emoji { font-size: 72px; line-height: 1; }
+.fruit-card__name { margin-top: 6px; font-size: 24px; font-weight: 900; line-height: 1.2; color: var(--ink); }
+.fruit-card__alt { font-size: 13px; color: var(--ink-3); }
+.fruit-card__text { font-size: 14px; color: var(--ink-2); }
+.fruit-card .fruit-note { margin-top: 4px; }
+
+.fruit-verdict {
+  width: 100%;
+  margin-top: 10px;
+  padding: 14px 16px;
+  border: 2px solid;
+  border-radius: 16px;
+  text-align: left;
+}
+.fruit-verdict__title { display: flex; align-items: center; gap: 8px; font-size: 17px; font-weight: 900; }
+.fruit-verdict__reason { margin-top: 4px; font-size: 14px; line-height: 1.45; }
+.fruit-verdict--good { border-color: var(--green); background: var(--green-50); color: var(--green-darker); }
+.fruit-verdict--warn { border-color: var(--gold); background: var(--amber-100); color: var(--amber-text); }
+.fruit-verdict--bad  { border-color: var(--red); background: var(--red-50); color: var(--red-text); }
+
+.fruit-result-actions { display: flex; flex-direction: column; gap: 10px; }
+
+/* Modo técnico */
+.fruit-tech { padding: 14px 16px; border: 1px dashed var(--slate-300); border-radius: 16px; background: var(--bg); font-size: 12px; color: var(--ink-2); }
+.fruit-tech__title { display: flex; align-items: center; gap: 6px; margin-bottom: 8px; font-weight: 800; color: var(--ink); }
+.fruit-tech__list { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; padding-left: 18px; }
+.fruit-tech__list li span { font-weight: 600; }
+.fruit-tech__list li strong { float: right; }
+.fruit-tech__list li small { display: block; color: var(--muted); }
+.fruit-tech__grid { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; }
+.fruit-tech__grid dd { font-weight: 700; text-align: right; }
+
+/* ── Prueba gratis usada ─────────────────────────────────────────────── */
+.fruit-locked {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  padding: 28px 20px 16px;
+  border-radius: 24px;
+  background: var(--white);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+}
+.fruit-locked__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  background: var(--amber-100);
+  color: var(--amber-text);
+}
+.fruit-locked__title { font-size: 18px; font-weight: 900; color: var(--ink); }
+.fruit-locked__text { margin-bottom: 8px; font-size: 14px; color: var(--ink-2); }

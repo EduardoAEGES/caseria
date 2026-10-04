@@ -45,6 +45,23 @@ en el orden declarado en `index.html`: datos → núcleo → componentes → pan
   Recibe el destino en `state.routeTarget = { storeIds, basketTotal }`; sus acciones devuelven `false` y solo
   repintan el panel para no destruir el mapa.
 
+## Identificador de fruta
+
+- Pantalla `scanner` (`js/screens/scanner.js`, estilos en `css/screens/fruit.css`): el usuario enciende la cámara
+  o sube/arrastra/pega una foto y la app le dice **qué fruta es** y **en qué estado está** (buena / pasada /
+  ya no sirve). Porcentajes y mediciones solo en "Modo técnico" (apagado por omisión). Usuario Free: 1 uso.
+- Todo corre en el navegador (`js/core/fruit-ai.js`). La cámara solo abre en https o localhost.
+- TensorFlow.js 4.22.0 está en `vendor/tf.min.js` y se carga solo al abrir esta pantalla.
+- Modelo de fábrica: MobileNet v2 (`tf.loadGraphModel`, píxeles ÷255, salida en logits → softmax, 1001 salidas:
+  clase i de ImageNet en la posición i+1). Solo compiten las 24 clases de fruta/verdura de `FRUIT_CLASSES`,
+  corregidas por el color de la foto. Si la probabilidad total de fruta es muy baja responde "No parece una fruta".
+  No conoce mandarina, palta, papaya, mango ni uva.
+- Estado sin modelo propio: por el color de la cáscara (`freshnessByColor`: manchas oscuras, marrón, cáscara despareja,
+  color vivo). Funciona mejor con plátano, manzana, fresa y cítricos; frutas de cáscara oscura (piña, palta) salen mal.
+- Modelo propio de Teachable Machine: se pega su enlace en "Mejorar el reconocimiento" (se guarda en `localStorage`,
+  `caseria.fruitModelUrl`). Píxeles en [-1, 1], salida ya con softmax. Clases tipo "mandarina buena" / "mandarina malograda":
+  la fruta y el estado salen del nombre (`parseCustomLabel`).
+
 ## Estructura
 
 - `index.html` — marco del celular (`#phone`, `#screen`, `#overlay`) y carga de CSS/JS
@@ -64,6 +81,8 @@ en el orden declarado en `index.html`: datos → núcleo → componentes → pan
 - `js/core/router.js` — `defineScreen`, `navigate`, `render` y delegación de eventos
 - `js/core/utils.js` — `esc`, `money`, `each`
 - `js/core/geo.js` — GPS, distancias, rutas (OSRM) y costo del viaje
+- `js/core/fruit-ai.js` — identificador de fruta (MobileNet / Teachable Machine y estado por color)
+- `vendor/tf.min.js` — TensorFlow.js guardado en el repo (no editar)
 - `js/components/` — piezas de HTML reutilizables (BottomNav, Sheet, modales…)
 - `js/screens/` — una pantalla por archivo
 - `img/logo.png` — logo

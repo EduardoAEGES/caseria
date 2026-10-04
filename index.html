@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="css/screens/results.css" />
     <link rel="stylesheet" href="css/screens/route.css" />
     <link rel="stylesheet" href="css/screens/account.css" />
+    <link rel="stylesheet" href="css/screens/fruit.css" />
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
@@ -43,9 +44,7 @@
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-    <!-- Scripts de Inteligencia Artificial (TensorFlow.js) -->
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@latest"></script>
+    <!-- TensorFlow.js (vendor/tf.min.js) lo carga js/core/fruit-ai.js solo al abrir el identificador de fruta. -->
 
     <!-- Scripts normales (no módulos) para que funcione abriendo el archivo con doble clic.
          El orden importa: datos → núcleo → componentes → pantallas → main. -->
@@ -59,6 +58,7 @@
     <script src="js/core/storage.js"></script>
     <script src="js/core/state.js"></script>
     <script src="js/core/geo.js"></script>
+    <script src="js/core/fruit-ai.js"></script>
     <script src="js/core/router.js"></script>
 
     <script src="js/components/icons.js"></script>

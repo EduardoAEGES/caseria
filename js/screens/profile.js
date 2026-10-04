@@ -2,7 +2,7 @@
 
 const PREMIUM_BENEFITS = [
   "Asistente nutricional con IA",
-  "Escáner de alimentos ilimitado",
+  "Identificador de fruta ilimitado",
   "Canastas personalizadas",
   "Comparación de precios ilimitada",
   "Alertas de precios y promociones",
@@ -30,7 +30,7 @@ function AiFeatureCard({ icon, title, desc, locked, canTry }) {
               : `<span class="pill pill--green pill--bold">${Icon("gift", { size: 12, stroke: 2.4 })} 1 prueba gratis</span>`}
         </div>
         <p class="ai-feature__desc">${desc}</p>
-        ${canTry ? `<button class="link-btn link-btn--icon" data-action="go" data-to="scanner">Usar prueba gratis${Icon("chevron-right", { size: 14, stroke: 2.4 })}</button>` : state.premium && title.includes("Escáner") ? `<button class="link-btn link-btn--icon" data-action="go" data-to="scanner">Abrir escáner${Icon("chevron-right", { size: 14, stroke: 2.4 })}</button>` : ""}
+        ${canTry ? `<button class="link-btn link-btn--icon" data-action="go" data-to="scanner">Usar prueba gratis${Icon("chevron-right", { size: 14, stroke: 2.4 })}</button>` : state.premium && title.includes("fruta") ? `<button class="link-btn link-btn--icon" data-action="go" data-to="scanner">Abrir identificador${Icon("chevron-right", { size: 14, stroke: 2.4 })}</button>` : ""}
       </div>
     </div>`;
 }
@@ -40,7 +40,7 @@ defineScreen("buyerprofile", {
 
   render() {
     const features = [
-      { icon: "camera", title: "Escáner IA de Frescura", desc: "Analiza calidad y vida útil de tus compras.", locked: !state.premium && state.trialUsed, canTry: !state.premium && !state.trialUsed },
+      { icon: "camera", title: "Identificador de fruta", desc: "Te dice qué fruta es y si está buena, pasada o ya no sirve.", locked: !state.premium && state.trialUsed, canTry: !state.premium && !state.trialUsed },
       { icon: "heart", title: "IA Nutricional + Especialistas", desc: "Planes de salud y citas con nutricionistas.", locked: !state.premium, canTry: false },
     ];
 
