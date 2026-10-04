@@ -3,15 +3,15 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES.tottus = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-10-04T12:20:20.338Z",
+  "updatedAt": "2026-10-04T12:23:17.927Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
-      "price": 8.9,
+      "price": 4.3,
       "normalPrice": null,
-      "name": "Harina de Arroz Costeño Bolsa 1 Kg",
-      "presentation": "Bolsa 1 Kg",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115838505/harina-de-arroz-costeno-bolsa-1-kg"
+      "name": "Arroz Costeño Extra Añejo Bolsa 750 g",
+      "presentation": "Bolsa 750 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/124763718/arroz-costeno-extra-anejo-bolsa-750-g"
     },
     "2": {
       "price": 10.5,
@@ -35,11 +35,11 @@ window.SCRAPED_PRICES.tottus = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/129605787/papa-canchan-procesada-x-kg"
     },
     "5": {
-      "price": 4.1,
-      "normalPrice": 4.5,
-      "name": "Concentrado de Tomate B&D Doypack 200 g",
-      "presentation": "Doypack 200 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/153342944/concentrado-de-tomate-b-d-doypack-200-g"
+      "price": 7.79,
+      "normalPrice": null,
+      "name": "Tomate Italiano Tottus",
+      "presentation": "500 g = 3 Un Aprox",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115894677/tomate-italiano-tottus"
     },
     "6": {
       "price": 7.9,
@@ -49,11 +49,11 @@ window.SCRAPED_PRICES.tottus = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/135553932/avena-tottus-bolsa-900-g"
     },
     "7": {
-      "price": 2.5,
+      "price": 4.2,
       "normalPrice": null,
-      "name": "Leche Gloria Niños Lata 170 g",
-      "presentation": "Lata 170 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/153527555/leche-gloria-ninos-lata-170-g"
+      "name": "Leche Gloria Reconstituida Entera Lata 390 g",
+      "presentation": "Lata 390 g  ",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087921/leche-gloria-reconstituida-entera-lata-390-g"
     },
     "9": {
       "price": 3.99,
@@ -63,11 +63,11 @@ window.SCRAPED_PRICES.tottus = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115805615/cebolla-roja-tottus"
     },
     "10": {
-      "price": 5.5,
-      "normalPrice": 6.5,
-      "name": "Trozos de Atún en Aceite Primor Lata 140 g",
-      "presentation": "Lata 140 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115878270/trozos-de-atun-en-aceite-primor-lata-140-g"
+      "price": 8.7,
+      "normalPrice": 10,
+      "name": "Aceite Vegetal Primor Clásico Botella 900 mL",
+      "presentation": "Botella 900 mL",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706444/aceite-vegetal-primor-clasico-botella-900-ml"
     },
     "11": {
       "price": 3.4,
@@ -91,18 +91,18 @@ window.SCRAPED_PRICES.tottus = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113705634/azucar-rubia-tottus-bolsa-1-kg"
     },
     "14": {
-      "price": 9.9,
+      "price": 12.9,
       "normalPrice": null,
-      "name": "Carne Molida De Cerdo x 500 g",
-      "presentation": "500 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115807161/carne-molida-de-cerdo-x-500-g"
+      "name": "Carne Molida De Res x 500 g",
+      "presentation": "Empaque 500 g Aprox",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113787352/carne-molida-de-res-x-500-g"
     },
     "15": {
-      "price": 19.9,
+      "price": 43.9,
       "normalPrice": null,
-      "name": "Bisteck Molido De Res x 500 g",
-      "presentation": "Empaque 500 g Aprox",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113787384/bisteck-molido-de-res-x-500-g"
+      "name": "Bisteck De Res",
+      "presentation": "500 g Aprox",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115842749/bisteck-de-res"
     },
     "16": {
       "price": 18.9,
@@ -112,11 +112,11 @@ window.SCRAPED_PRICES.tottus = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115817331/chuleta-de-brazuelo-de-cerdo-x-kg"
     },
     "17": {
-      "price": 3.9,
+      "price": 3.99,
       "normalPrice": null,
-      "name": "Zanahoria Juliana Tottus",
-      "presentation": "Empaque 200 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706648/zanahoria-juliana-tottus"
+      "name": "Zanahoria Tottus",
+      "presentation": "1 Kg = 5 Un Aprox",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115810260/zanahoria-tottus"
     },
     "18": {
       "price": 2.59,
@@ -126,18 +126,18 @@ window.SCRAPED_PRICES.tottus = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706390/lechuga-seda-hidroponica-tottus"
     },
     "19": {
-      "price": 1.7,
+      "price": 5.49,
       "normalPrice": null,
-      "name": "Agua Loa Sabor Manzana Botella 625 mL",
-      "presentation": "Botella 625 mL",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/143884111/Agua%20Loa%20Sabor%20Manzana%20Botella%20625%20mL"
+      "name": "Manzana Delicia Tottus",
+      "presentation": "1 Kg Aprox",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115809331/manzana-delicia-tottus"
     },
     "20": {
-      "price": 1.2,
-      "normalPrice": null,
-      "name": "Bebida Instantánea en Polvo Zuko Naranja Sobre 15 g",
-      "presentation": "Sobre 15 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113380974/jugo-en-polvo-sabor-a-naranja-zuko-15-g"
+      "price": 2.79,
+      "normalPrice": 3.99,
+      "name": "Naranja De Jugo Premium x Kg",
+      "presentation": "1 Kg = 6 Un Aprox",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/130698837/naranja-de-jugo-premium-x-kg"
     },
     "21": {
       "price": 11.49,
@@ -147,11 +147,11 @@ window.SCRAPED_PRICES.tottus = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/130698965/palta-fuerte-premium-x-kg"
     },
     "22": {
-      "price": 6.8,
-      "normalPrice": 7.5,
-      "name": "Yogurt Gloria Zero Lacto Fresa Botella 1 Kg",
-      "presentation": "Botella 1 Kg",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706089/yogurt-gloria-zero-lacto-fresa-botella-1-kg"
+      "price": 1.9,
+      "normalPrice": null,
+      "name": "Yogurt Gloria Frutado Fresa Envase 120 g",
+      "presentation": "Envase 120 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113710229/yogurt-gloria-frutado-fresa-120-g"
     },
     "23": {
       "price": 16.9,
@@ -161,18 +161,18 @@ window.SCRAPED_PRICES.tottus = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/122585242/queso-fresco-serrano-del-establo-empaque-250-g"
     },
     "24": {
-      "price": 8.3,
+      "price": 13.5,
       "normalPrice": null,
-      "name": "Pop Corn Bucky Snacks Mantequilla Bolsa 200 g",
-      "presentation": "Bolsa 200 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/141107330/Pop%20Corn%20Bucky%20Snacks%20Mantequilla%20Bolsa%20200%20g"
+      "name": "Mantequilla con Sal President Empaque 200 g",
+      "presentation": "Empaque 200 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113930870/mantequill-con-sal"
     },
     "25": {
-      "price": 3.2,
+      "price": 1.8,
       "normalPrice": null,
-      "name": "Agua San Luis Con Gas Botella 2.5 L",
-      "presentation": "Botella 2.5 L",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113366841/agua-san-luis-con-gas-botella-2-5-l"
+      "name": "Agua San Luis Sin Gas Botella 750 mL",
+      "presentation": "Botella 750 mL",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115806693/agua-mesa-san-luis-sin-gas-botella-x-750ml"
     },
     "26": {
       "price": 7.6,
@@ -189,18 +189,18 @@ window.SCRAPED_PRICES.tottus = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113379569/bebida-frugos-durazno-botella-1-l"
     },
     "28": {
-      "price": 3.2,
+      "price": 9.5,
       "normalPrice": null,
-      "name": "Jabón de Lavar Bolívar Cuidado Total Empaque 190 g",
-      "presentation": "Empaque 190 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/132020857/jabon-de-lavar-bolivar-cuidado-total-empaque-190-g"
+      "name": "Detergente en Polvo Bolívar Cuidado Total Bolsa 730 g",
+      "presentation": "Bolsa 730 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/130519777/detergente-en-polvo-bolivar-cuidado-total-bolsa-730-g"
     },
     "29": {
-      "price": 8.9,
+      "price": 4.6,
       "normalPrice": null,
-      "name": "Lejía en Gel Clorox Original Botella 1 L",
-      "presentation": "Botella 1 L",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/144604975/lejia-en-gel-clorox-original-botella-1-l"
+      "name": "Lejía Tradicional Clorox Botella 1 Kg",
+      "presentation": "Botella 1 Kg",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/123541837/lejia-tradicional-clorox-botella-1-kg"
     },
     "30": {
       "price": 4.49,
