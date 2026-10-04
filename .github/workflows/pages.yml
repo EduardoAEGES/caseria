@@ -1,0 +1,20 @@
+# Pide a GitHub Pages que vuelva a publicar la web en cada cambio a main.
+# Hace falta porque los cambios que sube una app (no una persona) no siempre disparan la publicación.
+name: Publicar web
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  pages: write
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pedir una nueva publicación de GitHub Pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/${{ github.repository }}/pages/builds"
