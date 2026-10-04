@@ -67,9 +67,10 @@ export function toItem(product) {
 const regionId = await getRegionId();
 
 async function search(query) {
-  const params = new URLSearchParams({ ft: query, _from: "0", _to: String(PAGE_SIZE - 1) });
-  if (regionId) params.set("regionId", regionId);
-  const products = await getJson(`${BASE}/api/catalog_system/pub/products/search?${params}`);
+  // Los espacios van como %20: con "+" (URLSearchParams) la API responde 400 en búsquedas de varias palabras.
+  let url = `${BASE}/api/catalog_system/pub/products/search?ft=${encodeURIComponent(query)}&_from=0&_to=${PAGE_SIZE - 1}`;
+  if (regionId) url += `&regionId=${encodeURIComponent(regionId)}`;
+  const products = await getJson(url);
   return {
     meta: { postalCode: POSTAL_CODE, regionId },
     items: products.map(toItem).filter(Boolean),
