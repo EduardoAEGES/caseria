@@ -19,38 +19,39 @@ const HEADERS = {
 const DELAY_MS = 1500; // pausa entre consultas para no cargar el sitio
 
 // productId de CaserIA → cómo encontrarlo en Tottus.
-// must: todas deben aparecer en el nombre · prefer: regex que suman puntos · exclude: descartan.
+// start: regex con la que debe EMPEZAR el nombre (sin tildes, minúsculas) · must: palabras obligatorias
+// prefer: regex que suman puntos; la primera pesa más (tamaño antes que variedad) · exclude: descartan · kg: preferir venta por kilo.
 export const QUERIES = {
-  1:  { q: "arroz costeño extra 1 kg",  must: ["arroz", "coste"],       prefer: ["\\b1\\s?kg\\b"] },
-  2:  { q: "pollo entero",              must: ["pollo", "entero"] },
-  3:  { q: "huevos 30 unidades",        must: ["huevo"],                prefer: ["\\b30\\b"] },
-  4:  { q: "papa canchan",              must: ["papa", "canchan"] },
-  5:  { q: "tomate",                    must: ["tomate"],               exclude: ["salsa", "pasta", "ketchup", "pure", "cherry", "triturado"] },
-  6:  { q: "avena 900 g",               must: ["avena"],                prefer: ["\\b900\\s?g"], exclude: ["bebida", "galleta"] },
-  7:  { q: "leche gloria lata 400 g",   must: ["leche", "gloria"],      prefer: ["\\b400\\s?g", "lata"], exclude: ["pack", "six"] },
-  8:  { q: "platano de seda",           must: ["platano", "seda"] },
-  9:  { q: "cebolla roja",              must: ["cebolla", "roja"] },
-  10: { q: "aceite primor 1 l",         must: ["aceite", "primor"],     prefer: ["\\b1\\s?(l|lt|litro)\\b"] },
-  11: { q: "fideos don vittorio 500 g", must: ["don vittorio"],         prefer: ["\\b500\\s?g", "spaghetti|tallarin"] },
-  12: { q: "atun florida 170 g",        must: ["atun", "florida"],      prefer: ["\\b170\\s?g"], exclude: ["pack", "x 3", "x3"] },
-  13: { q: "azucar rubia 1 kg",         must: ["azucar", "rubia"],      prefer: ["\\b1\\s?kg\\b"] },
-  14: { q: "carne molida",              must: ["carne", "molida"] },
-  15: { q: "bistec de res",             must: ["bistec"] },
-  16: { q: "chuleta de cerdo",          must: ["chuleta", "cerdo"] },
-  17: { q: "zanahoria",                 must: ["zanahoria"],            exclude: ["jugo", "rallada", "baby"] },
-  18: { q: "lechuga",                   must: ["lechuga"] },
-  19: { q: "manzana",                   must: ["manzana"],              exclude: ["jugo", "compota", "vinagre", "nectar", "te ", "galleta"] },
-  20: { q: "naranja",                   must: ["naranja"],              exclude: ["jugo", "nectar", "gaseosa", "refresco", "mermelada"] },
-  21: { q: "palta fuerte",              must: ["palta", "fuerte"] },
-  22: { q: "yogurt gloria 1 l",         must: ["yogurt", "gloria"],     prefer: ["\\b1\\s?(l|lt|kg)\\b"] },
-  23: { q: "queso fresco",              must: ["queso", "fresco"] },
-  24: { q: "mantequilla 200 g",         must: ["mantequilla"],          prefer: ["\\b200\\s?g"] },
-  25: { q: "agua san luis 2.5 l",       must: ["agua", "san luis"],     prefer: ["\\b2[.,]5\\s?(l|lt)\\b"], exclude: ["pack", "x 6"] },
-  26: { q: "inca kola 1.5 l",           must: ["inca kola"],            prefer: ["\\b1[.,]5\\s?(l|lt)\\b"], exclude: ["pack", "x 6", "zero"] },
-  27: { q: "frugos 1 l",                must: ["frugos"],               prefer: ["\\b1\\s?(l|lt)\\b"] },
-  28: { q: "detergente bolivar 750 g",  must: ["bolivar"],              prefer: ["\\b750\\s?g"] },
-  29: { q: "lejia clorox 1 l",          must: ["clorox"],               prefer: ["\\b1\\s?(l|lt)\\b"] },
-  30: { q: "papel higienico 4 rollos",  must: ["papel higienico"],      prefer: ["\\b4\\s?(un|rollos|x)\\b|x\\s?4\\b"] },
+  1:  { q: "arroz extra costeño",       start: "arroz (extra )?costeno|arroz costeno", exclude: ["harina", "galleta", "arborio", "parbolizado"], prefer: ["\\b(750\\s?g|1\\s?kg)\\b"] },
+  2:  { q: "pollo entero",              start: "pollo entero", kg: true },
+  3:  { q: "huevos 30 unidades",        start: "huevos?", prefer: ["\\b30\\b"] },
+  4:  { q: "papa canchan",              start: "papa canchan", kg: true },
+  5:  { q: "tomate italiano",           start: "tomate", exclude: ["cherry", "seco", "pelado", "pulpa", "triturado"], kg: true },
+  6:  { q: "avena 900 g",               start: "avena", prefer: ["\\b900\\s?g"] },
+  7:  { q: "leche evaporada gloria",    start: "leche (evaporada )?(entera )?gloria|leche gloria", exclude: ["pack", "six", "x 6", "ninos", "deslactosada", "light"], prefer: ["\\b400\\s?g"] },
+  8:  { q: "platano de seda",           start: "platano (de )?seda", kg: true },
+  9:  { q: "cebolla roja",              start: "cebolla roja", kg: true },
+  10: { q: "aceite vegetal primor",     start: "aceite (vegetal )?primor", exclude: ["1.8", "3 l"], prefer: ["\\b(900\\s?ml|1\\s?l)\\b", "clasico"] },
+  11: { q: "spaghetti don vittorio",    start: "(fideo|spaghetti|tallarin|pasta)", must: ["don vittorio"], prefer: ["\\b500\\s?g", "spaghetti|tallarin"] },
+  12: { q: "atun florida 170 g",        start: "(trozos de |solido de |filete de )?atun", must: ["florida"], exclude: ["pack", "x 3", "x3"], prefer: ["\\b170\\s?g"] },
+  13: { q: "azucar rubia 1 kg",         start: "azucar rubia", prefer: ["\\b1\\s?kg\\b"] },
+  14: { q: "carne molida de res",       start: "carne molida", exclude: ["cerdo", "pavo", "pollo"] },
+  15: { q: "bistec de res",             start: "bistec|bisteck", exclude: ["molido", "cerdo", "pollo"] },
+  16: { q: "chuleta de cerdo",          start: "chuleta", must: ["cerdo"] },
+  17: { q: "zanahoria",                 start: "zanahoria", exclude: ["juliana", "rallada", "baby"], kg: true },
+  18: { q: "lechuga",                   start: "lechuga" },
+  19: { q: "manzana",                   start: "manzana", exclude: ["deshidratada", "trozos"], kg: true },
+  20: { q: "naranja",                   start: "naranja", kg: true },
+  21: { q: "palta fuerte",              start: "palta fuerte", kg: true },
+  22: { q: "yogurt gloria 1 l",         start: "yogurt (bebible )?gloria", exclude: ["zero", "lacto", "griego", "battishake"], prefer: ["\\b1\\s?(l|kg)\\b", "fresa|vainilla"] },
+  23: { q: "queso fresco",              start: "queso fresco" },
+  24: { q: "mantequilla 200 g",         start: "mantequilla", exclude: ["mani", "galleta"], prefer: ["\\b200\\s?g"] },
+  25: { q: "agua san luis 2.5 l",       start: "agua (mineral )?san luis", exclude: ["con gas", "pack", "x 6"], prefer: ["\\b2[.,]5\\s?l\\b"] },
+  26: { q: "inca kola 1.5 l",           start: "gaseosa inca kola|inca kola", exclude: ["pack", "x 6", "zero", "sin azucar"], prefer: ["\\b1[.,]5\\s?l\\b"] },
+  27: { q: "frugos 1 l",                start: "(bebida |jugo |nectar )?frugos", prefer: ["\\b1\\s?l\\b"] },
+  28: { q: "detergente bolivar 750 g",  start: "detergente (en polvo )?bolivar", prefer: ["\\b750\\s?g"] },
+  29: { q: "lejia clorox",              start: "lejia", must: ["clorox"], exclude: ["gel"], prefer: ["\\b1\\s?l\\b", "original|tradicional"] },
+  30: { q: "papel higienico 4 rollos",  start: "papel higienico", prefer: ["\\b4\\s?(un|und|rollos)\\b|x\\s?4\\b"] },
 };
 
 const normalize = text => text.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/\s+/g, " ");
@@ -87,12 +88,17 @@ export function parseResults(html) {
 
 /** Elige el resultado que mejor coincide con la regla; empate → el más barato. */
 export function pickBest(items, rule) {
+  const start = rule.start ? new RegExp(`^(${rule.start})\\b`) : null;
   let best = null;
   for (const item of items) {
+    const name = normalize(item.name).trim();
     const text = normalize(`${item.name} ${item.brand} ${item.presentation}`);
-    if (!rule.must.every(word => text.includes(normalize(word)))) continue;
+    if (start && !start.test(name)) continue;
+    if (!(rule.must ?? []).every(word => text.includes(normalize(word)))) continue;
     if ((rule.exclude ?? []).some(word => text.includes(normalize(word)))) continue;
-    let score = (rule.prefer ?? []).filter(re => new RegExp(re, "i").test(text)).length * 10;
+    const prefer = rule.prefer ?? [];
+    let score = prefer.reduce((sum, re, i) => sum + (new RegExp(re, "i").test(text) ? (prefer.length - i) * 10 : 0), 0);
+    if (rule.kg && /kg/i.test(item.unit)) score += 5;
     if (/tottus/i.test(item.seller)) score += 2;
     if (!best || score > best.score || (score === best.score && item.price < best.item.price)) best = { item, score };
   }
