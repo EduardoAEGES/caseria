@@ -1,0 +1,245 @@
+{
+  "store": "mass",
+  "city": "AREQUIPA",
+  "catalogUrl": "https://www.tiendasmass.com.pe/catalogos/precio-bajo-y-alta-calidad-12/",
+  "title": "Precio bajo y Alta calidad",
+  "validFrom": "Desde el 15 de setiembre del 2026",
+  "pages": [
+    "https://www.tiendasmass.com.pe/wp-content/uploads/2026/09/C2_FOLLETO-MENSUAL-SETIEMBRE-1.jpg",
+    "https://www.tiendasmass.com.pe/wp-content/uploads/2026/09/C2_FOLLETO-MENSUAL-SETIEMBRE-2.jpg",
+    "https://www.tiendasmass.com.pe/wp-content/uploads/2026/09/C2_FOLLETO-MENSUAL-SETIEMBRE-3.jpg",
+    "https://www.tiendasmass.com.pe/wp-content/uploads/2026/09/C2_FOLLETO-MENSUAL-SETIEMBRE-4.jpg",
+    "https://www.tiendasmass.com.pe/wp-content/uploads/2026/09/C2_FOLLETO-MENSUAL-SETIEMBRE-5.jpg",
+    "https://www.tiendasmass.com.pe/wp-content/uploads/2026/09/C2_FOLLETO-MENSUAL-SETIEMBRE-6.jpg",
+    "https://www.tiendasmass.com.pe/wp-content/uploads/2026/09/C2_FOLLETO-MENSUAL-SETIEMBRE-7.jpg",
+    "https://www.tiendasmass.com.pe/wp-content/uploads/2026/09/C2_FOLLETO-MENSUAL-SETIEMBRE-8.jpg"
+  ],
+  "extractedAt": "2026-10-04",
+  "extractedBy": "manual (revisión de las imágenes del folleto)",
+  "products": [
+    {
+      "page": 2,
+      "name": "Cereal Zucatrigo",
+      "brand": "Cereales Go",
+      "presentation": "bl x 120 gr",
+      "price": 2.8,
+      "previousPrice": 3.2
+    },
+    {
+      "page": 2,
+      "name": "Cereal Macatrigo",
+      "brand": "Cereales Go",
+      "presentation": "bl x 120 gr",
+      "price": 2.8,
+      "previousPrice": 3.3
+    },
+    {
+      "page": 2,
+      "name": "Cereal Ángel zuck / chock",
+      "brand": "Ángel",
+      "presentation": "bl x 130 gr",
+      "price": 3.2,
+      "previousPrice": 3.4
+    },
+    {
+      "page": 2,
+      "name": "Chifles salados",
+      "brand": "Frutos & Snacks",
+      "presentation": "bl x 125 gr",
+      "price": 4.3,
+      "previousPrice": 4.9
+    },
+    {
+      "page": 2,
+      "name": "Mix de hojuelas",
+      "brand": "Frutos & Snacks",
+      "presentation": "bl x 100 gr",
+      "price": 3.9,
+      "previousPrice": 4.2
+    },
+    {
+      "page": 2,
+      "name": "Bebida energizante Atlas",
+      "brand": "Atlas",
+      "presentation": "la x 250 ml",
+      "price": 2.8,
+      "previousPrice": 3.2
+    },
+    {
+      "page": 3,
+      "name": "Bebida energizante Red Bull",
+      "brand": "Red Bull",
+      "presentation": "la x 250 ml",
+      "price": 6.5,
+      "previousPrice": 7.6
+    },
+    {
+      "page": 3,
+      "name": "Bebida Supersol citrus punch / fruit punch",
+      "brand": "Supersol",
+      "presentation": "bt x 2.5 lt",
+      "price": 3.9,
+      "previousPrice": 4.3
+    },
+    {
+      "page": 3,
+      "name": "Bebida Frugos durazno",
+      "brand": "Frugos",
+      "presentation": "bt x 300 ml",
+      "price": 2.2,
+      "previousPrice": 2.4
+    },
+    {
+      "page": 3,
+      "name": "Bebida Frugos durazno / mango",
+      "brand": "Frugos",
+      "presentation": "cj x 970 ml",
+      "price": 4.0,
+      "previousPrice": 4.4
+    },
+    {
+      "page": 3,
+      "name": "Bebida Frugos fresh citrus / fruit punch",
+      "brand": "Frugos",
+      "presentation": "bt x 500 ml",
+      "price": 1.7,
+      "previousPrice": 1.9
+    },
+    {
+      "page": 3,
+      "name": "Bebida de vodka Ponte+ frutos rojos / maracuyá / limón",
+      "brand": "Ponte+",
+      "presentation": "la x 355 ml",
+      "price": 4.1,
+      "previousPrice": 4.3
+    },
+    {
+      "page": 4,
+      "name": "Bebida Spark uva / manzana / mandarina",
+      "brand": "Spark",
+      "presentation": "la x 473 ml",
+      "price": 5.4,
+      "previousPrice": 6.1
+    },
+    {
+      "page": 4,
+      "name": "Vino Viña Maipo semi seco",
+      "brand": "Viña Maipo",
+      "presentation": "bt x 750 ml",
+      "price": 10.9,
+      "previousPrice": 13.1
+    },
+    {
+      "page": 4,
+      "name": "Pisco Taqkay acholado",
+      "brand": "Taqkay",
+      "presentation": "bt x 750 ml",
+      "price": 20.4,
+      "previousPrice": 23.0
+    },
+    {
+      "page": 4,
+      "name": "Bebida Frugos fresh citrus naranja / fruit punch",
+      "brand": "Frugos",
+      "presentation": "bt x 3 lt",
+      "price": 6.5,
+      "previousPrice": 7.6
+    },
+    {
+      "page": 4,
+      "name": "Alimento para gato adulto Ricocat trocitos de salmón",
+      "brand": "Ricocat",
+      "presentation": "dp x 85 gr",
+      "price": 2.4,
+      "previousPrice": 2.9
+    },
+    {
+      "page": 4,
+      "name": "Alimento para perro adulto Ricocan trocitos de cordero",
+      "brand": "Ricocan",
+      "presentation": "dp x 100 gr",
+      "price": 2.4,
+      "previousPrice": 2.9
+    },
+    {
+      "page": 5,
+      "name": "Arroz extra Valle Blanco",
+      "brand": "Valle Blanco",
+      "presentation": "bl x 4 kg",
+      "price": 17.2,
+      "previousPrice": null
+    },
+    {
+      "page": 5,
+      "name": "Filete de atún Válida en aceite",
+      "brand": "Válida",
+      "presentation": "la x 140 gr",
+      "price": 3.9,
+      "previousPrice": null
+    },
+    {
+      "page": 5,
+      "name": "Azúcar rubia El Granelito",
+      "brand": "El Granelito",
+      "presentation": "bl x 1.3 kg",
+      "price": 4.4,
+      "previousPrice": null
+    },
+    {
+      "page": 5,
+      "name": "Mat picnic impermeable",
+      "brand": "",
+      "presentation": "150 x 120 cm",
+      "price": 12.1,
+      "previousPrice": null
+    },
+    {
+      "page": 5,
+      "name": "Plancha base cerámica 2000W",
+      "brand": "",
+      "presentation": "unidad",
+      "price": 30.7,
+      "previousPrice": null
+    },
+    {
+      "page": 5,
+      "name": "Secadores de microfibra",
+      "brand": "",
+      "presentation": "pack de 2",
+      "price": 1.7,
+      "previousPrice": null
+    },
+    {
+      "page": 5,
+      "name": "Tabla de picar",
+      "brand": "",
+      "presentation": "36.5 x 22.5 x 1.1 cm",
+      "price": 5.5,
+      "previousPrice": null
+    },
+    {
+      "page": 5,
+      "name": "Comedero doble para mascota",
+      "brand": "",
+      "presentation": "27 x 17 x 21.5 cm",
+      "price": 6.1,
+      "previousPrice": null
+    },
+    {
+      "page": 6,
+      "name": "Tallarín Banchetto",
+      "brand": "Banchetto",
+      "presentation": "bl x 500 gr",
+      "price": 2.4,
+      "previousPrice": null
+    },
+    {
+      "page": 6,
+      "name": "Mantequilla con sal Tonadita",
+      "brand": "Tonadita",
+      "presentation": "br x 100 gr",
+      "price": 3.9,
+      "previousPrice": null
+    }
+  ]
+}

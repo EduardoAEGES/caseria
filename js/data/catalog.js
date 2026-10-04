@@ -102,8 +102,19 @@ function findProduct(productId) {
 // que el scraper no encontró queda como no disponible en esa tienda.
 const SCRAPED = window.SCRAPED_PRICES || {};
 
+// Tiendas que toman los precios de otra fuente: las dos Mass usan el folleto de Arequipa.
+const SCRAPED_SOURCE = { massporo: "mass", massande: "mass" };
+
+function scrapedData(storeId) {
+  return SCRAPED[SCRAPED_SOURCE[storeId] || storeId];
+}
+
+/** Precio extraído: el ítem, null si la tienda no lo tiene, o undefined si se usa la tabla de ejemplo. */
 function scrapedItem(storeId, productId) {
-  return SCRAPED[storeId] ? SCRAPED[storeId].items[productId] || null : undefined;
+  const data = scrapedData(storeId);
+  if (!data) return undefined;
+  // Datos parciales (folletos): lo que no aparece sigue con la tabla de ejemplo.
+  return data.items[productId] || (data.partial ? undefined : null);
 }
 
 function getPrice(storeId, productId) {
@@ -122,10 +133,10 @@ function referencePrice(productId) {
 
 // Fecha de actualización real para las tiendas con precios extraídos.
 for (const store of STORES) {
-  const data = SCRAPED[store.id];
+  const data = scrapedData(store.id);
   if (!data) continue;
   const days = Math.floor((Date.now() - new Date(data.updatedAt)) / 86400000);
-  store.updated = days <= 0 ? "Precio web de hoy" : days === 1 ? "Precio web de ayer" : `Precio web hace ${days} días`;
+  store.updated = data.label || (days <= 0 ? "Precio web de hoy" : days === 1 ? "Precio web de ayer" : `Precio web hace ${days} días`);
   store.freshnessLevel = days <= 1 ? "ok" : days <= 7 ? "warn" : "bad";
   store.scraped = true;
 }

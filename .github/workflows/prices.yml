@@ -30,9 +30,19 @@ jobs:
         id: metro
         continue-on-error: true
         run: node scraper/metro.mjs
+      # Mass publica folletos en imágenes: solo se leen con Claude cuando sale uno nuevo
+      # (requiere el secreto ANTHROPIC_API_KEY; sin él se mantienen los precios del folleto anterior).
+      - name: Extraer precios de Mass (folleto de Arequipa)
+        id: mass
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          npm install --no-save --silent @anthropic-ai/sdk
+          node scraper/mass.mjs
       - name: Guardar cambios en el repositorio
         run: |
-          git add js/data/prices-*.js data/*-catalogo.json
+          git add js/data/prices-*.js data/*-catalogo.json data/mass-folleto.json
           if git diff --cached --quiet; then echo "Sin cambios de precios"; exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -40,7 +50,7 @@ jobs:
           git pull --rebase origin "${GITHUB_REF_NAME}"
           git push origin "HEAD:${GITHUB_REF_NAME}"
       - name: Avisar si alguna tienda falló
-        if: steps.tottus.outcome == 'failure' || steps.metro.outcome == 'failure'
+        if: steps.tottus.outcome == 'failure' || steps.metro.outcome == 'failure' || steps.mass.outcome == 'failure'
         run: |
-          echo "::error::Falló algún scraper (Tottus: ${{ steps.tottus.outcome }}, Metro: ${{ steps.metro.outcome }}). Revisa los pasos de arriba."
+          echo "::error::Falló algún scraper (Tottus: ${{ steps.tottus.outcome }}, Metro: ${{ steps.metro.outcome }}, Mass: ${{ steps.mass.outcome }}). Revisa los pasos de arriba."
           exit 1
