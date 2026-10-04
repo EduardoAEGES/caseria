@@ -1,0 +1,18 @@
+name: Tottus · reconocimiento
+
+on:
+  workflow_dispatch:
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Instalar Playwright
+        run: npm install --no-save playwright@1 && npx playwright install --with-deps chromium
+      - name: Reconocer tottus.com.pe
+        run: PLAYWRIGHT=1 node scraper/discover-tottus.mjs
