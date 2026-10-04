@@ -38,8 +38,17 @@ console.log("respuesta ajax: " + cut(ajax, 1500));
 const catalogs = uniq([...ajax.replace(/\\\//g, "/").matchAll(/href=\\?"(https:[^"\\]+\/catalogos\/[^"\\]+)/g)].map(m => m[1]));
 console.log("catálogos: " + catalogs.join(" | "));
 
+import { mkdir, writeFile } from "node:fs/promises";
 for (const url of catalogs.slice(0, 2)) {
   const html = await probe(url, 0);
+  // Guarda las páginas del folleto en tmp/mass/ (la tarea de reconocimiento las sube como artefacto).
+  const pages = uniq([...html.matchAll(/(https?:[^"' ]+\/wp-content\/uploads\/[^"' ]+FOLLETO[^"' ]*\.(?:jpe?g|png|webp))/gi)].map(m => m[1]));
+  await mkdir("tmp/mass", { recursive: true });
+  for (const [i, img] of pages.entries()) {
+    const buf = Buffer.from(await (await fetch(img, { headers: HEADERS })).arrayBuffer());
+    await writeFile(`tmp/mass/pagina-${String(i + 1).padStart(2, "0")}.jpg`, buf);
+    console.log(`descargada ${img} (${Math.round(buf.length / 1024)} KB)`);
+  }
   console.log("title: " + (html.match(/<title>([\s\S]*?)<\/title>/)?.[1] ?? "-").trim());
   console.log("iframes: " + uniq([...html.matchAll(/<iframe[^>]+src="([^"]+)"/g)].map(m => m[1])).join(" | "));
   console.log("archivos: " + uniq([...html.matchAll(/(https?:[^"' ]+\.(?:pdf|xlsx?|csv))/gi)].map(m => m[1])).join(" | "));
