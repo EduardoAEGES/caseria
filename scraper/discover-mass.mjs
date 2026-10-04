@@ -25,17 +25,33 @@ async function probe(url, show = 600) {
   }
 }
 
-// Código del tema que maneja el selector de ciudad
-for (const js of ["global.js", "carrusel.js"]) {
-  const code = await probe(`${BASE}/wp-content/themes/mass/js/${js}`, 0);
-  const hits = [...code.matchAll(/.{0,300}(ciudad|ajax|catalog|publicac|action\s*:).{0,300}/gi)].slice(0, 12).map(m => m[0].replace(/\s+/g, " "));
-  console.log(`fragmentos de ${js}:\n  ` + hits.join("\n  "));
+// Folletos de Arequipa: la página pide los catálogos por AJAX con un nonce que viene en el HTML.
+const page0 = await probe(PAGE, 0);
+const nonce = page0.match(/nonce["']?\s*[:=]\s*["']([a-f0-9]{8,})["']/i)?.[1];
+console.log("nonce en el HTML: " + nonce);
+const ajax = await fetch(`${BASE}/json/admin-ajax.php`, {
+  method: "POST",
+  headers: { ...HEADERS, "content-type": "application/x-www-form-urlencoded; charset=UTF-8", "x-requested-with": "XMLHttpRequest" },
+  body: new URLSearchParams({ action: "cargar_catalogos_por_ciudad", ciudad: "AREQUIPA", nonce: nonce ?? "" }),
+}).then(r => r.text()).catch(e => "ERROR " + e.message);
+console.log("respuesta ajax: " + cut(ajax, 1500));
+const catalogs = uniq([...ajax.replace(/\\\//g, "/").matchAll(/href=\\?"(https:[^"\\]+\/catalogos\/[^"\\]+)/g)].map(m => m[1]));
+console.log("catálogos: " + catalogs.join(" | "));
+
+for (const url of catalogs.slice(0, 2)) {
+  const html = await probe(url, 0);
+  console.log("title: " + (html.match(/<title>([\s\S]*?)<\/title>/)?.[1] ?? "-").trim());
+  console.log("iframes: " + uniq([...html.matchAll(/<iframe[^>]+src="([^"]+)"/g)].map(m => m[1])).join(" | "));
+  console.log("archivos: " + uniq([...html.matchAll(/(https?:[^"' ]+\.(?:pdf|xlsx?|csv))/gi)].map(m => m[1])).join(" | "));
+  const imgs = uniq([...html.matchAll(/(https?:[^"' ]+\/wp-content\/uploads\/[^"' ]+\.(?:jpe?g|png|webp))/gi)].map(m => m[1]));
+  console.log(`imágenes de uploads (${imgs.length}):\n  ` + imgs.slice(0, 40).join("\n  "));
+  const precios = [...html.matchAll(/.{0,100}S\/\s?\d+[.,]\d{2}.{0,100}/g)].slice(0, 15).map(m => m[0].replace(/<[^>]+>/g, " ").replace(/\s+/g, " "));
+  console.log(`textos con S/ (${precios.length}):\n  ` + precios.join("\n  "));
+  const text = html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, " ").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
+  console.log("texto: " + cut(text, 2500));
+  const scripts = uniq([...html.matchAll(/<script[^>]+src="([^"]+)"/g)].map(m => m[1])).filter(u => !/cookiebot|gtm|jquery|bootstrap|lazysizes|slick/.test(u));
+  console.log("scripts: " + scripts.join(" | "));
 }
-const html = await probe(PAGE, 0);
-const inline = [...html.matchAll(/<script(?![^>]*src)[^>]*>([\s\S]*?)<\/script>/g)].map(m => m[1]).filter(c => /ciudad|ajax|catalog|publicac/i.test(c));
-console.log("scripts en línea relevantes:\n" + inline.map(c => cut(c.replace(/\s+/g, " "), 2500)).join("\n---\n"));
-const form = html.match(/<form[\s\S]*?selector-ciudad[\s\S]*?<\/form>/)?.[0] ?? html.match(/[\s\S]{0,800}selector-ciudad[\s\S]{0,1500}/)?.[0] ?? "";
-console.log("HTML del selector:\n" + cut(form.replace(/\s+/g, " "), 2500));
 
 if (process.env.PLAYWRIGHT) {
   const { chromium } = await import("playwright");
@@ -55,15 +71,16 @@ if (process.env.PLAYWRIGHT) {
   await page.goto(PAGE, { waitUntil: "networkidle", timeout: 60000 }).catch(e => console.log("goto:", e.message));
   await page.selectOption("#selector-ciudad", "AREQUIPA");
   await page.getByText("Ver publicaciones").first().click().catch(e => console.log("click:", e.message));
-  await page.waitForTimeout(6000);
-  console.log("URL tras elegir ciudad: " + page.url());
-  console.log("peticiones:\n  " + all.slice(0, 40).join("\n  "));
-  console.log("respuestas JSON/archivos:\n" + seen.slice(0, 40).join("\n"));
-  const links = await page.$$eval("a[href], iframe[src], img[src], embed[src], object[data]", els => els
-    .map(el => `${el.tagName.toLowerCase()} ${el.getAttribute("href") || el.getAttribute("src") || el.getAttribute("data")} ${(el.innerText || el.alt || "").trim().slice(0, 50)}`)
-    .filter(t => !/facebook|instagram|tiktok|youtube|legales|libro-de|conoceme|ubicame|aprende|ofrece|mailto|cookiebot|gtm/i.test(t)));
-  console.log("enlaces/imágenes/iframes tras elegir ciudad:\n  " + links.slice(0, 60).join("\n  "));
-  const text = await page.locator("main, #content, body").first().innerText().catch(() => "");
-  console.log("texto visible:\n" + cut(text, 3500));
+  await page.waitForTimeout(3000);
+  const href = await page.locator("#lista-catalogos a").first().getAttribute("href").catch(() => null);
+  console.log("abriendo catálogo: " + href);
+  seen.length = 0;
+  const loaded = [];
+  page.on("response", res => { const t = res.headers()["content-type"] ?? ""; if (/image|pdf|json|octet/.test(t)) loaded.push(`${res.status()} ${t.split(";")[0]} ${cut(res.url(), 200)}`); });
+  if (href) await page.goto(href, { waitUntil: "networkidle", timeout: 60000 }).catch(e => console.log("goto:", e.message));
+  await page.waitForTimeout(4000);
+  console.log("recursos cargados por el catálogo:\n  " + loaded.filter(l => !/cookiebot|google|facebook|clarity|mass_logo|libroRecl/.test(l)).slice(0, 60).join("\n  "));
+  const frames = page.frames().map(f => f.url()).filter(u => u && u !== "about:blank");
+  console.log("frames: " + frames.join(" | "));
   await browser.close();
 }
