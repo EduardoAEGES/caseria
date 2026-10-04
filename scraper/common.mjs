@@ -17,7 +17,7 @@ const DELAY_MS = 1500; // pausa entre consultas para no cargar los sitios
 export const QUERIES = {
   1:  { q: "arroz extra costeño",       start: "arroz (extra )?costeno|arroz costeno", exclude: ["harina", "galleta", "arborio", "parbolizado"], prefer: ["\\b(750\\s?g|1\\s?kg)\\b"] },
   2:  { q: "pollo entero",              start: "pollo entero", kg: true },
-  3:  { q: "huevos 30 unidades",        qBy: { metro: "huevos pardos" }, start: "huevos?", prefer: ["\\b30\\b"] },
+  3:  { q: "huevos 30 unidades",        qBy: { metro: "huevos pardos" }, start: "huevos?", prefer: ["\\b30\\s?(un|und|unid|unidades)?\\b"] },
   4:  { q: "papa canchan",              start: "papa canchan", kg: true },
   5:  { q: "tomate italiano",           start: "tomate", exclude: ["cherry", "seco", "pelado", "pulpa", "triturado"], kg: true },
   6:  { q: "avena 900 g",               start: "avena", prefer: ["\\b900\\s?g"] },
