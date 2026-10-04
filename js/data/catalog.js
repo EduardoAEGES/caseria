@@ -56,8 +56,8 @@ const STORES = [
   { id: "massande", name: "Tiendas Mass – Los Andes",  type: "discount", badge: "Descuento", address: "Av. Los Andes 210, Paucarpata",          district: "Paucarpata", distance: "1.1 km · 14 min", distMin: 14, updated: "Actualizado hoy",  freshnessLevel: "ok",   x: 20, y: 60 },
 ];
 
-// Tabla de precios: productId → precio por tienda, en el orden de STORES.
-// null = la tienda no tiene el producto.
+// Tabla de precios de ejemplo: productId → precio por tienda, en el orden de STORES.
+// null = la tienda no tiene el producto. Se ignora para las tiendas con precios extraídos.
 //          tottus plazavea franco massporo massande
 const PRICE_ROWS = {
   1:  [ 4.20,  3.90,  3.80,  3.50,  3.50],
@@ -96,7 +96,18 @@ function findProduct(productId) {
   return PRODUCTS.find(product => product.id === productId);
 }
 
+// Precios reales extraídos por los scrapers (scraper/*.mjs → js/data/prices-<tienda>.js).
+// Si una tienda tiene datos extraídos, se usan en lugar de PRICE_ROWS; un producto
+// que el scraper no encontró queda como no disponible en esa tienda.
+const SCRAPED = window.SCRAPED_PRICES || {};
+
+function scrapedItem(storeId, productId) {
+  return SCRAPED[storeId] ? SCRAPED[storeId].items[productId] || null : undefined;
+}
+
 function getPrice(storeId, productId) {
+  const scraped = scrapedItem(storeId, productId);
+  if (scraped !== undefined) return scraped ? scraped.price : null;
   const index = STORES.findIndex(store => store.id === storeId);
   const row = PRICE_ROWS[productId];
   return row ? row[index] ?? null : null;
@@ -104,8 +115,18 @@ function getPrice(storeId, productId) {
 
 /** Precio de referencia: el más bajo disponible entre todas las tiendas. */
 function referencePrice(productId) {
-  const prices = (PRICE_ROWS[productId] || []).filter(price => price !== null);
+  const prices = STORES.map(store => getPrice(store.id, productId)).filter(price => price !== null);
   return prices.length ? Math.min(...prices) : 0;
+}
+
+// Fecha de actualización real para las tiendas con precios extraídos.
+for (const store of STORES) {
+  const data = SCRAPED[store.id];
+  if (!data) continue;
+  const days = Math.floor((Date.now() - new Date(data.updatedAt)) / 86400000);
+  store.updated = days <= 0 ? "Precio web de hoy" : days === 1 ? "Precio web de ayer" : `Precio web hace ${days} días`;
+  store.freshnessLevel = days <= 1 ? "ok" : days <= 7 ? "warn" : "bad";
+  store.scraped = true;
 }
 
 /**
