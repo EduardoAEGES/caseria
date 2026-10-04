@@ -1,7 +1,11 @@
-name: Tottus · reconocimiento
+name: Reconocimiento de tiendas
 
 on:
   workflow_dispatch:
+    inputs:
+      script:
+        description: "Script de reconocimiento (scraper/discover-<tienda>.mjs)"
+        default: "discover-tottus.mjs"
 
 jobs:
   discover:
@@ -14,5 +18,5 @@ jobs:
           node-version: 22
       - name: Instalar Playwright
         run: npm install --no-save playwright@1 && npx playwright install --with-deps chromium
-      - name: Reconocer tottus.com.pe
-        run: PLAYWRIGHT=1 node scraper/discover-tottus.mjs
+      - name: Reconocer la tienda
+        run: PLAYWRIGHT=1 node "scraper/${{ inputs.script }}"
