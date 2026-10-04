@@ -25,28 +25,17 @@ async function probe(url, show = 600) {
   }
 }
 
-await probe(`${BASE}/robots.txt`, 1500);
-const html = await probe(PAGE, 400);
-if (html) {
-  console.log("\n===== análisis del HTML");
-  console.log("title: " + (html.match(/<title>([\s\S]*?)<\/title>/)?.[1] ?? "-").trim());
-  console.log("generator: " + (html.match(/<meta name="generator" content="([^"]+)"/)?.[1] ?? "-"));
-  console.log("__NEXT_DATA__: " + /__NEXT_DATA__/.test(html) + " · wp-content: " + /wp-content/.test(html) + " · vtex: " + /vtex/i.test(html) + " · shopify: " + /shopify/i.test(html));
-  console.log("iframes: " + uniq([...html.matchAll(/<iframe[^>]+src="([^"]+)"/g)].map(m => m[1])).join(" | "));
-  console.log("archivos: " + uniq([...html.matchAll(/href="([^"]+\.(?:pdf|xlsx?|csv)(?:\?[^"]*)?)"/gi)].map(m => m[1])).join(" | "));
-  console.log("selects: " + [...html.matchAll(/<select[^>]*>([\s\S]*?)<\/select>/g)].map(m => cut(m[0].replace(/\s+/g, " "), 400)).join("\n  "));
-  console.log("menciones Arequipa: " + [...html.matchAll(/.{0,120}arequipa.{0,120}/gi)].slice(0, 6).map(m => m[0].replace(/\s+/g, " ")).join("\n  "));
-  console.log("urls api/json: " + uniq([...html.matchAll(/["'](https?:\/\/[^"']*(?:api|json|graphql|ajax)[^"']*)["']/gi)].map(m => m[1])).slice(0, 25).join("\n  "));
-  console.log("scripts: " + uniq([...html.matchAll(/<script[^>]+src="([^"]+)"/g)].map(m => m[1])).slice(0, 25).join("\n  "));
-  const precios = [...html.matchAll(/.{0,80}S\/\s?\d+[.,]\d{2}.{0,80}/g)].slice(0, 12).map(m => m[0].replace(/<[^>]+>/g, " ").replace(/\s+/g, " "));
-  console.log(`textos con S/ (${precios.length}):\n  ` + precios.join("\n  "));
-  // Texto visible aproximado alrededor de la lista
-  const text = html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, " ").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
-  console.log("texto (inicio): " + cut(text, 2500));
+// Código del tema que maneja el selector de ciudad
+for (const js of ["global.js", "carrusel.js"]) {
+  const code = await probe(`${BASE}/wp-content/themes/mass/js/${js}`, 0);
+  const hits = [...code.matchAll(/.{0,300}(ciudad|ajax|catalog|publicac|action\s*:).{0,300}/gi)].slice(0, 12).map(m => m[0].replace(/\s+/g, " "));
+  console.log(`fragmentos de ${js}:\n  ` + hits.join("\n  "));
 }
-
-// API típicas de WordPress por si el sitio las expone
-await probe(`${BASE}/wp-json/`, 300);
+const html = await probe(PAGE, 0);
+const inline = [...html.matchAll(/<script(?![^>]*src)[^>]*>([\s\S]*?)<\/script>/g)].map(m => m[1]).filter(c => /ciudad|ajax|catalog|publicac/i.test(c));
+console.log("scripts en línea relevantes:\n" + inline.map(c => cut(c.replace(/\s+/g, " "), 2500)).join("\n---\n"));
+const form = html.match(/<form[\s\S]*?selector-ciudad[\s\S]*?<\/form>/)?.[0] ?? html.match(/[\s\S]{0,800}selector-ciudad[\s\S]{0,1500}/)?.[0] ?? "";
+console.log("HTML del selector:\n" + cut(form.replace(/\s+/g, " "), 2500));
 
 if (process.env.PLAYWRIGHT) {
   const { chromium } = await import("playwright");
@@ -61,17 +50,20 @@ if (process.env.PLAYWRIGHT) {
     seen.push(`${res.request().method()} ${res.status()} ${cut(res.url(), 250)}\n    ${snippet}`);
   });
   console.log("\n===== PLAYWRIGHT");
+  const all = [];
+  page.on("request", req => { if (req.method() === "POST" || /ajax|json|catalog|public|pdf/i.test(req.url())) all.push(`${req.method()} ${cut(req.url(), 250)} ${cut(req.postData() ?? "", 300)}`); });
   await page.goto(PAGE, { waitUntil: "networkidle", timeout: 60000 }).catch(e => console.log("goto:", e.message));
-  await page.waitForTimeout(3000);
-  console.log(`title: ${await page.title()}`);
+  await page.selectOption("#selector-ciudad", "AREQUIPA");
+  await page.getByText("Ver publicaciones").first().click().catch(e => console.log("click:", e.message));
+  await page.waitForTimeout(6000);
+  console.log("URL tras elegir ciudad: " + page.url());
+  console.log("peticiones:\n  " + all.slice(0, 40).join("\n  "));
   console.log("respuestas JSON/archivos:\n" + seen.slice(0, 40).join("\n"));
-  const controls = await page.$$eval("select, [role=combobox], [role=listbox], button, a", els => els
-    .map(el => `${el.tagName.toLowerCase()} ${(el.innerText || el.value || "").trim().replace(/\s+/g, " ").slice(0, 60)} ${el.getAttribute("href") ?? ""}`)
-    .filter(t => /arequipa|regi|ciudad|tienda|descarg|pdf|excel|precio|lima|provincia/i.test(t)).slice(0, 40));
-  console.log("controles relevantes:\n  " + controls.join("\n  "));
-  const options = await page.$$eval("select", sels => sels.map(s => [...s.options].map(o => `${o.value}=${o.text}`).join(", ")));
-  console.log("opciones de select: " + options.join("\n  "));
-  const text = await page.locator("body").innerText().catch(() => "");
-  console.log("texto visible:\n" + cut(text, 4000));
+  const links = await page.$$eval("a[href], iframe[src], img[src], embed[src], object[data]", els => els
+    .map(el => `${el.tagName.toLowerCase()} ${el.getAttribute("href") || el.getAttribute("src") || el.getAttribute("data")} ${(el.innerText || el.alt || "").trim().slice(0, 50)}`)
+    .filter(t => !/facebook|instagram|tiktok|youtube|legales|libro-de|conoceme|ubicame|aprende|ofrece|mailto|cookiebot|gtm/i.test(t)));
+  console.log("enlaces/imágenes/iframes tras elegir ciudad:\n  " + links.slice(0, 60).join("\n  "));
+  const text = await page.locator("main, #content, body").first().innerText().catch(() => "");
+  console.log("texto visible:\n" + cut(text, 3500));
   await browser.close();
 }
