@@ -14,8 +14,26 @@
   font-weight: 600;
   color: var(--ink);
 }
-.status-bar--dark { color: rgb(255 255 255 / 0.6); }
-.status-bar__icons { display: flex; align-items: center; gap: 6px; }
+.status-bar--dark { color: rgb(255 255 255 / 0.75); }
+.status-bar__icons { display: flex; align-items: center; gap: 5px; }
+
+/* ── Íconos SVG (js/components/icons.js) ───────────────────────────────── */
+.icon { flex-shrink: 0; display: inline-block; vertical-align: -0.2em; }
+.icon-chip {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--blue-50);
+  color: var(--blue);
+}
+.icon-chip--lg { width: 44px; height: 44px; }
+.icon--star { color: var(--gold); fill: var(--gold); }
+.icon--gold { color: var(--gold); }
+.icon--green { color: var(--green); }
 
 /* ── Logo de texto Ca$erIA ─────────────────────────────────────────────── */
 .wordmark { font-weight: 900; letter-spacing: -0.025em; color: var(--ink); }
@@ -67,6 +85,7 @@
 }
 
 .link-btn { font-size: 12px; font-weight: 700; color: var(--blue); }
+.link-btn--icon { display: inline-flex; align-items: center; gap: 2px; }
 
 /* ── Tarjetas ──────────────────────────────────────────────────────────── */
 .card {
@@ -87,12 +106,13 @@
   letter-spacing: 0.025em;
 }
 
-.section-title { font-size: 14px; font-weight: 700; color: var(--ink); }
+.section-title { font-size: 17px; font-weight: 800; letter-spacing: -0.01em; color: var(--ink); }
+.section-sub { font-size: 12px; color: var(--muted); }
 .section-head {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 /* ── Cajas informativas ────────────────────────────────────────────────── */
@@ -106,7 +126,7 @@
   font-size: 12px;
   line-height: 1.6;
 }
-.note__icon { flex-shrink: 0; font-size: 16px; line-height: 1.2; }
+.note__icon { flex-shrink: 0; display: flex; font-size: 16px; line-height: 1.2; }
 .note__title { margin-bottom: 4px; font-weight: 700; color: var(--blue); }
 
 .note--blue { background: var(--blue-50); border-color: rgb(11 99 229 / 0.2); color: var(--ink-2); }
@@ -159,6 +179,10 @@
 }
 .segmented__btn {
   flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
   padding: 6px 0;
   border-radius: 8px;
   font-size: 12px;
@@ -223,18 +247,21 @@
 .topbar__title { font-size: 16px; line-height: 24px; font-weight: 700; color: var(--ink); }
 .topbar__subtitle { font-size: 12px; color: var(--muted); }
 .topbar__highlight { font-weight: 600; color: var(--blue); }
-.topbar__icon { font-size: 20px; }
+.topbar__icon { display: flex; color: var(--ink-2); }
 
 .back-btn {
   flex-shrink: 0;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
+  margin-left: -8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  border-radius: 999px;
   color: var(--ink);
+  transition: background 0.15s;
 }
+.back-btn:active { background: var(--line-soft); }
 
 .steps { display: flex; gap: 4px; }
 .steps__bar { width: 24px; height: 6px; border-radius: 999px; background: var(--line); }
@@ -246,9 +273,10 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 8px 8px 20px;
+  padding: 8px 8px 22px;
   background: var(--white);
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--line-soft);
+  box-shadow: 0 -4px 16px rgb(15 23 42 / 0.04);
 }
 .bottom-nav__item {
   flex: 1;
@@ -262,9 +290,8 @@
   color: var(--muted);
 }
 .bottom-nav__item.is-active { color: var(--blue); }
-.bottom-nav__icon { font-size: 20px; line-height: 28px; }
-.bottom-nav__label { font-size: 12px; font-weight: 600; }
-.bottom-nav__dot { width: 4px; height: 4px; border-radius: 999px; background: var(--blue); }
+.bottom-nav__icon { display: flex; height: 28px; align-items: center; }
+.bottom-nav__label { font-size: 11px; font-weight: 600; letter-spacing: 0.01em; }
 
 /* ── Pie fijo con botón de acción ──────────────────────────────────────── */
 .action-footer {
@@ -319,6 +346,21 @@
   font-size: 14px;
   font-weight: 700;
 }
+.avatar--premium { position: relative; background: linear-gradient(135deg, #FBBF24, #D97706); }
+.avatar__badge {
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--white);
+  border-radius: 999px;
+  background: var(--ink);
+  color: #FBBF24;
+}
 .avatar--lg { width: 64px; height: 64px; border-radius: 16px; font-size: 24px; font-weight: 900; }
 
 .icon-box {
@@ -347,7 +389,7 @@
   transition: border-color 0.15s;
 }
 .field:focus-within { border-color: var(--blue); }
-.field__icon { flex-shrink: 0; font-size: 18px; }
+.field__icon { flex-shrink: 0; display: flex; font-size: 18px; color: var(--muted); }
 .field__input { flex: 1; min-width: 0; font-size: 16px; color: var(--ink); }
 .field__input--strong { font-weight: 600; }
 .field__input::placeholder { color: var(--slate-300); font-weight: 400; }
@@ -374,6 +416,7 @@
 }
 .detail-list li { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--ink-2); }
 .detail-list strong { font-weight: 600; color: var(--ink); }
+.detail-list__icon { display: flex; color: var(--blue); }
 
 .price-list__row {
   display: flex;
@@ -459,11 +502,14 @@
 
 .close-btn {
   flex-shrink: 0;
-  padding: 6px 12px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 999px;
   background: var(--line-soft);
   color: var(--ink-3);
-  font-weight: 700;
 }
 .close-btn--round { width: 32px; height: 32px; padding: 0; display: flex; align-items: center; justify-content: center; }
 
@@ -479,7 +525,7 @@
   font-weight: 600;
   color: var(--green-dark);
 }
-.saved-box__icon { font-size: 18px; }
+.saved-box__icon { display: flex; color: var(--green-dark); }
 
 /* Modal: distrito activo */
 .district-sheet { padding: 24px; }

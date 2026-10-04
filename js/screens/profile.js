@@ -1,31 +1,36 @@
 // Perfil del comprador: ahorro, plan Premium y funciones con IA.
 
 const PREMIUM_BENEFITS = [
-  "✓ Asistente nutricional con IA",
-  "✓ Escáner de alimentos ilimitado",
-  "✓ Canastas personalizadas",
-  "✓ Comparación de precios ilimitada",
-  "✓ Alertas de precios y promociones",
-  "✓ Historial y análisis de gastos",
+  "Asistente nutricional con IA",
+  "Escáner de alimentos ilimitado",
+  "Canastas personalizadas",
+  "Comparación de precios ilimitada",
+  "Alertas de precios y promociones",
+  "Historial y análisis de gastos",
 ];
 
-const PROFILE_MENU = ["📍 Establecimientos Preferidos", "🔔 Notificaciones", "❓ Centro de Ayuda", "🚪 Cerrar Sesión"];
+const PROFILE_MENU = [
+  { icon: "store", label: "Establecimientos preferidos" },
+  { icon: "bell", label: "Notificaciones" },
+  { icon: "info", label: "Centro de ayuda" },
+  { icon: "logout", label: "Cerrar sesión", logout: true },
+];
 
-function AiFeatureCard({ emoji, title, desc, locked, canTry }) {
+function AiFeatureCard({ icon, title, desc, locked, canTry }) {
   return `
     <div class="card card--pad ai-feature">
-      <div class="icon-box icon-box--lg icon-box--blue">${emoji}</div>
+      <span class="icon-chip icon-chip--lg">${Icon(icon, { size: 22 })}</span>
       <div class="ai-feature__body">
         <div class="ai-feature__head">
           <p class="ai-feature__title">${title}</p>
           ${locked
-            ? `<span class="pill pill--gray pill--bold">🔒 Premium</span>`
+            ? `<span class="pill pill--gray pill--bold">${Icon("lock", { size: 12, stroke: 2.4 })} Premium</span>`
             : state.premium
-              ? `<span class="pill pill--super pill--bold">⭐ Ilimitado</span>`
-              : `<span class="pill pill--green pill--bold">🎁 1 Prueba Gratis</span>`}
+              ? `<span class="pill pill--super pill--bold">${Icon("crown", { size: 12, stroke: 2.4 })} Ilimitado</span>`
+              : `<span class="pill pill--green pill--bold">${Icon("gift", { size: 12, stroke: 2.4 })} 1 prueba gratis</span>`}
         </div>
         <p class="ai-feature__desc">${desc}</p>
-        ${canTry ? `<button class="link-btn" data-action="go" data-to="scanner">Usar prueba gratis →</button>` : state.premium && title.includes("Escáner") ? `<button class="link-btn" data-action="go" data-to="scanner">Abrir escáner →</button>` : ""}
+        ${canTry ? `<button class="link-btn link-btn--icon" data-action="go" data-to="scanner">Usar prueba gratis${Icon("chevron-right", { size: 14, stroke: 2.4 })}</button>` : state.premium && title.includes("Escáner") ? `<button class="link-btn link-btn--icon" data-action="go" data-to="scanner">Abrir escáner${Icon("chevron-right", { size: 14, stroke: 2.4 })}</button>` : ""}
       </div>
     </div>`;
 }
@@ -35,8 +40,8 @@ defineScreen("buyerprofile", {
 
   render() {
     const features = [
-      { emoji: "📷", title: "Escáner IA de Frescura", desc: "Analiza calidad y vida útil de tus compras.", locked: !state.premium && state.trialUsed, canTry: !state.premium && !state.trialUsed },
-      { emoji: "🥗", title: "IA Nutricional + Especialistas", desc: "Planes de salud y citas con nutricionistas.", locked: !state.premium, canTry: false },
+      { icon: "camera", title: "Escáner IA de Frescura", desc: "Analiza calidad y vida útil de tus compras.", locked: !state.premium && state.trialUsed, canTry: !state.premium && !state.trialUsed },
+      { icon: "heart", title: "IA Nutricional + Especialistas", desc: "Planes de salud y citas con nutricionistas.", locked: !state.premium, canTry: false },
     ];
 
     return `
@@ -44,7 +49,7 @@ defineScreen("buyerprofile", {
         ${StatusBar()}
         <header class="topbar topbar--between">
           <h1 class="topbar__title">Mi Perfil</h1>
-          <button class="topbar__icon" aria-label="Ajustes">⚙️</button>
+          <button class="topbar__icon" aria-label="Ajustes">${Icon("settings", { size: 22 })}</button>
         </header>
 
         <div class="screen__body" data-scroll="profile">
@@ -53,7 +58,7 @@ defineScreen("buyerprofile", {
             <div>
               <p class="profile-head__name">${esc(state.userName)}</p>
               <p class="profile-head__email">${state.userEmail ? esc(state.userEmail) : "sin correo registrado"}</p>
-              <p class="profile-head__zone">📍 ${getDistrict().label}, Arequipa</p>
+              <p class="profile-head__zone">${Icon("map-pin", { size: 13 })} ${getDistrict().label}, Arequipa</p>
             </div>
           </div>
 
@@ -68,23 +73,24 @@ defineScreen("buyerprofile", {
 
           <div class="premium-card">
             <div class="premium-card__head">
-              <div class="premium-card__title"><span>⭐</span><p>Ca$erIA Premium</p></div>
+              <div class="premium-card__title">${Icon("crown", { size: 20, cls: "icon--gold" })}<p>Ca$erIA Premium</p></div>
               ${state.premium ? '<div class="premium-card__price"><p>Activo</p></div>' : '<div class="premium-card__price"><p>S/ 9.90</p><span>/mes</span></div>'}
             </div>
-            ${each(PREMIUM_BENEFITS, b => `<p class="premium-card__benefit">${b}</p>`)}
+            ${each(PREMIUM_BENEFITS, b => `<p class="premium-card__benefit">${Icon("check", { size: 14, stroke: 3, cls: "icon--green" })} ${b}</p>`)}
             ${!state.premium ? '<button class="btn btn--primary btn--md btn--block premium-card__cta">Obtener Premium</button>' : '<p class="premium-card__benefit" style="text-align:center; font-weight:bold; color:var(--blue); margin-top:12px;">¡Gracias por tu suscripción!</p>'}
           </div>
 
           <div>
-            <p class="profile__section-label">✨ Funciones con IA</p>
+            <p class="profile__section-label">Funciones con IA</p>
             <div class="ai-features">${each(features, AiFeatureCard)}</div>
           </div>
 
           <div class="card card--clip">
-            ${each(PROFILE_MENU, item => {
-              const logout = item.includes("Cerrar");
-              return `<button class="menu-item${logout ? " menu-item--danger" : ""}"${logout ? ` data-action="logout"` : ""}>${item}${logout ? "" : `<span class="menu-item__chevron">›</span>`}</button>`;
-            })}
+            ${each(PROFILE_MENU, item => `
+              <button class="menu-item${item.logout ? " menu-item--danger" : ""}"${item.logout ? ` data-action="logout"` : ""}>
+                <span class="menu-item__label">${Icon(item.icon, { size: 20 })}${item.label}</span>
+                ${item.logout ? "" : `<span class="menu-item__chevron">${Icon("chevron-right", { size: 18 })}</span>`}
+              </button>`)}
           </div>
         </div>
       </section>`;

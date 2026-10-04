@@ -16,7 +16,7 @@ function DistrictModal() {
         <h2 class="district-sheet__title">Distrito activo</h2>
         <p class="district-sheet__sub">Zona de validación actual de Ca$erIA.</p>
         <div class="district-option">
-          <span class="district-option__icon">📍</span>
+          <span class="district-option__icon">${Icon("map-pin", { size: 20 })}</span>
           <div class="district-option__text">
             <p class="district-option__name">Paucarpata, Arequipa</p>
             <p class="district-option__stores">Tottus · Plaza Vea · Franco · Tiendas Mass</p>
@@ -38,7 +38,7 @@ function WebRedirectModal(name) {
     <div class="backdrop backdrop--center" data-backdrop="closeModal">
       <div class="modal slide-up">
         <div class="modal__top">
-          <button class="close-btn close-btn--round" data-action="closeModal" aria-label="Cerrar">✕</button>
+          <button class="close-btn close-btn--round" data-action="closeModal" aria-label="Cerrar">${Icon("x", { size: 18, stroke: 2.4 })}</button>
         </div>
         <div class="modal__body">
           <div class="modal__icon">🌐</div>
@@ -56,7 +56,7 @@ function WebRedirectModal(name) {
             <span class="modal__online"></span>
           </div>
           <div class="note note--amber">
-            <span>ℹ️</span>
+            ${Icon("info", { size: 18 })}
             <p>Los precios en la web pueden diferir de los comparados por Ca$erIA. Se abrirá en tu navegador.</p>
           </div>
           <button class="btn btn--primary btn--lg btn--block" data-action="closeModal">Ir a la Web Externa ↗</button>

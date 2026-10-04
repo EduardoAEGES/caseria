@@ -26,13 +26,13 @@ defineScreen("stallstandard", {
         <div class="card card--pad">
           <p class="card__label">Información del establecimiento</p>
           ${DetailList([
-            ["🏪", "Establecimiento", "Tiendas Mass – Los Andes"],
-            ["📍", "Distrito", "Paucarpata, Arequipa"],
-            ["🗺️", "Dirección", "Av. Los Andes 210, Paucarpata"],
-            ["🚶", "Distancia", "~1.1 km · 14 min a pie"],
-            ["🕗", "Horario", "7:00 – 22:00 (todos los días)"],
+            ["store", "Establecimiento", "Tiendas Mass – Los Andes"],
+            ["map-pin", "Distrito", "Paucarpata, Arequipa"],
+            ["map", "Dirección", "Av. Los Andes 210, Paucarpata"],
+            ["walk", "Distancia", "~1.1 km · 14 min a pie"],
+            ["clock", "Horario", "7:00 – 22:00 (todos los días)"],
           ])}
-          <button class="btn btn--outline btn--sm btn--block">📍 Ver ubicación en mapa</button>
+          <button class="btn btn--outline btn--sm btn--block">${Icon("map-pin", { size: 16 })}Ver ubicación en mapa</button>
         </div>
 
         <div class="card card--pad">
@@ -50,8 +50,8 @@ defineScreen("stallstandard", {
 
         <div class="card card--pad stall-actions">
           ${SaveFavorite(ui.saved)}
-          <button class="btn btn--outline btn--md btn--block">🗺️ Cómo llegar</button>
-          <button class="btn btn--muted btn--md btn--block">🔍 Ver alternativa más cercana</button>
+          <button class="btn btn--outline btn--md btn--block">${Icon("navigation", { size: 16 })}Cómo llegar</button>
+          <button class="btn btn--muted btn--md btn--block">${Icon("search", { size: 16 })}Ver alternativa más cercana</button>
         </div>
       </div>
     </section>`,

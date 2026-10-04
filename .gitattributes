@@ -144,3 +144,6 @@
 *.stl                filter=lfs diff=lfs merge=lfs -text
 *.nc                 filter=lfs diff=lfs merge=lfs -text
 *.mat                filter=lfs diff=lfs merge=lfs -text
+
+# Imágenes de la app: archivos normales (no LFS) para que se vean en GitHub Pages y en vistas previas.
+img/** -filter -diff -merge -text

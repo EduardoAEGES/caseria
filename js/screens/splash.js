@@ -32,7 +32,7 @@ defineScreen("splash", {
 
         <div class="splash__fields">
           <label class="field">
-            <span class="field__icon">👤</span>
+            <span class="field__icon">${Icon("user", { size: 18 })}</span>
             <input id="splash-name" class="field__input field__input--strong" data-input="setName" placeholder="Tu Nombre" value="${esc(ui.name)}">
           </label>
           <label class="field">
@@ -75,7 +75,7 @@ defineScreen("splash", {
       navigate("permission");
     },
     login: () => {
-      startReturning();
+      startFree();
       navigate("home");
     },
   },

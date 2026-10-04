@@ -44,6 +44,6 @@
   .home__section, .home__header { padding-left: 16px; padding-right: 16px; }
   .basket-strip { padding-left: 16px; padding-right: 16px; }
   .topbar { padding-left: 16px; padding-right: 16px; }
-  .category-tile__name { font-size: 10px; }
+  .category-chip__name { font-size: 10px; }
   .segmented__btn { font-size: 11px; }
 }

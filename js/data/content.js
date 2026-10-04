@@ -40,7 +40,7 @@ const SAVED_BASKETS = [
 ];
 
 const FAVORITE_STORES = [
-  { name: "Tiendas Mass – Porongoche", type: "Tienda de descuento", address: "Av. Los Incas 320",  rating: 4.7, featured: true,  tags: ["🏷️ Descuento", "🏆 Mejor precio"] },
-  { name: "Franco Supermercados",      type: "Supermercado",        address: "Av. Porongoche 450", rating: 4.5, featured: false, tags: ["🏢 Super", "✓ Completo"] },
-  { name: "Tottus Porongoche",         type: "Supermercado",        address: "C.C. Real Plaza",    rating: 4.6, featured: false, tags: ["🏢 Super", "🌐 Compra Online"] },
+  { name: "Tiendas Mass – Porongoche", type: "Tienda de descuento", address: "Av. Los Incas 320",  rating: 4.7, featured: true,  tags: ["Descuento", "Mejor precio"] },
+  { name: "Franco Supermercados",      type: "Supermercado",        address: "Av. Porongoche 450", rating: 4.5, featured: false, tags: ["Supermercado", "Tiene todo"] },
+  { name: "Tottus Porongoche",         type: "Supermercado",        address: "C.C. Real Plaza",    rating: 4.6, featured: false, tags: ["Supermercado", "Compra online"] },
 ];

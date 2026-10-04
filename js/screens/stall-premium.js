@@ -19,12 +19,12 @@ defineScreen("stallpremium", {
         tone: "blue",
         emoji: "🏷️🛒",
         name: "Tiendas Mass – Porongoche",
-        badge: `<span class="stall-hero__badge stall-hero__badge--best">🏆 Mejor precio</span>`,
+        badge: `<span class="stall-hero__badge stall-hero__badge--best">${Icon("trophy", { size: 13, stroke: 2.4 })} Mejor precio</span>`,
         address: "Av. Los Incas 320, Paucarpata",
       })}
       <div class="screen__body" data-scroll="stall-premium">
         <div class="savings-banner">
-          <span class="savings-banner__icon">🏆</span>
+          <span class="savings-banner__icon">${Icon("trophy", { size: 20 })}</span>
           <div>
             <p class="savings-banner__title">Opción más económica para tu canasta</p>
             <p class="savings-banner__text">Precios actualizados · Ahorras S/ 23.50 vs. alternativas</p>
@@ -32,20 +32,20 @@ defineScreen("stallpremium", {
         </div>
 
         <div class="stat-chips">
-          <span class="stat-chip stat-chip--green">📊 S/ 76.50</span>
-          <span class="stat-chip stat-chip--blue">📍 600 m · 8 min</span>
+          <span class="stat-chip stat-chip--green">${Icon("cart", { size: 14 })} S/ 76.50</span>
+          <span class="stat-chip stat-chip--blue">${Icon("walk", { size: 14 })} 600 m · 8 min</span>
           <span class="stat-chip">🕗 7:00 – 22:00</span>
         </div>
 
         <div class="card card--pad">
           <p class="card__label">Información del establecimiento</p>
           ${DetailList([
-            ["🏪", "Establecimiento", "Tiendas Mass – Porongoche"],
-            ["📍", "Distrito", "Paucarpata, Arequipa"],
-            ["🗺️", "Dirección", "Av. Los Incas 320, Paucarpata"],
-            ["🚶", "Distancia", "~600 m · 8 min a pie"],
+            ["store", "Establecimiento", "Tiendas Mass – Porongoche"],
+            ["map-pin", "Distrito", "Paucarpata, Arequipa"],
+            ["map", "Dirección", "Av. Los Incas 320, Paucarpata"],
+            ["walk", "Distancia", "~600 m · 8 min a pie"],
           ])}
-          <button class="btn btn--outline btn--sm btn--block" data-action="map">📍 Ver ubicación en mapa</button>
+          <button class="btn btn--outline btn--sm btn--block" data-action="map">${Icon("map-pin", { size: 16 })}Ver ubicación en mapa</button>
         </div>
 
         <div class="card card--pad">
@@ -63,8 +63,8 @@ defineScreen("stallpremium", {
 
         <div class="stall-actions">
           ${SaveFavorite(ui.saved)}
-          <button class="btn btn--muted btn--md btn--block">🗺️ Cómo llegar</button>
-          <button class="btn btn--muted btn--md btn--block">🔍 Ver más ofertas de esta tienda</button>
+          <button class="btn btn--muted btn--md btn--block">${Icon("navigation", { size: 16 })}Cómo llegar</button>
+          <button class="btn btn--muted btn--md btn--block">${Icon("tag", { size: 16 })}Ver más ofertas de esta tienda</button>
         </div>
       </div>
     </section>`,

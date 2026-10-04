@@ -4,7 +4,7 @@ function StatusBar(dark = false) {
   return `
     <div class="status-bar${dark ? " status-bar--dark" : ""}">
       <span>9:41</span>
-      <div class="status-bar__icons"><span>●●●●</span><span>WiFi</span><span>🔋</span></div>
+      <div class="status-bar__icons">${Icon("signal", { size: 15 })}${Icon("wifi", { size: 15 })}${Icon("battery", { size: 22, stroke: 1.6 })}</div>
     </div>`;
 }
 
@@ -13,7 +13,7 @@ function Wordmark() {
 }
 
 function BackButton(action = "back") {
-  return `<button class="back-btn" data-action="${action}" aria-label="Volver">←</button>`;
+  return `<button class="back-btn" data-action="${action}" aria-label="Volver">${Icon("chevron-left", { size: 24, stroke: 2.4 })}</button>`;
 }
 
 /** Indicador "Paso X de 2" con dos barritas. */
@@ -22,7 +22,7 @@ function StepBars(done) {
 }
 
 function Check(on, modifiers = "") {
-  return `<span class="check ${modifiers}${on ? " is-on" : ""}">${on ? "✓" : ""}</span>`;
+  return `<span class="check ${modifiers}${on ? " is-on" : ""}">${on ? Icon("check", { size: 14, stroke: 3 }) : ""}</span>`;
 }
 
 /** Selector segmentado: options = [{ value, label }]. */
@@ -42,7 +42,7 @@ function Tabs(options, current, action) {
 }
 
 function CloseButton(action) {
-  return `<button class="close-btn" data-action="${action}" aria-label="Cerrar">✕</button>`;
+  return `<button class="close-btn" data-action="${action}" aria-label="Cerrar">${Icon("x", { size: 18, stroke: 2.4 })}</button>`;
 }
 
 /** Hoja inferior que se cierra al tocar el fondo oscuro. */
@@ -67,18 +67,18 @@ function SheetHeader({ eyebrow, title, tone = "", close = "closeSheet" }) {
 function ReferencePricesNote() {
   return `
     <div class="note note--amber">
-      <span>ℹ️</span>
+      ${Icon("info", { size: 18 })}
       <p>Los precios son referenciales. Pueden variar según disponibilidad en tienda.</p>
     </div>`;
 }
 
 // ── Barra de navegación inferior ────────────────────────────────────────────
 const NAV_ITEMS = [
-  { label: "Inicio",     icon: "🏠", to: "home",         activeOn: ["home"] },
-  { label: "Categorías", icon: "🗂️", to: "select",       activeOn: ["select", "quantities", "loading"] },
-  { label: "Listas",     icon: "📝", to: "mislistas",    activeOn: ["mislistas"] },
-  { label: "Comparar",   icon: "📊", to: "results",      activeOn: ["results", "stallstandard", "stallpremium", "stallmap"] },
-  { label: "Perfil",     icon: "👤", to: "buyerprofile", activeOn: ["buyerprofile", "scanner"] },
+  { label: "Inicio",     icon: "home", to: "home",         activeOn: ["home"] },
+  { label: "Categorías", icon: "grid", to: "select",       activeOn: ["select", "quantities", "loading"] },
+  { label: "Listas",     icon: "list", to: "mislistas",    activeOn: ["mislistas"] },
+  { label: "Comparar",   icon: "chart", to: "results",      activeOn: ["results", "stallstandard", "stallpremium", "stallmap"] },
+  { label: "Perfil",     icon: "user", to: "buyerprofile", activeOn: ["buyerprofile", "scanner"] },
 ];
 
 function BottomNav(current) {
@@ -88,9 +88,8 @@ function BottomNav(current) {
         const active = item.activeOn.includes(current);
         return `
           <button class="bottom-nav__item${active ? " is-active" : ""}" data-action="go" data-to="${item.to}">
-            <span class="bottom-nav__icon">${item.icon}</span>
+            <span class="bottom-nav__icon">${Icon(item.icon, { size: 24, stroke: active ? 2.3 : 1.8 })}</span>
             <span class="bottom-nav__label">${item.label}</span>
-            ${active ? `<span class="bottom-nav__dot"></span>` : ""}
           </button>`;
       })}
     </nav>`;

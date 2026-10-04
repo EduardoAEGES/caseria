@@ -9,7 +9,7 @@ const LOADING_STEPS = [
 function LoadingSteps(step) {
   return each(LOADING_STEPS, (text, i) => {
     const status = i < step ? "done" : i === step ? "current" : "pending";
-    const bullet = { done: "✓", current: "⏳", pending: "○" }[status];
+    const bullet = { done: Icon("check", { size: 12, stroke: 3 }), current: Icon("clock", { size: 12, stroke: 2.6 }), pending: "" }[status];
     return `
       <div class="loading-step${i < step ? " is-done" : ""}">
         <span class="loading-step__bullet loading-step__bullet--${status}">${bullet}</span>
@@ -35,13 +35,13 @@ defineScreen("loading", {
         <div class="radar__ring radar-ring-3"></div>
         <div class="radar__circle radar__circle--outer"></div>
         <div class="radar__circle radar__circle--inner"></div>
-        <div class="radar__core">🤖</div>
+        <div class="radar__core">${Icon("bot", { size: 30 })}</div>
         <span class="radar__blip radar__blip--orange"></span>
         <span class="radar__blip radar__blip--green"></span>
       </div>
 
       <div class="loading__status">
-        <h2 class="loading__title">🤖 Analizando opciones en ${getDistrict().label}...</h2>
+        <h2 class="loading__title">Analizando opciones en ${getDistrict().label}...</h2>
         <div id="loading-steps" class="loading__steps">${LoadingSteps(ui.step)}</div>
         <div class="typing-dots"><span class="pulse-1"></span><span class="pulse-2"></span><span class="pulse-3"></span></div>
       </div>

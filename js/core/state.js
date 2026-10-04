@@ -2,11 +2,11 @@
 
 // Usuario de prueba para el modo "Ya tengo cuenta" cuando no hay cuenta guardada.
 const DEMO_ACCOUNT = { name: "Mateo", email: "", trialUsed: false, premium: false };
-const DEMO_PREMIUM = { name: "Mateo (Premium)", email: "premium@caseria.pe", trialUsed: false, premium: true };
+const DEMO_PREMIUM = { name: "Valeria", email: "valeria@caseria.pe", trialUsed: false, premium: true };
 
 const state = {
   screen: "mode",
-  mode: null,                          // "firstTime" | "returning" (modo de simulación elegido)
+  mode: null,                          // "firstTime" | "free" | "premium" (modo de acceso elegido)
   registered: false,                   // true cuando ya existe una cuenta en este dispositivo
   userName: DEMO_ACCOUNT.name,
   userEmail: DEMO_ACCOUNT.email,
@@ -48,20 +48,19 @@ function startFirstTime() {
   resetSession(DEMO_ACCOUNT);
 }
 
-/** Modo "Ya tengo cuenta": usa la cuenta guardada (o la de prueba) y entra directo. */
-function startReturning() {
-  state.mode = "returning";
+/** Modo "Usuario Free": usa la cuenta guardada (o la de prueba) con el plan gratuito. */
+function startFree() {
+  state.mode = "free";
   state.registered = true;
-  resetSession(loadAccount() || DEMO_ACCOUNT);
+  resetSession({ ...(loadAccount() || DEMO_ACCOUNT), premium: false });
   saveAccount(currentAccount());
 }
 
-/** Modo "Premium": fuerza inicio con cuenta premium para probar funciones de pago. */
+/** Modo "Usuario Premium": cuenta de prueba con plan de pago. No toca la cuenta guardada. */
 function startPremium() {
   state.mode = "premium";
   state.registered = true;
   resetSession(DEMO_PREMIUM);
-  saveAccount(currentAccount());
 }
 
 /** Fin del registro: desde ahora la app ya no vuelve a pedir nombre y correo. */
@@ -72,7 +71,7 @@ function completeRegistration() {
 
 function useScannerTrial() {
   state.trialUsed = true;
-  if (state.registered) saveAccount(currentAccount());
+  if (state.registered && state.mode !== "premium") saveAccount(currentAccount());
 }
 
 // ── Canasta ─────────────────────────────────────────────────────────────────

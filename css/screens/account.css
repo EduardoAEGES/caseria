@@ -27,6 +27,7 @@
 .fav-store__rating { margin-bottom: 8px; font-size: 12px; }
 .fav-store__rating strong { color: var(--ink); }
 .fav-store__map {
+  display: flex;
   padding: 6px 10px;
   border-radius: 8px;
   background: var(--blue);
@@ -68,7 +69,7 @@
 .premium-card__price { text-align: right; }
 .premium-card__price p { font-weight: 900; color: var(--orange); }
 .premium-card__price span { font-size: 12px; color: var(--muted); }
-.premium-card__benefit { margin-bottom: 4px; font-size: 12px; color: var(--ink-2); }
+.premium-card__benefit { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; font-size: 12px; color: var(--ink-2); }
 .premium-card__cta { margin-top: 12px; padding: 12px; border-radius: 12px; }
 
 .profile__section-label {
@@ -100,7 +101,10 @@
 }
 .menu-item:last-child { border-bottom: 0; }
 .menu-item--danger { color: var(--red); }
-.menu-item__chevron { color: var(--slate-300); }
+.menu-item__chevron { display: flex; color: var(--slate-300); }
+.menu-item__label { display: flex; align-items: center; gap: 12px; }
+.menu-item__label .icon { color: var(--ink-3); }
+.menu-item--danger .menu-item__label .icon { color: var(--red); }
 
 /* ── Escáner IA ────────────────────────────────────────────────────────── */
 .scanner__header { flex-shrink: 0; display: flex; align-items: center; gap: 12px; padding: 8px 16px 12px; }

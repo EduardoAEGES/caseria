@@ -75,9 +75,9 @@ defineScreen("select", {
 
         <div class="select__search">
           <label class="search">
-            <span>🔍</span>
+            ${Icon("search", { size: 18 })}
             <input id="product-search" class="search__input" data-input="search" placeholder="Buscar producto..." value="${esc(ui.query)}">
-            ${ui.query ? `<button class="search__clear" data-action="clearSearch" aria-label="Borrar búsqueda">✕</button>` : ""}
+            ${ui.query ? `<button class="search__clear" data-action="clearSearch" aria-label="Borrar búsqueda">${Icon("x", { size: 16, stroke: 2.4 })}</button>` : ""}
           </label>
         </div>
 
@@ -99,7 +99,7 @@ defineScreen("select", {
         ${state.selected.length > 0 && !ui.activeProduct ? `
           <div class="action-footer">
             <button class="btn btn--primary btn--lg btn--block" data-action="next">
-              <span class="btn__count">${state.selected.length}</span> productos → Definir cantidades
+              <span class="btn__count">${state.selected.length}</span> productos · Definir cantidades ${Icon("chevron-right", { size: 18, stroke: 2.4 })}
             </button>
           </div>` : ""}
 

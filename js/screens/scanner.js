@@ -13,12 +13,12 @@ defineScreen("scanner", {
       <section class="screen screen--dark">
         ${StatusBar(true)}
         <header class="scanner__header">
-          <button class="scanner__back" data-action="finish" aria-label="Volver">←</button>
+          <button class="scanner__back" data-action="finish" aria-label="Volver">${Icon("chevron-left", { size: 24, stroke: 2.4 })}</button>
           <div>
-            <p class="scanner__title">📷 Escáner IA de Frescura</p>
+            <p class="scanner__title">Escáner IA de frescura</p>
             <p class="scanner__sub">${state.premium ? 'Uso Ilimitado' : 'Prueba gratis · 1 uso disponible'}</p>
           </div>
-          <span class="scanner__badge">${state.premium ? '⭐ Premium' : '🎁 Gratis'}</span>
+          <span class="scanner__badge">${state.premium ? `${Icon("crown", { size: 12, stroke: 2.4 })} Premium` : `${Icon("gift", { size: 12, stroke: 2.4 })} Gratis`}</span>
         </header>
 
         <div class="scanner__viewport" style="position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #000;">
@@ -53,7 +53,7 @@ defineScreen("scanner", {
                 </div>
                 <p class="scanner__result-line">📅 <strong>Vida útil:</strong> Estimación basada en IA (TensorFlow).</p>
                 <p class="scanner__result-line scanner__result-line--last">💰 <strong>Comparativa:</strong> Cruzado con base de datos de Paucarpata.</p>
-                <span class="pill pill--green pill--strong">✓ Apto para compra</span>
+                <span class="pill pill--green pill--strong">${Icon("check", { size: 12, stroke: 3 })} Apto para compra</span>
               </div>
             </div>` : ""}
         </div>
@@ -68,7 +68,7 @@ defineScreen("scanner", {
             </div>
           </div>` : isDone && state.premium ? `
           <div class="scanner__upsell slide-up">
-            <p class="scanner__upsell-title">✨ Análisis exitoso</p>
+            <p class="scanner__upsell-title">${Icon("sparkles", { size: 16 })} Análisis exitoso</p>
             <p class="scanner__upsell-text">Puedes seguir escaneando más productos de forma ilimitada con Premium.</p>
             <div class="scanner__upsell-actions">
               <button class="scanner__upsell-btn scanner__upsell-btn--solid" data-action="finish">Volver al Perfil</button>

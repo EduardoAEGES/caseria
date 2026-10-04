@@ -71,7 +71,7 @@ function EstablishmentListView(selectedIndex) {
               <span class="est-card__number" style="background: ${establishmentColor(e)}">${i + 1}</span>
               <p class="est-card__name">${e.name}</p>
             </div>
-            <span class="est-card__rating">⭐ <strong>${e.rating}</strong></span>
+            <span class="est-card__rating">${Icon("star", { size: 13, cls: "icon--star" })} <strong>${e.rating}</strong></span>
           </div>
           <p class="est-card__sub">${e.type} · ${e.address}</p>
           <div class="est-card__foot">
@@ -109,7 +109,7 @@ function EstablishmentMapView(ui) {
         <div class="map-chips__track hide-scrollbar" data-scroll="stall-map-chips">
           ${each(MAP_ESTABLISHMENTS, (e, i) => `
             <button class="map-chip${i === ui.selected ? " is-active" : ""}" data-action="select" data-index="${i}">
-              <span>${e.featured ? "🏆" : e.type === "Tienda de descuento" ? "🏷️" : "🏢"}</span>${i + 1}
+              ${Icon(e.featured ? "trophy" : e.type === "Tienda de descuento" ? "tag" : "store", { size: 14 })}${i + 1}
             </button>`)}
         </div>
       </div>
@@ -126,7 +126,7 @@ function EstablishmentMapView(ui) {
               <p class="map-sheet__meta">${selected.type}</p>
               <p class="map-sheet__meta">Paucarpata, Arequipa</p>
             </div>
-            <div class="map-sheet__rating">⭐ <strong>${selected.rating}</strong><span>/5</span></div>
+            <div class="map-sheet__rating">${Icon("star", { size: 14, cls: "icon--star" })} <strong>${selected.rating}</strong><span>/5</span></div>
           </div>
 
           <div class="map-sheet__status">
@@ -136,16 +136,16 @@ function EstablishmentMapView(ui) {
 
           <!-- Ambos grupos de botones existen; el CSS muestra uno según .is-expanded -->
           <div class="map-sheet__actions map-sheet__actions--expanded slide-up">
-            <button class="btn btn--primary btn--md btn--block">🗺️ Cómo llegar</button>
+            <button class="btn btn--primary btn--md btn--block">${Icon("navigation", { size: 16 })}Cómo llegar</button>
             <div class="map-sheet__row">
-              <button class="btn btn--muted btn--sm btn--grow map-sheet__dark-text">💰 Ver precios</button>
-              ${webButton("btn btn--outline btn--sm btn--grow", "🌐 Ir a Web")}
+              <button class="btn btn--muted btn--sm btn--grow map-sheet__dark-text">${Icon("tag", { size: 16 })}Ver precios</button>
+              ${webButton("btn btn--outline btn--sm btn--grow", `${Icon("arrow-right", { size: 16 })}Ir a la web`)}
             </div>
           </div>
           <div class="map-sheet__actions map-sheet__actions--collapsed">
-            <button class="btn btn--primary btn--sm btn--grow map-sheet__go">🗺️ Cómo llegar</button>
-            <button class="map-sheet__icon-btn map-sheet__icon-btn--blue" aria-label="Ver precios">💰</button>
-            ${webButton("map-sheet__icon-btn", "🌐")}
+            <button class="btn btn--primary btn--sm btn--grow map-sheet__go">${Icon("navigation", { size: 16 })}Cómo llegar</button>
+            <button class="map-sheet__icon-btn map-sheet__icon-btn--blue" aria-label="Ver precios">${Icon("tag", { size: 18 })}</button>
+            ${webButton("map-sheet__icon-btn", Icon("arrow-right", { size: 18 }))}
           </div>
         </div>
       </div>
@@ -167,7 +167,7 @@ defineScreen("stallmap", {
             <p class="topbar__subtitle">Opciones de compra en Paucarpata</p>
           </div>
         </div>
-        ${Segmented([{ value: "map", label: "🗺️ Vista Mapa" }, { value: "list", label: "📋 Vista Lista" }], ui.view, "setView")}
+        ${Segmented([{ value: "map", label: `${Icon("map", { size: 14 })} Mapa` }, { value: "list", label: `${Icon("list", { size: 14 })} Lista` }], ui.view, "setView")}
       </header>
       ${ui.view === "list" ? EstablishmentListView(ui.selected) : EstablishmentMapView(ui)}
     </section>`,

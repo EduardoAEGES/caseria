@@ -5,7 +5,7 @@ function StallHero({ tone, emoji, name, badge, address }) {
   return `
     <div class="stall-hero stall-hero--${tone}">
       <div class="stall-hero__emoji">${emoji}</div>
-      <button class="stall-hero__back" data-action="back" aria-label="Volver">←</button>
+      <button class="stall-hero__back" data-action="back" aria-label="Volver">${Icon("chevron-left", { size: 24, stroke: 2.4 })}</button>
       <div class="stall-hero__caption">
         <div class="stall-hero__title-row">
           <h1 class="stall-hero__name">${name}</h1>
@@ -16,19 +16,19 @@ function StallHero({ tone, emoji, name, badge, address }) {
     </div>`;
 }
 
-/** Lista "Establecimiento / Distrito / Dirección...": rows = [[emoji, etiqueta, valor]]. */
+/** Lista "Establecimiento / Distrito / Dirección...": rows = [[ícono, etiqueta, valor]]. */
 function DetailList(rows) {
   return `
     <ul class="detail-list">
-      ${each(rows, ([emoji, label, value]) => `<li><span>${emoji}</span><span><strong>${label}:</strong> ${value}</span></li>`)}
+      ${each(rows, ([icon, label, value]) => `<li><span class="detail-list__icon">${Icon(icon, { size: 16 })}</span><span><strong>${label}:</strong> ${value}</span></li>`)}
     </ul>`;
 }
 
 /** Botón "Guardar como favorita" que cambia a un aviso de guardado. */
 function SaveFavorite(saved) {
   return saved
-    ? `<div class="saved-box"><span class="saved-box__icon">✅</span><p>Guardado en tus establecimientos favoritos</p></div>`
-    : `<button class="btn btn--primary btn--md btn--block" data-action="save">⭐ Guardar como opción favorita</button>`;
+    ? `<div class="saved-box"><span class="saved-box__icon">${Icon("check", { size: 18, stroke: 3 })}</span><p>Guardado en tus establecimientos favoritos</p></div>`
+    : `<button class="btn btn--primary btn--md btn--block" data-action="save">${Icon("bookmark", { size: 18 })}Guardar como opción favorita</button>`;
 }
 
 /** Color del pin según el tipo de establecimiento del mapa. */

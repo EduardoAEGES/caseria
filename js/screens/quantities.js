@@ -20,7 +20,7 @@ defineScreen("quantities", {
 
         <div class="screen__body" data-scroll="quantities">
           <div class="note note--blue-text">
-            <span class="note__icon">🤖</span>
+            <span class="note__icon">${Icon("bot", { size: 18 })}</span>
             <p>Buscaremos esta combinación exacta en la base de precios de cada tienda y te mostraremos la mejor oferta.</p>
           </div>
 
@@ -49,7 +49,7 @@ defineScreen("quantities", {
         </div>
 
         <div class="action-footer">
-          <button class="btn btn--primary btn--lg btn--block" data-action="next"${products.length === 0 ? " disabled" : ""}>🔍 Buscar la mejor oferta</button>
+          <button class="btn btn--primary btn--lg btn--block" data-action="next"${products.length === 0 ? " disabled" : ""}>${Icon("search", { size: 18, stroke: 2.4 })}Buscar la mejor oferta</button>
         </div>
       </section>`;
   },

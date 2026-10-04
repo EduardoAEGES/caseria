@@ -62,7 +62,7 @@ function OnboardingArt(step) {
           <p class="ob-added__label">AGREGADO A TU CANASTA</p>
           <p class="ob-added__item">Tomate · 1 kg</p>
         </div>
-        <span class="ob-added__check">✓</span>
+        <span class="ob-added__check">${Icon("check", { size: 16, stroke: 3 })}</span>
       </div>
       <div class="ob-connector"></div>
     </div>`;
@@ -85,7 +85,7 @@ function OnboardingView(step) {
           <div class="onboarding__dots" aria-label="Paso ${step} de 3">
             ${each([1, 2, 3], dot => `<span class="onboarding__dot${dot === step ? " is-active" : ""}"></span>`)}
           </div>
-          <button class="onboarding__cta" data-action="next">${content.action}<span>${step === 3 ? "→" : "›"}</span></button>
+          <button class="onboarding__cta" data-action="next">${content.action}${Icon(step === 3 ? "arrow-right" : "chevron-right", { size: 20, stroke: 2.4 })}</button>
         </div>
       </div>
     </section>`;

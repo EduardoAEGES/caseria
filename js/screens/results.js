@@ -7,7 +7,7 @@ function BestOfferCard(best, priciest, savings) {
   if (!best) {
     return `
       <div class="alert-box">
-        <p class="alert-box__title">⚠ Ninguna tienda tiene toda tu canasta</p>
+        <p class="alert-box__title">${Icon("alert", { size: 16 })} Ninguna tienda tiene toda tu canasta</p>
         <p class="alert-box__text">La mejor oferta es combinar tiendas (abajo).</p>
       </div>`;
   }
@@ -15,21 +15,21 @@ function BestOfferCard(best, priciest, savings) {
   return `
     <article class="best-offer">
       <div class="best-offer__ribbon">
-        <span class="best-offer__ribbon-title">🏆 MEJOR OFERTA · TODO EN 1 TIENDA</span>
+        <span class="best-offer__ribbon-title">${Icon("trophy", { size: 14, stroke: 2.4 })} MEJOR OFERTA · TODO EN 1 TIENDA</span>
         ${saves ? `<span class="best-offer__savings">Ahorras ${money(savings)}</span>` : ""}
       </div>
       <div class="best-offer__body">
         <div class="best-offer__head">
           <div>
             <p class="best-offer__name">${best.store.name}</p>
-            <p class="best-offer__meta">🚶 ${best.store.distance} · ${best.store.address}</p>
+            <p class="best-offer__meta">${Icon("walk", { size: 14 })} ${best.store.distance} · ${best.store.address}</p>
           </div>
           <p class="best-offer__total">${money(best.total)}</p>
         </div>
         ${saves && priciest ? `<p class="best-offer__compare">Frente a ${priciest.store.name} (${money(priciest.total)}).</p>` : ""}
         <div class="best-offer__actions">
           <button class="btn btn--primary btn--sm btn--grow" data-action="openList" data-store="${best.store.id}">Ver mi lista de compra</button>
-          <button class="btn btn--subtle btn--sm" data-action="directions">🗺️ Cómo llegar</button>
+          <button class="btn btn--subtle btn--sm" data-action="directions">${Icon("navigation", { size: 15 })}Cómo llegar</button>
         </div>
       </div>
     </article>`;
@@ -39,7 +39,7 @@ function CombinedCard(best, combined, savings) {
   if (combined.stops.length <= 1 && best) {
     return `
       <div class="combo-card combo-card--compact">
-        <p>✓ ${best.store.name} tiene el precio más bajo en todos tus productos. No necesitas ir a otra tienda.</p>
+        <p>${Icon("check", { size: 14, stroke: 3 })} ${best.store.name} tiene el precio más bajo en todos tus productos. No necesitas ir a otra tienda.</p>
       </div>`;
   }
   const text = best && savings > SAVINGS_THRESHOLD
@@ -49,12 +49,12 @@ function CombinedCard(best, combined, savings) {
     <button class="combo-card" data-action="openCombined">
       <div class="combo-card__head">
         <div>
-          <p class="combo-card__title">💰 MÁXIMO AHORRO COMBINANDO TIENDAS</p>
+          <p class="combo-card__title">${Icon("wallet", { size: 14, stroke: 2.4 })} MÁXIMO AHORRO COMBINANDO TIENDAS</p>
           <p class="combo-card__stores">${combined.stops.map(s => s.store.name).join(" + ")}</p>
         </div>
         <p class="combo-card__total">${money(combined.total)}</p>
       </div>
-      <p class="combo-card__text">${text}<span class="combo-card__link">Ver reparto →</span></p>
+      <p class="combo-card__text">${text}<span class="combo-card__link">Ver reparto ${Icon("chevron-right", { size: 14, stroke: 2.4 })}</span></p>
     </button>`;
 }
 
@@ -76,13 +76,13 @@ function StoreOfferCard(offer, index, isBest) {
         <span class="pill pill--${store.type}">${store.badge}</span>
         <span class="pill pill--fresh-${store.freshnessLevel}">${store.updated}</span>
         ${offer.complete
-          ? `<span class="pill pill--green">✓ Tiene todo</span>`
-          : `<span class="pill pill--amber pill--wrap">⚠ Falta: ${offer.missing.map(p => p.name).join(", ")}</span>`}
+          ? `<span class="pill pill--green">${Icon("check", { size: 12, stroke: 3 })} Tiene todo</span>`
+          : `<span class="pill pill--amber pill--wrap">${Icon("alert", { size: 12, stroke: 2.4 })} Falta: ${offer.missing.map(p => p.name).join(", ")}</span>`}
       </div>
-      <p class="store-card__meta">🚶 ${store.distance} · <span>${store.address}</span></p>
+      <p class="store-card__meta">${Icon("walk", { size: 14 })} ${store.distance} · <span>${store.address}</span></p>
       <div class="store-card__actions">
         <button class="btn btn--outline btn--xs btn--grow" data-action="openList" data-store="${store.id}">Ver lista</button>
-        <button class="btn btn--subtle btn--xs" data-action="directions">🗺️ Cómo llegar</button>
+        <button class="btn btn--subtle btn--xs" data-action="directions">${Icon("navigation", { size: 15 })}Cómo llegar</button>
       </div>
     </article>`;
 }
@@ -99,7 +99,7 @@ function ResultsList(result, sorted) {
       ${CombinedCard(bestSingle, combined, combinedSavings)}
       <div class="results__list-head">
         <p class="section-title">Todas las tiendas</p>
-        <button class="link-btn" data-action="openTable">Comparar precio por producto →</button>
+        <button class="link-btn link-btn--icon" data-action="openTable">Comparar por producto${Icon("chevron-right", { size: 14, stroke: 2.4 })}</button>
       </div>
       ${each(sorted, (offer, i) => StoreOfferCard(offer, i, offer === bestSingle))}
     </div>`;
@@ -141,7 +141,7 @@ function ResultsMap(result, sorted, pin) {
       <div class="map-legend">
         ${each(legend, l => `<span class="map-legend__item"><span class="map-legend__dot map-legend__dot--${l.tone}"></span>${l.label}</span>`)}
       </div>
-      <button class="btn btn--primary btn--md btn--block" data-action="directions">Ver establecimientos y cómo llegar →</button>
+      <button class="btn btn--primary btn--md btn--block" data-action="directions">Ver establecimientos y cómo llegar${Icon("chevron-right", { size: 18, stroke: 2.4 })}</button>
     </div>`;
 }
 
@@ -194,7 +194,7 @@ function ShoppingListSheet(offer) {
       <span class="sheet-total__label">Total</span>
       <span class="sheet-total__value">${money(offer.total)}</span>
     </div>
-    <button class="btn btn--primary btn--md btn--block results__sheet-cta" data-action="directions">🗺️ Cómo llegar</button>`;
+    <button class="btn btn--primary btn--md btn--block results__sheet-cta" data-action="directions">${Icon("navigation", { size: 15 })}Cómo llegar</button>`;
 }
 
 function CombinedPlanSheet(combined) {
@@ -206,7 +206,7 @@ function CombinedPlanSheet(combined) {
           <p class="stop-card__name">${stop.store.name}</p>
           <strong>${money(stop.subtotal)}</strong>
         </div>
-        <p class="stop-card__meta">🚶 ${stop.store.distance}</p>
+        <p class="stop-card__meta">${Icon("walk", { size: 14 })} ${stop.store.distance}</p>
         ${each(stop.lines, line => `
           <div class="stop-card__line">
             <span class="stop-card__item">${line.product.emoji} ${line.product.name} · ${line.qty} × ${money(line.unitPrice)}</span>
@@ -256,8 +256,8 @@ defineScreen("results", {
         </header>
 
         <div class="results__controls">
-          ${Segmented([{ value: "precio", label: "💰 Precio" }, { value: "cerca", label: "📍 Cercanía" }], ui.criteria, "setCriteria")}
-          ${Segmented([{ value: "list", label: "📋 Lista" }, { value: "map", label: "🗺️ Mapa" }], ui.view, "setView")}
+          ${Segmented([{ value: "precio", label: `${Icon("tag", { size: 14 })} Precio` }, { value: "cerca", label: `${Icon("map-pin", { size: 14 })} Cercanía` }], ui.criteria, "setCriteria")}
+          ${Segmented([{ value: "list", label: `${Icon("list", { size: 14 })} Lista` }, { value: "map", label: `${Icon("map", { size: 14 })} Mapa` }], ui.view, "setView")}
         </div>
 
         ${ui.view === "list" ? ResultsList(result, sorted) : ResultsMap(result, sorted, ui.pin)}

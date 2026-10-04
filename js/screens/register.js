@@ -27,7 +27,7 @@ defineScreen("register", {
           </div>
 
           <div class="note note--blue">
-            <span class="note__icon">📍</span>
+            <span class="note__icon">${Icon("map-pin", { size: 18 })}</span>
             <div>
               <p class="note__title">Zona de comparación: Paucarpata</p>
               <p>Compara entre Tottus Porongoche, Plaza Vea, Franco Supermercados y Tiendas Mass.</p>
@@ -35,7 +35,7 @@ defineScreen("register", {
           </div>
         </div>
 
-        <button class="btn btn--primary btn--xl btn--block" data-action="next">Continuar →</button>
+        <button class="btn btn--primary btn--xl btn--block" data-action="next">Continuar${Icon("chevron-right", { size: 20, stroke: 2.4 })}</button>
       </div>
     </section>`,
 
