@@ -1,9 +1,9 @@
 {
   "store": "metro",
-  "updatedAt": "2026-10-04T13:45:01.822Z",
+  "updatedAt": "2026-10-04T14:56:28.062Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
-  "count": 704,
+  "count": 702,
   "products": [
     {
       "productId": "961667",
@@ -3531,21 +3531,6 @@
       "query": "carne molida de res"
     },
     {
-      "productId": "938120",
-      "name": "Carne de Res Premium Molida Wong x kg",
-      "brand": "Genérico",
-      "presentation": "x kg",
-      "unit": "KG",
-      "price": 56.9,
-      "normalPrice": null,
-      "ean": "2050043998930",
-      "category": "/Carnes, Aves y Pescados/Res y Otras Carnes/Carne Molida/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/carne-de-res-premium-molida-wong-x-kg/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/354702/Carne-Molida-Premium-x-Kg-1-214831759.jpg?v=638180580388770000",
-      "query": "carne molida de res"
-    },
-    {
       "productId": "33992",
       "name": "Cebolla Roja Metro x kg",
       "brand": "Metro",
@@ -4851,21 +4836,6 @@
       "query": "inca kola 1.5 l"
     },
     {
-      "productId": "40753",
-      "name": "Gaseosa Coca Cola Original 3L + Gaseosa Inca Kola Original 3L 2un",
-      "brand": "Inca Kola",
-      "presentation": "3L",
-      "unit": "UN",
-      "price": 28.2,
-      "normalPrice": null,
-      "ean": "7750182005678",
-      "category": "/Aguas y Bebidas/Gaseosas/Gaseosas Regulares/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/gaseosa-coca-cola-original-3l-gaseosa-inca-kola-original-3l-2un-722253/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/503965/722253-01-77558.jpg?v=638381183604230000",
-      "query": "inca kola 1.5 l"
-    },
-    {
       "productId": "1015087",
       "name": "Pollo Rostizado + Papas Fritas + Gaseosa Inca Kola Sin Azúcar 1.5L",
       "brand": "Metro",
@@ -5736,21 +5706,6 @@
       "query": "lechuga"
     },
     {
-      "productId": "32402",
-      "name": "Lechuga de Seda Hidropónica Manantiales x unid",
-      "brand": "Manantiales",
-      "presentation": "",
-      "unit": "UN",
-      "price": 2.7,
-      "normalPrice": 3.7,
-      "ean": "7756866000113",
-      "category": "/Frutas y Verduras/Verduras/Lechugas/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/lechuga-de-seda-hidroponica-manantiales-x-unid/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/283848/Lechuga-de-Seda-Hidroponica-Manantiales-x-Unid-1-88851.jpg?v=638179310381970000",
-      "query": "lechuga"
-    },
-    {
       "productId": "56095",
       "name": "Lechuga Crespa Hidropónica de Invernadero Ecologic x unid",
       "brand": "Ecologic",
@@ -5883,6 +5838,21 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/lechuga-crespa-hidroponica-manantiales-x-unid/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/348442/Lechuga-Crespa-Hidrop-nica-Manantiales-x-Unid-1-88850.jpg?v=638180577959000000",
+      "query": "lechuga"
+    },
+    {
+      "productId": "32402",
+      "name": "Lechuga de Seda Hidropónica Manantiales x unid",
+      "brand": "Manantiales",
+      "presentation": "",
+      "unit": "UN",
+      "price": 3.7,
+      "normalPrice": null,
+      "ean": "7756866000113",
+      "category": "/Frutas y Verduras/Verduras/Lechugas/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/lechuga-de-seda-hidroponica-manantiales-x-unid/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/283848/Lechuga-de-Seda-Hidroponica-Manantiales-x-Unid-1-88851.jpg?v=638179310381970000",
       "query": "lechuga"
     },
     {
@@ -8751,6 +8721,21 @@
       "query": "papa canchan"
     },
     {
+      "productId": "2858",
+      "name": "Papa Blanca Canchán Procesada x kgs",
+      "brand": "Genérico",
+      "presentation": "x kg",
+      "unit": "KG",
+      "price": 4.49,
+      "normalPrice": 5.49,
+      "ean": "9541510000008",
+      "category": "/Frutas y Verduras/Verduras/Tubérculos y Raíces/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/papa-blanca-canchan-procesada-x-kgs-4182-2/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/240166/frontal-4.jpg?v=638173826735500000",
+      "query": "papa canchan"
+    },
+    {
       "productId": "33616",
       "name": "Papa Canchán Procesada x kg",
       "brand": "Comcen",
@@ -8763,21 +8748,6 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/papa-canchan-procesada-x-kg-2/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/544000/73450-1.jpg?v=638620988175400000",
-      "query": "papa canchan"
-    },
-    {
-      "productId": "2858",
-      "name": "Papa Blanca Canchán Procesada x kgs",
-      "brand": "Genérico",
-      "presentation": "x kg",
-      "unit": "KG",
-      "price": 5.49,
-      "normalPrice": null,
-      "ean": "9541510000008",
-      "category": "/Frutas y Verduras/Verduras/Tubérculos y Raíces/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/papa-blanca-canchan-procesada-x-kgs-4182-2/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/240166/frontal-4.jpg?v=638173826735500000",
       "query": "papa canchan"
     },
     {
