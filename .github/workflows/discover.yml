@@ -7,6 +7,9 @@ on:
         description: "Script de reconocimiento (scraper/discover-<tienda>.mjs)"
         default: "discover-tottus.mjs"
 
+permissions:
+  contents: write
+
 jobs:
   discover:
     runs-on: ubuntu-latest
@@ -28,3 +31,17 @@ jobs:
           path: tmp/
           if-no-files-found: ignore
           retention-days: 3
+      # Copia de los archivos descargados en una rama temporal (en base64, fuera de Git LFS),
+      # para revisarlos desde entornos que no pueden bajar artefactos. Se borra a mano después.
+      - name: Compartir archivos en la rama reconocimiento-tmp
+        if: hashFiles('tmp/**') != ''
+        run: |
+          mkdir -p share
+          find tmp -type f | while read -r f; do base64 -w0 "$f" > "share/$(echo "$f" | tr '/' '_').b64"; done
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan reconocimiento-tmp
+          git rm -rfq --cached .
+          git add -f share
+          git commit -qm "Archivos de reconocimiento (temporal)"
+          git push -f origin reconocimiento-tmp
