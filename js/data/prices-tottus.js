@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-10-04T13:37:19.542Z",
+  "updatedAt": "2026-10-04T13:40:39.505Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -168,11 +168,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113930870/mantequill-con-sal"
     },
     "25": {
-      "price": 1.8,
+      "price": 3.2,
       "normalPrice": null,
-      "name": "Agua San Luis Sin Gas Botella 750 mL",
-      "presentation": "Botella 750 mL",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115806693/agua-mesa-san-luis-sin-gas-botella-x-750ml"
+      "name": "Agua San Luis Sin Gas Botella 3 L",
+      "presentation": "Botella 3 L",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/152010566/agua-san-luis-sin-gas-botella-3-l"
     },
     "26": {
       "price": 7.6,

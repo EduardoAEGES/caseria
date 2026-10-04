@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-10-04T13:38:22.560Z",
+  "updatedAt": "2026-10-04T13:41:31.313Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -20,6 +20,13 @@ window.SCRAPED_PRICES["metro"] = {
       "name": "Pollo Entero con Menudencia Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/pollo-entero-con-menudencia-metro-x-kg-26334-2/p"
+    },
+    "3": {
+      "price": 6.49,
+      "normalPrice": null,
+      "name": "Huevos Pardos Metro Bandeja 8 Unid",
+      "presentation": "8 Unid",
+      "url": "https://www.metro.pe/huevos-pardos-metro-bandeja-8-unid-2/p"
     },
     "4": {
       "price": 4.29,
@@ -99,11 +106,11 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/carne-molida-economica-congelada-los-hierros-x-500-g/p"
     },
     "15": {
-      "price": 38.9,
-      "normalPrice": null,
-      "name": "Bistec Apanado de Res Oregon Foods 3un",
-      "presentation": "3un",
-      "url": "https://www.metro.pe/bistec-apanado-de-res-oregon-foods-3un-1000758/p"
+      "price": 39.9,
+      "normalPrice": 43.9,
+      "name": "Bisteck de Tapa Nacional x kg",
+      "presentation": "x kg",
+      "url": "https://www.metro.pe/bisteck-de-tapa-nacional-en-bandeja-x-kg-390616-2/p"
     },
     "16": {
       "price": 19.9,
@@ -148,11 +155,11 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/palta-fuerte-metro-x-kg-71554-2/p"
     },
     "22": {
-      "price": 3.3,
-      "normalPrice": null,
-      "name": "Yogurt Gloria Battimix Vainilla 146g",
-      "presentation": "146g",
-      "url": "https://www.metro.pe/yogurt-gloria-battimix-vainilla-146g-49186001/p"
+      "price": 5.5,
+      "normalPrice": 6.8,
+      "name": "Yogurt Parcialmente Descremado Piña Gloria Botella 1 kg",
+      "presentation": "1 kg",
+      "url": "https://www.metro.pe/yogurt-parcialmente-descremado-pina-gloria-botella-1-kg-2-2/p"
     },
     "23": {
       "price": 28.9,
@@ -167,6 +174,13 @@ window.SCRAPED_PRICES["metro"] = {
       "name": "Mantequilla Plusa Con Sal Barra 200 g",
       "presentation": "200 g",
       "url": "https://www.metro.pe/mantequilla-plusa-con-sal-barra-200-g/p"
+    },
+    "25": {
+      "price": 3,
+      "normalPrice": null,
+      "name": "Agua de Mesa Sin Gas San Luis Botella 3L",
+      "presentation": "3L",
+      "url": "https://www.metro.pe/agua-de-mesa-sin-gas-san-luis-botella-3l-59545002/p"
     },
     "26": {
       "price": 7.6,
