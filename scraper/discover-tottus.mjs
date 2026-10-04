@@ -49,9 +49,41 @@ async function probe(url) {
   }
 }
 
-await probe(`${BASE}/robots.txt`);
-await probe(`${BASE}/tottus-pe?kid=shopp1to`);
-await probe(`${BASE}/tottus-pe/search?Ntt=arroz%20costeno`);
+// Portada: configuración pública y enlaces a categorías / búsqueda
+{
+  const res = await fetch(`${BASE}/tottus-pe?kid=shopp1to`, { headers: HEADERS });
+  const html = await res.text();
+  const data = JSON.parse(html.match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/)[1]);
+  const props = data.props.pageProps;
+  console.log("\n===== portada");
+  const cfgEntries = Object.entries(props.publicRuntimeConfig ?? {}).filter(([k, v]) => typeof v === "string" && /url|api|search|host|zone|region/i.test(k));
+  console.log("publicRuntimeConfig (urls):\n" + cfgEntries.map(([k, v]) => `  ${k}=${cut(v, 150)}`).join("\n"));
+  console.log("store: " + cut(JSON.stringify(props.store), 500));
+  console.log("serverData keys: " + Object.keys(props.serverData ?? {}).join(", "));
+  const hrefs = [...new Set([...html.matchAll(/href="(\/tottus-pe\/[^"?#]+)/g)].map(m => m[1]))];
+  console.log(`enlaces /tottus-pe/ (${hrefs.length}):\n  ` + hrefs.slice(0, 40).join("\n  "));
+  const apis = [...new Set([...html.matchAll(/https?:\/\/[a-z0-9.-]+\/(?:s|api)\/[a-z0-9/_-]+/gi)].map(m => m[0]))];
+  console.log("urls tipo api en el html:\n  " + apis.slice(0, 20).join("\n  "));
+  const zones = [...new Set([...html.matchAll(/"(?:zones?|politicalId|priceGroup|pgid)"\s*:\s*("[^"]*"|\[[^\]]*\]|\d+)/gi)].map(m => m[0]))];
+  console.log("zonas: " + zones.slice(0, 15).join(" | "));
+}
+
+// Sitemap de categorías → primera categoría de alimentos
+{
+  console.log("\n===== sitemap categorías");
+  const index = await (await fetch(`${BASE}/static/site/sitemaps/categories/categories_pe_TO_COM-index.xml`, { headers: HEADERS })).text();
+  const maps = [...index.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
+  console.log("sitemaps: " + maps.join(" "));
+  if (maps[0]) {
+    const xml = await (await fetch(maps[0], { headers: HEADERS })).text();
+    const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
+    console.log(`categorías (${urls.length}):\n  ` + urls.filter(u => /arroz|abarrote|leche|aceite|despensa/i.test(u)).slice(0, 15).join("\n  ") + "\n  …\n  " + urls.slice(0, 10).join("\n  "));
+    const target = urls.find(u => /arroz/i.test(u)) ?? urls[0];
+    if (target) await probe(target);
+  }
+}
+
+for (const path of ["/tottus-pe/buscar?Ntt=arroz", "/tottus-pe/search/?Ntt=arroz", "/search?Ntt=arroz"]) await probe(`${BASE}${path}`);
 
 if (process.env.PLAYWRIGHT) {
   const { chromium } = await import("playwright");
@@ -65,8 +97,8 @@ if (process.env.PLAYWRIGHT) {
     try { snippet = cut(await res.text(), 300); } catch {}
     seen.push(`${res.request().method()} ${res.status()} ${cut(res.url(), 300)}\n    ${snippet}`);
   });
-  console.log("\n===== PLAYWRIGHT search");
-  await page.goto(`${BASE}/tottus-pe/search?Ntt=arroz%20costeno`, { waitUntil: "networkidle", timeout: 60000 }).catch(e => console.log("goto:", e.message));
+  console.log("\n===== PLAYWRIGHT portada");
+  await page.goto(`${BASE}/tottus-pe?kid=shopp1to`, { waitUntil: "networkidle", timeout: 60000 }).catch(e => console.log("goto:", e.message));
   console.log(`title: ${await page.title()}`);
   console.log("respuestas JSON:\n" + seen.slice(0, 40).join("\n"));
   const cookies = await page.context().cookies();
