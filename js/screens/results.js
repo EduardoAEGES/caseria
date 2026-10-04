@@ -157,7 +157,7 @@ function PriceTableSheet(cart) {
       </div>
       ${CloseButton("closeSheet")}
     </div>
-    <div class="price-grid price-grid--head">${each(STORES, s => `<span>${STORE_SHORT[s.id]}</span>`)}</div>
+    <div class="price-grid price-grid--head" style="--cols: ${STORES.length}">${each(STORES, s => `<span>${STORE_SHORT[s.id]}</span>`)}</div>
     ${each(products, product => {
       const prices = STORES.map(s => getPrice(s.id, product.id));
       const available = prices.filter(price => price !== null);
@@ -165,7 +165,7 @@ function PriceTableSheet(cart) {
       return `
         <div class="price-row">
           <p class="price-row__name">${product.emoji} ${product.name}</p>
-          <div class="price-grid">
+          <div class="price-grid" style="--cols: ${STORES.length}">
             ${each(prices, price => price === null
               ? `<span class="price-cell is-missing">—</span>`
               : `<span class="price-cell${price === min ? " is-best" : ""}">S/${price.toFixed(2)}</span>`)}

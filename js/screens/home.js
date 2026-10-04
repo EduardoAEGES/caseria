@@ -42,7 +42,7 @@ defineScreen("home", {
               <div class="home-banner__text-wrap">
                 <p class="home-banner__eyebrow">Compara y ahorra</p>
                 <p class="home-banner__title">Tu canasta al mejor precio de Paucarpata</p>
-                <p class="home-banner__text">Tottus, Plaza Vea, Franco y Tiendas Mass en una sola búsqueda.</p>
+                <p class="home-banner__text">Tottus, Metro, Plaza Vea, Franco y Tiendas Mass en una sola búsqueda.</p>
               </div>
               <span class="home-banner__icon">${Icon("cart", { size: 30, stroke: 1.8 })}</span>
             </div>

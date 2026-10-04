@@ -7,6 +7,7 @@ const DISTRICT_DATA = {
       { name: "Tottus Porongoche",    tag: "Supermercado", emoji: "🛒" },
       { name: "Plaza Vea",            tag: "Supermercado", emoji: "🏬" },
       { name: "Franco Supermercados", tag: "Supermercado", emoji: "🏪" },
+      { name: "Metro",                tag: "Supermercado · compra online", emoji: "🏬" },
     ],
     minimarkets: [
       { name: "Tiendas Mass – Porongoche", tag: "Tienda de descuento", emoji: "🏷️" },
@@ -23,7 +24,7 @@ const QUICK_BASKETS = [
 ];
 
 // Nombres cortos para las columnas de la tabla de precios.
-const STORE_SHORT = { tottus: "Tottus", plazavea: "P. Vea", franco: "Franco", massporo: "Mass P.", massande: "Mass A." };
+const STORE_SHORT = { tottus: "Tottus", plazavea: "P. Vea", franco: "Franco", massporo: "Mass P.", metro: "Metro", massande: "Mass A." };
 
 // Establecimientos del mapa (x, y en el sistema 0–100 del SVG).
 const MAP_ESTABLISHMENTS = [

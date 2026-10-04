@@ -179,7 +179,7 @@
 .map-legend__dot--super { background: var(--blue); }
 
 /* ── Hojas: tabla de precios y reparto ─────────────────────────────────── */
-.price-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; }
+.price-grid { display: grid; grid-template-columns: repeat(var(--cols, 5), 1fr); gap: 4px; }
 .price-grid--head { padding-bottom: 4px; font-size: 10px; font-weight: 700; text-align: center; color: var(--ink-3); }
 .price-row { padding: 10px 0; border-top: 1px solid var(--line-soft); }
 .price-row__name { margin-bottom: 6px; font-size: 14px; font-weight: 700; color: var(--ink); }

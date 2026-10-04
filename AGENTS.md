@@ -37,8 +37,10 @@ en el orden declarado en `index.html`: datos → núcleo → componentes → pan
 - `css/screens/*.css` — estilos propios de cada grupo de pantallas
 - `css/responsive.css` — ajustes para celulares (siempre el último CSS)
 - `js/data/catalog.js` — productos, tiendas, tabla de precios y `searchBestOffers`
-- `js/data/prices-tottus.js` — precios reales de Tottus (generado por el scraper, no editar)
-- `scraper/tottus.mjs` — scraper de Tottus (Node 18+, sin dependencias); `data/tottus-catalogo.json` guarda todo lo visto
+- `js/data/prices-<tienda>.js` — precios reales de Tottus y Metro (generados por los scrapers, no editar)
+- `scraper/` — scrapers (Node 18+, sin dependencias): `common.mjs` (reglas de coincidencia y escritura),
+  `tottus.mjs`, `metro.mjs` y `discover-*.mjs` (reconocimiento); `data/<tienda>-catalogo.json` guarda todo lo visto
+- `js/components/icons.js` — íconos SVG de línea: `Icon("chevron-left")`; usar en vez de flechas de texto o emojis de interfaz
 - `js/data/content.js` — distrito, canastas rápidas y datos de demostración
 - `js/core/storage.js` — guardar/leer la cuenta en `localStorage`
 - `js/core/state.js` — estado global (`state`), modos de sesión y helpers de la canasta
@@ -75,10 +77,14 @@ elementos con `data-scroll` / `id`). Una acción que devuelve `false` no redibuj
 
 ## Precios reales (scrapers)
 
-- `.github/workflows/tottus-prices.yml` ejecuta `node scraper/tottus.mjs` todos los días
+- `.github/workflows/prices.yml` ejecuta `scraper/tottus.mjs` y `scraper/metro.mjs` todos los días
   (6:17 a. m. de Perú, o a mano desde la pestaña Actions) y guarda los cambios en el repo.
-- El scraper busca cada producto en `tottus.com.pe/tottus-pe/buscar?Ntt=…`, lee el JSON
-  `__NEXT_DATA__` y elige el resultado según las reglas de `QUERIES` (`start`, `must`,
-  `prefer`, `exclude`, `kg`). Para ajustar una coincidencia, editar su regla.
+  Cada tienda corre aparte: si una falla, las otras se guardan igual.
+- Tottus: busca en `tottus.com.pe/tottus-pe/buscar?Ntt=…` y lee el JSON `__NEXT_DATA__`.
+- Metro: API pública de VTEX `metro.pe/api/catalog_system/pub/products/search?ft=…`, con la región
+  del código postal 04008 (Paucarpata).
+- Las reglas de `QUERIES` en `scraper/common.mjs` (`q`, `qBy`, `start`, `must`, `prefer`, `exclude`, `kg`)
+  deciden qué resultado corresponde a cada producto de la app. Para ajustar una coincidencia, editar su regla.
+- `.github/workflows/discover.yml` corre un `scraper/discover-<tienda>.mjs` para estudiar una tienda nueva.
 - `catalog.js` usa `window.SCRAPED_PRICES[tienda]` cuando existe; si no, la tabla de ejemplo.
-- Si encuentra menos de la mitad de productos no sobrescribe los datos anteriores.
+- Si un scraper encuentra menos de la mitad de productos no sobrescribe los datos anteriores.
