@@ -37,6 +37,8 @@ en el orden declarado en `index.html`: datos → núcleo → componentes → pan
 - `css/screens/*.css` — estilos propios de cada grupo de pantallas
 - `css/responsive.css` — ajustes para celulares (siempre el último CSS)
 - `js/data/catalog.js` — productos, tiendas, tabla de precios y `searchBestOffers`
+- `js/data/prices-tottus.js` — precios reales de Tottus (generado por el scraper, no editar)
+- `scraper/tottus.mjs` — scraper de Tottus (Node 18+, sin dependencias); `data/tottus-catalogo.json` guarda todo lo visto
 - `js/data/content.js` — distrito, canastas rápidas y datos de demostración
 - `js/core/storage.js` — guardar/leer la cuenta en `localStorage`
 - `js/core/state.js` — estado global (`state`), modos de sesión y helpers de la canasta
@@ -70,3 +72,13 @@ elementos con `data-scroll` / `id`). Una acción que devuelve `false` no redibuj
   Los colores salen de las variables de `:root` en `css/base.css`.
 - Todo texto ingresado por el usuario se escapa con `esc()` antes de insertarlo en el HTML.
 - Usar comillas dobles en strings con apóstrofos.
+
+## Precios reales (scrapers)
+
+- `.github/workflows/tottus-prices.yml` ejecuta `node scraper/tottus.mjs` todos los días
+  (6:17 a. m. de Perú, o a mano desde la pestaña Actions) y guarda los cambios en el repo.
+- El scraper busca cada producto en `tottus.com.pe/tottus-pe/buscar?Ntt=…`, lee el JSON
+  `__NEXT_DATA__` y elige el resultado según las reglas de `QUERIES` (`start`, `must`,
+  `prefer`, `exclude`, `kg`). Para ajustar una coincidencia, editar su regla.
+- `catalog.js` usa `window.SCRAPED_PRICES[tienda]` cuando existe; si no, la tabla de ejemplo.
+- Si encuentra menos de la mitad de productos no sobrescribe los datos anteriores.

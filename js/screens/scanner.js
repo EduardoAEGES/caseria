@@ -146,9 +146,9 @@ defineScreen("scanner", {
           const elLine = document.getElementById("scan-line");
           const elFill = document.getElementById("scan-fill");
           const elPercent = document.getElementById("scan-percent");
-          if (elLine) elLine.style.top = \`\${8 + ui.progress * 0.6}%\`;
-          if (elFill) elFill.style.width = \`\${ui.progress}%\`;
-          if (elPercent) elPercent.textContent = \`\${ui.progress}%\`;
+          if (elLine) elLine.style.top = `${8 + ui.progress * 0.6}%`;
+          if (elFill) elFill.style.width = `${ui.progress}%`;
+          if (elPercent) elPercent.textContent = `${ui.progress}%`;
         }
       }, 50);
 
