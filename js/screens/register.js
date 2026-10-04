@@ -30,7 +30,7 @@ defineScreen("register", {
             <span class="note__icon">${Icon("map-pin", { size: 18 })}</span>
             <div>
               <p class="note__title">Zona de comparación: Paucarpata</p>
-              <p>Compara entre Tottus Porongoche, Plaza Vea, Franco Supermercados y Tiendas Mass.</p>
+              <p>Compara entre Mass, Tambo, OXXO, Metro Lambramani, Makro, Tottus Porongoche y Plaza Vea.</p>
             </div>
           </div>
         </div>

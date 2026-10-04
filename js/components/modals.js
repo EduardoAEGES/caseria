@@ -19,7 +19,7 @@ function DistrictModal() {
           <span class="district-option__icon">${Icon("map-pin", { size: 20 })}</span>
           <div class="district-option__text">
             <p class="district-option__name">Paucarpata, Arequipa</p>
-            <p class="district-option__stores">Tottus · Plaza Vea · Franco · Tiendas Mass</p>
+            <p class="district-option__stores">Mass · Tambo · OXXO · Metro · Makro · Tottus · Plaza Vea</p>
           </div>
           ${Check(true, "check--sm")}
         </div>

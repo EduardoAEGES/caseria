@@ -1,8 +1,8 @@
 // Animación de "radar" mientras se arma la comparación.
 
 const LOADING_STEPS = [
-  "Consultando precios en Franco Supermercados y Tiendas Mass...",
-  "Comparando con Plaza Vea y Tottus Porongoche...",
+  "Consultando precios en Mass, Tambo y OXXO...",
+  "Comparando con Metro, Makro, Tottus y Plaza Vea...",
   "Calculando la mejor oferta para tu canasta...",
 ];
 

@@ -2,21 +2,6 @@
    Componentes reutilizables entre pantallas
    ========================================================================== */
 
-/* ── Barra de estado (9:41 · WiFi · batería) ───────────────────────────── */
-.status-bar {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 24px 4px;
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 600;
-  color: var(--ink);
-}
-.status-bar--dark { color: rgb(255 255 255 / 0.75); }
-.status-bar__icons { display: flex; align-items: center; gap: 5px; }
-
 /* ── Íconos SVG (js/components/icons.js) ───────────────────────────────── */
 .icon { flex-shrink: 0; display: inline-block; vertical-align: -0.2em; }
 .icon-chip {
@@ -40,6 +25,7 @@
 .wordmark__dollar { color: var(--orange); }
 
 /* ── Botones ───────────────────────────────────────────────────────────── */
+a.btn { text-decoration: none; }
 .btn {
   display: inline-flex;
   align-items: center;
@@ -157,6 +143,8 @@
 .pill--gray { color: var(--muted); background: var(--line-soft); }
 .pill--super { color: var(--blue); background: rgb(11 99 229 / 0.09); }
 .pill--discount { color: var(--green); background: rgb(34 197 94 / 0.09); }
+.pill--wholesale { color: var(--purple); background: rgb(124 58 237 / 0.09); }
+.pill--convenience { color: #C2410C; background: rgb(255 152 0 / 0.12); }
 .pill--fresh-ok { color: var(--green-dark); background: var(--green-50); }
 .pill--fresh-warn { color: var(--amber-text); background: var(--yellow-100); }
 .pill--fresh-bad { color: var(--red-text); background: var(--red-50); }

@@ -18,7 +18,7 @@ defineScreen("permission", {
             <p><strong>Ca$erIA</strong> necesita tu ubicación para calcular rutas a los establecimientos más cercanos.</p>
           </div>
           <div class="perm__buttons">
-            <button class="btn btn--sm btn--grow btn--outline${ui.granted ? " is-on" : ""}" data-action="grant">${ui.granted ? `${Icon("check", { size: 16, stroke: 3 })}Permitido` : "Permitir ubicación"}</button>
+            <button class="btn btn--sm btn--grow btn--outline${ui.granted === true ? " is-on" : ""}" data-action="grant">${ui.granted === true ? `${Icon("check", { size: 16, stroke: 3 })}Ubicación activada` : ui.granted === "asking" ? "Buscando…" : ui.granted === "denied" ? "Sin permiso · reintentar" : "Permitir ubicación"}</button>
             <button class="btn btn--sm btn--grow btn--quiet">Omitir</button>
           </div>
         </div>
@@ -30,7 +30,7 @@ defineScreen("permission", {
             ${Icon("map-pin", { size: 18 })}
             <div>
               <p class="zone-option__name">Paucarpata, Arequipa</p>
-              <p class="zone-option__stores">Tottus · Plaza Vea · Franco · Tiendas Mass</p>
+              <p class="zone-option__stores">Mass · Tambo · OXXO · Metro · Makro · Tottus · Plaza Vea</p>
             </div>
           </div>
         </div>
@@ -45,7 +45,14 @@ defineScreen("permission", {
     </section>`,
 
   actions: {
-    grant: ui => { ui.granted = true; },
+    // Pide la ubicación real al GPS del celular (si no la da, se usa Paucarpata aproximada).
+    grant: ui => {
+      ui.granted = "asking";
+      requestLocation().then(() => {
+        ui.granted = geo.status === "ok" ? true : "denied";
+        if (state.screen === "permission") render();
+      });
+    },
     next: () => navigate("register"),
   },
 });

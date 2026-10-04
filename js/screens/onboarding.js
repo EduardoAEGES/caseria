@@ -40,7 +40,7 @@ function OnboardingArt(step) {
         <div class="ob-tile ob-tile--left">🥬</div>
         <div class="ob-tile ob-tile--right">🍗</div>
         <div class="ob-basket">🛒</div>
-        <div class="ob-best">Mejor oferta: Franco · S/ 41.20</div>
+        <div class="ob-best">Mejor oferta: Mass · S/ 41.20</div>
       </div>`;
   }
 

@@ -86,40 +86,22 @@ strong { font-weight: 700; }
 .hide-scrollbar::-webkit-scrollbar,
 .screen__body::-webkit-scrollbar { display: none; }
 
-/* ── Marco del celular (en computadora) ────────────────────────────────── */
-.stage {
-  min-height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-}
+/* ── Contenedor de la app (pantalla completa del celular) ──────────────── */
+/* La app es solo para celular: ocupa toda la pantalla. En una tablet o computadora
+   se muestra como una columna centrada del ancho de un teléfono. */
+.stage { min-height: 100%; }
 
 .phone {
   position: relative;
   display: flex;
   flex-direction: column;
-  flex-shrink: 0;
-  width: 393px;
-  height: 852px;
-  max-height: calc(100vh - 48px);   /* en pantallas bajas el marco se achica */
-  max-height: calc(100dvh - 48px);
-  border-radius: 44px;
+  width: 100%;
+  max-width: 480px;
+  height: 100vh;
+  height: 100dvh;             /* alto real visible (sin la barra del navegador) */
+  margin: 0 auto;
   overflow: hidden;
   background: var(--bg);
-  box-shadow: var(--shadow-2xl);
-}
-
-.phone__notch {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 112px;
-  height: 28px;
-  border-radius: 0 0 16px 16px;
-  background: var(--dark);
-  z-index: 60;
 }
 
 .phone__content {
@@ -128,18 +110,10 @@ strong { font-weight: 700; }
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  margin-top: 28px;
 }
 
-.phone__home-bar {
-  position: absolute;
-  bottom: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 112px;
-  height: 4px;
-  border-radius: 999px;
-  background: rgb(30 41 59 / 0.15);
+@media (min-width: 481px) {
+  .phone { box-shadow: var(--shadow-2xl); }
 }
 
 /* ── Pantalla genérica ─────────────────────────────────────────────────── */

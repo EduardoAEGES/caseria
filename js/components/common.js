@@ -1,11 +1,9 @@
 // Piezas de interfaz reutilizables. Cada función devuelve un trozo de HTML.
 
-function StatusBar(dark = false) {
-  return `
-    <div class="status-bar${dark ? " status-bar--dark" : ""}">
-      <span>9:41</span>
-      <div class="status-bar__icons">${Icon("signal", { size: 15 })}${Icon("wifi", { size: 15 })}${Icon("battery", { size: 22, stroke: 1.6 })}</div>
-    </div>`;
+// La app es solo para celular: el teléfono ya muestra su propia hora, señal y batería.
+// Se mantiene la función para no tocar cada pantalla.
+function StatusBar() {
+  return "";
 }
 
 function Wordmark() {
@@ -77,7 +75,7 @@ const NAV_ITEMS = [
   { label: "Inicio",     icon: "home", to: "home",         activeOn: ["home"] },
   { label: "Categorías", icon: "grid", to: "select",       activeOn: ["select", "quantities", "loading"] },
   { label: "Listas",     icon: "list", to: "mislistas",    activeOn: ["mislistas"] },
-  { label: "Comparar",   icon: "chart", to: "results",      activeOn: ["results", "stallstandard", "stallpremium", "stallmap"] },
+  { label: "Comparar",   icon: "chart", to: "results",      activeOn: ["results", "route"] },
   { label: "Perfil",     icon: "user", to: "buyerprofile", activeOn: ["buyerprofile", "scanner"] },
 ];
 

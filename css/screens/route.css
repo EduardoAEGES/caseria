@@ -1,0 +1,117 @@
+/* ==========================================================================
+   Cómo llegar: mapa con la ruta, modos de viaje y costo total
+   ========================================================================== */
+
+.route-map {
+  position: relative;
+  flex-shrink: 0;
+  height: 34%;
+  min-height: 200px;
+  background: #E8EFF5;
+  z-index: 0;                 /* Leaflet usa z-index altos: así no tapa las hojas y modales */
+}
+.route-map__fallback {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 24px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--ink-3);
+}
+
+/* Pin numerado de cada tienda (L.divIcon) */
+.route-pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.route-pin span {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--white);
+  border-radius: 999px;
+  background: var(--orange);
+  box-shadow: var(--shadow-lg);
+  font-size: 13px;
+  font-weight: 900;
+  color: var(--white);
+}
+
+.route-panel {
+  margin-top: -16px;
+  padding-top: 18px;
+  border-radius: 20px 20px 0 0;
+  background: var(--white);
+  box-shadow: 0 -6px 20px rgb(15 23 42 / 0.08);
+  position: relative;
+  z-index: 1;
+  gap: 14px;
+}
+.route-panel > * { flex-shrink: 0; }
+.route-panel__loading { display: flex; align-items: center; gap: 8px; padding: 24px 0; font-size: 14px; color: var(--ink-3); }
+
+.route-origin {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--amber-50);
+  font-size: 12px;
+  color: var(--amber-text);
+}
+.route-origin p { flex: 1; }
+.route-origin.is-gps { background: var(--blue-50); color: var(--blue); }
+
+.route-stops { display: flex; flex-direction: column; gap: 10px; list-style: none; }
+.route-stop { display: flex; align-items: center; gap: 12px; }
+.route-stop__num {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--orange);
+  font-size: 12px;
+  font-weight: 900;
+  color: var(--white);
+}
+.route-stop__name { font-size: 14px; font-weight: 800; color: var(--ink); }
+.route-stop__meta { font-size: 12px; color: var(--muted); }
+
+.route-modes { display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); gap: 8px; }
+.route-mode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 12px 6px;
+  border: 2px solid var(--line);
+  border-radius: 16px;
+  background: var(--white);
+  color: var(--ink-3);
+  transition: all 0.15s;
+}
+.route-mode.is-active { border-color: var(--blue); background: var(--blue-50); color: var(--blue); }
+.route-mode__label { margin-top: 2px; font-size: 12px; font-weight: 700; }
+.route-mode__time { font-size: 15px; font-weight: 900; color: var(--ink); }
+.route-mode__fare { font-size: 12px; font-weight: 700; color: var(--green-dark); }
+
+.route-total { padding: 14px 16px; border-radius: 16px; background: var(--bg); border: 1px solid var(--line); }
+.route-total__row { display: flex; justify-content: space-between; padding: 4px 0; font-size: 13px; color: var(--ink-2); }
+.route-total__row strong { color: var(--ink); }
+.route-total__row--sum { margin-top: 4px; padding-top: 8px; border-top: 1px dashed var(--slate-300); font-size: 15px; font-weight: 800; color: var(--ink); }
+.route-total__row--sum strong { font-size: 18px; font-weight: 900; color: var(--blue); }
+.route-total__hint { margin-top: 6px; font-size: 11px; color: var(--muted); }
+
+.route-note { display: flex; gap: 6px; font-size: 11px; line-height: 1.5; color: var(--muted); }
+.route-note .icon { margin-top: 1px; }

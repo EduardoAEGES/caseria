@@ -1,6 +1,6 @@
 # Ca$erIA
 
-Prototipo de app móvil para comparar precios de canastas en Paucarpata (Arequipa).
+App solo para celular que compara precios de canastas en Paucarpata (Arequipa) y traza la ruta a la tienda.
 HTML, CSS y JavaScript puros: sin frameworks, sin build y sin `npm install`.
 
 ## Cómo ejecutarlo
@@ -14,20 +14,36 @@ en el orden declarado en `index.html`: datos → núcleo → componentes → pan
 
 ## Flujo al abrir y modos de simulación
 
-1. `mode` — selector de demo: **Primera vez** o **Ya tengo cuenta**.
+1. `mode` — selector de demo: **Primera vez**, **Usuario Free** o **Usuario Premium**.
 2. `intro` — presentación de carga; se muestra siempre.
 3. Primera vez: `onboarding1-3` → `splash` (nombre y correo) → `permission` → `register` → `home`.
    Al terminar el registro la cuenta se guarda en `localStorage` (`js/core/storage.js`).
-4. Ya tengo cuenta: directo a `home` con la cuenta guardada, o con el usuario de prueba "Mateo".
+4. Usuario Free: directo a `home` con la cuenta guardada (o "Mateo") y plan gratuito.
+   Usuario Premium: directo a `home` con la cuenta de prueba "Valeria" (no toca la cuenta guardada).
 
 "Cerrar Sesión" en el perfil vuelve al selector de modo (la cuenta queda guardada).
 
-## Responsive
+## Solo para celular
 
-- En computadora la app se ve dentro de un marco de celular que se achica si la ventana es baja.
-- En pantallas de hasta 500px (`css/responsive.css`, cargado al final) ocupa toda la pantalla,
-  oculta la muesca y la hora falsas y respeta las zonas seguras (`env(safe-area-inset-*)`).
+- La app ocupa toda la pantalla (`.phone` a 100dvh). En tablet o computadora se ve como una columna
+  centrada de 480px, sin marco de teléfono. No hay barra de estado simulada: `StatusBar()` devuelve "".
+- `css/responsive.css` (cargado al final) respeta las zonas seguras (`env(safe-area-inset-*)`) y ajusta
+  celulares angostos.
 - `manifest.webmanifest` permite agregarla a la pantalla de inicio como app (requiere servirla por http/https).
+
+## Tiendas, ubicación y rutas
+
+- Tiendas en `STORES` (`js/data/catalog.js`): Mass, Tambo, OXXO (Paucarpata), Metro Lambramani, Makro
+  Avelino Cáceres, Tottus Porongoche y Plaza Vea, con `lat`/`lng` aproximados (editar ahí si se conocen los exactos).
+- Precios: Tottus y Metro reales (scrapers); Mass real solo en lo que trae su folleto; Plaza Vea, Makro,
+  Tambo y OXXO usan precios referenciales inventados (`PRICE_ROWS`).
+- `js/core/geo.js`: pide la ubicación al GPS (`requestLocation`; sin permiso usa Paucarpata aproximada),
+  calcula la distancia a cada tienda, pide la ruta por calles a OSRM (OpenStreetMap; sin conexión estima en
+  línea recta) y estima tiempo y pasaje por modo con los supuestos de `TRAVEL` (combi S/ 1.50 por tramo,
+  taxi desde S/ 6, a pie hasta 2.5 km). `googleMapsUrl` abre la ruta en Google Maps.
+- `js/screens/route.js` (pantalla `route`): mapa Leaflet con la ruta, opciones de viaje y total canasta + pasaje.
+  Recibe el destino en `state.routeTarget = { storeIds, basketTotal }`; sus acciones devuelven `false` y solo
+  repintan el panel para no destruir el mapa.
 
 ## Estructura
 
@@ -47,7 +63,8 @@ en el orden declarado en `index.html`: datos → núcleo → componentes → pan
 - `js/core/state.js` — estado global (`state`), modos de sesión y helpers de la canasta
 - `js/core/router.js` — `defineScreen`, `navigate`, `render` y delegación de eventos
 - `js/core/utils.js` — `esc`, `money`, `each`
-- `js/components/` — piezas de HTML reutilizables (StatusBar, BottomNav, Sheet, modales…)
+- `js/core/geo.js` — GPS, distancias, rutas (OSRM) y costo del viaje
+- `js/components/` — piezas de HTML reutilizables (BottomNav, Sheet, modales…)
 - `js/screens/` — una pantalla por archivo
 - `img/logo.png` — logo
 - `docs/` — notas de diseño originales
@@ -88,8 +105,7 @@ elementos con `data-scroll` / `id`). Una acción que devuelve `false` no redibuj
   `cargar_catalogos_por_ciudad` con `ciudad=AREQUIPA`). Si el folleto es el mismo de `data/mass-folleto.json`
   se reutiliza; si es nuevo se lee con Claude (`claude-opus-5-5`, secreto `ANTHROPIC_API_KEY` en GitHub).
   Sin la clave se mantienen los precios del folleto anterior y la tarea avisa. Los precios de Mass son
-  parciales (`partial: true`): lo que no sale en el folleto sigue con la tabla de ejemplo, y las dos tiendas
-  Mass de la app (`massporo`, `massande`) comparten estos precios (`SCRAPED_SOURCE` en `catalog.js`).
+  parciales (`partial: true`): lo que no sale en el folleto sigue con la tabla de ejemplo.
   `node scraper/mass.mjs --offline` recalcula los precios desde `data/mass-folleto.json` sin internet.
 - Las reglas de `QUERIES` en `scraper/common.mjs` (`q`, `qBy`, `byStore`, `start`, `must`, `prefer`, `exclude`, `kg`)
   deciden qué resultado corresponde a cada producto de la app. Para ajustar una coincidencia, editar su regla.

@@ -46,51 +46,54 @@ const PRODUCTS = [
   { id: 30, name: "Papel higiénico x4",       unit: "paquete", cat: "Limpieza",  emoji: "🧻" },
 ];
 
-// type: "super" | "discount" · freshnessLevel: "ok" | "warn" | "bad"
-// x, y: posición (en %) del pin en el mapa de resultados.
+// type: "super" | "wholesale" | "discount" | "convenience" · freshnessLevel: "ok" | "warn" | "bad"
+// lat/lng: ubicación aproximada del local (editar aquí si se conoce la exacta).
+// distance, distMin, x, y se calculan desde la ubicación del usuario (js/core/geo.js).
 const STORES = [
-  { id: "tottus",   name: "Tottus Porongoche",         type: "super",    badge: "Super",     address: "C.C. Real Plaza Porongoche, Paucarpata", district: "Paucarpata", distance: "1.8 km · 22 min", distMin: 22, updated: "Actualizado ayer", freshnessLevel: "warn", x: 70, y: 45 },
-  { id: "plazavea", name: "Plaza Vea",                 type: "super",    badge: "Super",     address: "C.C. Porongoche, Paucarpata",            district: "Paucarpata", distance: "1.4 km · 17 min", distMin: 17, updated: "Actualizado ayer", freshnessLevel: "warn", x: 45, y: 55 },
-  { id: "franco",   name: "Franco Supermercados",      type: "super",    badge: "Super",     address: "Av. Porongoche 450, Paucarpata",         district: "Paucarpata", distance: "900 m · 12 min",  distMin: 12, updated: "Actualizado hoy",  freshnessLevel: "ok",   x: 62, y: 28 },
-  { id: "massporo", name: "Tiendas Mass – Porongoche", type: "discount", badge: "Descuento", address: "Av. Los Incas 320, Paucarpata",          district: "Paucarpata", distance: "600 m · 8 min",   distMin: 8,  updated: "Actualizado hoy",  freshnessLevel: "ok",   x: 28, y: 38 },
-  { id: "metro",    name: "Metro",                     type: "super",    badge: "Super",     address: "metro.pe · precio web para Paucarpata (04008)", district: "Arequipa", distance: "Compra online", distMin: 40, updated: "Sin datos", freshnessLevel: "bad", x: 84, y: 72 },
-  { id: "massande", name: "Tiendas Mass – Los Andes",  type: "discount", badge: "Descuento", address: "Av. Los Andes 210, Paucarpata",          district: "Paucarpata", distance: "1.1 km · 14 min", distMin: 14, updated: "Actualizado hoy",  freshnessLevel: "ok",   x: 20, y: 60 },
+  { id: "tottus",   name: "Tottus Porongoche",       type: "super",       badge: "Supermercado",   zone: "Porongoche",           address: "C.C. Mall Aventura Porongoche, Av. Porongoche",  lat: -16.4166, lng: -71.5089, updated: "Precio referencial", freshnessLevel: "warn" },
+  { id: "plazavea", name: "Plaza Vea",               type: "super",       badge: "Supermercado",   zone: "Cercano a Paucarpata", address: "Av. Avelino Cáceres, José Luis Bustamante y Rivero", lat: -16.4228, lng: -71.5203, updated: "Precio referencial", freshnessLevel: "warn" },
+  { id: "metro",    name: "Metro Lambramani",        type: "super",       badge: "Supermercado",   zone: "Lambramani",           address: "C.C. Lambramani, Av. Lambramani",                lat: -16.4139, lng: -71.5196, updated: "Precio referencial", freshnessLevel: "warn" },
+  { id: "makro",    name: "Makro Avelino Cáceres",   type: "wholesale",   badge: "Supermayorista", zone: "Avelino Cáceres",      address: "Av. Avelino Cáceres, José Luis Bustamante y Rivero", lat: -16.4192, lng: -71.5258, updated: "Precio referencial", freshnessLevel: "warn" },
+  { id: "mass",     name: "Tiendas Mass Paucarpata", type: "discount",    badge: "Descuento",      zone: "Paucarpata",           address: "Av. Kennedy, Paucarpata",                        lat: -16.4241, lng: -71.5021, updated: "Precio referencial", freshnessLevel: "warn" },
+  { id: "tambo",    name: "Tambo Paucarpata",        type: "convenience", badge: "Conveniencia",   zone: "Paucarpata",           address: "Av. Jesús, Paucarpata",                          lat: -16.4207, lng: -71.5108, updated: "Precio referencial", freshnessLevel: "warn" },
+  { id: "oxxo",     name: "OXXO Paucarpata",         type: "convenience", badge: "Conveniencia",   zone: "Paucarpata",           address: "Av. Porongoche, Paucarpata",                     lat: -16.4222, lng: -71.5074, updated: "Precio referencial", freshnessLevel: "warn" },
 ];
 
 // Tabla de precios de ejemplo: productId → precio por tienda, en el orden de STORES.
-// null = la tienda no tiene el producto (o no hay ejemplo). Se ignora para las tiendas con precios extraídos.
-//          tottus plazavea franco massporo massande
+// null = la tienda no tiene el producto. Las tiendas con precios extraídos (Tottus, Metro) la ignoran;
+// Mass la usa solo para lo que no sale en su folleto. Plaza Vea, Makro, Tambo y OXXO: precios referenciales.
+//          tottus plazavea metro  makro  mass  tambo  oxxo
 const PRICE_ROWS = {
-  1:  [ 4.20,  3.90,  3.80,  3.50,  null,  3.50],
-  2:  [10.90, 11.20,  9.90, 10.50,  null,  null],
-  3:  [17.50, 16.90, 16.50, 15.90,  null, 15.90],
-  4:  [ 2.40,  2.20,  1.90,  2.30,  null,  2.30],
-  5:  [ 3.20,  2.90,  2.80,  3.10,  null,  null],
-  6:  [ 4.60,  4.50,  4.30,  4.10,  null,  4.10],
-  7:  [ 4.10,  3.90,  4.00,  3.70,  null,  3.70],
-  8:  [ 2.20,  1.90,  1.70,  null,  null,  null],
-  9:  [ 2.60,  2.40,  2.10,  2.50,  null,  2.50],
-  10: [ 9.90,  9.50,  9.80,  8.90,  null,  8.90],
-  11: [ 3.60,  3.40,  3.50,  3.20,  null,  3.20],
-  12: [ 6.90,  6.50,  6.70,  6.30,  null,  6.30],
-  13: [ 4.50,  4.30,  4.20,  3.90,  null,  3.90],
-  14: [21.90, 20.90, 19.50,  null,  null,  null],
-  15: [32.90, 31.50, 29.90,  null,  null,  null],
-  16: [19.90, 18.90, 18.50,  null,  null,  null],
-  17: [ 2.80,  2.50,  2.20,  2.60,  null,  null],
-  18: [ 2.50,  2.30,  1.90,  null,  null,  null],
-  19: [ 6.90,  6.50,  5.90,  6.20,  null,  6.20],
-  20: [ 4.50,  4.20,  3.80,  4.30,  null,  null],
-  21: [ 9.90,  9.50,  8.50,  null,  null,  null],
-  22: [ 7.90,  7.50,  7.60,  6.90,  null,  6.90],
-  23: [18.90, 17.90, 16.50,  null,  null,  null],
-  24: [ 8.50,  8.20,  8.40,  7.90,  null,  7.90],
-  25: [ 3.90,  3.70,  3.80,  3.30,  null,  3.30],
-  26: [ 7.50,  7.20,  7.40,  6.90,  null,  6.90],
-  27: [ 4.90,  4.70,  4.80,  4.40,  null,  4.40],
-  28: [ 9.90,  9.50,  9.70,  8.90,  null,  8.90],
-  29: [ 4.50,  4.30,  4.40,  3.90,  null,  3.90],
-  30: [ 6.90,  6.50,  6.70,  5.90,  null,  5.90],
+  1:  [ 4.20,  3.90,  null,  3.50,  3.50,  4.60,  4.80],
+  2:  [10.90, 11.20,  null, 10.20, 10.50,  null,  null],
+  3:  [17.50, 16.90,  null, 15.40, 15.90, 19.80, 20.80],
+  4:  [ 2.40,  2.20,  null,  2.00,  2.30,  null,  null],
+  5:  [ 3.20,  2.90,  null,  2.60,  3.10,  null,  null],
+  6:  [ 4.60,  4.50,  null,  4.10,  4.10,  5.30,  5.49],
+  7:  [ 4.10,  3.90,  null,  3.50,  3.70,  4.60,  4.80],
+  8:  [ 2.20,  1.90,  null,  1.70,  null,  2.20,  2.30],
+  9:  [ 2.60,  2.40,  null,  2.20,  2.50,  null,  null],
+  10: [ 9.90,  9.50,  null,  8.60,  8.90, 11.10, 11.70],
+  11: [ 3.60,  3.40,  null,  3.10,  3.20,  4.00,  4.20],
+  12: [ 6.90,  6.50,  null,  5.90,  6.30,  7.60,  7.99],
+  13: [ 4.50,  4.30,  null,  3.90,  3.90,  5.00,  5.30],
+  14: [21.90, 20.90,  null, 18.99,  null,  null,  null],
+  15: [32.90, 31.50,  null, 28.70,  null,  null,  null],
+  16: [19.90, 18.90,  null, 17.20,  null,  null,  null],
+  17: [ 2.80,  2.50,  null,  2.30,  2.60,  null,  null],
+  18: [ 2.50,  2.30,  null,  2.10,  null,  null,  null],
+  19: [ 6.90,  6.50,  null,  5.90,  6.20,  7.60,  null],
+  20: [ 4.50,  4.20,  null,  3.80,  4.30,  null,  null],
+  21: [ 9.90,  9.50,  null,  8.60,  null,  null,  null],
+  22: [ 7.90,  7.50,  null,  6.80,  6.90,  8.80,  9.20],
+  23: [18.90, 17.90,  null, 16.30,  null,  null,  null],
+  24: [ 8.50,  8.20,  null,  7.49,  7.90,  9.60, 10.10],
+  25: [ 3.90,  3.70,  null,  3.40,  3.30,  4.30,  4.60],
+  26: [ 7.50,  7.20,  null,  6.60,  6.90,  8.40,  8.90],
+  27: [ 4.90,  4.70,  null,  4.30,  4.40,  5.49,  5.80],
+  28: [ 9.90,  9.50,  null,  8.60,  8.90, 11.10, 11.70],
+  29: [ 4.50,  4.30,  null,  3.90,  3.90,  5.00,  5.30],
+  30: [ 6.90,  6.50,  null,  5.90,  5.90,  7.60,  7.99],
 };
 
 function findProduct(productId) {
@@ -102,11 +105,8 @@ function findProduct(productId) {
 // que el scraper no encontró queda como no disponible en esa tienda.
 const SCRAPED = window.SCRAPED_PRICES || {};
 
-// Tiendas que toman los precios de otra fuente: las dos Mass usan el folleto de Arequipa.
-const SCRAPED_SOURCE = { massporo: "mass", massande: "mass" };
-
 function scrapedData(storeId) {
-  return SCRAPED[SCRAPED_SOURCE[storeId] || storeId];
+  return SCRAPED[storeId];
 }
 
 /** Precio extraído: el ítem, null si la tienda no lo tiene, o undefined si se usa la tabla de ejemplo. */

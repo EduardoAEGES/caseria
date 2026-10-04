@@ -1,39 +1,22 @@
 /* ==========================================================================
-   Responsive: se carga al final para poder ajustar cualquier componente
+   Ajustes de celular: se carga al final para poder ajustar cualquier componente
    ========================================================================== */
 
-/* ── En un celular: la app ocupa toda la pantalla, como una app nativa ─── */
-@media (max-width: 500px) {
-  body { background: var(--bg); overscroll-behavior: none; }
+/* ── Zonas seguras del celular (muesca y barra de gestos) ──────────────── */
+body { background: var(--bg); overscroll-behavior: none; }
 
-  .stage { display: block; min-height: 0; padding: 0; }
+/* :where() deja la especificidad en 0, así las pantallas con padding propio (intro) lo conservan. */
+:where(.screen) { padding-top: max(12px, env(safe-area-inset-top)); }
+:where(.phone__content:not(.has-nav) .screen) { padding-bottom: env(safe-area-inset-bottom); }
+.bottom-nav { padding-bottom: max(8px, env(safe-area-inset-bottom)); }
+.sheet { padding-bottom: calc(20px + env(safe-area-inset-bottom)); }
 
-  .phone {
-    width: 100%;
-    height: 100vh;
-    height: 100dvh;           /* alto real visible (sin la barra del navegador) */
-    max-height: none;
-    border-radius: 0;
-    box-shadow: none;
-  }
+/* Con 16px el iPhone no hace zoom al tocar un campo de texto */
+.field__input,
+.search__input { font-size: 16px; }
 
-  /* El celular ya tiene su propia muesca, hora y barra de gestos */
-  .phone__notch,
-  .phone__home-bar,
-  .status-bar { display: none; }
-
-  .phone__content { margin-top: 0; }
-
-  /* Respeta la muesca y la barra de gestos (iPhone/Android con pantalla completa).
-     :where() deja la especificidad en 0, así las pantallas con padding propio (intro) lo conservan. */
-  :where(.screen) { padding-top: max(12px, env(safe-area-inset-top)); }
-  :where(.phone__content:not(.has-nav) .screen) { padding-bottom: env(safe-area-inset-bottom); }
-  .bottom-nav { padding-bottom: max(8px, env(safe-area-inset-bottom)); }
-  .sheet { padding-bottom: calc(20px + env(safe-area-inset-bottom)); }
-
-  /* Con 16px el iPhone no hace zoom al tocar un campo de texto */
-  .field__input,
-  .search__input { font-size: 16px; }
+@media (min-width: 481px) {
+  body { background: var(--slate-300); }
 }
 
 /* ── Celulares angostos (≈320–360px) ───────────────────────────────────── */

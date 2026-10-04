@@ -21,6 +21,10 @@ const ICON_PATHS = {
   "map":           `<path d="m9 4-6 2.5v14L9 18l6 2.5 6-2.5v-14L15 6.5 9 4Z"/><path d="M9 4v14"/><path d="M15 6.5v14"/>`,
   "navigation":    `<path d="m3 11 19-9-9 19-2-8-8-2Z"/>`,
   "walk":          `<circle cx="13" cy="4" r="2"/><path d="m9 21 3-7 3 3v4"/><path d="m7 12 3-4 4 1 2 4 3 1"/>`,
+  "bus":           `<rect x="4" y="3" width="16" height="15" rx="3"/><path d="M4 11h16"/><path d="M8 3v8"/><path d="M16 3v8"/><path d="M6 18v2"/><path d="M18 18v2"/><circle cx="8" cy="14.5" r=".8"/><circle cx="16" cy="14.5" r=".8"/>`,
+  "car":           `<path d="M5 17h14"/><path d="M3 17v-4l2-5a2 2 0 0 1 1.9-1.4h10.2A2 2 0 0 1 19 8l2 5v4"/><path d="M3 13h18"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/>`,
+  "crosshair":     `<circle cx="12" cy="12" r="8"/><path d="M12 2v4"/><path d="M12 18v4"/><path d="M2 12h4"/><path d="M18 12h4"/><circle cx="12" cy="12" r="2"/>`,
+  "external":      `<path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>`,
   "cart":          `<circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.4a1 1 0 0 0 1 .8h9.7a1 1 0 0 0 1-.8L21 7H6"/>`,
   "tag":           `<path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1.2"/>`,
   "store":         `<path d="M3 9 4.5 4h15L21 9"/><path d="M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M5 12v8h14v-8"/><path d="M10 20v-5h4v5"/>`,
@@ -45,10 +49,6 @@ const ICON_PATHS = {
   "save":          `<path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2Z"/><path d="M17 21v-8H7v8"/><path d="M7 3v5h8"/>`,
   "phone":         `<rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/>`,
   "percent":       `<path d="M19 5 5 19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/>`,
-  // Barra de estado del teléfono (rellenos)
-  "signal":        `<path fill="currentColor" stroke="none" d="M2 17h3v4H2zM7 13h3v8H7zM12 9h3v12h-3zM17 5h3v16h-3z"/>`,
-  "wifi":          `<path d="M2 8.8a15 15 0 0 1 20 0"/><path d="M5 12.6a10 10 0 0 1 14 0"/><path d="M8.5 16.3a5 5 0 0 1 7 0"/><path d="M12 20h.01"/>`,
-  "battery":       `<rect x="2" y="7" width="18" height="10" rx="2.5"/><path d="M22 11v2"/><rect x="4" y="9" width="12" height="6" rx="1" fill="currentColor" stroke="none"/>`,
 };
 
 function Icon(name, { size = 20, cls = "", stroke = 2 } = {}) {

@@ -145,6 +145,8 @@
 .map-pin__dot--best { background: var(--gold); }
 .map-pin__dot--super { background: var(--blue); }
 .map-pin__dot--discount { background: var(--green); }
+.map-pin__dot--wholesale { background: var(--purple); }
+.map-pin__dot--convenience { background: var(--orange); }
 .map-pin__tooltip {
   position: absolute;
   bottom: -48px;
@@ -177,6 +179,8 @@
 .map-legend__dot--best { background: var(--gold); }
 .map-legend__dot--discount { background: var(--green); }
 .map-legend__dot--super { background: var(--blue); }
+.map-legend__dot--wholesale { background: var(--purple); }
+.map-legend__dot--convenience { background: var(--orange); }
 
 /* ── Hojas: tabla de precios y reparto ─────────────────────────────────── */
 .price-grid { display: grid; grid-template-columns: repeat(var(--cols, 5), 1fr); gap: 4px; }

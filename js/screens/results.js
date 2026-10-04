@@ -3,6 +3,11 @@
 // Diferencias menores a medio céntimo se consideran empate.
 const SAVINGS_THRESHOLD = 0.005;
 
+/** Botón "Cómo llegar": abre la ruta a esas tiendas con el total de la canasta. */
+function DirectionsButton(storeIds, total, cls = "btn btn--subtle btn--sm", label = "Cómo llegar") {
+  return `<button class="${cls}" data-action="directions" data-stores="${storeIds.join(",")}" data-total="${total.toFixed(2)}">${Icon("navigation", { size: 15 })}${label}</button>`;
+}
+
 function BestOfferCard(best, priciest, savings) {
   if (!best) {
     return `
@@ -22,14 +27,14 @@ function BestOfferCard(best, priciest, savings) {
         <div class="best-offer__head">
           <div>
             <p class="best-offer__name">${best.store.name}</p>
-            <p class="best-offer__meta">${Icon("walk", { size: 14 })} ${best.store.distance} · ${best.store.address}</p>
+            <p class="best-offer__meta">${Icon("map-pin", { size: 14 })} ${best.store.distance} · ${best.store.address}</p>
           </div>
           <p class="best-offer__total">${money(best.total)}</p>
         </div>
         ${saves && priciest ? `<p class="best-offer__compare">Frente a ${priciest.store.name} (${money(priciest.total)}).</p>` : ""}
         <div class="best-offer__actions">
           <button class="btn btn--primary btn--sm btn--grow" data-action="openList" data-store="${best.store.id}">Ver mi lista de compra</button>
-          <button class="btn btn--subtle btn--sm" data-action="directions">${Icon("navigation", { size: 15 })}Cómo llegar</button>
+          ${DirectionsButton([best.store.id], best.total)}
         </div>
       </div>
     </article>`;
@@ -79,10 +84,10 @@ function StoreOfferCard(offer, index, isBest) {
           ? `<span class="pill pill--green">${Icon("check", { size: 12, stroke: 3 })} Tiene todo</span>`
           : `<span class="pill pill--amber pill--wrap">${Icon("alert", { size: 12, stroke: 2.4 })} Falta: ${offer.missing.map(p => p.name).join(", ")}</span>`}
       </div>
-      <p class="store-card__meta">${Icon("walk", { size: 14 })} ${store.distance} · <span>${store.address}</span></p>
+      <p class="store-card__meta">${Icon("map-pin", { size: 14 })} ${store.distance} · <span>${store.address}</span></p>
       <div class="store-card__actions">
         <button class="btn btn--outline btn--xs btn--grow" data-action="openList" data-store="${store.id}">Ver lista</button>
-        <button class="btn btn--subtle btn--xs" data-action="directions">${Icon("navigation", { size: 15 })}Cómo llegar</button>
+        ${DirectionsButton([offer.store.id], offer.total, "btn btn--subtle btn--xs")}
       </div>
     </article>`;
 }
@@ -127,8 +132,10 @@ function ResultsMap(result, sorted, pin) {
 
   const legend = [
     { tone: "best", label: "Mejor oferta" },
-    { tone: "discount", label: "Tiendas Mass" },
     { tone: "super", label: "Supermercados" },
+    { tone: "wholesale", label: "Mayorista" },
+    { tone: "discount", label: "Descuento" },
+    { tone: "convenience", label: "Conveniencia" },
   ];
 
   return `
@@ -141,7 +148,7 @@ function ResultsMap(result, sorted, pin) {
       <div class="map-legend">
         ${each(legend, l => `<span class="map-legend__item"><span class="map-legend__dot map-legend__dot--${l.tone}"></span>${l.label}</span>`)}
       </div>
-      <button class="btn btn--primary btn--md btn--block" data-action="directions">Ver establecimientos y cómo llegar${Icon("chevron-right", { size: 18, stroke: 2.4 })}</button>
+      ${DirectionsButton([(result.bestSingle || sorted[0]).store.id], (result.bestSingle || sorted[0]).total, "btn btn--primary btn--md btn--block", `Cómo llegar a ${(result.bestSingle || sorted[0]).store.name}`)}
     </div>`;
 }
 
@@ -194,7 +201,7 @@ function ShoppingListSheet(offer) {
       <span class="sheet-total__label">Total</span>
       <span class="sheet-total__value">${money(offer.total)}</span>
     </div>
-    <button class="btn btn--primary btn--md btn--block results__sheet-cta" data-action="directions">${Icon("navigation", { size: 15 })}Cómo llegar</button>`;
+    ${DirectionsButton([offer.store.id], offer.total, "btn btn--primary btn--md btn--block results__sheet-cta")}`;
 }
 
 function CombinedPlanSheet(combined) {
@@ -206,7 +213,7 @@ function CombinedPlanSheet(combined) {
           <p class="stop-card__name">${stop.store.name}</p>
           <strong>${money(stop.subtotal)}</strong>
         </div>
-        <p class="stop-card__meta">${Icon("walk", { size: 14 })} ${stop.store.distance}</p>
+        <p class="stop-card__meta">${Icon("map-pin", { size: 14 })} ${stop.store.distance}</p>
         ${each(stop.lines, line => `
           <div class="stop-card__line">
             <span class="stop-card__item">${line.product.emoji} ${line.product.name} · ${line.qty} × ${money(line.unitPrice)}</span>
@@ -217,7 +224,8 @@ function CombinedPlanSheet(combined) {
     <div class="sheet-total sheet-total--green">
       <span class="sheet-total__label">Total combinado</span>
       <span class="sheet-total__value">${money(combined.total)}</span>
-    </div>`;
+    </div>
+    ${DirectionsButton(combined.stops.map(stop => stop.store.id), combined.total, "btn btn--primary btn--md btn--block results__sheet-cta", `Ruta por las ${combined.stops.length} tiendas`)}`;
 }
 
 function ResultsSheet(ui, result, cart) {
@@ -280,6 +288,9 @@ defineScreen("results", {
       ui.listStoreId = el.dataset.store;
     },
     closeSheet: ui => { ui.sheet = null; },
-    directions: () => navigate("stallpremium"),
+    directions: (ui, el) => {
+      state.routeTarget = { storeIds: el.dataset.stores.split(","), basketTotal: Number(el.dataset.total) };
+      navigate("route");
+    },
   },
 });

@@ -9,7 +9,8 @@ defineScreen("home", {
 
   render(ui) {
     const district = getDistrict();
-    const catalog = ui.catalogTab === "super" ? district.supermarkets : district.minimarkets;
+    const nearbyTypes = ui.catalogTab === "super" ? ["super", "wholesale"] : ["discount", "convenience"];
+    const catalog = STORES.filter(s => nearbyTypes.includes(s.type)).sort((a, b) => a.km - b.km);
     const name = esc(state.userName);
     const initial = esc((state.userName[0] || "M").toUpperCase());
 
@@ -42,7 +43,7 @@ defineScreen("home", {
               <div class="home-banner__text-wrap">
                 <p class="home-banner__eyebrow">Compara y ahorra</p>
                 <p class="home-banner__title">Tu canasta al mejor precio de Paucarpata</p>
-                <p class="home-banner__text">Tottus, Metro, Plaza Vea, Franco y Tiendas Mass en una sola búsqueda.</p>
+                <p class="home-banner__text">Mass, Tambo, OXXO, Metro, Makro, Tottus y Plaza Vea en una sola búsqueda.</p>
               </div>
               <span class="home-banner__icon">${Icon("cart", { size: 30, stroke: 1.8 })}</span>
             </div>
@@ -110,24 +111,24 @@ defineScreen("home", {
             <div class="section-head">
               <div>
                 <p class="section-title">Tiendas cerca de ti</p>
-                <p class="section-sub">Donde buscamos tus precios</p>
+                <p class="section-sub">${geo.status === "ok" ? "Según tu ubicación" : "Desde Paucarpata (aprox.)"} · toca una para ver la ruta</p>
               </div>
             </div>
             <div class="card card--clip">
               <div class="store-tabs">
-                ${each([{ value: "super", label: "Supermercados" }, { value: "mass", label: "Tiendas de descuento" }], t => `
+                ${each([{ value: "super", label: "Supermercados" }, { value: "near", label: "Cerca de casa" }], t => `
                   <button class="store-tabs__btn${ui.catalogTab === t.value ? " is-active" : ""}" data-action="setCatalog" data-value="${t.value}">${t.label}</button>`)}
               </div>
               <div class="store-list">
                 ${each(catalog, store => `
-                  <div class="store-list__row">
-                    <span class="icon-chip">${Icon(ui.catalogTab === "super" ? "store" : "tag", { size: 20 })}</span>
+                  <button class="store-list__row" data-action="storeRoute" data-store="${store.id}">
+                    <span class="icon-chip">${Icon(store.type === "super" || store.type === "wholesale" ? "store" : "tag", { size: 20 })}</span>
                     <div class="store-list__text">
                       <p class="store-list__name">${store.name}</p>
-                      <p class="store-list__tag">${store.tag}</p>
+                      <p class="store-list__tag">${store.badge} · ${store.zone} · ${store.distance}</p>
                     </div>
                     <span class="store-list__chevron">${Icon("chevron-right", { size: 18 })}</span>
-                  </div>`)}
+                  </button>`)}
               </div>
             </div>
           </div>
@@ -147,6 +148,12 @@ defineScreen("home", {
 
   actions: {
     setCatalog: (ui, el) => { ui.catalogTab = el.dataset.value; },
+    // Ruta a una tienda con el total de la canasta actual en esa tienda.
+    storeRoute: (ui, el) => {
+      const offer = searchBestOffers(getCart()).offers.find(o => o.store.id === el.dataset.store);
+      state.routeTarget = { storeIds: [el.dataset.store], basketTotal: offer ? offer.total : 0 };
+      navigate("route");
+    },
     openCategory: (ui, el) => {
       state.startCategory = el.dataset.cat;
       navigate("select");
