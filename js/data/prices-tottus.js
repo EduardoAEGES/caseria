@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-10-04T14:55:27.722Z",
+  "updatedAt": "2026-10-06T17:12:19.568Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -14,11 +14,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/124763718/arroz-costeno-extra-anejo-bolsa-750-g"
     },
     "2": {
-      "price": 10.5,
+      "price": 9.9,
       "normalPrice": 11.5,
-      "name": "Pollo Entero Trozado Redondos x Kg",
-      "presentation": "2.15 kg Aprox",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115808216/pollo-entero-trozado-redondos-x-kg"
+      "name": "Pollo Entero Sin Menudencia Redondos x Kg",
+      "presentation": "2 kg Aprox",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115808410/pollo-entero-sin-menudencia-redondos-x-kg"
     },
     "3": {
       "price": 15.9,
@@ -28,14 +28,14 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/114518367/huevos-pardos-tottus-bandeja-30-und"
     },
     "4": {
-      "price": 3.99,
+      "price": 4.49,
       "normalPrice": null,
       "name": "Papa Canchan Procesada x Kg",
       "presentation": "Empaque 1 Kg Aprox.",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/129605787/papa-canchan-procesada-x-kg"
     },
     "5": {
-      "price": 7.79,
+      "price": 7.7,
       "normalPrice": null,
       "name": "Tomate Italiano Tottus",
       "presentation": "500 g = 3 Un Aprox",
@@ -54,6 +54,13 @@ window.SCRAPED_PRICES["tottus"] = {
       "name": "Leche Gloria Reconstituida Entera Lata 390 g",
       "presentation": "Lata 390 g  ",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087921/leche-gloria-reconstituida-entera-lata-390-g"
+    },
+    "8": {
+      "price": 3.99,
+      "normalPrice": null,
+      "name": "Plátano De Seda Extra Tottus x Kg",
+      "presentation": "1 Kg = 5 Un Aprox",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115847468/platano-de-seda-extra-tottus-x-kg"
     },
     "9": {
       "price": 3.99,
@@ -91,15 +98,15 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113705634/azucar-rubia-tottus-bolsa-1-kg"
     },
     "14": {
-      "price": 12.9,
-      "normalPrice": null,
+      "price": 12.2,
+      "normalPrice": 12.9,
       "name": "Carne Molida De Res x 500 g",
       "presentation": "Empaque 500 g Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113787352/carne-molida-de-res-x-500-g"
     },
     "15": {
-      "price": 43.9,
-      "normalPrice": null,
+      "price": 42.9,
+      "normalPrice": 43.9,
       "name": "Bisteck De Res",
       "presentation": "500 g Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115842749/bisteck-de-res"
@@ -112,7 +119,7 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115817331/chuleta-de-brazuelo-de-cerdo-x-kg"
     },
     "17": {
-      "price": 3.99,
+      "price": 3.79,
       "normalPrice": null,
       "name": "Zanahoria Tottus",
       "presentation": "1 Kg = 5 Un Aprox",
@@ -126,7 +133,7 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706390/lechuga-seda-hidroponica-tottus"
     },
     "19": {
-      "price": 5.49,
+      "price": 5.9,
       "normalPrice": null,
       "name": "Manzana Delicia Tottus",
       "presentation": "1 Kg Aprox",
@@ -140,18 +147,18 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/130698837/naranja-de-jugo-premium-x-kg"
     },
     "21": {
-      "price": 11.49,
+      "price": 17.9,
       "normalPrice": null,
-      "name": "Palta Fuerte Sin Madurar x Kg",
-      "presentation": "1 Kg = 4 Un Aprox",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/130698965/palta-fuerte-premium-x-kg"
+      "name": "Palta Fuerte Orgánico Tottus",
+      "presentation": "760 g Aprox",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115822635/palta-fuerte-organico-tottus"
     },
     "22": {
-      "price": 1.95,
+      "price": 1.9,
       "normalPrice": null,
-      "name": "Yogurt Gloria Vainilla Botella 180 g",
-      "presentation": "Botella 180 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/119331881/gloria-yog-par-desc-vainilla-x180g"
+      "name": "Yogurt Gloria Frutado Fresa Envase 120 g",
+      "presentation": "Envase 120 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113710229/yogurt-gloria-frutado-fresa-120-g"
     },
     "23": {
       "price": 16.9,
