@@ -35,7 +35,7 @@
   color: var(--muted);
   text-align: left;
 }
-.search-box .icon { color: var(--blue); }
+.search-box .icon { color: var(--green-dark); }
 .search-box__placeholder { font-size: 14px; }
 
 /* Banner principal */
@@ -47,8 +47,8 @@
   padding: 18px;
   overflow: hidden;
   border-radius: 20px;
-  background: linear-gradient(135deg, var(--blue) 0%, #2563EB 55%, #1E40AF 100%);
-  box-shadow: var(--shadow-blue);
+  background: linear-gradient(135deg, #16A34A 0%, #15803D 55%, #166534 100%);
+  box-shadow: 0 10px 15px -3px rgb(22 163 74 / 0.25), 0 4px 6px -4px rgb(22 163 74 / 0.25);
   color: var(--white);
 }
 .home-banner::after {
@@ -62,7 +62,7 @@
   background: rgb(255 255 255 / 0.08);
 }
 .home-banner__text-wrap { flex: 1; position: relative; z-index: 1; }
-.home-banner__eyebrow { font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #FDBA74; }
+.home-banner__eyebrow { font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #FEF08A; }
 .home-banner__title { margin: 2px 0 4px; font-size: 17px; font-weight: 800; line-height: 1.25; }
 .home-banner__text { font-size: 12px; line-height: 1.4; color: rgb(255 255 255 / 0.8); }
 .home-banner__icon {
