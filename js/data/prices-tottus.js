@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-10-06T17:12:19.568Z",
+  "updatedAt": "2026-10-07T17:50:28.608Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {

@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-10-06T17:13:28.493Z",
+  "updatedAt": "2026-10-07T17:51:37.298Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -22,8 +22,8 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/pollo-entero-con-menudencia-metro-x-kg-26334-2/p"
     },
     "3": {
-      "price": 17.9,
-      "normalPrice": null,
+      "price": 16.5,
+      "normalPrice": 17.9,
       "name": "Huevos Pardos Metro 30un",
       "presentation": "30un",
       "url": "https://www.metro.pe/huevos-pardos-metro-30un-1009776/p"
@@ -106,11 +106,11 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/carne-molida-economica-congelada-los-hierros-x-500-g/p"
     },
     "15": {
-      "price": 37.9,
-      "normalPrice": 43.9,
-      "name": "Bisteck Bola de Lomo Nacional x kg",
+      "price": 43.9,
+      "normalPrice": null,
+      "name": "Bisteck de Paleta Nacional x kg",
       "presentation": "x kg",
-      "url": "https://www.metro.pe/bisteck-bola-de-lomo-nacional-en-bandeja-x-kg-390617-2/p"
+      "url": "https://www.metro.pe/bisteck-de-paleta-nacional-en-bandeja-x-kg-390618-2/p"
     },
     "16": {
       "price": 19.9,
@@ -148,14 +148,14 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/naranja-para-jugo-chanchamayo-x-kg-152606-2/p"
     },
     "21": {
-      "price": 10.99,
+      "price": 10.9,
       "normalPrice": 11.49,
       "name": "Palta Fuerte Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/palta-fuerte-metro-x-kg-71554-2/p"
     },
     "22": {
-      "price": 5.5,
+      "price": 6.1,
       "normalPrice": 6.8,
       "name": "Yogurt Parcialmente Descremado Piña Gloria Botella 1 kg",
       "presentation": "1 kg",
