@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-10-07T17:50:28.608Z",
+  "updatedAt": "2026-10-08T17:53:50.854Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -14,15 +14,15 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/124763718/arroz-costeno-extra-anejo-bolsa-750-g"
     },
     "2": {
-      "price": 9.9,
+      "price": 10.5,
       "normalPrice": 11.5,
-      "name": "Pollo Entero Sin Menudencia Redondos x Kg",
-      "presentation": "2 kg Aprox",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115808410/pollo-entero-sin-menudencia-redondos-x-kg"
+      "name": "Pollo Entero Trozado Redondos x Kg",
+      "presentation": "2.15 kg Aprox",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115808216/pollo-entero-trozado-redondos-x-kg"
     },
     "3": {
-      "price": 15.9,
-      "normalPrice": 17.9,
+      "price": 17.9,
+      "normalPrice": null,
       "name": "Huevos Pardos Tottus Bandeja 30 Und",
       "presentation": "Bandeja 30 Und",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/114518367/huevos-pardos-tottus-bandeja-30-und"
@@ -98,18 +98,18 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113705634/azucar-rubia-tottus-bolsa-1-kg"
     },
     "14": {
-      "price": 12.2,
-      "normalPrice": 12.9,
+      "price": 12.9,
+      "normalPrice": null,
       "name": "Carne Molida De Res x 500 g",
       "presentation": "Empaque 500 g Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113787352/carne-molida-de-res-x-500-g"
     },
     "15": {
-      "price": 42.9,
-      "normalPrice": 43.9,
-      "name": "Bisteck De Res",
-      "presentation": "500 g Aprox",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115842749/bisteck-de-res"
+      "price": 43.9,
+      "normalPrice": null,
+      "name": "Bisteck Tottus",
+      "presentation": "Empaque 700 g Aprox",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115845404/bisteck-tottus"
     },
     "16": {
       "price": 18.9,
