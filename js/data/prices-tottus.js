@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-10-08T17:53:50.854Z",
+  "updatedAt": "2026-10-09T17:27:44.809Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -22,10 +22,10 @@ window.SCRAPED_PRICES["tottus"] = {
     },
     "3": {
       "price": 17.9,
-      "normalPrice": null,
-      "name": "Huevos Pardos Tottus Bandeja 30 Und",
+      "normalPrice": 19.5,
+      "name": "Huevos Pardos La Calera Bandeja 30 Und",
       "presentation": "Bandeja 30 Und",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/114518367/huevos-pardos-tottus-bandeja-30-und"
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/130751327/huevos-pardos-la-calera-bandeja-30-und"
     },
     "4": {
       "price": 4.49,
@@ -77,8 +77,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706444/aceite-vegetal-primor-clasico-botella-900-ml"
     },
     "11": {
-      "price": 3.4,
-      "normalPrice": 3.8,
+      "price": 3.8,
+      "normalPrice": null,
       "name": "Pasta Trigo Fettuccini Don Vittorio Empaque 500 g",
       "presentation": "Empaque 500 g",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/142707030/pasta-trigo-fettuccini-don-vittorio-empaque-500-g"
@@ -107,9 +107,9 @@ window.SCRAPED_PRICES["tottus"] = {
     "15": {
       "price": 43.9,
       "normalPrice": null,
-      "name": "Bisteck Tottus",
-      "presentation": "Empaque 700 g Aprox",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115845404/bisteck-tottus"
+      "name": "Bisteck De Res",
+      "presentation": "500 g Aprox",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115842749/bisteck-de-res"
     },
     "16": {
       "price": 18.9,
@@ -154,11 +154,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115822635/palta-fuerte-organico-tottus"
     },
     "22": {
-      "price": 1.9,
+      "price": 1.95,
       "normalPrice": null,
-      "name": "Yogurt Gloria Frutado Fresa Envase 120 g",
-      "presentation": "Envase 120 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113710229/yogurt-gloria-frutado-fresa-120-g"
+      "name": "Yogurt Gloria Vainilla Botella 180 g",
+      "presentation": "Botella 180 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/119331881/gloria-yog-par-desc-vainilla-x180g"
     },
     "23": {
       "price": 16.9,
