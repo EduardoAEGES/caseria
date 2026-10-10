@@ -252,23 +252,9 @@ defineScreen("results", {
   render(ui) {
     const cart = getCart();
     const result = searchBestOffers(cart);
-    let sorted;
-    if (ui.criteria === "precio") {
-      sorted = result.offers;
-    } else if (ui.criteria === "cerca") {
-      sorted = [...result.offers].sort((a, b) => a.store.distMin - b.store.distMin);
-    } else if (ui.criteria === "presupuesto") {
-      const budget = state.budget;
-      if (budget == null) {
-        sorted = result.offers;
-      } else {
-        const affordable = result.offers.filter(o => budget - o.total >= 0)
-          .sort((a, b) => (budget - b.total) - (budget - a.total));
-        const over = result.offers.filter(o => budget - o.total < 0)
-          .sort((a, b) => (budget - a.total) - (budget - b.total));
-        sorted = [...affordable, ...over];
-      }
-    }
+    const sorted = ui.criteria === "precio"
+  ? result.offers
+  : [...result.offers].sort((a, b) => a.store.distMin - b.store.distMin);
 
     return `
       <section class="screen">
@@ -282,9 +268,9 @@ defineScreen("results", {
         </header>
 
         <div class="results__controls">
-          ${Segmented([{ value: "precio", label: `${Icon("tag", { size: 14 })} Precio` }, { value: "cerca", label: `${Icon("map-pin", { size: 14 })} Cercanía` }, { value: "presupuesto", label: `${Icon("wallet", { size: 14 })} Tu bolsillo` }], ui.criteria, "setCriteria")}
+          ${Segmented([{ value: "precio", label: `${Icon("tag", { size: 14 })} Precio` }, { value: "cerca", label: `${Icon("map-pin", { size: 14 })} Cercanía` }], ui.criteria, "setCriteria")}
           ${Segmented([{ value: "list", label: `${Icon("list", { size: 14 })} Lista` }, { value: "map", label: `${Icon("map", { size: 14 })} Mapa` }], ui.view, "setView")}
-          ${ui.criteria === "presupuesto" ? `<div class="budget-control"><input id="budgetInput" type="number" placeholder="Presupuesto S/" class="input-budget"/><button class="btn btn--primary btn--sm" data-action="setBudget">Aplicar</button></div>` : ``}
+
         </div>
 
         ${ui.view === "list" ? ResultsList(result, sorted) : ResultsMap(result, sorted, ui.pin)}
@@ -296,13 +282,7 @@ defineScreen("results", {
     back: () => navigate("quantities"),
     setCriteria: (ui, el) => { ui.criteria = el.dataset.value; },
     setView: (ui, el) => { ui.view = el.dataset.value; },
-    setBudget: (ui, el) => {
-      const input = document.getElementById('budgetInput');
-      const val = Number(input.value);
-      if (!isNaN(val) && val >= 0) {
-        state.budget = val;
-      }
-    },
+
     pin: (ui, el) => {
       const index = Number(el.dataset.index);
       ui.pin = ui.pin === index ? null : index;
