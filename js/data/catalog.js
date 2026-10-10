@@ -10,7 +10,7 @@ const CATEGORIES = [
   { key: "Abarrotes", emoji: "🍚" },
   { key: "Lácteos",   emoji: "🥛" },
   { key: "Bebidas",   emoji: "🧃" },
-  { key: "Limpieza",  emoji: "🧼" },
+  { key: "Snacks",    emoji: "🍿" },
 ];
 
 const PRODUCTS = [
@@ -41,22 +41,25 @@ const PRODUCTS = [
   { id: 25, name: "Agua San Luis 2.5L",       unit: "botella", cat: "Bebidas",   emoji: "💧" },
   { id: 26, name: "Gaseosa Inca Kola 1.5L",   unit: "botella", cat: "Bebidas",   emoji: "🥤" },
   { id: 27, name: "Jugo Frugos 1L",           unit: "caja",    cat: "Bebidas",   emoji: "🧃" },
-  { id: 28, name: "Detergente Bolívar 750g",  unit: "bolsa",   cat: "Limpieza",  emoji: "🧺" },
-  { id: 29, name: "Lejía Clorox 1L",          unit: "botella", cat: "Limpieza",  emoji: "🧴" },
-  { id: 30, name: "Papel higiénico x4",       unit: "paquete", cat: "Limpieza",  emoji: "🧻" },
+  { id: 28, name: "Galletas Casino 6pk",        unit: "paquete", cat: "Snacks",    emoji: "🍪" },
+  { id: 29, name: "Chocolate Sublime 30g",      unit: "unidad",  cat: "Snacks",    emoji: "🍫" },
+  { id: 30, name: "Papas Lays Clásicas 140g",   unit: "bolsa",   cat: "Snacks",    emoji: "🥔" },
+  { id: 31, name: "Barra Cereal Bar x6",        unit: "caja",    cat: "Snacks",    emoji: "🌾" },
+  { id: 32, name: "Frutos secos surtidos 150g", unit: "bolsa",   cat: "Snacks",    emoji: "🥜" },
+  { id: 33, name: "Doritos Mega Queso 150g",    unit: "bolsa",   cat: "Snacks",    emoji: "🧀" },
 ];
 
 // type: "super" | "wholesale" | "discount" | "convenience" · freshnessLevel: "ok" | "warn" | "bad"
 // lat/lng: ubicación aproximada del local (editar aquí si se conoce la exacta).
 // distance, distMin, x, y se calculan desde la ubicación del usuario (js/core/geo.js).
 const STORES = [
-  { id: "tottus",   name: "Tottus Porongoche",       type: "super",       badge: "Supermercado",   zone: "Porongoche",           address: "C.C. Mall Aventura Porongoche, Av. Porongoche",  lat: -16.4166, lng: -71.5089, updated: "Precio referencial", freshnessLevel: "warn" },
-  { id: "plazavea", name: "Plaza Vea",               type: "super",       badge: "Supermercado",   zone: "Cercano a Paucarpata", address: "Av. Avelino Cáceres, José Luis Bustamante y Rivero", lat: -16.4228, lng: -71.5203, updated: "Precio referencial", freshnessLevel: "warn" },
-  { id: "metro",    name: "Metro Lambramani",        type: "super",       badge: "Supermercado",   zone: "Lambramani",           address: "C.C. Lambramani, Av. Lambramani",                lat: -16.4139, lng: -71.5196, updated: "Precio referencial", freshnessLevel: "warn" },
-  { id: "makro",    name: "Makro Avelino Cáceres",   type: "wholesale",   badge: "Supermayorista", zone: "Avelino Cáceres",      address: "Av. Avelino Cáceres, José Luis Bustamante y Rivero", lat: -16.4192, lng: -71.5258, updated: "Precio referencial", freshnessLevel: "warn" },
-  { id: "mass",     name: "Tiendas Mass Paucarpata", type: "discount",    badge: "Descuento",      zone: "Paucarpata",           address: "Av. Kennedy, Paucarpata",                        lat: -16.4241, lng: -71.5021, updated: "Precio referencial", freshnessLevel: "warn" },
-  { id: "tambo",    name: "Tambo Paucarpata",        type: "convenience", badge: "Conveniencia",   zone: "Paucarpata",           address: "Av. Jesús, Paucarpata",                          lat: -16.4207, lng: -71.5108, updated: "Precio referencial", freshnessLevel: "warn" },
-  { id: "oxxo",     name: "OXXO Paucarpata",         type: "convenience", badge: "Conveniencia",   zone: "Paucarpata",           address: "Av. Porongoche, Paucarpata",                     lat: -16.4222, lng: -71.5074, updated: "Precio referencial", freshnessLevel: "warn" },
+  { id: "tottus",   name: "Tottus Porongoche",       type: "super",       badge: "Supermercado",   zone: "Porongoche",           address: "C.C. Mall Aventura Porongoche, Av. Porongoche",  lat: -16.4166, lng: -71.5089, updated: "Precio referencial", freshnessLevel: "warn", url: "https://www.tottus.com.pe/tottus-pe" },
+  { id: "plazavea", name: "Plaza Vea",               type: "super",       badge: "Supermercado",   zone: "Cercano a Paucarpata", address: "Av. Avelino Cáceres, José Luis Bustamante y Rivero", lat: -16.4228, lng: -71.5203, updated: "Precio referencial", freshnessLevel: "warn", url: "https://www.plazavea.com.pe" },
+  { id: "metro",    name: "Metro Lambramani",        type: "super",       badge: "Supermercado",   zone: "Lambramani",           address: "C.C. Lambramani, Av. Lambramani",                lat: -16.4139, lng: -71.5196, updated: "Precio referencial", freshnessLevel: "warn", url: "https://www.metro.pe" },
+  { id: "makro",    name: "Makro Avelino Cáceres",   type: "wholesale",   badge: "Supermayorista", zone: "Avelino Cáceres",      address: "Av. Avelino Cáceres, José Luis Bustamante y Rivero", lat: -16.4192, lng: -71.5258, updated: "Precio referencial", freshnessLevel: "warn", url: "https://www.makro.pe" },
+  { id: "mass",     name: "Tiendas Mass Paucarpata", type: "discount",    badge: "Descuento",      zone: "Paucarpata",           address: "Av. Kennedy, Paucarpata",                        lat: -16.4241, lng: -71.5021, updated: "Precio referencial", freshnessLevel: "warn", url: "https://www.tiendasmass.com.pe" },
+  { id: "tambo",    name: "Tambo Paucarpata",        type: "convenience", badge: "Conveniencia",   zone: "Paucarpata",           address: "Av. Jesús, Paucarpata",                          lat: -16.4207, lng: -71.5108, updated: "Precio referencial", freshnessLevel: "warn", url: "https://www.tambo.pe" },
+  { id: "oxxo",     name: "OXXO Paucarpata",         type: "convenience", badge: "Conveniencia",   zone: "Paucarpata",           address: "Av. Porongoche, Paucarpata",                     lat: -16.4222, lng: -71.5074, updated: "Precio referencial", freshnessLevel: "warn", url: "https://www.oxxo.pe" },
 ];
 
 // Tabla de precios de ejemplo: productId → precio por tienda, en el orden de STORES.
@@ -91,9 +94,12 @@ const PRICE_ROWS = {
   25: [ 3.90,  3.70,  null,  3.40,  3.30,  4.30,  4.60],
   26: [ 7.50,  7.20,  null,  6.60,  6.90,  8.40,  8.90],
   27: [ 4.90,  4.70,  null,  4.30,  4.40,  5.49,  5.80],
-  28: [ 9.90,  9.50,  null,  8.60,  8.90, 11.10, 11.70],
-  29: [ 4.50,  4.30,  null,  3.90,  3.90,  5.00,  5.30],
-  30: [ 6.90,  6.50,  null,  5.90,  5.90,  7.60,  7.99],
+  28: [ 4.80,  4.90,  5.10,  4.20,  4.30,  5.50,  5.60],
+  29: [ 2.50,  2.60,  2.70,  2.20,  2.30,  3.00,  3.20],
+  30: [ 6.90,  7.20,  7.50,  6.20,  6.50,  7.90,  8.20],
+  31: [ 5.90,  6.20,  6.40,  5.20,  5.40,  6.80,  7.00],
+  32: [ 8.50,  8.90,  9.20,  7.50,  7.80,  9.90, 10.20],
+  33: [ 6.80,  7.00,  7.30,  6.00,  6.30,  7.90,  8.10],
 };
 
 function findProduct(productId) {
@@ -113,6 +119,8 @@ function scrapedData(storeId) {
 function scrapedItem(storeId, productId) {
   const data = scrapedData(storeId);
   if (!data) return undefined;
+  // Los productos de Snacks (>= 28) usan la tabla comparativa de precios
+  if (productId >= 28) return undefined;
   // Datos parciales (folletos): lo que no aparece sigue con la tabla de ejemplo.
   return data.items[productId] || (data.partial ? undefined : null);
 }
