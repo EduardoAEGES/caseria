@@ -10,20 +10,16 @@ const PREMIUM_BENEFITS = [
     desc: "Reconoce frutas con IA sin límite de usos.",
   },
   {
-    title: "Alertas personalizadas",
-    desc: "Define el precio que quieres alcanzar y CaSerIA te avisa cuando tu canasta llegue a ese monto.",
+    title: "Personalización y alertas inteligentes",
+    desc: "Elige tus marcas preferidas, productos que no deseas cambiar y sustituciones aceptadas. CaserIA personaliza tu canasta y tus alertas según esas preferencias.",
   },
   {
-    title: "Personalización avanzada",
-    desc: "Configura marcas preferidas, productos que no deseas cambiar y sustituciones aceptadas.",
+    title: "Presupuesto mensual",
+    desc: "Define tu límite de gasto mensual y CaserIA lleva el seguimiento de tus compras para mostrarte cuánto has gastado, cuánto te queda y si vas dentro de tu presupuesto.",
   },
   {
-    title: "Recomendaciones personalizadas",
-    desc: "Recibe sugerencias según tu canasta, presupuesto y preferencias.",
-  },
-  {
-    title: "Experiencia con menos publicidad general",
-    desc: "Reduce anuncios generales, manteniendo promociones patrocinadas relevantes claramente identificadas.",
+    title: "Una experiencia sin distracciones",
+    desc: "Sin anuncios publicitarios. Solo ofertas, descuentos y promociones seleccionadas para ayudarte a ahorrar más.",
   },
 ];
 
@@ -94,7 +90,7 @@ defineScreen("buyerprofile", {
               <div class="premium-card__title">${Icon("crown", { size: 20, cls: "icon--gold" })}<p>Ca$erIA Premium</p></div>
               ${state.premium ? '<div class="premium-card__price"><p>Activo</p></div>' : '<div class="premium-card__price"><p>S/ 9.90</p><span>/ mes</span></div>'}
             </div>
-            <p class="premium-card__lead">Más personalización y control sobre tus compras.</p>
+            <p class="premium-card__lead">Más personalización, control y una experiencia de compra adaptada a ti.</p>
             <div class="premium-card__list">
               ${each(PREMIUM_BENEFITS, b => `
                 <div class="premium-card__benefit">
