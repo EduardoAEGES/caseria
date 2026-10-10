@@ -17,6 +17,7 @@ const state = {
   quantities: {},                      // productId → cantidad
   startCategory: "Todos",              // categoría con la que se abre "Elige tus productos"
   modal: null,                         // null | { type: "district" } | { type: "web", name }
+  budget: null                         // presupuesto ingresado por el usuario (S/)
 };
 
 function getDistrict() {
