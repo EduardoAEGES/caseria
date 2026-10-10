@@ -97,7 +97,7 @@ Create a high-fidelity mobile app prototype design system and wireframes for "Ca
 - Featured Card: "⭐ Ca$erIA Premium (S/ 9.90 / mes)".
 - Teasers Section: "🚀 PRÓXIMAMENTE EN CASERIA"
   * Card 1: "📷 Escáner IA de Alimentos" [Badge: Próximamente]
-  * Card 2: "🥗 IA Nutricional + Especialistas" [Badge: Próximamente]
+  * Card 2: "🥗 IA Nutricional" [Badge: Próximamente]
 - VISIBLE BOTTOM NAVIGATION BAR: [ 🏠 Inicio | 🛒 Canasta | 📋 Mis Listas | 👤 Perfil (Active) ]
 
 ---

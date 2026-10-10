@@ -131,11 +131,11 @@ Create a high-fidelity mobile app prototype design system and wireframes for "Ca
 - Gamified Impact Banner: "🎉 Has ahorrado S/ 142.50 con CaserIA | Nivel: Ahorrador Experto".
 - Featured Upsell Card: "⭐ Ca$erIA Premium" (Gold/Orange Border #FF9800)
   * Price: "S/ 9.90 / mes"
-  * Benefits: "✓ IA Nutricional Ilimitada", "✓ Tarifas sociales con Nutricionistas Colegiados", "✓ Cero comisiones en Reserva y Recoge".
+  * Benefits: "✓ IA Nutricional Ilimitada", "✓ Alertas y personalización avanzada", "✓ Cero comisiones en Reserva y Recoge".
   * Primary Button: "Obtener Premium" (Blue #0B63E5 button).
 - Teaser Section: "🚀 PRÓXIMAMENTE EN CASERIA"
   * Teaser 1: "📷 Escáner IA de Alimentos (Escanea la frescura y vida útil de tus compras con la cámara)." [Badge: Próximamente]
-  * Teaser 2: "🥗 IA Nutricional + Especialistas (Planes de salud y citas directas con nutricionistas)." [Badge: Próximamente]
+  * Teaser 2: "🥗 IA Nutricional (Recibe orientación general sobre alimentación y recomendaciones relacionadas con tus productos y preferencias)." [Badge: Próximamente]
 - Settings Group: Métodos de Pago, Mercados Preferidos (Río Seco, Zamácola, Paucarpata), Cerrar Sesión.
 
 ---

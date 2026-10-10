@@ -110,7 +110,7 @@ Create a high-fidelity mobile app prototype design system and wireframes for "Ca
 - Featured Upsell: "⭐ Ca$erIA Premium (S/ 9.90 / mes)".
 - AI Freemium Section:
   * "📷 Escáner IA de Frescura" [Badge: 🎁 1 Prueba Gratis / 🔒 Premium].
-  * "🥗 IA Nutricional + Especialistas" [Badge: 🎁 1 Prueba Gratis / 🔒 Premium].
+  * "🥗 IA Nutricional" [Badge: 🎁 1 Prueba Gratis / 🔒 Premium].
 - Settings Group: Mercados Preferidos, Notificaciones, Centro de Ayuda, Cerrar Sesión. (NO payment methods option).
 - VISIBLE BOTTOM NAVIGATION BAR: [ 🏠 Inicio | 🛒 Canasta | 📋 Mis Listas | 👤 Perfil (Active) ].
 

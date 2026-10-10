@@ -1,12 +1,30 @@
 // Perfil del comprador: ahorro, plan Premium y funciones con IA.
 
 const PREMIUM_BENEFITS = [
-  "Asistente nutricional con IA",
-  "Identificador de fruta ilimitado",
-  "Canastas personalizadas",
-  "Comparación de precios ilimitada",
-  "Alertas de precios y promociones",
-  "Historial y análisis de gastos",
+  {
+    title: "IA Nutricional",
+    desc: "Orientación general según tus preferencias y los productos de tu canasta.",
+  },
+  {
+    title: "Identificador de frutas ilimitado",
+    desc: "Reconoce frutas con IA sin límite de usos.",
+  },
+  {
+    title: "Alertas personalizadas",
+    desc: "Define el precio que quieres alcanzar y CaSerIA te avisa cuando tu canasta llegue a ese monto.",
+  },
+  {
+    title: "Personalización avanzada",
+    desc: "Configura marcas preferidas, productos que no deseas cambiar y sustituciones aceptadas.",
+  },
+  {
+    title: "Recomendaciones personalizadas",
+    desc: "Recibe sugerencias según tu canasta, presupuesto y preferencias.",
+  },
+  {
+    title: "Experiencia con menos publicidad general",
+    desc: "Reduce anuncios generales, manteniendo promociones patrocinadas relevantes claramente identificadas.",
+  },
 ];
 
 const PROFILE_MENU = [
@@ -41,7 +59,7 @@ defineScreen("buyerprofile", {
   render() {
     const features = [
       { icon: "camera", title: "Identificador de fruta", desc: "Te dice qué fruta es y si está buena, pasada o ya no sirve.", locked: !state.premium && state.trialUsed, canTry: !state.premium && !state.trialUsed },
-      { icon: "heart", title: "IA Nutricional + Especialistas", desc: "Planes de salud y citas con nutricionistas.", locked: !state.premium, canTry: false },
+      { icon: "heart", title: "IA Nutricional", desc: "Recibe orientación general sobre alimentación y recomendaciones relacionadas con tus productos y preferencias.", locked: !state.premium, canTry: false },
     ];
 
     return `
@@ -74,9 +92,19 @@ defineScreen("buyerprofile", {
           <div class="premium-card">
             <div class="premium-card__head">
               <div class="premium-card__title">${Icon("crown", { size: 20, cls: "icon--gold" })}<p>Ca$erIA Premium</p></div>
-              ${state.premium ? '<div class="premium-card__price"><p>Activo</p></div>' : '<div class="premium-card__price"><p>S/ 9.90</p><span>/mes</span></div>'}
+              ${state.premium ? '<div class="premium-card__price"><p>Activo</p></div>' : '<div class="premium-card__price"><p>S/ 9.90</p><span>/ mes</span></div>'}
             </div>
-            ${each(PREMIUM_BENEFITS, b => `<p class="premium-card__benefit">${Icon("check", { size: 14, stroke: 3, cls: "icon--green" })} ${b}</p>`)}
+            <p class="premium-card__lead">Más personalización y control sobre tus compras.</p>
+            <div class="premium-card__list">
+              ${each(PREMIUM_BENEFITS, b => `
+                <div class="premium-card__benefit">
+                  <span class="premium-card__check">${Icon("check", { size: 14, stroke: 3, cls: "icon--green" })}</span>
+                  <div>
+                    <p class="premium-card__benefit-title">${b.title}</p>
+                    <p class="premium-card__benefit-desc">${b.desc}</p>
+                  </div>
+                </div>`)}
+            </div>
             ${!state.premium ? '<button class="btn btn--primary btn--md btn--block premium-card__cta">Obtener Premium</button>' : '<p class="premium-card__benefit" style="text-align:center; font-weight:bold; color:var(--blue); margin-top:12px;">¡Gracias por tu suscripción!</p>'}
           </div>
 
