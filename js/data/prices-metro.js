@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-10-10T16:16:31.442Z",
+  "updatedAt": "2026-10-11T16:41:06.193Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -29,14 +29,14 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/huevos-pardos-metro-30un-1009776/p"
     },
     "4": {
-      "price": 4.69,
+      "price": 4.29,
       "normalPrice": 5.29,
-      "name": "Papa Canchán Procesada x kg",
+      "name": "Papa Canchán Procesada Especial x kg",
       "presentation": "x kg",
-      "url": "https://www.metro.pe/papa-canchan-procesada-x-kg-2/p"
+      "url": "https://www.metro.pe/papa-canchan-procesada-especial-x-kg-2-2/p"
     },
     "5": {
-      "price": 6.59,
+      "price": 5.69,
       "normalPrice": 6.99,
       "name": "Tomate Italiano Metro x kg",
       "presentation": "x kg",

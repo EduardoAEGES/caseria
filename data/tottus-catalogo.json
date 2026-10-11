@@ -1,8 +1,8 @@
 {
   "store": "tottus",
-  "updatedAt": "2026-10-10T16:15:18.614Z",
+  "updatedAt": "2026-10-11T16:40:00.729Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
-  "count": 1289,
+  "count": 1288,
   "products": [
     {
       "productId": "115776531",
@@ -200,21 +200,6 @@
       "query": "aceite vegetal primor"
     },
     {
-      "productId": "115891118",
-      "name": "Aceite de Oliva Extra Virgen El Olivar Botella 200 mL",
-      "brand": "EL OLIVAR",
-      "presentation": "Botella 200 mL",
-      "unit": "UN",
-      "price": 18.9,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115891118/aceite-de-oliva-extra-virgen-el-olivar-botella-200-ml",
-      "image": "https://media.tottus.com.pe/tottusPE/10421889_1/public",
-      "query": "aceite vegetal primor"
-    },
-    {
       "productId": "123559462",
       "name": "Aceite Vegetal Tottus Botella 3 L",
       "brand": "TOTTUS",
@@ -392,6 +377,21 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/117065565/aceite-botella-oleico-710-ml",
       "image": "https://media.tottus.com.pe/tottusPE/42984622_1/public",
+      "query": "aceite vegetal primor"
+    },
+    {
+      "productId": "113710937",
+      "name": "Aceite de Oliva Tottus Extra Virgen Botella 500 mL",
+      "brand": "TOTTUS",
+      "presentation": "Botella 500 mL  ",
+      "unit": "UN",
+      "price": 29.9,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113710937/aceite-de-oliva-tottus-extra-virgen-botella-500-ml",
+      "image": "https://media.tottus.com.pe/tottusPE/40771397_1/public",
       "query": "aceite vegetal primor"
     },
     {
@@ -2645,6 +2645,21 @@
       "query": "atun florida 170 g"
     },
     {
+      "productId": "155775229",
+      "name": "Filete de Atún Campomar Aceite de Oliva Caja 120 g",
+      "brand": "CAMPOMAR",
+      "presentation": "Caja 120 g",
+      "unit": "UN",
+      "price": 9.6,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/155775229/filete-de-atun-campomar-aceite-de-oliva-caja-120-g",
+      "image": "https://media.tottus.com.pe/tottusPE/43712785_1/public",
+      "query": "atun florida 170 g"
+    },
+    {
       "productId": "139815365",
       "name": "Lomo de Atún Campomar en Aceite Pack 2 Latas 150 g",
       "brand": "CAMPOMAR",
@@ -2717,21 +2732,6 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113712710/filete-de-atun-real-en-agua-light-pack-3-latas-80-g",
       "image": "https://media.tottus.com.pe/tottusPE/42350862_1/public",
-      "query": "atun florida 170 g"
-    },
-    {
-      "productId": "157271223",
-      "name": "Filete de Atún Florida en Agua Pack 3 Und",
-      "brand": "FLORIDA",
-      "presentation": "Pack 3 Und",
-      "unit": "UN",
-      "price": 12.9,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/157271223/filete-de-atun-florida-en-agua-pack-3-und",
-      "image": "https://media.tottus.com.pe/tottusPE/43725619_1/public",
       "query": "atun florida 170 g"
     },
     {
@@ -2870,36 +2870,6 @@
       "query": "avena 900 g"
     },
     {
-      "productId": "113710865",
-      "name": "Quinua Avena Tottus Bolsa 380 g",
-      "brand": "TOTTUS",
-      "presentation": "Bolsa 380 g",
-      "unit": "UN",
-      "price": 4,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113710865/quinua-avena-tottus-bolsa-380-g",
-      "image": "https://media.tottus.com.pe/tottusPE/40371326_1/public",
-      "query": "avena 900 g"
-    },
-    {
-      "productId": "113713832",
-      "name": "Avena Chía en Hojuelas Tottus Bolsa 380 g",
-      "brand": "TOTTUS",
-      "presentation": "Bolsa 380 g",
-      "unit": "UN",
-      "price": 4,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113713832/avena-chia-en-hojuelas-tottus-bolsa-380-g",
-      "image": "https://media.tottus.com.pe/tottusPE/41416046_1/public",
-      "query": "avena 900 g"
-    },
-    {
       "productId": "113713032",
       "name": "Avena Grano de Oro Bolsa 370 g",
       "brand": "GRANO DE ORO",
@@ -2927,21 +2897,6 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/117151506/avena-hojuela-3-ositos-precocida-clasica-250g",
       "image": "https://media.tottus.com.pe/tottusPE/43002779_1/public",
-      "query": "avena 900 g"
-    },
-    {
-      "productId": "146923541",
-      "name": "Avena Precocida Santa Catalina Bolsa 250 g",
-      "brand": "SANTA CATALINA",
-      "presentation": "Bolsa 250 g",
-      "unit": "UN",
-      "price": 4.5,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/146923541/avena-precocida-santa-catalina-bolsa-250-g",
-      "image": "https://media.tottus.com.pe/tottusPE/43565634_1/public",
       "query": "avena 900 g"
     },
     {
@@ -3005,6 +2960,51 @@
       "query": "avena 900 g"
     },
     {
+      "productId": "115810240",
+      "name": "Avena Hojuela 3 Ositos con Chocolate Bolsa 180 g",
+      "brand": "3 OSITOS",
+      "presentation": "Bolsa 180 g",
+      "unit": "UN",
+      "price": 5,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115810240/avena-hojuela-3-ositos-con-chocolate-bolsa-180-g",
+      "image": "https://media.tottus.com.pe/tottusPE/42747473_1/public",
+      "query": "avena 900 g"
+    },
+    {
+      "productId": "113712226",
+      "name": "Avena con Quinua 3 Ositos Bolsa 270 g",
+      "brand": "3 OSITOS",
+      "presentation": "Bolsa 270 g  ",
+      "unit": "UN",
+      "price": 5.1,
+      "normalPrice": 5.6,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113712226/avena-con-quinua-3-ositos-bolsa-270-g",
+      "image": "https://media.tottus.com.pe/tottusPE/40135461_1/public",
+      "query": "avena 900 g"
+    },
+    {
+      "productId": "113708387",
+      "name": "Avena 3 Ositos con Cereales Andinos Bolsa 270 g",
+      "brand": "3 OSITOS",
+      "presentation": "Bolsa 270 g",
+      "unit": "UN",
+      "price": 5.1,
+      "normalPrice": 5.6,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113708387/avena-3-ositos-con-cereales-andinos-bolsa-270-g",
+      "image": "https://media.tottus.com.pe/tottusPE/41103595_1/public",
+      "query": "avena 900 g"
+    },
+    {
       "productId": "129926849",
       "name": "Avena Grano De Oro Bolsa 500 g",
       "brand": "GRANO DE ORO",
@@ -3032,21 +3032,6 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/129925775/avena-integral-grano-de-oro-bolsa-500-g",
       "image": "https://media.tottus.com.pe/tottusPE/43308939_1/public",
-      "query": "avena 900 g"
-    },
-    {
-      "productId": "145796787",
-      "name": "Bebida con Avena Gloria Canela Caja 946 mL",
-      "brand": "GLORIA",
-      "presentation": "Caja 946 mL",
-      "unit": "UN",
-      "price": 6.2,
-      "normalPrice": 6.25,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/145796787/bebida-con-avena-gloria-canela-caja-946-ml",
-      "image": "https://media.tottus.com.pe/tottusPE/43554992_01/public",
       "query": "avena 900 g"
     },
     {
@@ -3140,21 +3125,6 @@
       "query": "avena 900 g"
     },
     {
-      "productId": "148217877",
-      "name": "Avena Integral Grano de Oro Bolsa 1 Kg",
-      "brand": "GRANO DE ORO",
-      "presentation": "Bolsa 1 Kg",
-      "unit": "UN",
-      "price": 8.5,
-      "normalPrice": 10.1,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/148217877/avena-integral-grano-de-oro-bolsa-1-kg",
-      "image": "https://media.tottus.com.pe/tottusPE/43585668_1/public",
-      "query": "avena 900 g"
-    },
-    {
       "productId": "115878264",
       "name": "Avena Quaker Tradicional Bolsa 500 g",
       "brand": "QUAKER",
@@ -3170,48 +3140,18 @@
       "query": "avena 900 g"
     },
     {
-      "productId": "116235856",
-      "name": "Avena Quaker Tradicional Chocolate Bolsa 290 g",
-      "brand": "QUAKER",
-      "presentation": "Bolsa 290 g",
+      "productId": "148217877",
+      "name": "Avena Integral Grano de Oro Bolsa 1 Kg",
+      "brand": "GRANO DE ORO",
+      "presentation": "Bolsa 1 Kg",
       "unit": "UN",
       "price": 8.5,
-      "normalPrice": null,
+      "normalPrice": 10.1,
       "cmrPrice": null,
       "seller": "Tottus",
       "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/116235856/avena-quaker-tradicional-chocolate-bolsa-290-g",
-      "image": "https://media.tottus.com.pe/tottusPE/42021362_1/public",
-      "query": "avena 900 g"
-    },
-    {
-      "productId": "124105244",
-      "name": "Avena Quaker con Quinua Bolsa 330 g",
-      "brand": "QUAKER",
-      "presentation": "Bolsa 330 g",
-      "unit": "UN",
-      "price": 8.5,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/124105244/avena-quaker-con-quinua-bolsa-330-g",
-      "image": "https://media.tottus.com.pe/tottusPE/43153687_1/public",
-      "query": "avena 900 g"
-    },
-    {
-      "productId": "131378661",
-      "name": "Avena Quaker Instantánea Caja 350 g",
-      "brand": "QUAKER",
-      "presentation": "Caja 350 g",
-      "unit": "UN",
-      "price": 9.5,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/131378661/avena-quaker-instantanea-caja-350-g",
-      "image": "https://media.tottus.com.pe/tottusPE/42021363_1/public",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/148217877/avena-integral-grano-de-oro-bolsa-1-kg",
+      "image": "https://media.tottus.com.pe/tottusPE/43585668_1/public",
       "query": "avena 900 g"
     },
     {
@@ -3287,6 +3227,36 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115776354/quinua-avena-hojuela-3-ositos-precocida-900-g",
       "image": "https://media.tottus.com.pe/tottusPE/42756589_1/public",
+      "query": "avena 900 g"
+    },
+    {
+      "productId": "113707383",
+      "name": "Jabón en Barra Protex Avena Empaque 3 Und 110 g",
+      "brand": "PROTEX",
+      "presentation": "Empaque 3 Und",
+      "unit": "UN",
+      "price": 10.9,
+      "normalPrice": 12.5,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113707383/jabon-en-barra-protex-avena-empaque-3-und-110-g",
+      "image": "https://media.tottus.com.pe/tottusPE/40430288_1/public",
+      "query": "avena 900 g"
+    },
+    {
+      "productId": "117026656",
+      "name": "Pan Artesanal de Masa Madre con Trigo y Avena",
+      "brand": "TOTTUS",
+      "presentation": "Unidad",
+      "unit": "UN",
+      "price": 10.9,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/117026656/pan-artesanal-masa-madre-trigo-avena",
+      "image": "https://media.tottus.com.pe/tottusPE/42967379_1/public",
       "query": "avena 900 g"
     },
     {
@@ -3380,36 +3350,6 @@
       "query": "avena 900 g"
     },
     {
-      "productId": "116324215",
-      "name": "Avena en Hojuelas La Purita Sin Gluten Doypack 800 g",
-      "brand": "LA PURITA",
-      "presentation": "Doypack 800 g",
-      "unit": "UN",
-      "price": 13.9,
-      "normalPrice": 18,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/116324215/avena-en-hojuelas-la-purita-sin-gluten-doypack-800-g",
-      "image": "https://media.tottus.com.pe/tottusPE/42945280_1/public",
-      "query": "avena 900 g"
-    },
-    {
-      "productId": "157271193",
-      "name": "Avena en Hojuelas Santa Catalina Doypack 400 g",
-      "brand": "SANTA CATALINA",
-      "presentation": "Doypack 400 g",
-      "unit": "UN",
-      "price": 14.5,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/157271193/avena-en-hojuelas-santa-catalina-doypack-400-g",
-      "image": "https://media.tottus.com.pe/tottusPE/43725616_1/public",
-      "query": "avena 900 g"
-    },
-    {
       "productId": "148679734",
       "name": "Avena Integral Entera Mi Tierra Sin Gluten Doypack 650 g",
       "brand": "MI TIERRA",
@@ -3485,33 +3425,63 @@
       "query": "avena 900 g"
     },
     {
-      "productId": "142911041",
-      "name": "Avena Proteica Avena & Canela Sabor Chocolate Doypack 455 g",
-      "brand": "AVENA & CANELA",
-      "presentation": "Doypack 455 g",
+      "productId": "117118165",
+      "name": "Jabón en Barra Protex Antibacterial Avena Sixpack 660 g",
+      "brand": "PROTEX",
+      "presentation": "Empaque 110 g",
       "unit": "UN",
-      "price": 22.7,
-      "normalPrice": 37.9,
+      "price": 20.5,
+      "normalPrice": 22.9,
       "cmrPrice": null,
       "seller": "Tottus",
       "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/142911041/avena-proteica-avena-canela-sabor-chocolate-doypack-455-g",
-      "image": "https://media.tottus.com.pe/tottusPE/43511687_1/public",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/117118165/jabon-en-barra-protex-antibacterial-avena-sixpack-660-g",
+      "image": "https://media.tottus.com.pe/tottusPE/41949565_1/public",
       "query": "avena 900 g"
     },
     {
-      "productId": "142911056",
-      "name": "Avena Proteica Avena & Canela Sabor Canela Doypack 455 g",
-      "brand": "AVENA & CANELA",
-      "presentation": "Doypack 455 g",
+      "productId": "120815390",
+      "name": "Gel de Baño Babaria Avena Envase 600 mL",
+      "brand": "BABARIA",
+      "presentation": "Envase 600 mL",
       "unit": "UN",
-      "price": 22.7,
-      "normalPrice": 37.9,
+      "price": 20.9,
+      "normalPrice": null,
       "cmrPrice": null,
       "seller": "Tottus",
       "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/142911056/avena-proteica-avena-canela-sabor-canela-doypack-455-g",
-      "image": "https://media.tottus.com.pe/tottusPE/43511686_1/public",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/120815390/gel-de-bano-avena-babaria-600-ml",
+      "image": "https://media.tottus.com.pe/tottusPE/41563574_1/public",
+      "query": "avena 900 g"
+    },
+    {
+      "productId": "142905523",
+      "name": "Granola de Avena La Purita Canela Doypack 600 g",
+      "brand": "LA PURITA",
+      "presentation": "Doypack 600 g",
+      "unit": "UN",
+      "price": 21.9,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/142905523/granola-de-avena-la-purita-canela-doypack-600-g",
+      "image": "https://media.tottus.com.pe/tottusPE/43510909_1/public",
+      "query": "avena 900 g"
+    },
+    {
+      "productId": "149459510",
+      "name": "Crema Corporal Portugal Avena Botella 450 g",
+      "brand": "PORTUGAL",
+      "presentation": "Botella 450 g",
+      "unit": "UN",
+      "price": 22,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/149459510/crema-corporal-portugal-avena-botella-450-g",
+      "image": "https://media.tottus.com.pe/tottusPE/43598611_1/public",
       "query": "avena 900 g"
     },
     {
@@ -3527,21 +3497,6 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/142905514/avena-en-hojuelas-la-purita-sin-gluten-pote-1-5-kg",
       "image": "https://media.tottus.com.pe/tottusPE/43510906_1/public",
-      "query": "avena 900 g"
-    },
-    {
-      "productId": "155007616",
-      "name": "Avena Vegan Protein Chocolate Bolsa 600 g",
-      "brand": "NATURANDES",
-      "presentation": "Bolsa 600 g",
-      "unit": "UN",
-      "price": 25.5,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/155007616/avena-vegan-protein-chocolate-bolsa-600-g",
-      "image": "https://media.tottus.com.pe/tottusPE/43705417_1/public",
       "query": "avena 900 g"
     },
     {
@@ -3572,6 +3527,51 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/155007613/avena-vegan-protein-lucuma-bolsa-600-g",
       "image": "https://media.tottus.com.pe/tottusPE/43705418_1/public",
+      "query": "avena 900 g"
+    },
+    {
+      "productId": "155007616",
+      "name": "Avena Vegan Protein Chocolate Bolsa 600 g",
+      "brand": "NATURANDES",
+      "presentation": "Bolsa 600 g",
+      "unit": "UN",
+      "price": 25.5,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/155007616/avena-vegan-protein-chocolate-bolsa-600-g",
+      "image": "https://media.tottus.com.pe/tottusPE/43705417_1/public",
+      "query": "avena 900 g"
+    },
+    {
+      "productId": "141332741",
+      "name": "Loción Hidratante Instituto Español Avena Envase 950 mL",
+      "brand": "INSTITUTO ESPANOL",
+      "presentation": "Envase 950 mL",
+      "unit": "UN",
+      "price": 55.9,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/141332741/locion-hidratante-instituto-espanol-avena-envase-950-ml",
+      "image": "https://media.tottus.com.pe/tottusPE/43492968_1/public",
+      "query": "avena 900 g"
+    },
+    {
+      "productId": "113445394",
+      "name": "Crema Corporal Johnsons Baby Avena Envase 800 g",
+      "brand": "JOHNSONS",
+      "presentation": "Envase 800 g",
+      "unit": "UN",
+      "price": 56.6,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113445394/crema-corporal-johnsons-bebe-avena-envase-800-g",
+      "image": "https://media.tottus.com.pe/tottusPE/41867173_01/public",
       "query": "avena 900 g"
     },
     {
@@ -4985,6 +4985,21 @@
       "query": "carne molida de res"
     },
     {
+      "productId": "117560672",
+      "name": "Empanada de Carne Tottus Empaque 4 Und",
+      "brand": "TOTTUS",
+      "presentation": "Empaque 4 Und",
+      "unit": "UN",
+      "price": 13.5,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/117560672/empanada-carne-4-und",
+      "image": "https://media.tottus.com.pe/tottusPE/43014962_1/public",
+      "query": "carne molida de res"
+    },
+    {
       "productId": "115807143",
       "name": "Pack Ahorrador Mollejitas De Pollo",
       "brand": "TOTTUS",
@@ -5180,6 +5195,21 @@
       "query": "carne molida de res"
     },
     {
+      "productId": "115844971",
+      "name": "Asado Pejerrey x Kg",
+      "brand": "TOTTUS",
+      "presentation": "2.5 Kg Aprox",
+      "unit": "KG",
+      "price": 44.9,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115844971/asado-pejerreyx-kg",
+      "image": "https://media.tottus.com.pe/tottusPE/40251780_1/public",
+      "query": "carne molida de res"
+    },
+    {
       "productId": "142863533",
       "name": "Entraña Especial Tottus x Kg",
       "brand": "TOTTUS",
@@ -5267,21 +5297,6 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115844955/lomo-fino-nacional",
       "image": "https://media.tottus.com.pe/tottusPE/40251778_1/public",
-      "query": "carne molida de res"
-    },
-    {
-      "productId": "115848504",
-      "name": "Entraña Fina De Res Uruguayo",
-      "brand": "TOTTUS",
-      "presentation": "Empaque 1 Kg Aprox",
-      "unit": "KG",
-      "price": 104.9,
-      "normalPrice": 119.9,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115848504/entrana-fina-de-res-uruguayo",
-      "image": "https://media.tottus.com.pe/tottusPE/42229316_1/public",
       "query": "carne molida de res"
     },
     {
@@ -5525,21 +5540,6 @@
       "query": "cebolla roja"
     },
     {
-      "productId": "113706440",
-      "name": "Cebolla Picada Tottus Empaque 200 g",
-      "brand": "TOTTUS VERDURAS",
-      "presentation": "Empaque 200 g",
-      "unit": "UN",
-      "price": 6.8,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706440/cebolla-picada-tottus",
-      "image": "https://media.tottus.com.pe/tottusPE/41351930_1/public",
-      "query": "cebolla roja"
-    },
-    {
       "productId": "115813015",
       "name": "Col Morada Mitad Tottus",
       "brand": "TOTTUS VERDURAS",
@@ -5672,6 +5672,21 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706614/ajos-pelados-tottus",
       "image": "https://media.tottus.com.pe/tottusPE/41076332_1/public",
+      "query": "cebolla roja"
+    },
+    {
+      "productId": "115825084",
+      "name": "Tomate Cherry Orgánico Tottus 250 g",
+      "brand": "TOTTUS VERDURAS",
+      "presentation": "Empaque 250 g",
+      "unit": "UN",
+      "price": 13.39,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115825084/tomate-cherry-organico-tottus-250-g",
+      "image": "https://media.tottus.com.pe/tottusPE/42518984_1/public",
       "query": "cebolla roja"
     },
     {
@@ -6020,21 +6035,6 @@
       "query": "chuleta de cerdo"
     },
     {
-      "productId": "116964237",
-      "name": "Adobo De Cerdo Bolsa 1 Kg x Un",
-      "brand": "TOTTUS",
-      "presentation": "1 Kg Aprox",
-      "unit": "UN",
-      "price": 21.9,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/116964237/adobo-de-cerdo-bolsa-1-kg-x-un",
-      "image": "https://media.tottus.com.pe/tottusPE/41714230_1/public",
-      "query": "chuleta de cerdo"
-    },
-    {
       "productId": "115869614",
       "name": "Chuleta De Lomo De Cerdo Tottus",
       "brand": "TOTTUS",
@@ -6065,21 +6065,6 @@
       "query": "chuleta de cerdo"
     },
     {
-      "productId": "115835926",
-      "name": "Bisteck De Cerdo x Kg",
-      "brand": "TOTTUS",
-      "presentation": "500 g Aprox",
-      "unit": "KG",
-      "price": 25.9,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115835926/bisteck-de-cerdo-x-kg",
-      "image": "https://media.tottus.com.pe/tottusPE/42588141_1/public",
-      "query": "chuleta de cerdo"
-    },
-    {
       "productId": "115835950",
       "name": "Chuleta Clasica De Cerdo Duroc",
       "brand": "TOTTUS",
@@ -6107,21 +6092,6 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115865350/panceta-con-piel-con-hueso-tottus",
       "image": "https://media.tottus.com.pe/tottusPE/20102037_1/public",
-      "query": "chuleta de cerdo"
-    },
-    {
-      "productId": "143781330",
-      "name": "Chuletón De Pierna Duroc Redondos x Kg",
-      "brand": "REDONDOS",
-      "presentation": "1 Kg Aprox",
-      "unit": "KG",
-      "price": 28.9,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/143781330/chuleton-de-pierna-duroc-redondos-x-kg",
-      "image": "https://media.tottus.com.pe/tottusPE/43528982_1/public",
       "query": "chuleta de cerdo"
     },
     {
@@ -6167,6 +6137,36 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115809140/picana-de-cerdo",
       "image": "https://media.tottus.com.pe/tottusPE/41238371_1/public",
+      "query": "chuleta de cerdo"
+    },
+    {
+      "productId": "115813191",
+      "name": "Bife De Lomo De Cerdo x Kg",
+      "brand": "TOTTUS",
+      "presentation": "900 g Aprox",
+      "unit": "KG",
+      "price": 29.9,
+      "normalPrice": 31.9,
+      "cmrPrice": 28.5,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115813191/bife-de-lomo-de-cerdo-x-kg",
+      "image": "https://media.tottus.com.pe/tottusPE/40475162_1/public",
+      "query": "chuleta de cerdo"
+    },
+    {
+      "productId": "115810046",
+      "name": "Entraña De Cerdo",
+      "brand": "TOTTUS",
+      "presentation": "500 g Aprox",
+      "unit": "KG",
+      "price": 29.9,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115810046/entrana-de-cerdo",
+      "image": "https://media.tottus.com.pe/tottusPE/41714252_1/public",
       "query": "chuleta de cerdo"
     },
     {
@@ -6305,6 +6305,36 @@
       "query": "chuleta de cerdo"
     },
     {
+      "productId": "115855732",
+      "name": "Baby Back Ribs De Cerdo",
+      "brand": "TOTTUS",
+      "presentation": "1.9 Kg Aprox",
+      "unit": "KG",
+      "price": 34.9,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115855732/baby-back-ribs-de-cerdo",
+      "image": "https://media.tottus.com.pe/tottusPE/40531199_1/public",
+      "query": "chuleta de cerdo"
+    },
+    {
+      "productId": "115809072",
+      "name": "Panceta Premium De Cerdo x Kg",
+      "brand": "TOTTUS",
+      "presentation": "Empaque 2.5 Kg Aprox",
+      "unit": "KG",
+      "price": 36.9,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115809072/panceta-premium-de-cerdo-x-kg",
+      "image": "https://media.tottus.com.pe/tottusPE/40827020_1/public",
+      "query": "chuleta de cerdo"
+    },
+    {
       "productId": "115921785",
       "name": "Churrasco Redondo Tottus",
       "brand": "TOTTUS",
@@ -6347,21 +6377,6 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115862434/tira-de-panceta-duroc",
       "image": "https://media.tottus.com.pe/tottusPE/42828767_1/public",
-      "query": "chuleta de cerdo"
-    },
-    {
-      "productId": "115835928",
-      "name": "Lomito Fino De Cerdo Duroc x Kg",
-      "brand": "TOTTUS",
-      "presentation": "700 g Aprox",
-      "unit": "KG",
-      "price": 39.9,
-      "normalPrice": null,
-      "cmrPrice": 31.9,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115835928/lomito-fino-de-cerdo-duroc-x-kg",
-      "image": "https://media.tottus.com.pe/tottusPE/42588145_1/public",
       "query": "chuleta de cerdo"
     },
     {
@@ -7415,6 +7430,21 @@
       "query": "frugos 1 l"
     },
     {
+      "productId": "133453521",
+      "name": "Bebida Tampico Citrus Punch Botella 1.5 L",
+      "brand": "TAMPICO",
+      "presentation": "Botella 1.5 L",
+      "unit": "UN",
+      "price": 4.3,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/133453521/bebida-tampico-citrus-punch-botella-15-l",
+      "image": "https://media.tottus.com.pe/tottusPE/43376531_1/public",
+      "query": "frugos 1 l"
+    },
+    {
       "productId": "149455182",
       "name": "Bebida de Durazno Gloria Botella 1 L",
       "brand": "GLORIA",
@@ -7592,21 +7622,6 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/139815383/bebida-frugos-durazno-caja-1-45-l",
       "image": "https://media.tottus.com.pe/tottusPE/43471828_1/public",
-      "query": "frugos 1 l"
-    },
-    {
-      "productId": "127359942",
-      "name": "Bebida Cifrut Fruit Punch Botella 3.03 L",
-      "brand": "CIFRUT",
-      "presentation": "Botella 3.03 L",
-      "unit": "UN",
-      "price": 6.9,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/127359942/cifrut-fruit-punch-303-l",
-      "image": "https://media.tottus.com.pe/tottusPE/43227461_1/public",
       "query": "frugos 1 l"
     },
     {
@@ -7907,21 +7922,6 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115938363/locion-reveladora-oxigenta-igora-20-vol-20-ml",
       "image": "https://media.tottus.com.pe/tottusPE/42740702_1/public",
-      "query": "huevos 30 unidades"
-    },
-    {
-      "productId": "118299045",
-      "name": "Salchicha de Huacho Tottus Empaque 150 g",
-      "brand": "TOTTUS",
-      "presentation": "Empaque 150 g",
-      "unit": "UN",
-      "price": 6.2,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/118299045/salchicha-de-huacho-tottus-empaque-150-g",
-      "image": "https://media.tottus.com.pe/tottusPE/43034123_1/public",
       "query": "huevos 30 unidades"
     },
     {
@@ -8357,6 +8357,21 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/151261592/huevo-de-pascua-chocolate-alianza-lima-empaque-90-g",
       "image": "https://media.tottus.com.pe/tottusPE/43630272_1/public",
+      "query": "huevos 30 unidades"
+    },
+    {
+      "productId": "113928629",
+      "name": "Claras de Huevo Enkel Foods Botella 500 g",
+      "brand": "ENKEL FOODS",
+      "presentation": "Botella 500 g",
+      "unit": "UN",
+      "price": 19.9,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113928629/claras-de-huevo-enkel-foods-botella-500-g",
+      "image": "https://media.tottus.com.pe/tottusPE/41965667_1/public",
       "query": "huevos 30 unidades"
     },
     {
@@ -9395,21 +9410,6 @@
       "query": "leche evaporada gloria"
     },
     {
-      "productId": "115807081",
-      "name": "Mezcla Láctea Ideal Light Lata 390 g",
-      "brand": "IDEAL",
-      "presentation": "Lata 390 g  ",
-      "unit": "UN",
-      "price": 4.1,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115807081/mezcla-lactea-ideallight-lata-390-g",
-      "image": "https://media.tottus.com.pe/tottusPE/42852754_1/public",
-      "query": "leche evaporada gloria"
-    },
-    {
       "productId": "129087921",
       "name": "Leche Gloria Reconstituida Entera Lata 390 g",
       "brand": "GLORIA",
@@ -9485,21 +9485,6 @@
       "query": "leche evaporada gloria"
     },
     {
-      "productId": "129087923",
-      "name": "Leche Gloria Light Lata 390 g",
-      "brand": "GLORIA",
-      "presentation": "Lata 390 g  ",
-      "unit": "UN",
-      "price": 4.4,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087923/leche-gloria-light-lata-390-g",
-      "image": "https://media.tottus.com.pe/tottusPE/43273631_1/public",
-      "query": "leche evaporada gloria"
-    },
-    {
       "productId": "129087750",
       "name": "Leche Gloria Zero Lacto Sin Lactosa Lata 390 g",
       "brand": "GLORIA",
@@ -9512,6 +9497,21 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087750/leche-gloria-zero-lacto-sin-lactosa-lata-390-g",
       "image": "https://media.tottus.com.pe/tottusPE/43273656_1/public",
+      "query": "leche evaporada gloria"
+    },
+    {
+      "productId": "129087923",
+      "name": "Leche Gloria Light Lata 390 g",
+      "brand": "GLORIA",
+      "presentation": "Lata 390 g  ",
+      "unit": "UN",
+      "price": 4.4,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087923/leche-gloria-light-lata-390-g",
+      "image": "https://media.tottus.com.pe/tottusPE/43273631_1/public",
       "query": "leche evaporada gloria"
     },
     {
@@ -9557,6 +9557,21 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113708426/leche-entera-en-polvo-gloria-bolsa-96-g",
       "image": "https://media.tottus.com.pe/tottusPE/41137621_01/public",
+      "query": "leche evaporada gloria"
+    },
+    {
+      "productId": "144746398",
+      "name": "Fórmula Láctea Líquida Nan 2 Bebés Lata 390 g",
+      "brand": "NAN",
+      "presentation": "Lata 390 g",
+      "unit": "UN",
+      "price": 6.1,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/144746398/formula-lactea-liquida-nan-2-bebes-lata-390-g",
+      "image": "https://media.tottus.com.pe/tottusPE/43545284_1/public",
       "query": "leche evaporada gloria"
     },
     {
@@ -9740,6 +9755,21 @@
       "query": "leche evaporada gloria"
     },
     {
+      "productId": "113705685",
+      "name": "Mezcla Láctea Laive Sin Lactosa Sixpack Caja 480 g",
+      "brand": "LAIVE",
+      "presentation": "Sixpack Caja 480 g",
+      "unit": "UN",
+      "price": 21.3,
+      "normalPrice": 23.4,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113705685/mezcla-lactea-laive-sin-lactosa-sixpack-caja-480-g",
+      "image": "https://media.tottus.com.pe/tottusPE/42454832_1/public",
+      "query": "leche evaporada gloria"
+    },
+    {
       "productId": "129087924",
       "name": "Leche Gloria Reconstituida Entera Sixpack Lata 390 g",
       "brand": "GLORIA",
@@ -9875,21 +9905,6 @@
       "query": "leche evaporada gloria"
     },
     {
-      "productId": "115807087",
-      "name": "Mezcla Láctea Ideal Light Sixpack Lata 390 g",
-      "brand": "IDEAL",
-      "presentation": "Sixpack Lata 390 g  ",
-      "unit": "UN",
-      "price": 23.5,
-      "normalPrice": 24.6,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115807087/six-pack-mezcla-lactea-ideallight-lata-390g",
-      "image": "https://media.tottus.com.pe/tottusPE/42852753_1/public",
-      "query": "leche evaporada gloria"
-    },
-    {
       "productId": "130135933",
       "name": "Leche Laive Practitarro Sixpack Botella 390 g",
       "brand": "LAIVE",
@@ -9902,21 +9917,6 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/130135933/leche-de-tarro-laive-sixpack-botella-390-g",
       "image": "https://media.tottus.com.pe/tottusPE/43314214_1/public",
-      "query": "leche evaporada gloria"
-    },
-    {
-      "productId": "130135916",
-      "name": "Leche Laive Practitarro Sin Lactosa Sixpack Botella 390 g",
-      "brand": "LAIVE",
-      "presentation": "Sixpack Botella 390 g",
-      "unit": "UN",
-      "price": 23.9,
-      "normalPrice": 25.1,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/130135916/leche-de-tarro-laive-sin-lactosa-sixpack-botella-390-g",
-      "image": "https://media.tottus.com.pe/tottusPE/43314212_1/public",
       "query": "leche evaporada gloria"
     },
     {
@@ -9947,6 +9947,21 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087764/leche-gloria-zero-lacto-sixpack-lata-390-g",
       "image": "https://media.tottus.com.pe/tottusPE/43273657_1/public",
+      "query": "leche evaporada gloria"
+    },
+    {
+      "productId": "144746404",
+      "name": "Fórmula Láctea Líquida Nan 2 Bebés Sixpack Lata 390 g",
+      "brand": "NAN",
+      "presentation": "Lata 390 g",
+      "unit": "UN",
+      "price": 36.2,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/144746404/formula-lactea-liquida-nan-2-bebes-sixpack-lata-390-g",
+      "image": "https://media.tottus.com.pe/tottusPE/43545285_1/public",
       "query": "leche evaporada gloria"
     },
     {
@@ -10160,6 +10175,21 @@
       "query": "lechuga"
     },
     {
+      "productId": "128392457",
+      "name": "Albahaca Manantiales 80 g",
+      "brand": "MANANTIALES",
+      "presentation": "80 g",
+      "unit": "UN",
+      "price": 2.99,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/128392457/albahaca-manantiales-80-g",
+      "image": "https://media.tottus.com.pe/tottusPE/43255965_1/public",
+      "query": "lechuga"
+    },
+    {
       "productId": "113706226",
       "name": "Lechuga Romana Tottus",
       "brand": "TOTTUS VERDURAS",
@@ -10187,6 +10217,21 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/118679187/lechuga-crespa-tottus",
       "image": "https://media.tottus.com.pe/tottusPE/10164010_1/public",
+      "query": "lechuga"
+    },
+    {
+      "productId": "128392451",
+      "name": "Lechuga De Seda Hidropónica Manantiales 200 g",
+      "brand": "MANANTIALES",
+      "presentation": "200 g",
+      "unit": "UN",
+      "price": 3.79,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/128392451/lechuga-de-seda-hidroponica-manantiales-200-g",
+      "image": "https://media.tottus.com.pe/tottusPE/43255961_1/public",
       "query": "lechuga"
     },
     {
@@ -10295,6 +10340,21 @@
       "query": "lechuga"
     },
     {
+      "productId": "130326789",
+      "name": "Lechuga Crespa Verde Manantiales x 250 g",
+      "brand": "MANANTIALES",
+      "presentation": "250 g",
+      "unit": "UN",
+      "price": 4.39,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/130326789/lechuga-crespa-verde-manantiales-250-g",
+      "image": "https://media.tottus.com.pe/tottusPE/43323213_1/public",
+      "query": "lechuga"
+    },
+    {
       "productId": "115808838",
       "name": "Mix Lechuga Crespa Tottus",
       "brand": "TOTTUS VERDURAS",
@@ -10325,21 +10385,6 @@
       "query": "lechuga"
     },
     {
-      "productId": "113710821",
-      "name": "Romero Tottus",
-      "brand": "TOTTUS VERDURAS",
-      "presentation": "Unidad",
-      "unit": "UN",
-      "price": 4.9,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113710821/romero-tottus",
-      "image": "https://media.tottus.com.pe/tottusPE/40953460_1/public",
-      "query": "lechuga"
-    },
-    {
       "productId": "115808826",
       "name": "Orégano Tottus",
       "brand": "TOTTUS VERDURAS",
@@ -10352,21 +10397,6 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115808826/oregano-tottus",
       "image": "https://media.tottus.com.pe/tottusPE/40953459_1/public",
-      "query": "lechuga"
-    },
-    {
-      "productId": "115808822",
-      "name": "Mejorana Tottus",
-      "brand": "TOTTUS VERDURAS",
-      "presentation": "Unidad",
-      "unit": "UN",
-      "price": 4.9,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115808822/mejorana-tottus",
-      "image": "https://media.tottus.com.pe/tottusPE/40953457_1/public",
       "query": "lechuga"
     },
     {
@@ -10400,6 +10430,21 @@
       "query": "lechuga"
     },
     {
+      "productId": "115808820",
+      "name": "Estragón Tottus",
+      "brand": "TOTTUS VERDURAS",
+      "presentation": "Unidad",
+      "unit": "UN",
+      "price": 4.9,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115808820/estragon-tottus",
+      "image": "https://media.tottus.com.pe/tottusPE/40953456_1/public",
+      "query": "lechuga"
+    },
+    {
       "productId": "113929634",
       "name": "Dill Tottus 40 g",
       "brand": "TOTTUS VERDURAS",
@@ -10415,18 +10460,18 @@
       "query": "lechuga"
     },
     {
-      "productId": "115808820",
-      "name": "Estragón Tottus",
-      "brand": "TOTTUS VERDURAS",
-      "presentation": "Unidad",
+      "productId": "128392435",
+      "name": "Espinaca Bebe Deshojada Manantiales 150 g",
+      "brand": "MANANTIALES",
+      "presentation": "150 g",
       "unit": "UN",
-      "price": 4.9,
+      "price": 4.99,
       "normalPrice": null,
       "cmrPrice": null,
       "seller": "Tottus",
       "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115808820/estragon-tottus",
-      "image": "https://media.tottus.com.pe/tottusPE/40953456_1/public",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/128392435/espinaca-bebe-deshojada-manantiales-150-g",
+      "image": "https://media.tottus.com.pe/tottusPE/43255968_1/public",
       "query": "lechuga"
     },
     {
@@ -10475,21 +10520,6 @@
       "query": "lechuga"
     },
     {
-      "productId": "128349192",
-      "name": "Arúgula Manantiales 150 g",
-      "brand": "MANANTIALES",
-      "presentation": "150 g",
-      "unit": "UN",
-      "price": 6.79,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/128349192/arugula-manantiales-150-g",
-      "image": "https://media.tottus.com.pe/tottusPE/43255170_1/public",
-      "query": "lechuga"
-    },
-    {
       "productId": "113930858",
       "name": "Ensalada Mix Con Espinaca Tottus",
       "brand": "TOTTUS VERDURAS",
@@ -10505,21 +10535,6 @@
       "query": "lechuga"
     },
     {
-      "productId": "118679204",
-      "name": "Mix De Lechuga Verde Puro x 150 g",
-      "brand": "VERDE PURO",
-      "presentation": "Bolsa 150 g",
-      "unit": "UN",
-      "price": 6.9,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/118679204/mix-de-lechuga-verde-puro-x-150-g",
-      "image": "https://media.tottus.com.pe/tottusPE/10167214_1/public",
-      "query": "lechuga"
-    },
-    {
       "productId": "113706882",
       "name": "Espinaca Tottus 400 g",
       "brand": "TOTTUS VERDURAS",
@@ -10532,21 +10547,6 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706882/espinaca-tottus-400-g",
       "image": "https://media.tottus.com.pe/tottusPE/40354150_1/public",
-      "query": "lechuga"
-    },
-    {
-      "productId": "115836154",
-      "name": "Mix De Lechugas Baby",
-      "brand": "TOTTUS VERDURAS",
-      "presentation": "Bolsa 150 g",
-      "unit": "UN",
-      "price": 7.3,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115836154/mix-de-lechugas-baby",
-      "image": "https://media.tottus.com.pe/tottusPE/42571758_1/public",
       "query": "lechuga"
     },
     {
@@ -10580,6 +10580,21 @@
       "query": "lechuga"
     },
     {
+      "productId": "136951363",
+      "name": "Mix De Lechuga Hidróponica Marce x 150 g",
+      "brand": "MARCE",
+      "presentation": "150 g",
+      "unit": "UN",
+      "price": 7.7,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/136951363/mix-de-lechuga-hidroponica-marce-x-150-g",
+      "image": "https://media.tottus.com.pe/tottusPE/43406269_1/public",
+      "query": "lechuga"
+    },
+    {
       "productId": "113710931",
       "name": "Espinaca Baby Seleccionada Tottus",
       "brand": "TOTTUS VERDURAS",
@@ -10595,18 +10610,18 @@
       "query": "lechuga"
     },
     {
-      "productId": "118772628",
-      "name": "Col de Bruselas Tottus",
-      "brand": "TOTTUS VERDURAS",
-      "presentation": "Empaque 150 g",
+      "productId": "118679152",
+      "name": "Espinaca Baby Verde Puro x 180 g",
+      "brand": "VERDE PURO",
+      "presentation": "Bolsa 180 g",
       "unit": "UN",
-      "price": 10.5,
+      "price": 8.99,
       "normalPrice": null,
       "cmrPrice": null,
       "seller": "Tottus",
       "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/118772628/col-de-bruselas-tottus-",
-      "image": "https://media.tottus.com.pe/tottusPE/42468848_1/public",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/118679152/espinaca-baby-verde-puro-x-180-g",
+      "image": "https://media.tottus.com.pe/tottusPE/10167308_1/public",
       "query": "lechuga"
     },
     {
@@ -10640,21 +10655,6 @@
       "query": "lechuga"
     },
     {
-      "productId": "113711780",
-      "name": "Sprouts Mix De Germinados",
-      "brand": "TOTTUS VERDURAS",
-      "presentation": "Empaque 100 g",
-      "unit": "UN",
-      "price": 16.6,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113711780/sprouts-mix-de-germinados",
-      "image": "https://media.tottus.com.pe/tottusPE/42642814_1/public",
-      "query": "lechuga"
-    },
-    {
       "productId": "115832814",
       "name": "Sprouts Germinado De Alfalfa",
       "brand": "TOTTUS VERDURAS",
@@ -10667,6 +10667,21 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115832814/sprouts-germinado-de-alfalfa",
       "image": "https://media.tottus.com.pe/tottusPE/42522672_1/public",
+      "query": "lechuga"
+    },
+    {
+      "productId": "113711780",
+      "name": "Sprouts Mix De Germinados",
+      "brand": "TOTTUS VERDURAS",
+      "presentation": "Empaque 100 g",
+      "unit": "UN",
+      "price": 16.6,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113711780/sprouts-mix-de-germinados",
+      "image": "https://media.tottus.com.pe/tottusPE/42642814_1/public",
       "query": "lechuga"
     },
     {
@@ -10985,6 +11000,21 @@
       "query": "lejia clorox"
     },
     {
+      "productId": "119544585",
+      "name": "Desinfectante Pinesol Limón Botella 900 mL",
+      "brand": "PINESOL",
+      "presentation": "Botella 900 mL",
+      "unit": "UN",
+      "price": 10.9,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/119544585/desinfectante-pinesol-limon-envase-900-ml",
+      "image": "https://media.tottus.com.pe/tottusPE/10167342_1/public",
+      "query": "lejia clorox"
+    },
+    {
       "productId": "157748865",
       "name": "Lejía Sapolio Tradicional Envase 4.5 Kg",
       "brand": "SAPOLIO",
@@ -11177,21 +11207,6 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113709237/toallitas-desinfectantes-clorox-expert-empaque-60-und",
       "image": "https://media.tottus.com.pe/tottusPE/42508035_1/public",
-      "query": "lejia clorox"
-    },
-    {
-      "productId": "121700818",
-      "name": "Toallitas Desinfectantes Clorox Fresh Envase 35 Und",
-      "brand": "CLOROX",
-      "presentation": "Envase 35 Und",
-      "unit": "UN",
-      "price": 20.9,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/121700818/toallitas-fresh-canister-clorox",
-      "image": "https://media.tottus.com.pe/tottusPE/43113681_1/public",
       "query": "lejia clorox"
     },
     {
@@ -11735,6 +11750,21 @@
       "query": "mantequilla 200 g"
     },
     {
+      "productId": "129087791",
+      "name": "Queso Fresco Piamonte Empaque 200 g",
+      "brand": "PIAMONTE",
+      "presentation": "Empaque 200g",
+      "unit": "UN",
+      "price": 10.6,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087791/queso-fresco-piamonte-empaque-200-g",
+      "image": "https://media.tottus.com.pe/tottusPE/43273674_1/public",
+      "query": "mantequilla 200 g"
+    },
+    {
       "productId": "126571958",
       "name": "Mantequilla Gloria con Sal Envase 180 g",
       "brand": "GLORIA",
@@ -11885,21 +11915,6 @@
       "query": "mantequilla 200 g"
     },
     {
-      "productId": "113929203",
-      "name": "Mantequilla con Sal Plusa Empaque 200 g",
-      "brand": "PLUSA",
-      "presentation": "Empaque 200 g",
-      "unit": "UN",
-      "price": 15.3,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113929203/mantequilla-con-sal-plusa-empaque-200-g",
-      "image": "https://media.tottus.com.pe/tottusPE/40447513_1/public",
-      "query": "mantequilla 200 g"
-    },
-    {
       "productId": "137931121",
       "name": "Mantequilla Sin Sal Plusa Empaque 200 g",
       "brand": "PLUSA",
@@ -11912,6 +11927,21 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/137931121/mantequilla-sin-sal-plusa-empaque-200-g",
       "image": "https://media.tottus.com.pe/tottusPE/43418898_1/public",
+      "query": "mantequilla 200 g"
+    },
+    {
+      "productId": "113929203",
+      "name": "Mantequilla con Sal Plusa Empaque 200 g",
+      "brand": "PLUSA",
+      "presentation": "Empaque 200 g",
+      "unit": "UN",
+      "price": 15.3,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113929203/mantequilla-con-sal-plusa-empaque-200-g",
+      "image": "https://media.tottus.com.pe/tottusPE/40447513_1/public",
       "query": "mantequilla 200 g"
     },
     {
@@ -12065,21 +12095,6 @@
       "query": "mantequilla 200 g"
     },
     {
-      "productId": "146640855",
-      "name": "Barquillos Pirucream Bites Doypack 200 g",
-      "brand": "PIRUCREAM",
-      "presentation": "Doypack 200 g",
-      "unit": "UN",
-      "price": 29.9,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/146640855/barquillos-pirucream-bites-doypack-200-g",
-      "image": "https://media.tottus.com.pe/tottusPE/43561816_1/public",
-      "query": "mantequilla 200 g"
-    },
-    {
       "productId": "133453442",
       "name": "Mantequilla de Almendras y Stevia The Butter Factory Pote 200 g",
       "brand": "THE BUTTER FACTORY",
@@ -12215,6 +12230,21 @@
       "query": "manzana"
     },
     {
+      "productId": "139337643",
+      "name": "Bebida Rehidratante Dilyte Manzana Botella 650 mL",
+      "brand": "DILYTE",
+      "presentation": "Botella 650 mL",
+      "unit": "UN",
+      "price": 4,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/139337643/bebida-rehidratante-dilyte-manzana-botella-650-ml",
+      "image": "https://media.tottus.com.pe/tottusPE/43451490_1/public",
+      "query": "manzana"
+    },
+    {
       "productId": "138899838",
       "name": "Granola Bites Sumkha Manzana Doypack 100 g",
       "brand": "SUMKHA",
@@ -12245,6 +12275,21 @@
       "query": "manzana"
     },
     {
+      "productId": "156518792",
+      "name": "Jugo Ama Time Manzana Caja 200 mL",
+      "brand": "AMA TIME",
+      "presentation": "Caja 200 mL",
+      "unit": "UN",
+      "price": 6.3,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/156518792/jugo-ama-time-manzana-caja-200-ml",
+      "image": "https://media.tottus.com.pe/tottusPE/43721794_1/public",
+      "query": "manzana"
+    },
+    {
       "productId": "139815387",
       "name": "Colado Gerber Manzana Empaque 100 g",
       "brand": "GERBER",
@@ -12260,18 +12305,18 @@
       "query": "manzana"
     },
     {
-      "productId": "148836710",
-      "name": "Melody de Manzana Asolo Dolce Empaque 100 g",
-      "brand": "ASOLO DOLCE",
-      "presentation": "Empaque 100 g",
+      "productId": "124031687",
+      "name": "Bebida Rehidratante Suerox Manzana Botella 630 mL",
+      "brand": "SUEROX",
+      "presentation": "Botella 630 mL",
       "unit": "UN",
       "price": 6.5,
       "normalPrice": null,
       "cmrPrice": null,
       "seller": "Tottus",
       "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/148836710/melody-de-manzana-asolo-dolce-empaque-100-g",
-      "image": "https://media.tottus.com.pe/tottusPE/43592269_1/public",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/124031687/bebida-rehidratante-suerox-manzana-botella-630-ml",
+      "image": "https://media.tottus.com.pe/tottusPE/43151349_1/public",
       "query": "manzana"
     },
     {
@@ -12455,21 +12500,6 @@
       "query": "manzana"
     },
     {
-      "productId": "135602122",
-      "name": "Infusión Manzana con Miel Carmencita Caja 10 Sobres",
-      "brand": "CARMENCITA",
-      "presentation": "Caja 10 Sobres",
-      "unit": "UN",
-      "price": 8.9,
-      "normalPrice": 13.9,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/135602122/infusion-manzana-con-miel-carmencita-caja-10-sobres",
-      "image": "https://media.tottus.com.pe/tottusPE/43388663_1/public",
-      "query": "manzana"
-    },
-    {
       "productId": "115877832",
       "name": "Manzana Granny Smith Importada Tottus",
       "brand": "TOTTUS FRUTAS",
@@ -12482,6 +12512,21 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115877832/manzana-granny-smith-importada-tottus",
       "image": "https://media.tottus.com.pe/tottusPE/10161782_1/public",
+      "query": "manzana"
+    },
+    {
+      "productId": "113710676",
+      "name": "Vinagre de Manzana Peru Pride Botella 500 mL",
+      "brand": "PERU PRIDE",
+      "presentation": "Botella 500 mL",
+      "unit": "UN",
+      "price": 9.99,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113710676/vinagre-de-manzana-peru-pride-botella-500-ml",
+      "image": "https://media.tottus.com.pe/tottusPE/40611903_1/public",
       "query": "manzana"
     },
     {
@@ -12560,36 +12605,6 @@
       "query": "manzana"
     },
     {
-      "productId": "116953587",
-      "name": "Lavavajilla Liquido Sapolio Manzana Botella 1250 mL",
-      "brand": "SAPOLIO",
-      "presentation": "Botella 1250 mL",
-      "unit": "UN",
-      "price": 14.9,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/116953587/lavavajilla-liquido-sapolio-manzana-botella-1250-ml",
-      "image": "https://media.tottus.com.pe/tottusPE/42837175_01/public",
-      "query": "manzana"
-    },
-    {
-      "productId": "145796751",
-      "name": "Granola Dyff Manzana y Canela Doypack 390 g",
-      "brand": "DYFFERENT",
-      "presentation": "Doypack 390 g",
-      "unit": "UN",
-      "price": 14.9,
-      "normalPrice": 16.5,
-      "cmrPrice": 14.5,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/145796751/granola-dyff-manzana-y-canela-doypack-390-g",
-      "image": "https://media.tottus.com.pe/tottusPE/43554984_1/public",
-      "query": "manzana"
-    },
-    {
       "productId": "115838468",
       "name": "Membrillo Tottus",
       "brand": "TOTTUS FRUTAS",
@@ -12665,21 +12680,6 @@
       "query": "manzana"
     },
     {
-      "productId": "123531725",
-      "name": "Suavizante Suavitel Frescura de Manzana Envase 2.3 L",
-      "brand": "SUAVITEL",
-      "presentation": "Envase 2.3 L",
-      "unit": "UN",
-      "price": 21.5,
-      "normalPrice": 22,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/123531725/suavizante-suavitel-frescura-de-manzana-envase-2-3-l",
-      "image": "https://media.tottus.com.pe/tottusPE/43147871_1/public",
-      "query": "manzana"
-    },
-    {
       "productId": "117117618",
       "name": "Tarta De Manzana Chica",
       "brand": "TOTTUS",
@@ -12692,6 +12692,21 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/117117618/tarta-manzana-chica-tottus-hpa",
       "image": "https://media.tottus.com.pe/tottusPE/41529714_1/public",
+      "query": "manzana"
+    },
+    {
+      "productId": "133453503",
+      "name": "Cereal Kelloggs Müsli Manzana Caja 275 g",
+      "brand": "KELLOGGS",
+      "presentation": "Caja 275 g  ",
+      "unit": "UN",
+      "price": 24.7,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/133453503/cereal-kelloggs-musli-manzana-caja-275-g",
+      "image": "https://media.tottus.com.pe/tottusPE/43376558_1/public",
       "query": "manzana"
     },
     {
@@ -12710,18 +12725,18 @@
       "query": "manzana"
     },
     {
-      "productId": "132159707",
-      "name": "Suavizante Suavitel Frescura De Manzana Envase 4.8 L",
-      "brand": "SUAVITEL",
-      "presentation": "Envase 4.8 L",
+      "productId": "156318071",
+      "name": "Gomitas Tmx Detox+ Manzana Pote 90 Und",
+      "brand": "TMX THE WELLNESS CO",
+      "presentation": "Pote 90 Und",
       "unit": "UN",
-      "price": 44.9,
-      "normalPrice": 50,
+      "price": 42.9,
+      "normalPrice": 49,
       "cmrPrice": null,
       "seller": "Tottus",
       "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/132159707/suavizante-suavitel-frescura-de-manzana-envase-4-8-l",
-      "image": "https://media.tottus.com.pe/tottusPE/43342738_1/public",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/156318071/gomitas-tmx-detox-manzana-pote-90-und",
+      "image": "https://media.tottus.com.pe/tottusPE/43720426_1/public",
       "query": "manzana"
     },
     {
@@ -13010,6 +13025,21 @@
       "query": "naranja"
     },
     {
+      "productId": "115906852",
+      "name": "Toronja de Costa",
+      "brand": "TOTTUS FRUTAS",
+      "presentation": "1 Kg Aprox",
+      "unit": "KG",
+      "price": 7.99,
+      "normalPrice": 8.49,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115906852/toronja-de-costa",
+      "image": "https://media.tottus.com.pe/tottusPE/10162007_1/public",
+      "query": "naranja"
+    },
+    {
       "productId": "115808244",
       "name": "Jugo Cold Pressed Naranja Y Zanahoria",
       "brand": "ECOFRESH",
@@ -13097,21 +13127,6 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113712716/jugo-pasteurizado-sabor-naranja-y-zanahoria-tottus",
       "image": "https://media.tottus.com.pe/tottusPE/41129310_1/public",
-      "query": "naranja"
-    },
-    {
-      "productId": "115836508",
-      "name": "Jugo De Zanahoria y Naranja Epic 880 mL",
-      "brand": "EPIC",
-      "presentation": "Botella 880 mL",
-      "unit": "UN",
-      "price": 13.6,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115836508/jugo-de-zanahoria-y-naranja-epic-880-ml",
-      "image": "https://media.tottus.com.pe/tottusPE/42625094_1/public",
       "query": "naranja"
     },
     {
@@ -14270,6 +14285,21 @@
       "query": "papa canchan"
     },
     {
+      "productId": "113715239",
+      "name": "Chupe De Viernes Tottus",
+      "brand": "TOTTUS VERDURAS",
+      "presentation": "Bandeja 400 g",
+      "unit": "UN",
+      "price": 7.2,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113715239/chupe-de-viernes-tottus",
+      "image": "https://media.tottus.com.pe/tottusPE/41351918_1/public",
+      "query": "papa canchan"
+    },
+    {
       "productId": "146489320",
       "name": "Tamal Chinchano Recutecu Relleno De Cerdo 400 Gr",
       "brand": "RECUTECU",
@@ -14282,21 +14312,6 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/146489320/tamal-chinchano-relleno-de-cerdo-x-400gr",
       "image": "https://media.tottus.com.pe/tottusPE/43559335_1/public",
-      "query": "papa canchan"
-    },
-    {
-      "productId": "146489316",
-      "name": "Tamal Chinchano Recutecu Relleno De Pollo 400 Gr",
-      "brand": "RECUTECU",
-      "presentation": "Und",
-      "unit": "UN",
-      "price": 7.5,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/146489316/tamal-chichano-relleno-de-pollo-x-400gr",
-      "image": "https://media.tottus.com.pe/tottusPE/43559334_1/public",
       "query": "papa canchan"
     },
     {
@@ -14570,6 +14585,21 @@
       "query": "papel higienico 4 rollos"
     },
     {
+      "productId": "113929423",
+      "name": "Servilletas Elite Doblada en 4 Empaque 100 Und",
+      "brand": "ELITE",
+      "presentation": "Empaque 100 Und",
+      "unit": "UN",
+      "price": 4.5,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113929423/servilletas-elite-doblada-en-4-empaque-100-und",
+      "image": "https://media.tottus.com.pe/tottusPE/20048034_1/public",
+      "query": "papel higienico 4 rollos"
+    },
+    {
       "productId": "149684383",
       "name": "Papel Higienico Soft Premium 40 metros Empaque 4 Und",
       "brand": "SOFT",
@@ -14687,6 +14717,21 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113707774/papel-higienico-suave-resistemax-doble-hoja-empaque-12-und",
       "image": "https://media.tottus.com.pe/tottusPE/42676979_1/public",
+      "query": "papel higienico 4 rollos"
+    },
+    {
+      "productId": "155191867",
+      "name": "Papel Toalla Scott Gigante Rendidor Rollo 70 m",
+      "brand": "SCOTT",
+      "presentation": "Und",
+      "unit": "UN",
+      "price": 9.9,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/155191867/papel-toalla-scott-gigante-rendidor-rollo-70-m",
+      "image": "https://media.tottus.com.pe/tottusPE/43707334_1/public",
       "query": "papel higienico 4 rollos"
     },
     {
@@ -15035,21 +15080,6 @@
       "query": "papel higienico 4 rollos"
     },
     {
-      "productId": "155008481",
-      "name": "Papel Higiénico Elite Premium Soft Pack 18 Und",
-      "brand": "ELITE",
-      "presentation": "Pack 18 Und",
-      "unit": "UN",
-      "price": 27.5,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/155008481/papel-higienico-elite-premium-soft-pack-18-und",
-      "image": "https://media.tottus.com.pe/tottusPE/43705460_1/public",
-      "query": "papel higienico 4 rollos"
-    },
-    {
       "productId": "113445646",
       "name": "Toallitas Húmedas Huggies One&Done Pepino y Té Verde Empaque 184 Und",
       "brand": "HUGGIES",
@@ -15152,21 +15182,6 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/133600871/papel-higienico-paracas-black-empaque-18-und",
       "image": "https://media.tottus.com.pe/tottusPE/43377706_1/public",
-      "query": "papel higienico 4 rollos"
-    },
-    {
-      "productId": "153087936",
-      "name": "Papel Higiénico Suave Rindemax Empaque 24 Und",
-      "brand": "SUAVE",
-      "presentation": "Empaque 24 Und",
-      "unit": "UN",
-      "price": 34.9,
-      "normalPrice": 38.9,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/153087936/papel-higienico-suave-rindemax-empaque-24-und",
-      "image": "https://media.tottus.com.pe/tottusPE/43664432_1/public",
       "query": "papel higienico 4 rollos"
     },
     {
@@ -15545,21 +15560,6 @@
       "query": "platano de seda"
     },
     {
-      "productId": "154684826",
-      "name": "Crema Para Peinar Sedal Toque De Seda Botella 300 mL",
-      "brand": "SEDAL",
-      "presentation": "Botella 300 mL",
-      "unit": "UN",
-      "price": 14.5,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/154684826/crema-para-peinar-sedal-toque-de-seda-botella-300-ml",
-      "image": "https://media.tottus.com.pe/tottusPE/43688492_1/public",
-      "query": "platano de seda"
-    },
-    {
       "productId": "133600932",
       "name": "Plátano Frito Artichay Sabor Salsa Acevichada Empaque 210 g",
       "brand": "ARTICHAY",
@@ -15845,21 +15845,6 @@
       "query": "pollo entero"
     },
     {
-      "productId": "146033646",
-      "name": "Pollo Con Menudencia Avinka x Kg",
-      "brand": "AVINKA",
-      "presentation": "Empaque 2.3 Kg Aprox",
-      "unit": "KG",
-      "price": 10.2,
-      "normalPrice": 17.9,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/146033646/pollo-con-menudencia-avinka-x-kg",
-      "image": "https://media.tottus.com.pe/tottusPE/43555534_1/public",
-      "query": "pollo entero"
-    },
-    {
       "productId": "115808216",
       "name": "Pollo Entero Trozado Redondos x Kg",
       "brand": "REDONDOS",
@@ -16085,18 +16070,18 @@
       "query": "pollo entero"
     },
     {
-      "productId": "116224583",
-      "name": "Piernitas Light De Pollo Sin Piel",
+      "productId": "146489269",
+      "name": "1/2 Pollo Rostizado + Porción De Papas + 2 Inca Kola Sin Azúcar 300 Ml",
       "brand": "TOTTUS",
-      "presentation": "Empaque 600 g Aprox.",
-      "unit": "KG",
-      "price": 17.9,
-      "normalPrice": null,
+      "presentation": "Combo 4 Und",
+      "unit": "UN",
+      "price": 16.9,
+      "normalPrice": 20.6,
       "cmrPrice": null,
       "seller": "Tottus",
       "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/116224583/piernitas-light-de-pollo-sin-piel",
-      "image": "https://media.tottus.com.pe/tottusPE/40600801_1/public",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/146489269/1-2-pollo-rostizado-porcion-de-papas-2-inca-kola-sin-azucar-300-ml",
+      "image": "https://media.tottus.com.pe/tottusPE/43559329_2/public",
       "query": "pollo entero"
     },
     {
@@ -16127,21 +16112,6 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115836142/pack-ahorrador-pechuga-especial-light-de-pollo",
       "image": "https://media.tottus.com.pe/tottusPE/40600798_1/public",
-      "query": "pollo entero"
-    },
-    {
-      "productId": "116227868",
-      "name": "Muslito Light De Pollo",
-      "brand": "TOTTUS",
-      "presentation": "Empaque 700 g Aprox.",
-      "unit": "KG",
-      "price": 19.75,
-      "normalPrice": 20.2,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/116227868/muslito-light-de-pollo",
-      "image": "https://media.tottus.com.pe/tottusPE/40600795_01/public",
       "query": "pollo entero"
     },
     {
@@ -16250,6 +16220,21 @@
       "query": "pollo entero"
     },
     {
+      "productId": "115897345",
+      "name": "Alitas Marinadas Buffalo Tottus",
+      "brand": "TOTTUS",
+      "presentation": "Empaque Por kg",
+      "unit": "UN",
+      "price": 23.9,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115897345/alitas-marinadas-buffalo-tottus",
+      "image": "https://media.tottus.com.pe/tottusPE/42094297_1/public",
+      "query": "pollo entero"
+    },
+    {
       "productId": "115835554",
       "name": "Milanesa De Pollo Tottus",
       "brand": "TOTTUS",
@@ -16310,21 +16295,6 @@
       "query": "pollo entero"
     },
     {
-      "productId": "147696481",
-      "name": "Pollo Rostizado + Porción De Papas + Arroz Oriental 400 g + 1 Ají",
-      "brand": "TOTTUS",
-      "presentation": "Combo 4 Und",
-      "unit": "UN",
-      "price": 30.9,
-      "normalPrice": 34.3,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/147696481/pollo-rostizado-porcion-de-papas-arroz-oriental-400-g-1-aji",
-      "image": "https://media.tottus.com.pe/tottusPE/43572775_1/public",
-      "query": "pollo entero"
-    },
-    {
       "productId": "147696573",
       "name": "Pollo Rostizado + 2 Porciones De Papas + Pote De Ají 250 g",
       "brand": "TOTTUS",
@@ -16337,6 +16307,21 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/147696573/pollo-rostizado-tottus-papas-pote-de-aji-250-g",
       "image": "https://media.tottus.com.pe/tottusPE/43572777_1/public",
+      "query": "pollo entero"
+    },
+    {
+      "productId": "147696481",
+      "name": "Pollo Rostizado + Porción De Papas + Arroz Oriental 400 g + 1 Ají",
+      "brand": "TOTTUS",
+      "presentation": "Combo 4 Und",
+      "unit": "UN",
+      "price": 30.9,
+      "normalPrice": 34.3,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/147696481/pollo-rostizado-porcion-de-papas-arroz-oriental-400-g-1-aji",
+      "image": "https://media.tottus.com.pe/tottusPE/43572775_1/public",
       "query": "pollo entero"
     },
     {
@@ -16625,21 +16610,6 @@
       "query": "queso fresco"
     },
     {
-      "productId": "115809335",
-      "name": "Queso Crema Philadelphia Original Pote 150 g",
-      "brand": "PHILADELPHIA",
-      "presentation": "Pote 150 g",
-      "unit": "UN",
-      "price": 12.9,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115809335/queso-crema-philadelphia-original-pote-150-g",
-      "image": "https://media.tottus.com.pe/tottusPE/41410878_1/public",
-      "query": "queso fresco"
-    },
-    {
       "productId": "113928559",
       "name": "Queso Mozzarella Laive Light Empaque 250 g",
       "brand": "LAIVE",
@@ -16745,21 +16715,6 @@
       "query": "queso fresco"
     },
     {
-      "productId": "153089446",
-      "name": "Queso Mozzarella Bola Duman Empaque 250 g",
-      "brand": "DUMAN",
-      "presentation": "Empaque 250 g",
-      "unit": "UN",
-      "price": 16.9,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/153089446/queso-mozzarella-bola-duman-empaque-250-g",
-      "image": "https://media.tottus.com.pe/tottusPE/43664466_1/public",
-      "query": "queso fresco"
-    },
-    {
       "productId": "113707507",
       "name": "Queso Fresco Mozzarella Piamonte Empaque 250 g",
       "brand": "PIAMONTE",
@@ -16850,6 +16805,21 @@
       "query": "queso fresco"
     },
     {
+      "productId": "115836152",
+      "name": "Queso Fresco Tottus x Kg",
+      "brand": "TOTTUS",
+      "presentation": "Empaque 400 g Aprox.",
+      "unit": "KG",
+      "price": 30.9,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115836152/queso-fresco-tottus-x-kg",
+      "image": "https://media.tottus.com.pe/tottusPE/42583762_1/public",
+      "query": "queso fresco"
+    },
+    {
       "productId": "116973095",
       "name": "Queso Fresco Gloria Molde x Kg",
       "brand": "GLORIA",
@@ -16910,6 +16880,21 @@
       "query": "queso fresco"
     },
     {
+      "productId": "115845013",
+      "name": "Queso Fresco Laive Sbelt x Kg",
+      "brand": "LAIVE",
+      "presentation": "Empaque 300 g Aprox.",
+      "unit": "KG",
+      "price": 38,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115845013/queso-fresco-laive-sbelt-x-kg",
+      "image": "https://media.tottus.com.pe/tottusPE/42410280_2/public",
+      "query": "queso fresco"
+    },
+    {
       "productId": "131844533",
       "name": "Queso Fresco de Vaca Duman Taper x Kg",
       "brand": "DUMAN",
@@ -16952,21 +16937,6 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/136951433/queso-fresco-deslactosado-duman-x-kg",
       "image": "https://media.tottus.com.pe/tottusPE/43406262_1/public",
-      "query": "queso fresco"
-    },
-    {
-      "productId": "115808252",
-      "name": "Queso Fresco de Vaca Duman x Kg",
-      "brand": "DUMAN",
-      "presentation": "Empaque 400 g Aprox.",
-      "unit": "KG",
-      "price": 49,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115808252/queso-fresco-de-vaca-duman-x-kg",
-      "image": "https://media.tottus.com.pe/tottusPE/42182615_01/public",
       "query": "queso fresco"
     },
     {
@@ -17675,21 +17645,6 @@
       "query": "spaghetti don vittorio"
     },
     {
-      "productId": "137931422",
-      "name": "Pasta Tipo Spaghetti Sabor Salsa Pesto Pastarotti 175 g",
-      "brand": "PASTAROTTI",
-      "presentation": "Bolsa x 175g",
-      "unit": "UN",
-      "price": 10.9,
-      "normalPrice": null,
-      "cmrPrice": null,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/137931422/pasta-tipo-spaghetti-sabor-salsa-pesto-pastarotti-175-g",
-      "image": "https://media.tottus.com.pe/tottusPE/43418931_1/public",
-      "query": "spaghetti don vittorio"
-    },
-    {
       "productId": "136951378",
       "name": "Pasta de Arroz Spaghetti El Dorado Bolsa 250 g",
       "brand": "EL DORADO",
@@ -17717,6 +17672,21 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/136951344/pasta-de-maiz-amarillo-spaghetti-eldorado-x-250-g",
       "image": "https://media.tottus.com.pe/tottusPE/43406224_1/public",
+      "query": "spaghetti don vittorio"
+    },
+    {
+      "productId": "151743013",
+      "name": "Spaghetti Konjac Zerocarbo Caja 270 g",
+      "brand": "ZERO CARBO",
+      "presentation": "Caja 270 g",
+      "unit": "UN",
+      "price": 14.4,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/151743013/spaghetti-konjac-zerocarbo-caja-270-g",
+      "image": "https://media.tottus.com.pe/tottusPE/43635471_1/public",
       "query": "spaghetti don vittorio"
     },
     {
@@ -18077,6 +18047,21 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115810195/arveja-americana-tottus",
       "image": "https://media.tottus.com.pe/tottusPE/10162060_1/public",
+      "query": "tomate italiano"
+    },
+    {
+      "productId": "118772610",
+      "name": "Zucchini Baby Tottus",
+      "brand": "TOTTUS VERDURAS",
+      "presentation": "300 g",
+      "unit": "",
+      "price": 12.6,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/118772610/zucchini-baby-tottus",
+      "image": "https://media.tottus.com.pe/tottusPE/42468844_1/public",
       "query": "tomate italiano"
     },
     {
@@ -18920,18 +18905,18 @@
       "query": "zanahoria"
     },
     {
-      "productId": "115806622",
-      "name": "Zanahoria En Bastones Tottus",
+      "productId": "113929799",
+      "name": "Mix En Bastones Zanahoria Y Apio Tottus",
       "brand": "TOTTUS VERDURAS",
       "presentation": "Empaque 210 g",
       "unit": "UN",
-      "price": 4.9,
-      "normalPrice": null,
+      "price": 4.3,
+      "normalPrice": 6,
       "cmrPrice": null,
       "seller": "Tottus",
       "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115806622/zanahoria-en-bastones-tottus",
-      "image": "https://media.tottus.com.pe/tottusPE/41898131_1/public",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113929799/mix-en-bastones-zanahoria-y-apio-tottus",
+      "image": "https://media.tottus.com.pe/tottusPE/41898132_1/public",
       "query": "zanahoria"
     },
     {
@@ -19280,21 +19265,6 @@
       "query": "zanahoria"
     },
     {
-      "productId": "117118343",
-      "name": "Keke Con Zanahoria y Frosting Tottus 470 g",
-      "brand": "TOTTUS",
-      "presentation": "8 Porciones",
-      "unit": "UN",
-      "price": 11.93,
-      "normalPrice": 15.9,
-      "cmrPrice": 11.13,
-      "seller": "Tottus",
-      "ownBrand": true,
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/117118343/keke-zanahoria-frosting",
-      "image": "https://media.tottus.com.pe/tottusPE/42096615_3/public",
-      "query": "zanahoria"
-    },
-    {
       "productId": "144288868",
       "name": "Galletas Santiveri Zanahoria y Almendras Caja 240 g",
       "brand": "SANTIVERI",
@@ -19307,6 +19277,21 @@
       "ownBrand": true,
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/144288868/galletas-santiveri-zanahoria-y-almendras-caja-240-g",
       "image": "https://media.tottus.com.pe/tottusPE/43531874_1/public",
+      "query": "zanahoria"
+    },
+    {
+      "productId": "115836508",
+      "name": "Jugo De Zanahoria y Naranja Epic 880 mL",
+      "brand": "EPIC",
+      "presentation": "Botella 880 mL",
+      "unit": "UN",
+      "price": 13.6,
+      "normalPrice": null,
+      "cmrPrice": null,
+      "seller": "Tottus",
+      "ownBrand": true,
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115836508/jugo-de-zanahoria-y-naranja-epic-880-ml",
+      "image": "https://media.tottus.com.pe/tottusPE/42625094_1/public",
       "query": "zanahoria"
     },
     {
