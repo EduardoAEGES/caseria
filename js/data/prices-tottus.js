@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-10-11T16:40:00.729Z",
+  "updatedAt": "2026-10-12T20:18:53.320Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -14,15 +14,15 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/124763718/arroz-costeno-extra-anejo-bolsa-750-g"
     },
     "2": {
-      "price": 10.5,
+      "price": 9.9,
       "normalPrice": 11.5,
       "name": "Pollo Entero Trozado Redondos x Kg",
       "presentation": "2.15 kg Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115808216/pollo-entero-trozado-redondos-x-kg"
     },
     "3": {
-      "price": 15.8,
-      "normalPrice": 17.9,
+      "price": 17.9,
+      "normalPrice": null,
       "name": "Huevos Pardos Tottus Bandeja 30 Und",
       "presentation": "Bandeja 30 Und",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/114518367/huevos-pardos-tottus-bandeja-30-und"
@@ -31,7 +31,7 @@ window.SCRAPED_PRICES["tottus"] = {
       "price": 4.49,
       "normalPrice": null,
       "name": "Papa Canchan Procesada x Kg",
-      "presentation": "Empaque 1 Kg Aprox.",
+      "presentation": "1 Kg = 6 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/129605787/papa-canchan-procesada-x-kg"
     },
     "5": {
@@ -63,8 +63,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115847468/platano-de-seda-extra-tottus-x-kg"
     },
     "9": {
-      "price": 3.99,
-      "normalPrice": null,
+      "price": 3.89,
+      "normalPrice": 3.9,
       "name": "Cebolla Roja Tottus",
       "presentation": "1 Kg = 8 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115805615/cebolla-roja-tottus"
@@ -146,19 +146,12 @@ window.SCRAPED_PRICES["tottus"] = {
       "presentation": "1 Kg = 6 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/130698837/naranja-de-jugo-premium-x-kg"
     },
-    "21": {
-      "price": 17.9,
-      "normalPrice": null,
-      "name": "Palta Fuerte Orgánico Tottus",
-      "presentation": "760 g Aprox",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115822635/palta-fuerte-organico-tottus"
-    },
     "22": {
-      "price": 1.9,
+      "price": 1.95,
       "normalPrice": null,
-      "name": "Yogurt Gloria Frutado Fresa Envase 120 g",
-      "presentation": "Envase 120 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113710229/yogurt-gloria-frutado-fresa-120-g"
+      "name": "Yogurt Gloria Vainilla Botella 180 g",
+      "presentation": "Botella 180 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/119331881/gloria-yog-par-desc-vainilla-x180g"
     },
     "23": {
       "price": 10.6,
@@ -210,11 +203,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/123541837/lejia-tradicional-clorox-botella-1-kg"
     },
     "30": {
-      "price": 4.49,
+      "price": 6.7,
       "normalPrice": null,
-      "name": "Papel Higiénico Suave Cuidado Completo Empaque 4 Und",
+      "name": "Papel Higienico Soft Premium 40 metros Empaque 4 Und",
       "presentation": "Empaque 4 Und",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113709043/papel-higienico-suave-cuidado-completo-empaque-4-rollos"
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/149684383/papel-higienico-soft-premium-40-metros-empaque-4-und"
     }
   }
 };
