@@ -4,6 +4,7 @@ function Modal() {
   if (!state.modal) return "";
   if (state.modal.type === "district") return DistrictModal();
   if (state.modal.type === "web") return WebRedirectModal(state.modal.name);
+  if (state.modal.type === "budget") return BudgetModal(state.modal);
   return "";
 }
 

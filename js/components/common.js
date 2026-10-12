@@ -23,10 +23,10 @@ function Check(on, modifiers = "") {
   return `<span class="check ${modifiers}${on ? " is-on" : ""}">${on ? Icon("check", { size: 14, stroke: 3 }) : ""}</span>`;
 }
 
-/** Selector segmentado: options = [{ value, label }]. */
-function Segmented(options, current, action) {
+/** Selector segmentado: options = [{ value, label }]; modifier = clase extra opcional. */
+function Segmented(options, current, action, modifier = "") {
   return `
-    <div class="segmented">
+    <div class="segmented${modifier ? ` ${modifier}` : ""}">
       ${each(options, o => `<button class="segmented__btn${o.value === current ? " is-active" : ""}" data-action="${action}" data-value="${o.value}">${o.label}</button>`)}
     </div>`;
 }

@@ -150,6 +150,24 @@ for (const store of STORES) {
 }
 
 /**
+ * Ofertas reales: productos cuyo precio web actual es menor que su precio normal, según los
+ * scrapers (Tottus, Metro, Mass). Las tablas de ejemplo no tienen ofertas, así que no se inventa ninguna.
+ * Devuelve [{ product, store, item, price, normalPrice, saving }] de mayor a menor ahorro.
+ */
+function realDeals(minSaving = 0.1) {
+  const deals = [];
+  for (const store of STORES) {
+    if (!scrapedData(store.id)) continue;
+    for (const product of PRODUCTS) {
+      const item = scrapedItem(store.id, product.id);
+      if (!item || !item.normalPrice || item.normalPrice - item.price < minSaving) continue;
+      deals.push({ product, store, item, price: item.price, normalPrice: item.normalPrice, saving: item.normalPrice - item.price });
+    }
+  }
+  return deals.sort((a, b) => b.saving - a.saving);
+}
+
+/**
  * Busca en la tabla de precios de cada tienda y arma la mejor oferta para la canasta.
  * cart: [{ productId, qty }]
  * Devuelve:

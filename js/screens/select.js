@@ -56,6 +56,14 @@ defineScreen("select", {
   nav: true,
   ui: () => ({ category: state.startCategory, query: "", activeProduct: null }),
 
+  // Al entrar a Categorías para armar la canasta, primero se pregunta el presupuesto (una vez por sesión).
+  enter() {
+    if (state.budget == null && !state.budgetAsked && !state.modal) {
+      openBudgetModal();
+      render();
+    }
+  },
+
   render(ui) {
     const q = ui.query.trim().toLowerCase();
     const products = PRODUCTS.filter(p => (ui.category === "Todos" || p.cat === ui.category) && (!q || p.name.toLowerCase().includes(q)));
@@ -72,6 +80,8 @@ defineScreen("select", {
           </div>
           ${StepBars(1)}
         </header>
+
+        ${BudgetBar()}
 
         <div class="select__search">
           <label class="search">
@@ -94,6 +104,7 @@ defineScreen("select", {
         <div class="screen__body" data-scroll="select-grid">
           ${products.length === 0 ? `<p class="empty">No encontramos productos con ese nombre.</p>` : ""}
           <div class="product-grid">${each(products, ProductCard)}</div>
+          ${ui.activeProduct ? "" : BudgetAssistant(assistantMessage("select"))}
         </div>
 
         ${state.selected.length > 0 && !ui.activeProduct ? `

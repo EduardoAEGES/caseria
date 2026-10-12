@@ -110,4 +110,13 @@ function bindEvents(container) {
     const el = event.target.closest("[data-input]");
     if (el) runAction(el.dataset.input, el, event);
   });
+
+  // Enter en un campo con data-enter="acción" (p. ej. confirmar el presupuesto).
+  container.addEventListener("keydown", event => {
+    if (event.key !== "Enter") return;
+    const el = event.target.closest("[data-enter]");
+    if (!el) return;
+    event.preventDefault();
+    runAction(el.dataset.enter, el, event);
+  });
 }

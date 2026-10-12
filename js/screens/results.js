@@ -65,9 +65,8 @@ function CombinedCard(best, combined, savings) {
 
 function StoreOfferCard(offer, index, isBest) {
   const { store } = offer;
-  const budget = state.budget;
-  const diff = budget != null ? budget - offer.total : null;
-  const budgetMsg = diff != null ? (diff >= 0 ? `<p class="budget-info is-positive">Se ajusta a tu presupuesto. Te quedan S/${diff.toFixed(2)}</p>` : `<p class="budget-info is-negative">Supera tu presupuesto en S/${(-diff).toFixed(2)}</p>`) : '';
+  // Con presupuesto ingresado, cada tienda que tiene todo dice cuánto te queda o te falta.
+  const budgetMsg = state.budget != null && offer.complete ? `<div class="store-card__budget">${PocketPill(state.budget, offer.total)}</div>` : "";
   return `
     <article class="store-card">
       <div class="store-card__head">
@@ -111,6 +110,7 @@ function ResultsList(result, sorted) {
         <button class="link-btn link-btn--icon" data-action="openTable">Comparar por producto${Icon("chevron-right", { size: 14, stroke: 2.4 })}</button>
       </div>
       ${each(sorted, (offer, i) => StoreOfferCard(offer, i, offer === bestSingle))}
+      ${BudgetAssistant(assistantMessage("results"))}
     </div>`;
 }
 
@@ -268,17 +268,24 @@ defineScreen("results", {
         </header>
 
         <div class="results__controls">
-          ${Segmented([{ value: "precio", label: `${Icon("tag", { size: 14 })} Precio` }, { value: "cerca", label: `${Icon("map-pin", { size: 14 })} Cercanía` }], ui.criteria, "setCriteria")}
-          ${Segmented([{ value: "list", label: `${Icon("list", { size: 14 })} Lista` }, { value: "map", label: `${Icon("map", { size: 14 })} Mapa` }], ui.view, "setView")}
-
+          ${Segmented([
+            { value: "precio", label: `${Icon("tag", { size: 14 })}<span class="segmented__label">Precio</span>` },
+            { value: "cerca", label: `${Icon("map-pin", { size: 14 })}<span class="segmented__label">Cercanía</span>` },
+            { value: "bolsillo", label: `${Icon("wallet", { size: 14 })}<span class="segmented__label">Tu bolsillo</span>` },
+          ], ui.criteria, "setCriteria", "segmented--criteria")}
+          ${ui.criteria === "bolsillo" ? "" : Segmented([
+            { value: "list", label: `${Icon("list", { size: 14 })}<span class="segmented__label">Lista</span>` },
+            { value: "map", label: `${Icon("map", { size: 14 })}<span class="segmented__label">Mapa</span>` },
+          ], ui.view, "setView", "segmented--view")}
         </div>
 
-        ${ui.view === "list" ? ResultsList(result, sorted) : ResultsMap(result, sorted, ui.pin)}
+        ${ui.criteria === "bolsillo" ? BolsilloView() : ui.view === "list" ? ResultsList(result, sorted) : ResultsMap(result, sorted, ui.pin)}
         ${ResultsSheet(ui, result, cart)}
       </section>`;
   },
 
   actions: {
+    ...BOLSILLO_ACTIONS,
     back: () => navigate("quantities"),
     setCriteria: (ui, el) => { ui.criteria = el.dataset.value; },
     setView: (ui, el) => { ui.view = el.dataset.value; },

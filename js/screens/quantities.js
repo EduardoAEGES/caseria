@@ -18,6 +18,8 @@ defineScreen("quantities", {
           ${StepBars(2)}
         </header>
 
+        ${BudgetBar()}
+
         <div class="screen__body" data-scroll="quantities">
           <div class="note note--blue-text">
             <span class="note__icon">${Icon("bot", { size: 18 })}</span>
@@ -46,6 +48,7 @@ defineScreen("quantities", {
           </div>
 
           <button class="btn btn--dashed btn--md btn--block" data-action="back">+ Agregar más productos</button>
+          ${BudgetAssistant(assistantMessage("quantities"))}
         </div>
 
         <div class="action-footer">

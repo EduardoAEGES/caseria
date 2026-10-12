@@ -16,8 +16,10 @@ const state = {
   selected: [],                        // ids de productos en la canasta
   quantities: {},                      // productId → cantidad
   startCategory: "Todos",              // categoría con la que se abre "Elige tus productos"
-  modal: null,                         // null | { type: "district" } | { type: "web", name }
-  budget: null                         // presupuesto ingresado por el usuario (S/)
+  modal: null,                         // null | { type: "district" } | { type: "web", name } | { type: "budget", draft, error }
+  budget: null,                        // presupuesto ingresado por el usuario para esta compra (S/)
+  budgetAsked: false,                  // ya se preguntó el presupuesto en esta sesión (aunque lo haya omitido)
+  assistant: { key: null, open: true, fresh: false }, // globo del robot asistente de "Tu bolsillo"
 };
 
 function getDistrict() {
@@ -36,6 +38,9 @@ function resetSession(account) {
   state.quantities = { 2: 2, 3: 1, 6: 1 };
   state.startCategory = "Todos";
   state.modal = null;
+  state.budget = null;
+  state.budgetAsked = false;
+  state.assistant = { key: null, open: true, fresh: false };
 }
 
 function currentAccount() {

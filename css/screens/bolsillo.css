@@ -1,0 +1,362 @@
+/* ==========================================================================
+   Tu bolsillo: presupuesto, barra de saldo, robot asistente y vista de resultados
+   ========================================================================== */
+
+/* ── Selector Precio / Cercanía / Tu bolsillo en resultados ────────────── */
+.segmented--criteria { flex: 1 1 auto; }
+.segmented--view { flex: 0 0 auto; }
+.segmented--view .segmented__btn { padding: 6px 10px; }
+
+/* En celulares la vista Lista/Mapa queda solo con íconos para que entren las tres opciones */
+@media (max-width: 420px) {
+  .segmented--view .segmented__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .results__controls:has(.segmented--view) .segmented--criteria .icon { display: none; }
+}
+
+/* ── Ventana "¿Cuánto dinero tienes?" ──────────────────────────────────── */
+.budget-modal .modal__top { padding-bottom: 0; }
+.budget-modal__bot {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--blue), var(--blue-deep));
+  box-shadow: var(--shadow-blue);
+}
+.budget-modal__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+.budget-field { width: 100%; }
+.budget-field__prefix { font-size: 18px; font-weight: 800; color: var(--blue); }
+.budget-field .field__input { font-size: 22px; font-weight: 800; }
+.budget-modal__error { width: 100%; min-height: 18px; margin: 6px 0 4px; font-size: 12px; font-weight: 600; color: var(--red-text); }
+.budget-modal__quick { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 16px; }
+.budget-modal .btn--primary { margin-bottom: 4px; }
+
+/* ── Barra "Tu bolsillo" (Categorías y Cantidades) ─────────────────────── */
+.budget-bar {
+  flex-shrink: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 24px;
+  background: var(--blue-50);
+  border-bottom: 1px solid rgb(11 99 229 / 0.15);
+  text-align: left;
+}
+.budget-bar__icon {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--blue);
+  color: var(--white);
+}
+.budget-bar__text { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.budget-bar__label { font-size: 12px; font-weight: 800; color: var(--blue); }
+.budget-bar__value { font-size: 12px; color: var(--ink-2); }
+.budget-bar__state { font-weight: 700; }
+.budget-bar__state.is-under { color: var(--green-dark); }
+.budget-bar__state.is-exact { color: var(--amber-text); }
+.budget-bar__state.is-over { color: var(--red-text); }
+.budget-bar__edit {
+  flex-shrink: 0;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--white);
+  border: 1px solid rgb(11 99 229 / 0.25);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+/* ── Robot asistente flotante ──────────────────────────────────────────── */
+/* Va al final de un contenedor con scroll: sticky lo deja abajo a la derecha de lo visible,
+   siempre por encima de la barra inferior y de los botones fijos (que están fuera del scroll). */
+.assistant {
+  position: sticky;
+  bottom: 4px;
+  z-index: 30;
+  align-self: flex-end;
+  width: 56px;
+  height: 56px;
+  margin-top: auto;
+  pointer-events: none;
+}
+.assistant > * { pointer-events: auto; }
+
+.assistant__bot {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--white);
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--blue), var(--blue-deep));
+  box-shadow: var(--shadow-blue);
+  animation: assistant-bob 3.2s ease-in-out infinite;
+  transition: transform 0.15s;
+}
+.assistant__bot:active { transform: scale(0.92); }
+.assistant__dot {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--white);
+  border-radius: 999px;
+  background: var(--orange);
+}
+
+.assistant__bubble {
+  position: absolute;
+  right: 6px;
+  bottom: 66px;
+  width: min(250px, calc(100vw - 64px));
+  padding: 12px 34px 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 16px 16px 4px 16px;
+  background: var(--white);
+  box-shadow: var(--shadow-xl);
+}
+.assistant__bubble::after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  bottom: -7px;
+  width: 12px;
+  height: 12px;
+  transform: rotate(45deg);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--white);
+}
+.assistant__bubble--enter { animation: assistant-pop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both; transform-origin: bottom right; }
+.assistant__text { font-size: 13px; line-height: 1.45; font-weight: 500; color: var(--ink); }
+.assistant__close {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  color: var(--muted);
+}
+.assistant__close:hover { background: var(--line-soft); color: var(--ink-2); }
+.assistant__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  margin-top: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--blue-50);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+@keyframes assistant-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+@keyframes assistant-pop {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .assistant__bot, .assistant__bubble--enter { animation: none; }
+}
+
+/* ── Etiqueta Te quedan / Te faltan ────────────────────────────────────── */
+.pocket-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.pocket-pill.is-under { background: var(--green-50); color: var(--green-dark); }
+.pocket-pill.is-exact { background: var(--amber-100); color: var(--amber-text); }
+.pocket-pill.is-over { background: var(--red-50); color: var(--red-text); }
+.store-card__budget { margin-bottom: 8px; }
+
+/* ── Vista "Tu bolsillo" ───────────────────────────────────────────────── */
+.pocket-section-title { margin-bottom: -4px; padding-top: 4px; }
+.pocket-note { font-size: 11px; line-height: 1.5; color: var(--muted); }
+.pocket-note--top { margin: 2px 0 8px; }
+
+.pocket-card {
+  padding: 16px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--blue), var(--blue-deep));
+  box-shadow: var(--shadow-blue);
+  color: var(--white);
+}
+.pocket-card__head { display: flex; align-items: center; justify-content: space-between; }
+.pocket-card__eyebrow { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; opacity: 0.9; }
+.pocket-card__edit {
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.18);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--white);
+}
+.pocket-card__amount { margin-top: 4px; font-size: 30px; font-weight: 900; line-height: 1.15; }
+.pocket-card__sub { font-size: 12px; opacity: 0.8; }
+.pocket-meter { height: 8px; margin: 12px 0 10px; overflow: hidden; border-radius: 999px; background: rgb(255 255 255 / 0.22); }
+.pocket-meter span { display: block; height: 100%; border-radius: 999px; background: var(--green); transition: width 0.3s; }
+.pocket-meter.is-over span { background: #FCA5A5; }
+.pocket-card__rows { display: flex; flex-direction: column; gap: 4px; }
+.pocket-card__row { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; }
+.pocket-card__row span { opacity: 0.85; }
+.pocket-card__row strong { font-weight: 800; }
+.pocket-card__row--under strong { color: #86EFAC; }
+.pocket-card__row--exact strong { color: #FDE68A; }
+.pocket-card__row--over strong { color: #FECACA; }
+
+.pocket-ask {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 20px 16px 16px;
+  border: 1px solid rgb(11 99 229 / 0.15);
+  border-radius: 16px;
+  background: var(--blue-50);
+  text-align: center;
+}
+.pocket-ask__bot {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--blue), var(--blue-deep));
+  box-shadow: var(--shadow-blue);
+}
+.pocket-ask__title { font-size: 16px; font-weight: 900; color: var(--ink); }
+.pocket-ask__text { margin-bottom: 8px; font-size: 13px; color: var(--ink-3); }
+
+.pocket-option {
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+.pocket-option.is-recommended { border: 2px solid var(--green); }
+.pocket-option__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+.pocket-option__title { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 14px; font-weight: 800; color: var(--ink); }
+.pocket-option__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--green);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+.pocket-option__stores { font-size: 12px; color: var(--ink-3); }
+.pocket-option__total { white-space: nowrap; font-size: 18px; font-weight: 900; color: var(--ink); }
+.pocket-option__missing { display: flex; align-items: center; gap: 4px; margin-top: 6px; font-size: 12px; color: var(--amber-text); }
+.pocket-option__actions { display: flex; gap: 8px; margin-top: 10px; }
+
+.pocket-tips { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; list-style: none; }
+.pocket-tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--white);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+.pocket-tip strong { color: var(--ink); }
+.pocket-tip__icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: var(--blue-50);
+  color: var(--blue);
+}
+.pocket-tip.is-good { border-color: rgb(34 197 94 / 0.35); background: rgb(220 252 231 / 0.45); }
+.pocket-tip.is-good .pocket-tip__icon { background: var(--green-50); color: var(--green-dark); }
+.pocket-tip.is-warn { border-color: rgb(245 158 11 / 0.35); background: var(--amber-50); }
+.pocket-tip.is-warn .pocket-tip__icon { background: var(--amber-100); color: var(--amber-text); }
+
+.pocket-plan {
+  padding: 14px 16px;
+  border: 2px dashed rgb(11 99 229 / 0.35);
+  border-radius: 16px;
+  background: var(--white);
+}
+.pocket-plan--empty { border-color: var(--line); }
+.pocket-plan__title { display: flex; align-items: center; gap: 6px; margin-bottom: 8px; font-size: 14px; font-weight: 800; color: var(--blue); }
+.pocket-plan--empty .pocket-plan__title { color: var(--ink-2); }
+.pocket-plan__steps { display: flex; flex-direction: column; gap: 4px; margin: 0 0 8px 18px; font-size: 13px; color: var(--ink-2); }
+.pocket-plan__steps strong { color: var(--ink); }
+.pocket-plan__text { margin-bottom: 10px; font-size: 13px; color: var(--ink-2); }
+.pocket-plan--empty .pocket-plan__text { margin-bottom: 0; }
+
+.pocket-list { margin-top: 12px; }
+.pocket-section-title + .pocket-note--top + .pocket-list { margin-top: 0; }
+.pocket-basket,
+.pocket-deal {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line-soft);
+}
+.pocket-basket:last-child,
+.pocket-deal:last-child { border-bottom: 0; }
+.pocket-basket__emoji { font-size: 24px; }
+.pocket-basket__text,
+.pocket-deal__text { flex: 1; min-width: 0; }
+.pocket-basket__name,
+.pocket-deal__name { font-size: 13px; font-weight: 700; color: var(--ink); }
+.pocket-basket__meta,
+.pocket-deal__meta { font-size: 12px; color: var(--ink-3); }
+.pocket-deal__meta s { color: var(--muted); }
+.pocket-deal__meta strong { color: var(--green-dark); }

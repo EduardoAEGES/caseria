@@ -45,6 +45,18 @@ en el orden declarado en `index.html`: datos → núcleo → componentes → pan
   Recibe el destino en `state.routeTarget = { storeIds, basketTotal }`; sus acciones devuelven `false` y solo
   repintan el panel para no destruir el mapa.
 
+## Tu bolsillo (presupuesto)
+
+- Al entrar a Categorías (`select`) se pregunta una vez por sesión "¿Cuánto dinero tienes para esta compra?"
+  (modal `state.modal.type === "budget"`). Se guarda en `state.budget`; "Ahora no" marca `state.budgetAsked`.
+  La barra `BudgetBar()` (Categorías y Cantidades) muestra el saldo y permite cambiarlo. Free y Premium por igual.
+- En resultados, "Tu bolsillo" es la tercera opción junto a Precio y Cercanía (`js/screens/bolsillo.js`).
+- Cálculos y consejos en `js/core/budget.js` con reglas y datos existentes: `searchBestOffers`, canastas rápidas,
+  pasajes de `TRAVEL` y ofertas reales (`realDeals()` en `catalog.js`: solo precio web con `normalPrice` mayor).
+  No inventa precios ni ofertas. `reductionPlan` propone bajar cantidades o quitar productos para que alcance.
+- Robot asistente: `BudgetAssistant(assistantMessage(dónde))` va como último hijo de un `.screen__body`
+  (sticky abajo a la derecha, sin tapar barra inferior ni botones fijos). El globo se cierra y se reabre tocando el robot.
+
 ## Identificador de fruta
 
 - Pantalla `scanner` (`js/screens/scanner.js`, estilos en `css/screens/fruit.css`): el usuario enciende la cámara
@@ -81,6 +93,7 @@ en el orden declarado en `index.html`: datos → núcleo → componentes → pan
 - `js/core/router.js` — `defineScreen`, `navigate`, `render` y delegación de eventos
 - `js/core/utils.js` — `esc`, `money`, `each`
 - `js/core/geo.js` — GPS, distancias, rutas (OSRM) y costo del viaje
+- `js/core/budget.js` — "Tu bolsillo": presupuesto vs. opciones, consejos, plan de ajuste y mensajes del robot
 - `js/core/fruit-ai.js` — identificador de fruta (MobileNet / Teachable Machine y estado por color)
 - `vendor/tf.min.js` — TensorFlow.js guardado en el repo (no editar)
 - `js/components/` — piezas de HTML reutilizables (BottomNav, Sheet, modales…)
