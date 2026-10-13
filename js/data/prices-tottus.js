@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-10-12T20:18:53.320Z",
+  "updatedAt": "2026-10-13T18:19:05.562Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -22,20 +22,20 @@ window.SCRAPED_PRICES["tottus"] = {
     },
     "3": {
       "price": 17.9,
-      "normalPrice": null,
-      "name": "Huevos Pardos Tottus Bandeja 30 Und",
+      "normalPrice": 19.5,
+      "name": "Huevos Pardos La Calera Bandeja 30 Und",
       "presentation": "Bandeja 30 Und",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/114518367/huevos-pardos-tottus-bandeja-30-und"
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/130751327/huevos-pardos-la-calera-bandeja-30-und"
     },
     "4": {
-      "price": 4.49,
+      "price": 4.19,
       "normalPrice": null,
       "name": "Papa Canchan Procesada x Kg",
       "presentation": "1 Kg = 6 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/129605787/papa-canchan-procesada-x-kg"
     },
     "5": {
-      "price": 7.7,
+      "price": 7.79,
       "normalPrice": null,
       "name": "Tomate Italiano Tottus",
       "presentation": "500 g = 3 Un Aprox",
@@ -98,8 +98,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113705634/azucar-rubia-tottus-bolsa-1-kg"
     },
     "14": {
-      "price": 12.9,
-      "normalPrice": null,
+      "price": 12.6,
+      "normalPrice": 12.9,
       "name": "Carne Molida De Res x 500 g",
       "presentation": "Empaque 500 g Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113787352/carne-molida-de-res-x-500-g"
@@ -119,21 +119,14 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115817331/chuleta-de-brazuelo-de-cerdo-x-kg"
     },
     "17": {
-      "price": 3.79,
+      "price": 4.19,
       "normalPrice": null,
       "name": "Zanahoria Tottus",
       "presentation": "1 Kg = 5 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115810260/zanahoria-tottus"
     },
-    "18": {
-      "price": 2.59,
-      "normalPrice": null,
-      "name": "Lechuga Seda Hidropónica Tottus",
-      "presentation": "Empaque 160 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706390/lechuga-seda-hidroponica-tottus"
-    },
     "19": {
-      "price": 5.9,
+      "price": 5.4,
       "normalPrice": null,
       "name": "Manzana Delicia Tottus",
       "presentation": "1 Kg Aprox",
@@ -147,11 +140,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/130698837/naranja-de-jugo-premium-x-kg"
     },
     "22": {
-      "price": 1.95,
+      "price": 1.9,
       "normalPrice": null,
-      "name": "Yogurt Gloria Vainilla Botella 180 g",
-      "presentation": "Botella 180 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/119331881/gloria-yog-par-desc-vainilla-x180g"
+      "name": "Yogurt Gloria Frutado Fresa Envase 120 g",
+      "presentation": "Envase 120 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113710229/yogurt-gloria-frutado-fresa-120-g"
     },
     "23": {
       "price": 10.6,

@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-10-12T20:19:59.777Z",
+  "updatedAt": "2026-10-13T18:20:10.147Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -29,11 +29,11 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/huevos-pardos-metro-30un-1009776/p"
     },
     "4": {
-      "price": 4.29,
-      "normalPrice": 5.29,
-      "name": "Papa Canchán Procesada Especial x kg",
+      "price": 5.29,
+      "normalPrice": null,
+      "name": "Papa Canchán Procesada x kg",
       "presentation": "x kg",
-      "url": "https://www.metro.pe/papa-canchan-procesada-especial-x-kg-2-2/p"
+      "url": "https://www.metro.pe/papa-canchan-procesada-x-kg-2/p"
     },
     "5": {
       "price": 6.99,
@@ -65,7 +65,7 @@ window.SCRAPED_PRICES["metro"] = {
     },
     "9": {
       "price": 3.29,
-      "normalPrice": 4.89,
+      "normalPrice": null,
       "name": "Cebolla Roja Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/cebolla-roja-metro-x-kg-3/p"
@@ -120,18 +120,18 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/chuleta-de-pierna-de-cerdo-con-piel-nacional-del-sur-x-kg-386202/p"
     },
     "17": {
-      "price": 3.6,
+      "price": 3.99,
       "normalPrice": null,
       "name": "Zanahoria Especial x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/zanahoria-especial-x-kg-2-2/p"
     },
     "18": {
-      "price": 2.2,
-      "normalPrice": 2.9,
-      "name": "Lechuga Crespa Cuisine & Co",
+      "price": 1.99,
+      "normalPrice": null,
+      "name": "Lechuga Americana Metro x unid",
       "presentation": "",
-      "url": "https://www.metro.pe/lechuga-crespa-cuisine-co-959972-2/p"
+      "url": "https://www.metro.pe/lechuga-americana-metro-x-unid-3/p"
     },
     "19": {
       "price": 4.99,

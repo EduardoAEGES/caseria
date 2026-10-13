@@ -1,9 +1,9 @@
 {
   "store": "metro",
-  "updatedAt": "2026-10-12T20:19:59.777Z",
+  "updatedAt": "2026-10-13T18:20:10.147Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
-  "count": 695,
+  "count": 699,
   "products": [
     {
       "productId": "961667",
@@ -576,18 +576,18 @@
       "query": "aceite vegetal primor"
     },
     {
-      "productId": "1078218",
-      "name": "Sixpack Trozos de Atún en Aceite Vegetal Primor 140g",
+      "productId": "1083628",
+      "name": "Sixpack Filete de Atún en Aceite Primor 140g",
       "brand": "Primor",
       "presentation": "140g",
       "unit": "UN",
-      "price": 30.5,
-      "normalPrice": 32.9,
-      "ean": "7750243076357",
+      "price": 28.8,
+      "normalPrice": 40.2,
+      "ean": "2050044430804",
       "category": "/Abarrotes/Alimentos en Conserva/Pescado en Conserva/",
       "ownBrand": false,
-      "url": "https://www.metro.pe/sixpack-trozos-de-at-n-en-aceite-vegetal-primor-140g-1043556/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/593382/TROZOS-DE-ATUN-PRIMOR-SIXPACK-X140GR-1-296366.jpg?v=638864805750600000",
+      "url": "https://www.metro.pe/sixpack-filete-de-at-n-en-aceite-primor-140g-1049295/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/606616/Sixpack-Filete-de-At-n-en-Aceite-Primor-140g-1-301747.jpg?v=639208021174730000",
       "query": "aceite vegetal primor"
     },
     {
@@ -636,6 +636,21 @@
       "query": "aceite vegetal primor"
     },
     {
+      "productId": "1078218",
+      "name": "Sixpack Trozos de Atún en Aceite Vegetal Primor 140g",
+      "brand": "Primor",
+      "presentation": "140g",
+      "unit": "UN",
+      "price": 32.9,
+      "normalPrice": null,
+      "ean": "7750243076357",
+      "category": "/Abarrotes/Alimentos en Conserva/Pescado en Conserva/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/sixpack-trozos-de-at-n-en-aceite-vegetal-primor-140g-1043556/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/593382/TROZOS-DE-ATUN-PRIMOR-SIXPACK-X140GR-1-296366.jpg?v=638864805750600000",
+      "query": "aceite vegetal primor"
+    },
+    {
       "productId": "1100110",
       "name": "Tripack Aceite Vegetal Primor Premium Botella 900ml",
       "brand": "Primor",
@@ -648,21 +663,6 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/tripack-aceite-vegetal-primor-premium-botella-900ml-1066931/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/641999/Tripack-Aceite-Vegetal-Primor-Premium-Botella-900ml-ACEITE-PRIMOR-PREMIUM-900ML-X3-1-366884.jpg?v=639201747576370000",
-      "query": "aceite vegetal primor"
-    },
-    {
-      "productId": "994721",
-      "name": "Pack x6 Filete de Atún Florida en Aceite Vegetal",
-      "brand": "Florida",
-      "presentation": "x6",
-      "unit": "UN",
-      "price": 35.9,
-      "normalPrice": 39.9,
-      "ean": "7751158012027",
-      "category": "/Abarrotes/Alimentos en Conserva/Pescado en Conserva/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/pack-x6-filete-de-atun-florida-en-aceite-vegetal-2/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/396519/Pack-x6-Filete-de-At-n-Florida-en-Aceite-Vegetal-1-349154811.jpg?v=638180790752770000",
       "query": "aceite vegetal primor"
     },
     {
@@ -1566,6 +1566,36 @@
       "query": "arroz extra costeño"
     },
     {
+      "productId": "34266",
+      "name": "Arroz Extra Metro 5kg",
+      "brand": "Metro",
+      "presentation": "5kg",
+      "unit": "UN",
+      "price": 17,
+      "normalPrice": 19.9,
+      "ean": "7754725000052",
+      "category": "/Abarrotes/Arroz/Arroz Extra y Superior/",
+      "ownBrand": true,
+      "url": "https://www.metro.pe/arroz-extra-metro-5kg-391214/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/280754/Arroz-Extra-Metro-bolsa-5-kg--Arroz-Extra-Metro-bolsa-5-kg-1-150491.jpg?v=638179307608800000",
+      "query": "arroz extra costeño"
+    },
+    {
+      "productId": "1016926",
+      "name": "Arroz Extra Cuisine & Co 5kg",
+      "brand": "Cuisine & Co",
+      "presentation": "5kg",
+      "unit": "UN",
+      "price": 18.5,
+      "normalPrice": 23.5,
+      "ean": "2050044195147",
+      "category": "/Abarrotes/Arroz/Arroz Extra y Superior/",
+      "ownBrand": true,
+      "url": "https://www.metro.pe/arroz-extra-cuisine-co-5kg-981123/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/453497/ARROZ-EXTRA-X-5KG-CUISINE-CO-1-351639054.jpg?v=638285249155500000",
+      "query": "arroz extra costeño"
+    },
+    {
       "productId": "24453",
       "name": "Arroz Superior Paisana 5kg",
       "brand": "Paisana",
@@ -1581,21 +1611,6 @@
       "query": "arroz extra costeño"
     },
     {
-      "productId": "1016926",
-      "name": "Arroz Extra Cuisine & Co 5kg",
-      "brand": "Cuisine & Co",
-      "presentation": "5kg",
-      "unit": "UN",
-      "price": 18.9,
-      "normalPrice": 23.5,
-      "ean": "2050044195147",
-      "category": "/Abarrotes/Arroz/Arroz Extra y Superior/",
-      "ownBrand": true,
-      "url": "https://www.metro.pe/arroz-extra-cuisine-co-5kg-981123/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/453497/ARROZ-EXTRA-X-5KG-CUISINE-CO-1-351639054.jpg?v=638285249155500000",
-      "query": "arroz extra costeño"
-    },
-    {
       "productId": "1086674",
       "name": "Arroz Extra Añejo Metro 5kg",
       "brand": "Metro",
@@ -1608,21 +1623,6 @@
       "ownBrand": true,
       "url": "https://www.metro.pe/arroz-extra-a-ejo-metro-5kg-1051598/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/637067/Arroz-Extra-A-ejo-Metro-5kg-1-353679.jpg?v=639088582279270000",
-      "query": "arroz extra costeño"
-    },
-    {
-      "productId": "34266",
-      "name": "Arroz Extra Metro 5kg",
-      "brand": "Metro",
-      "presentation": "5kg",
-      "unit": "UN",
-      "price": 19.9,
-      "normalPrice": null,
-      "ean": "7754725000052",
-      "category": "/Abarrotes/Arroz/Arroz Extra y Superior/",
-      "ownBrand": true,
-      "url": "https://www.metro.pe/arroz-extra-metro-5kg-391214/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/280754/Arroz-Extra-Metro-bolsa-5-kg--Arroz-Extra-Metro-bolsa-5-kg-1-150491.jpg?v=638179307608800000",
       "query": "arroz extra costeño"
     },
     {
@@ -1761,21 +1761,6 @@
       "query": "arroz extra costeño"
     },
     {
-      "productId": "34075",
-      "name": "Arroz Blanco Extra Añejo Faraón Naranja 5kg",
-      "brand": "Faraon",
-      "presentation": "5kg",
-      "unit": "UN",
-      "price": 22.5,
-      "normalPrice": 26.9,
-      "ean": "7754294000095",
-      "category": "/Abarrotes/Arroz/Arroz Extra y Superior/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/arroz-blanco-extra-anejo-faraon-naranja-5kg-570522/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/535630/570522-01-39350.jpg?v=638563377745130000",
-      "query": "arroz extra costeño"
-    },
-    {
       "productId": "1018326",
       "name": "Arroz Costeño Añejo Extra 5kg",
       "brand": "Costeño",
@@ -1788,6 +1773,21 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/arroz-coste-o-a-ejo-extra-5kg-1000184/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/651244/Arroz-Coste-o-A-ejo-Extra-5kg-1-238316.jpg?v=639172281718470000",
+      "query": "arroz extra costeño"
+    },
+    {
+      "productId": "34075",
+      "name": "Arroz Blanco Extra Añejo Faraón Naranja 5kg",
+      "brand": "Faraon",
+      "presentation": "5kg",
+      "unit": "UN",
+      "price": 24.9,
+      "normalPrice": null,
+      "ean": "7754294000095",
+      "category": "/Abarrotes/Arroz/Arroz Extra y Superior/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/arroz-blanco-extra-anejo-faraon-naranja-5kg-570522/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/535630/570522-01-39350.jpg?v=638563377745130000",
       "query": "arroz extra costeño"
     },
     {
@@ -2136,66 +2136,6 @@
       "query": "atun florida 170 g"
     },
     {
-      "productId": "562387",
-      "name": "Avena Quinua Cuisine & Co 300g",
-      "brand": "Cuisine & Co",
-      "presentation": "300g",
-      "unit": "UN",
-      "price": 3.9,
-      "normalPrice": 5.1,
-      "ean": "2050043782133",
-      "category": "/Desayuno/Cereales y Avenas/Avenas Instantáneas/",
-      "ownBrand": true,
-      "url": "https://www.metro.pe/quinua-avena-cuisine-co-bolsa-300-g-891745/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/408920/891745-1.jpg?v=638181172432900000",
-      "query": "avena 900 g"
-    },
-    {
-      "productId": "562381",
-      "name": "Avena Tradicional Cuisine & Co 300g",
-      "brand": "Cuisine & Co",
-      "presentation": "300g",
-      "unit": "UN",
-      "price": 3.9,
-      "normalPrice": 4.9,
-      "ean": "2050043782102",
-      "category": "/Desayuno/Cereales y Avenas/Avenas Instantáneas/",
-      "ownBrand": true,
-      "url": "https://www.metro.pe/avena-tradicional-cuisine-co-300g-891742/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/408917/891742-1.jpg?v=638181172411470000",
-      "query": "avena 900 g"
-    },
-    {
-      "productId": "562383",
-      "name": "Avena Maca Cuisine & Co 300g",
-      "brand": "Cuisine & Co",
-      "presentation": "300g",
-      "unit": "UN",
-      "price": 3.9,
-      "normalPrice": 6,
-      "ean": "2050043782126",
-      "category": "/Desayuno/Cereales y Avenas/Avenas Instantáneas/",
-      "ownBrand": true,
-      "url": "https://www.metro.pe/maca-avena-cuisine-co-bolsa-300-g-891744/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/408922/891744-1.jpg?v=638181172452600000",
-      "query": "avena 900 g"
-    },
-    {
-      "productId": "1076379",
-      "name": "Avena con Chía Cuisine & Co 300g",
-      "brand": "Cuisine & Co",
-      "presentation": "300g",
-      "unit": "UN",
-      "price": 3.9,
-      "normalPrice": 4.9,
-      "ean": "2050044409183",
-      "category": "/Desayuno/Cereales y Avenas/Avenas Instantáneas/",
-      "ownBrand": true,
-      "url": "https://www.metro.pe/avena-con-ch-a-cuisine-co-300g-1041573/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/610362/AVENA-CHIA-CUISINE-CO-300G-Avena-con-Ch-a-Cuisine-Co-300g-1-294531.jpg?v=638959953913400000",
-      "query": "avena 900 g"
-    },
-    {
       "productId": "1719",
       "name": "Hojuelas de Avena Precocida Santa Catalina 250g",
       "brand": "Santa Catalina",
@@ -2226,6 +2166,21 @@
       "query": "avena 900 g"
     },
     {
+      "productId": "562381",
+      "name": "Avena Tradicional Cuisine & Co 300g",
+      "brand": "Cuisine & Co",
+      "presentation": "300g",
+      "unit": "UN",
+      "price": 4.9,
+      "normalPrice": null,
+      "ean": "2050043782102",
+      "category": "/Desayuno/Cereales y Avenas/Avenas Instantáneas/",
+      "ownBrand": true,
+      "url": "https://www.metro.pe/avena-tradicional-cuisine-co-300g-891742/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/408917/891742-1.jpg?v=638181172411470000",
+      "query": "avena 900 g"
+    },
+    {
       "productId": "1096861",
       "name": "Avena con Kiwicha Cuisine & Co 300g",
       "brand": "Cuisine & Co",
@@ -2238,6 +2193,36 @@
       "ownBrand": true,
       "url": "https://www.metro.pe/avena-con-kiwicha-cuisine-co-300g-1052937/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/646092/Avena-con-Kiwicha-Cuisine-Co-300g-1-363692.jpg?v=639143877731270000",
+      "query": "avena 900 g"
+    },
+    {
+      "productId": "1076379",
+      "name": "Avena con Chía Cuisine & Co 300g",
+      "brand": "Cuisine & Co",
+      "presentation": "300g",
+      "unit": "UN",
+      "price": 4.9,
+      "normalPrice": null,
+      "ean": "2050044409183",
+      "category": "/Desayuno/Cereales y Avenas/Avenas Instantáneas/",
+      "ownBrand": true,
+      "url": "https://www.metro.pe/avena-con-ch-a-cuisine-co-300g-1041573/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/610362/AVENA-CHIA-CUISINE-CO-300G-Avena-con-Ch-a-Cuisine-Co-300g-1-294531.jpg?v=638959953913400000",
+      "query": "avena 900 g"
+    },
+    {
+      "productId": "562387",
+      "name": "Avena Quinua Cuisine & Co 300g",
+      "brand": "Cuisine & Co",
+      "presentation": "300g",
+      "unit": "UN",
+      "price": 5.1,
+      "normalPrice": null,
+      "ean": "2050043782133",
+      "category": "/Desayuno/Cereales y Avenas/Avenas Instantáneas/",
+      "ownBrand": true,
+      "url": "https://www.metro.pe/quinua-avena-cuisine-co-bolsa-300-g-891745/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/408920/891745-1.jpg?v=638181172432900000",
       "query": "avena 900 g"
     },
     {
@@ -2316,6 +2301,36 @@
       "query": "avena 900 g"
     },
     {
+      "productId": "1016303",
+      "name": "Bebida de Avena Vakimu Yoguavena Mix Berries 160g",
+      "brand": "Vakimu",
+      "presentation": "160g",
+      "unit": "UN",
+      "price": 5.9,
+      "normalPrice": null,
+      "ean": "7756305001114",
+      "category": "/Lácteos/Yogures/Yogurt Probiótico y  Funcional/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/bebida-de-avena-vakimu-yoguavena-mix-berries-160g/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/458324/Bebida-de-Avena-Vakimu-Yoguavena-Mix-Berries-160g-1-351648307.jpg?v=638285759860300000",
+      "query": "avena 900 g"
+    },
+    {
+      "productId": "562383",
+      "name": "Avena Maca Cuisine & Co 300g",
+      "brand": "Cuisine & Co",
+      "presentation": "300g",
+      "unit": "UN",
+      "price": 6,
+      "normalPrice": null,
+      "ean": "2050043782126",
+      "category": "/Desayuno/Cereales y Avenas/Avenas Instantáneas/",
+      "ownBrand": true,
+      "url": "https://www.metro.pe/maca-avena-cuisine-co-bolsa-300-g-891744/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/408922/891744-1.jpg?v=638181172452600000",
+      "query": "avena 900 g"
+    },
+    {
       "productId": "1688",
       "name": "Avena Premium 3 Ositos 250g",
       "brand": "3 Ositos",
@@ -2346,21 +2361,6 @@
       "query": "avena 900 g"
     },
     {
-      "productId": "1686",
-      "name": "Quinua Avena 3 Ositos 270g",
-      "brand": "3 Ositos",
-      "presentation": "270g",
-      "unit": "UN",
-      "price": 6.4,
-      "normalPrice": null,
-      "ean": "7750885006484",
-      "category": "/Desayuno/Cereales y Avenas/Avenas Instantáneas/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/quinua-avena-3-ositos-270g-131702/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/520538/131702-01-62479.jpg?v=638483890051700000",
-      "query": "avena 900 g"
-    },
-    {
       "productId": "1687",
       "name": "Maca Avena Bolsa 270 g",
       "brand": "3 Ositos",
@@ -2373,6 +2373,21 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/maca-avena-bolsa-270-g/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/519870/131716-01-62478.jpg?v=638479569975530000",
+      "query": "avena 900 g"
+    },
+    {
+      "productId": "1686",
+      "name": "Quinua Avena 3 Ositos 270g",
+      "brand": "3 Ositos",
+      "presentation": "270g",
+      "unit": "UN",
+      "price": 6.4,
+      "normalPrice": null,
+      "ean": "7750885006484",
+      "category": "/Desayuno/Cereales y Avenas/Avenas Instantáneas/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/quinua-avena-3-ositos-270g-131702/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/520538/131702-01-62479.jpg?v=638483890051700000",
       "query": "avena 900 g"
     },
     {
@@ -2406,6 +2421,21 @@
       "query": "avena 900 g"
     },
     {
+      "productId": "1076158",
+      "name": "Avena Integral con Kiwicha Santa Catalina 280g",
+      "brand": "Santa Catalina",
+      "presentation": "280g",
+      "unit": "UN",
+      "price": 6.9,
+      "normalPrice": null,
+      "ean": "7754159001298",
+      "category": "/Desayuno/Cereales y Avenas/Avenas Instantáneas/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/avena-integral-con-kiwicha-santa-catalina-280g-1041369/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/661848/Avena-Integral-con-Kiwicha-Santa-Catalina-280g-1-296850.jpg?v=639235245882430000",
+      "query": "avena 900 g"
+    },
+    {
       "productId": "1076160",
       "name": "Avena Integral con Maca Santa Catalina 280g",
       "brand": "Santa Catalina",
@@ -2433,21 +2463,6 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/avena-integral-con-quinua-santa-catalina-280g-1041368/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/663258/Avena-Integral-con-Quinua-Santa-Catalina-280g-1-296849.jpg?v=639244210048470000",
-      "query": "avena 900 g"
-    },
-    {
-      "productId": "1076158",
-      "name": "Avena Integral con Kiwicha Santa Catalina 280g",
-      "brand": "Santa Catalina",
-      "presentation": "280g",
-      "unit": "UN",
-      "price": 6.9,
-      "normalPrice": null,
-      "ean": "7754159001298",
-      "category": "/Desayuno/Cereales y Avenas/Avenas Instantáneas/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/avena-integral-con-kiwicha-santa-catalina-280g-1041369/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/661848/Avena-Integral-con-Kiwicha-Santa-Catalina-280g-1-296850.jpg?v=639235245882430000",
       "query": "avena 900 g"
     },
     {
@@ -2591,8 +2606,8 @@
       "brand": "Angel",
       "presentation": "380g",
       "unit": "UN",
-      "price": 9.9,
-      "normalPrice": 10.9,
+      "price": 10.9,
+      "normalPrice": null,
       "ean": "7750243082792",
       "category": "/Desayuno/Cereales y Avenas/Cereales/",
       "ownBrand": false,
@@ -2616,6 +2631,21 @@
       "query": "avena 900 g"
     },
     {
+      "productId": "1707",
+      "name": "Avena Tradicional Quaker 900g",
+      "brand": "Quaker",
+      "presentation": "900g",
+      "unit": "UN",
+      "price": 13.5,
+      "normalPrice": null,
+      "ean": "7758574002311",
+      "category": "/Desayuno/Cereales y Avenas/Avenas Instantáneas/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/avena-tradicional-quaker-900g-509768/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/613669/509768-01-22830.jpg?v=638979718401300000",
+      "query": "avena 900 g"
+    },
+    {
       "productId": "935606",
       "name": "Quinua Avena 3 Ositos 900g",
       "brand": "3 Ositos",
@@ -2628,21 +2658,6 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/quinua-avena-3-ositos-900g/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/519881/933877-01-84918.jpg?v=638479570020900000",
-      "query": "avena 900 g"
-    },
-    {
-      "productId": "1707",
-      "name": "Avena Tradicional Quaker 900g",
-      "brand": "Quaker",
-      "presentation": "900g",
-      "unit": "UN",
-      "price": 14.5,
-      "normalPrice": null,
-      "ean": "7758574002311",
-      "category": "/Desayuno/Cereales y Avenas/Avenas Instantáneas/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/avena-tradicional-quaker-900g-509768/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/613669/509768-01-22830.jpg?v=638979718401300000",
       "query": "avena 900 g"
     },
     {
@@ -2688,21 +2703,6 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/harina-de-avena-integral-marimiel-300-g-2/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/348854/HARINA-DE-AVENA-INTEGRAL-MARIMIEL-X-300G-1-226754026.jpg?v=638180578116900000",
-      "query": "avena 900 g"
-    },
-    {
-      "productId": "1072944",
-      "name": "Pan de Molde con Avena Orno 600g",
-      "brand": "Orno",
-      "presentation": "600g",
-      "unit": "UN",
-      "price": 15.9,
-      "normalPrice": null,
-      "ean": "7750489250023",
-      "category": "/Panadería y Pastelería/La Panadería/Panes Especiales/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/pan-de-molde-con-avena-orno-600g-1031035/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/577259/Pan-de-Molde-con-Avena-Orno-600g-PAN-DE-MOLDE-CON-AVENA-X-600-GR-ORNO-1-291641.jpg?v=638779269896230000",
       "query": "avena 900 g"
     },
     {
@@ -2778,21 +2778,6 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/twopack-avena-tradicional-quaker-750g-1072371/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/659527/AVENA-QUAKER-TRADICIONAL-DUOPACK-X-750GR-1-371676.jpg?v=639220017879030000",
-      "query": "avena 900 g"
-    },
-    {
-      "productId": "1074212",
-      "name": "Avena con Manzana Instantánea Santa Catalina 350g",
-      "brand": "Santa Catalina",
-      "presentation": "350g",
-      "unit": "UN",
-      "price": 20,
-      "normalPrice": null,
-      "ean": "7754159001496",
-      "category": "/Desayuno/Cereales y Avenas/Avenas Instantáneas/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/avena-con-manzana-instant-nea-santa-catalina-350g-1039648/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/663256/Avena-Instant-nea-con-Manzana-Santa-Catalina-350g-1-292633.jpg?v=639244210041900000",
       "query": "avena 900 g"
     },
     {
@@ -3351,6 +3336,21 @@
       "query": "carne molida de res"
     },
     {
+      "productId": "1093323",
+      "name": "Carne Molida Especial Nacional x kg",
+      "brand": "Genérico",
+      "presentation": "x kg",
+      "unit": "KG",
+      "price": 21.9,
+      "normalPrice": 24.9,
+      "ean": "2584470000008",
+      "category": "/Carnes, Aves y Pescados/Res y Otras Carnes/Carne Molida/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/carne-molida-especial-nacional-x-kg-1052976/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/627489/CARNE-MOLIDA-ESPECIAL-NACIONAL-TERMOFORM-1-360213.jpg?v=639039657805330000",
+      "query": "carne molida de res"
+    },
+    {
       "productId": "1029795",
       "name": "Carne Molida Porcionada Los Hierros 800g",
       "brand": "Los Hierros",
@@ -3426,6 +3426,36 @@
       "query": "carne molida de res"
     },
     {
+      "productId": "1093327",
+      "name": "Carne para Guiso Nacional x kg",
+      "brand": "Genérico",
+      "presentation": "x kg",
+      "unit": "KG",
+      "price": 36.9,
+      "normalPrice": null,
+      "ean": "2543750000008",
+      "category": "/Carnes, Aves y Pescados/Res y Otras Carnes/Res para Guiso/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/carne-para-guiso-nacional-x-kg-1052980/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/627493/CARNE-PARA-GUISO-NACIONAL-TERMOFORMADO-1-360217.jpg?v=639039657818570000",
+      "query": "carne molida de res"
+    },
+    {
+      "productId": "1618",
+      "name": "Carne para Guiso Nacional x kg",
+      "brand": "Genérico",
+      "presentation": "x kg",
+      "unit": "KG",
+      "price": 36.9,
+      "normalPrice": null,
+      "ean": "2510900000003",
+      "category": "/Carnes, Aves y Pescados/Res y Otras Carnes/Res para Guiso/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/carne-para-guiso-nacional-x-kg-2-2/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/239330/109134-01-7308.jpg?v=638173822327730000",
+      "query": "carne molida de res"
+    },
+    {
       "productId": "36141",
       "name": "Carne para Guiso Nacional x kg",
       "brand": "Genérico",
@@ -3471,6 +3501,21 @@
       "query": "carne molida de res"
     },
     {
+      "productId": "1617",
+      "name": "Carne para Guiso Especial Nacional x kg",
+      "brand": "Genérico",
+      "presentation": "x kg",
+      "unit": "KG",
+      "price": 44.9,
+      "normalPrice": null,
+      "ean": "2510890000007",
+      "category": "/Carnes, Aves y Pescados/Res y Otras Carnes/Res para Guiso/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/carne-para-guiso-especial-nacional-x-kg/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/239326/frontal-3594.jpg?v=638173822307530000",
+      "query": "carne molida de res"
+    },
+    {
       "productId": "557280",
       "name": "Carne para Saltado de Res Nacional Metro x Kg",
       "brand": "Metro",
@@ -3492,7 +3537,7 @@
       "presentation": "x kg",
       "unit": "KG",
       "price": 3.29,
-      "normalPrice": 4.89,
+      "normalPrice": null,
       "ean": "2544730000001",
       "category": "/Frutas y Verduras/Verduras/Cebollas, Ajos y Ajíes/",
       "ownBrand": true,
@@ -3513,6 +3558,21 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/cebolla-roja-agro-selecto-1kg-2/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/355260/Cebolla-Roja-Agro-Selecto-Bolsa-1-Kg-1-160773178.jpg?v=638180580593070000",
+      "query": "cebolla roja"
+    },
+    {
+      "productId": "961324",
+      "name": "Cebolla Roja Picada Cuisine & Co 200g",
+      "brand": "Cuisine & Co",
+      "presentation": "200g",
+      "unit": "UN",
+      "price": 8,
+      "normalPrice": null,
+      "ean": "7757440000598",
+      "category": "/Frutas y Verduras/Verduras/Verduras Preparadas y Picadas/",
+      "ownBrand": true,
+      "url": "https://www.metro.pe/cebolla-roja-picada-cuisine-co-200g/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/369124/Cebolla-Roja-Picada-Cuisine-Co-200g-1-312163964.jpg?v=638180586534330000",
       "query": "cebolla roja"
     },
     {
@@ -3573,21 +3633,6 @@
       "ownBrand": true,
       "url": "https://www.metro.pe/chuleta-de-brazuelo-de-cerdo-con-piel-nacional-del-sur-x-kg-386203/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/283838/Chuleta-de-Brazuelo-de-Cerdo-con-Piel-Nacional-del-Sur-x-kg-1-16518789.jpg?v=638179310373630000",
-      "query": "chuleta de cerdo"
-    },
-    {
-      "productId": "33576",
-      "name": "Chuleta de Pierna con Piel de Cerdo x kg",
-      "brand": "Genérico",
-      "presentation": "x kg",
-      "unit": "KG",
-      "price": 21.9,
-      "normalPrice": null,
-      "ean": "2521620000006",
-      "category": "/Carnes, Aves y Pescados/Cerdo/Pierna y Brazuelo/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/chuleta-de-pierna-con-piel-de-cerdo-x-kg-126333-2/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/275837/126333-01-41388.jpg?v=638179302590500000",
       "query": "chuleta de cerdo"
     },
     {
@@ -3741,21 +3786,6 @@
       "query": "detergente bolivar 750 g"
     },
     {
-      "productId": "1035529",
-      "name": "Detergente en Polvo Bolívar Cuidado Total Floral 730g",
-      "brand": "Bolívar",
-      "presentation": "730g",
-      "unit": "UN",
-      "price": 9.5,
-      "normalPrice": null,
-      "ean": "7750243079051",
-      "category": "/Limpieza/Cuidado de Ropa/Detergente en Polvo/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/detergente-en-polvo-bolivar-cuidado-total-floral-730g-1016182/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/573270/Detergente-en-Polvo-Bol-var-Cuidado-Total-Floral-730g-1-263028.jpg?v=638754321951600000",
-      "query": "detergente bolivar 750 g"
-    },
-    {
       "productId": "1037467",
       "name": "Detergente en Polvo Bolívar Cuidado y Suavidad 730g",
       "brand": "Bolívar",
@@ -3768,6 +3798,21 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/detergente-en-polvo-bolivar-cuidado-y-suavidad-730g-1016184/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/576007/Detergente-en-Polvo-Bol-var-Cuidado-y-Suavidad-730g-1-263829.jpg?v=638768146350330000",
+      "query": "detergente bolivar 750 g"
+    },
+    {
+      "productId": "1035529",
+      "name": "Detergente en Polvo Bolívar Cuidado Total Floral 730g",
+      "brand": "Bolívar",
+      "presentation": "730g",
+      "unit": "UN",
+      "price": 9.5,
+      "normalPrice": null,
+      "ean": "7750243079051",
+      "category": "/Limpieza/Cuidado de Ropa/Detergente en Polvo/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/detergente-en-polvo-bolivar-cuidado-total-floral-730g-1016182/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/573270/Detergente-en-Polvo-Bol-var-Cuidado-Total-Floral-730g-1-263028.jpg?v=638754321951600000",
       "query": "detergente bolivar 750 g"
     },
     {
@@ -3831,21 +3876,6 @@
       "query": "frugos 1 l"
     },
     {
-      "productId": "39355",
-      "name": "Bebida de Durazno Frugos del Valle Botella 1L",
-      "brand": "Frugos",
-      "presentation": "1L",
-      "unit": "UN",
-      "price": 4.6,
-      "normalPrice": 5.5,
-      "ean": "7750182004893",
-      "category": "/Aguas y Bebidas/Jugos y otras bebidas/Jugos Naturales/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/bebida-de-durazno-frugos-del-valle-botella-1l/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/547131/Bebida-de-Durazno-Frugos-del-Valle-Botella-1L-BEBIDA-DEL-VALLE-FRUGOS-DURAZNO-1L-1-264860.jpg?v=638633470170970000",
-      "query": "frugos 1 l"
-    },
-    {
       "productId": "51403",
       "name": "Bebida de Naranja Frugos del Valle Botella 1L",
       "brand": "Frugos",
@@ -3858,6 +3888,21 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/bebida-de-naranja-frugos-del-valle-botella-1l/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/502886/718595002-01-58935.jpg?v=638379345720630000",
+      "query": "frugos 1 l"
+    },
+    {
+      "productId": "39355",
+      "name": "Bebida de Durazno Frugos del Valle Botella 1L",
+      "brand": "Frugos",
+      "presentation": "1L",
+      "unit": "UN",
+      "price": 4.6,
+      "normalPrice": 5.5,
+      "ean": "7750182004893",
+      "category": "/Aguas y Bebidas/Jugos y otras bebidas/Jugos Naturales/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/bebida-de-durazno-frugos-del-valle-botella-1l/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/547131/Bebida-de-Durazno-Frugos-del-Valle-Botella-1L-BEBIDA-DEL-VALLE-FRUGOS-DURAZNO-1L-1-264860.jpg?v=638633470170970000",
       "query": "frugos 1 l"
     },
     {
@@ -3876,21 +3921,6 @@
       "query": "frugos 1 l"
     },
     {
-      "productId": "63",
-      "name": "Bebida de Durazno Frugos del Valle Caja 1.45L",
-      "brand": "Frugos",
-      "presentation": "1.45L",
-      "unit": "UN",
-      "price": 5.5,
-      "normalPrice": 6,
-      "ean": "7750236000185",
-      "category": "/Aguas y Bebidas/Jugos y otras bebidas/Jugos Naturales/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/bebida-de-durazno-frugos-del-valle-caja-1-45l-256200/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/586629/256200-01-84994.jpg?v=638826682001100000",
-      "query": "frugos 1 l"
-    },
-    {
       "productId": "187",
       "name": "Bebida de Manzana Frugos del Valle Caja 1.45L",
       "brand": "Frugos",
@@ -3903,6 +3933,21 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/bebida-de-manzana-frugos-del-valle-caja-1-45l-451828/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/586630/451828-01-38511.jpg?v=638826682004530000",
+      "query": "frugos 1 l"
+    },
+    {
+      "productId": "63",
+      "name": "Bebida de Durazno Frugos del Valle Caja 1.45L",
+      "brand": "Frugos",
+      "presentation": "1.45L",
+      "unit": "UN",
+      "price": 5.5,
+      "normalPrice": 6,
+      "ean": "7750236000185",
+      "category": "/Aguas y Bebidas/Jugos y otras bebidas/Jugos Naturales/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/bebida-de-durazno-frugos-del-valle-caja-1-45l-256200/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/586629/256200-01-84994.jpg?v=638826682001100000",
       "query": "frugos 1 l"
     },
     {
@@ -4581,21 +4626,6 @@
       "query": "huevos pardos"
     },
     {
-      "productId": "44887",
-      "name": "Gaseosa Inca Kola Sin Azúcar Botella 1L",
-      "brand": "Inca Kola",
-      "presentation": "1L",
-      "unit": "UN",
-      "price": 4.9,
-      "normalPrice": null,
-      "ean": "7750182005463",
-      "category": "/Aguas y Bebidas/Gaseosas/Gaseosas Light y Zero/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/gaseosa-inca-kola-sin-azucar-botella-1l-2/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/300170/Gaseosa-Inca-Kola-Sin-Az-car-Botella-1L-1-219874.jpg?v=638179471643570000",
-      "query": "inca kola 1.5 l"
-    },
-    {
       "productId": "10803",
       "name": "Gaseosa Inca Kola Sabor Original Botella 1L",
       "brand": "Inca Kola",
@@ -4608,6 +4638,21 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/gaseosa-inca-kola-sabor-original-botella-1l-534755/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/503957/534755-01-79058.jpg?v=638381183570400000",
+      "query": "inca kola 1.5 l"
+    },
+    {
+      "productId": "44887",
+      "name": "Gaseosa Inca Kola Sin Azúcar Botella 1L",
+      "brand": "Inca Kola",
+      "presentation": "1L",
+      "unit": "UN",
+      "price": 4.9,
+      "normalPrice": null,
+      "ean": "7750182005463",
+      "category": "/Aguas y Bebidas/Gaseosas/Gaseosas Light y Zero/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/gaseosa-inca-kola-sin-azucar-botella-1l-2/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/300170/Gaseosa-Inca-Kola-Sin-Az-car-Botella-1L-1-219874.jpg?v=638179471643570000",
       "query": "inca kola 1.5 l"
     },
     {
@@ -5136,21 +5181,6 @@
       "query": "leche evaporada gloria"
     },
     {
-      "productId": "1079922",
-      "name": "Leche Reconstituida con Quinua , Kiwicha y Cañihua Gloria 390g",
-      "brand": "Gloria",
-      "presentation": "390g",
-      "unit": "UN",
-      "price": 4.7,
-      "normalPrice": null,
-      "ean": "7751271037419",
-      "category": "/Lácteos/Leches/Leches Evaporadas, en polvo y Mezclas Lácteas/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/leche-reconstituida-con-quinua-kiwicha-y-ca-ihua-gloria-390g-1045149/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/594827/LECHE-REC-QUIN-KIWIC-CANIHU-GLORIA-390GR-1-298071.jpg?v=638875282754700000",
-      "query": "leche evaporada gloria"
-    },
-    {
       "productId": "8481",
       "name": "Leche Entera UHT Gloria Bolsa 800ml",
       "brand": "Gloria",
@@ -5163,6 +5193,21 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/leche-entera-uht-gloria-bolsa-800ml-127749/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/607558/127749-01-27237.jpg?v=638938245821500000",
+      "query": "leche evaporada gloria"
+    },
+    {
+      "productId": "1033387",
+      "name": "Leche UHT Sin Lactosa Gloria Zero Lacto Bolsa 800ml",
+      "brand": "Gloria",
+      "presentation": "800ml",
+      "unit": "UN",
+      "price": 5.2,
+      "normalPrice": null,
+      "ean": "7751271036269",
+      "category": "/Lácteos/Leches/Leches Frescas y UHT/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/leche-uht-sin-lactosa-gloria-zero-lacto-bolsa-900ml-1013119/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/607585/Leche-UHT-Sin-Lactosa-Gloria-Zero-Lacto-Bolsa-800ml-1-260491.jpg?v=638953668772000000",
       "query": "leche evaporada gloria"
     },
     {
@@ -5511,21 +5556,6 @@
       "query": "leche evaporada gloria"
     },
     {
-      "productId": "994699",
-      "name": "Sixpack Leche Reconstituida Gloria Lata 390g",
-      "brand": "Gloria",
-      "presentation": "390g",
-      "unit": "UN",
-      "price": 21.9,
-      "normalPrice": 24.6,
-      "ean": "7751271031103",
-      "category": "/Lácteos/Leches/Leches Evaporadas, en polvo y Mezclas Lácteas/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/sixpack-leche-reconstituida-gloria-lata-390g-975289-2/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/596133/975289-1.jpg?v=638880609454970000",
-      "query": "leche evaporada gloria"
-    },
-    {
       "productId": "997912",
       "name": "Sixpack Leche Reconstituida Gloria Light Lata 390g",
       "brand": "Gloria",
@@ -5553,6 +5583,21 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/pack-x6-leche-evaporada-gloria-entera-2-2/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/596134/975696-1.jpg?v=638880609891700000",
+      "query": "leche evaporada gloria"
+    },
+    {
+      "productId": "994699",
+      "name": "Sixpack Leche Reconstituida Gloria Lata 390g",
+      "brand": "Gloria",
+      "presentation": "390g",
+      "unit": "UN",
+      "price": 22.9,
+      "normalPrice": 24.6,
+      "ean": "7751271031103",
+      "category": "/Lácteos/Leches/Leches Evaporadas, en polvo y Mezclas Lácteas/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/sixpack-leche-reconstituida-gloria-lata-390g-975289-2/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/596133/975289-1.jpg?v=638880609454970000",
       "query": "leche evaporada gloria"
     },
     {
@@ -5661,6 +5706,21 @@
       "query": "leche evaporada gloria"
     },
     {
+      "productId": "33573",
+      "name": "Lechuga Americana Metro x unid",
+      "brand": "Metro",
+      "presentation": "",
+      "unit": "UN",
+      "price": 1.99,
+      "normalPrice": null,
+      "ean": "7751368000050",
+      "category": "/Frutas y Verduras/Verduras/Lechugas/",
+      "ownBrand": true,
+      "url": "https://www.metro.pe/lechuga-americana-metro-x-unid-3/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/275823/4027-1.jpg?v=638179302575670000",
+      "query": "lechuga"
+    },
+    {
       "productId": "991337",
       "name": "Lechuga Crespa Cuisine & Co",
       "brand": "Cuisine & Co",
@@ -5676,18 +5736,18 @@
       "query": "lechuga"
     },
     {
-      "productId": "2888",
-      "name": "Lechuga La Caserita",
-      "brand": "La Caserita",
+      "productId": "56096",
+      "name": "Lechuga Hoja de Roble Roja Hidropónica de Invernadero Ecologic x unid",
+      "brand": "Ecologics",
       "presentation": "",
       "unit": "UN",
-      "price": 2.9,
-      "normalPrice": 3.9,
-      "ean": "7750697342664",
+      "price": 2.49,
+      "normalPrice": 3.7,
+      "ean": "7757110000064",
       "category": "/Frutas y Verduras/Verduras/Lechugas/",
       "ownBrand": false,
-      "url": "https://www.metro.pe/lechuga-la-caserita-23027/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/517444/23027-01-30147.jpg?v=638466831738030000",
+      "url": "https://www.metro.pe/lechuga-hoja-de-roble-roja-hidroponica-de-invernadero-ecologic-x-unid/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/416668/Lechuga-Hoja-de-Roble-Roja-Hidroponica-de-Invernadero-Ecologic-x-Unid-1-44544265.jpg?v=638279315014370000",
       "query": "lechuga"
     },
     {
@@ -5706,21 +5766,6 @@
       "query": "lechuga"
     },
     {
-      "productId": "56095",
-      "name": "Lechuga Crespa Hidropónica de Invernadero Ecologic x unid",
-      "brand": "Ecologic",
-      "presentation": "",
-      "unit": "UN",
-      "price": 2.9,
-      "normalPrice": 3.9,
-      "ean": "7757110000026",
-      "category": "/Frutas y Verduras/Verduras/Lechugas/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/lechuga-crespa-hidroponica-de-invernadero-ecologic-x-unid-2/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/416667/Lechuga-Crespa-Hidroponica-de-Invernadero-Ecologic-x-Unid-Lechuga-Crespa-Hidroponico-de-Invernadero-Ecologic-x-Unid-1-44544264.jpg?v=638279314996430000",
-      "query": "lechuga"
-    },
-    {
       "productId": "2933",
       "name": "Lechuga Hidropónica x un",
       "brand": "Genérico",
@@ -5733,21 +5778,6 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/lechuga-hidroponica-x-un/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/240255/191169-1.jpg?v=638173827173770000",
-      "query": "lechuga"
-    },
-    {
-      "productId": "56096",
-      "name": "Lechuga Hoja de Roble Roja Hidropónica de Invernadero Ecologic x unid",
-      "brand": "Ecologics",
-      "presentation": "",
-      "unit": "UN",
-      "price": 3.7,
-      "normalPrice": null,
-      "ean": "7757110000064",
-      "category": "/Frutas y Verduras/Verduras/Lechugas/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/lechuga-hoja-de-roble-roja-hidroponica-de-invernadero-ecologic-x-unid/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/416668/Lechuga-Hoja-de-Roble-Roja-Hidroponica-de-Invernadero-Ecologic-x-Unid-1-44544265.jpg?v=638279315014370000",
       "query": "lechuga"
     },
     {
@@ -5808,6 +5838,21 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/lechuga-americana-delisalad-2/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/397756/Lechuga-Americana-Delisalad-xun-1-136908870.jpg?v=638180798659100000",
+      "query": "lechuga"
+    },
+    {
+      "productId": "2888",
+      "name": "Lechuga La Caserita",
+      "brand": "La Caserita",
+      "presentation": "",
+      "unit": "UN",
+      "price": 3.9,
+      "normalPrice": null,
+      "ean": "7750697342664",
+      "category": "/Frutas y Verduras/Verduras/Lechugas/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/lechuga-la-caserita-23027/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/517444/23027-01-30147.jpg?v=638466831738030000",
       "query": "lechuga"
     },
     {
@@ -5886,18 +5931,18 @@
       "query": "lechuga"
     },
     {
-      "productId": "33573",
-      "name": "Lechuga Americana Metro x unid",
-      "brand": "Metro",
+      "productId": "56095",
+      "name": "Lechuga Crespa Hidropónica de Invernadero Ecologic x unid",
+      "brand": "Ecologic",
       "presentation": "",
       "unit": "UN",
-      "price": 3.99,
+      "price": 3.9,
       "normalPrice": null,
-      "ean": "7751368000050",
+      "ean": "7757110000026",
       "category": "/Frutas y Verduras/Verduras/Lechugas/",
-      "ownBrand": true,
-      "url": "https://www.metro.pe/lechuga-americana-metro-x-unid-3/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/275823/4027-1.jpg?v=638179302575670000",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/lechuga-crespa-hidroponica-de-invernadero-ecologic-x-unid-2/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/416667/Lechuga-Crespa-Hidroponica-de-Invernadero-Ecologic-x-Unid-Lechuga-Crespa-Hidroponico-de-Invernadero-Ecologic-x-Unid-1-44544264.jpg?v=638279314996430000",
       "query": "lechuga"
     },
     {
@@ -5946,6 +5991,21 @@
       "query": "lechuga"
     },
     {
+      "productId": "56098",
+      "name": "Lechuga Romana Hidropónica de Invernadero Ecologic x unid",
+      "brand": "Ecologic",
+      "presentation": "",
+      "unit": "UN",
+      "price": 4.3,
+      "normalPrice": 4.7,
+      "ean": "7757110000019",
+      "category": "/Frutas y Verduras/Verduras/Lechugas/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/lechuga-romana-hidroponica-de-invernadero-ecologic-x-unid/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/416670/Lechuga-Romana-Hidroponica-de-Invernadero-Ecologic-x-Unid-1-44544267.jpg?v=638279315048500000",
+      "query": "lechuga"
+    },
+    {
       "productId": "56099",
       "name": "Lechuga Hoja de Roble Verde Hidropónica Ecologic x unid",
       "brand": "Ecologics",
@@ -5958,21 +6018,6 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/lechuga-hoja-de-roble-verde-hidroponica-ecologic-x-unid-2/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/416671/Lechuga-Hoja-de-Roble-Verde-Hidroponica-de-Invernadero-Ecologic-x-Unid-1-44544268.jpg?v=638279315065170000",
-      "query": "lechuga"
-    },
-    {
-      "productId": "1041002",
-      "name": "Lechuga de Seda Ecologic",
-      "brand": "Ecologic",
-      "presentation": "",
-      "unit": "UN",
-      "price": 4.4,
-      "normalPrice": 5.6,
-      "ean": "7757110001665",
-      "category": "/Frutas y Verduras/Verduras/Lechugas/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/lechuga-de-seda-ecologic-1019282/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/542270/Lechuga-de-Seda-Ecologic-1-265544.jpg?v=638605821962270000",
       "query": "lechuga"
     },
     {
@@ -6006,21 +6051,6 @@
       "query": "lechuga"
     },
     {
-      "productId": "998154",
-      "name": "Lechuga Americana Verde Puro",
-      "brand": "Verde puro",
-      "presentation": "",
-      "unit": "UN",
-      "price": 4.5,
-      "normalPrice": null,
-      "ean": "7758010000413",
-      "category": "/Frutas y Verduras/Verduras/Lechugas/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/lechuga-americana-verde-puro-576029/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/517559/576029-01-92625.jpg?v=638467257824000000",
-      "query": "lechuga"
-    },
-    {
       "productId": "984379",
       "name": "Lechuga Americana Ecologic x un",
       "brand": "Genérico",
@@ -6036,48 +6066,33 @@
       "query": "lechuga"
     },
     {
-      "productId": "56098",
-      "name": "Lechuga Romana Hidropónica de Invernadero Ecologic x unid",
-      "brand": "Ecologic",
-      "presentation": "",
-      "unit": "UN",
-      "price": 4.7,
-      "normalPrice": null,
-      "ean": "7757110000019",
-      "category": "/Frutas y Verduras/Verduras/Lechugas/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/lechuga-romana-hidroponica-de-invernadero-ecologic-x-unid/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/416670/Lechuga-Romana-Hidroponica-de-Invernadero-Ecologic-x-Unid-1-44544267.jpg?v=638279315048500000",
-      "query": "lechuga"
-    },
-    {
-      "productId": "998152",
-      "name": "Lechuga Butterhead Viva x un",
+      "productId": "1074079",
+      "name": "Lechuga Americana Viva x un",
       "brand": "Viva",
       "presentation": "",
       "unit": "UN",
-      "price": 4.8,
-      "normalPrice": 5.8,
-      "ean": "7751021000335",
+      "price": 4.5,
+      "normalPrice": null,
+      "ean": "7751021000458",
       "category": "/Frutas y Verduras/Verduras/Lechugas/",
       "ownBrand": false,
-      "url": "https://www.metro.pe/lechuga-butterhead-viva-x-un-527914/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/626718/527914-01-92615.jpg?v=639032421777330000",
+      "url": "https://www.metro.pe/lechuga-americana-viva-x-un-1039527/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/626720/Lechuga-Americana-Viva-un-1-292510.jpg?v=639032421787870000",
       "query": "lechuga"
     },
     {
-      "productId": "991506",
-      "name": "Mix de Lechuga Cuisine & Co 200g",
-      "brand": "Cuisine & Co",
-      "presentation": "200g",
+      "productId": "1041002",
+      "name": "Lechuga de Seda Ecologic",
+      "brand": "Ecologic",
+      "presentation": "",
       "unit": "UN",
-      "price": 4.9,
-      "normalPrice": 5.9,
-      "ean": "7756866000342",
+      "price": 5.6,
+      "normalPrice": null,
+      "ean": "7757110001665",
       "category": "/Frutas y Verduras/Verduras/Lechugas/",
-      "ownBrand": true,
-      "url": "https://www.metro.pe/mix-de-lechuga-cuisine-co-200g-2/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/450123/Mix-de-Lechuga-Cuisine-Co-200g-1-283394708.jpg?v=638285064408070000",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/lechuga-de-seda-ecologic-1019282/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/542270/Lechuga-de-Seda-Ecologic-1-265544.jpg?v=638605821962270000",
       "query": "lechuga"
     },
     {
@@ -6108,6 +6123,36 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/lechuga-crespa-viva-x-un-527913/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/626716/527913-01-70696.jpg?v=639032421765470000",
+      "query": "lechuga"
+    },
+    {
+      "productId": "998152",
+      "name": "Lechuga Butterhead Viva x un",
+      "brand": "Viva",
+      "presentation": "",
+      "unit": "UN",
+      "price": 5.8,
+      "normalPrice": null,
+      "ean": "7751021000335",
+      "category": "/Frutas y Verduras/Verduras/Lechugas/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/lechuga-butterhead-viva-x-un-527914/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/626718/527914-01-92615.jpg?v=639032421777330000",
+      "query": "lechuga"
+    },
+    {
+      "productId": "991506",
+      "name": "Mix de Lechuga Cuisine & Co 200g",
+      "brand": "Cuisine & Co",
+      "presentation": "200g",
+      "unit": "UN",
+      "price": 5.9,
+      "normalPrice": null,
+      "ean": "7756866000342",
+      "category": "/Frutas y Verduras/Verduras/Lechugas/",
+      "ownBrand": true,
+      "url": "https://www.metro.pe/mix-de-lechuga-cuisine-co-200g-2/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/450123/Mix-de-Lechuga-Cuisine-Co-200g-1-283394708.jpg?v=638285064408070000",
       "query": "lechuga"
     },
     {
@@ -6696,18 +6741,18 @@
       "query": "mantequilla 200 g"
     },
     {
-      "productId": "957802",
-      "name": "Semillas de Ajonjolí Renacer 200 g",
+      "productId": "958560",
+      "name": "Semilla Power Renacer 200 g",
       "brand": "Renacer",
       "presentation": "200 g",
       "unit": "UN",
-      "price": 12.5,
+      "price": 13.2,
       "normalPrice": null,
-      "ean": "7756214000628",
-      "category": "/Desayuno/Suplementos Nutricionales para Adultos/",
+      "ean": "7756214001069",
+      "category": "/Desayuno/Café e Infusiones/Infusiones en Filtrantes y en Hoja/",
       "ownBrand": false,
-      "url": "https://www.metro.pe/semillas-de-ajonjoli-renacer-200-g-2-2/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/372404/SEMILLAS-DE-AJONJOLI-RENACER-X-200-GR-1-238824.jpg?v=638180588207670000",
+      "url": "https://www.metro.pe/semilla-power-renacer-200-g-2/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/382336/SEMILLA-POWER-X200G-RENACER-1-177489058.jpg?v=638180594091270000",
       "query": "mantequilla 200 g"
     },
     {
@@ -6891,21 +6936,6 @@
       "query": "mantequilla 200 g"
     },
     {
-      "productId": "957803",
-      "name": "Semillas de Chía Renacer 200 g",
-      "brand": "Renacer",
-      "presentation": "200 g",
-      "unit": "UN",
-      "price": 18.7,
-      "normalPrice": null,
-      "ean": "7756214000864",
-      "category": "/Desayuno/Suplementos Nutricionales para Adultos/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/semillas-de-chia-renacer-200-g-2-2/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/372411/SEMILLAS-DE-CHIA-RENACER-X-200-GR-1-238825.jpg?v=638180588212330000",
-      "query": "mantequilla 200 g"
-    },
-    {
       "productId": "549057",
       "name": "Mantequilla La Chuguranita Barra 150 g",
       "brand": "La Chuguranita",
@@ -6948,6 +6978,21 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/jamon-artesano-paquete-200-g-2/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/559540/924696-01-75693.jpg?v=638690386069630000",
+      "query": "mantequilla 200 g"
+    },
+    {
+      "productId": "1061727",
+      "name": "Galletas de Mantequilla Noel 80g Surtido",
+      "brand": "Noel",
+      "presentation": "80g",
+      "unit": "UN",
+      "price": 20,
+      "normalPrice": null,
+      "ean": "7702025150373",
+      "category": "/Abarrotes/Galletas, Snacks y Golosinas/Galletas/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/galletas-de-mantequilla-noel-80g-surtido-1027396/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/551731/Galletas-de-Mantequilla-Noel-80g-Surtido-1-282025.jpg?v=638653144045600000",
       "query": "mantequilla 200 g"
     },
     {
@@ -7116,21 +7161,6 @@
       "query": "mantequilla 200 g"
     },
     {
-      "productId": "1022552",
-      "name": "Mantequilla con Sal Arias 235g",
-      "brand": "Arias",
-      "presentation": "235g",
-      "unit": "UN",
-      "price": 36.9,
-      "normalPrice": null,
-      "ean": "8413100612608",
-      "category": "/Lácteos/Mantequillas y Margarinas/Mantequillas/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/mantequilla-con-sal-arias-235g-767264/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/487158/Mantequilla-con-Sal-Arias-235g-1-243322.jpg?v=638322344190430000",
-      "query": "mantequilla 200 g"
-    },
-    {
       "productId": "1022553",
       "name": "Mantequilla Sin Sal Arias 235g",
       "brand": "Arias",
@@ -7143,6 +7173,21 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/mantequilla-sin-sal-arias-235g-767265/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/487159/Mantequilla-Sin-Sal-Arias-235g-1-243323.jpg?v=638322344193270000",
+      "query": "mantequilla 200 g"
+    },
+    {
+      "productId": "1022552",
+      "name": "Mantequilla con Sal Arias 235g",
+      "brand": "Arias",
+      "presentation": "235g",
+      "unit": "UN",
+      "price": 36.9,
+      "normalPrice": null,
+      "ean": "8413100612608",
+      "category": "/Lácteos/Mantequillas y Margarinas/Mantequillas/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/mantequilla-con-sal-arias-235g-767264/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/487158/Mantequilla-con-Sal-Arias-235g-1-243322.jpg?v=638322344190430000",
       "query": "mantequilla 200 g"
     },
     {
@@ -7191,28 +7236,13 @@
       "query": "manzana"
     },
     {
-      "productId": "1025778",
-      "name": "Lavavajillas en Pasta Home Care Manzana 800g",
-      "brand": "Home Care",
-      "presentation": "800g",
-      "unit": "UN",
-      "price": 3,
-      "normalPrice": 5.7,
-      "ean": "2050044281178",
-      "category": "/Limpieza/Limpieza de Cocina/Lavavajillas/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/lavavajillas-en-pasta-home-care-manzana-800g-1003748/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/516009/LAVAVAJILLA-EN-PASTA-800GR-MANZANA-1-246917.jpg?v=638457430963930000",
-      "query": "manzana"
-    },
-    {
       "productId": "1102115",
       "name": "LOA LATA SLEEK 355ML , Manzana",
       "brand": "Loa",
       "presentation": "355ML",
       "unit": "UN",
-      "price": 3.9,
-      "normalPrice": null,
+      "price": 3.5,
+      "normalPrice": 3.9,
       "ean": "7751731007242",
       "category": "/Aguas y Bebidas/Aguas/Agua Saborizada/",
       "ownBrand": false,
@@ -7326,21 +7356,6 @@
       "query": "manzana"
     },
     {
-      "productId": "2740",
-      "name": "Manzana Israel x kg",
-      "brand": "Wong",
-      "presentation": "x kg",
-      "unit": "KG",
-      "price": 5.69,
-      "normalPrice": null,
-      "ean": "40150",
-      "category": "/Frutas y Verduras/Frutas/Manzanas, Peras y Membrillo/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/manzana-israel-x-kg-3920/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/240054/Manzana-Israel-Wong-3920.jpg?v=638173826181830000",
-      "query": "manzana"
-    },
-    {
       "productId": "6563",
       "name": "Compota de Manzana Heinz Frasco 113 g",
       "brand": "Heinz",
@@ -7353,6 +7368,21 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/compota-de-manzana-heinz-frasco-113-g-2/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/244607/48406010-01-1161.jpg?v=638173936408400000",
+      "query": "manzana"
+    },
+    {
+      "productId": "1033513",
+      "name": "Compota Smiley Kids Manzana y Ciruela 90g",
+      "brand": "Smiley Kids",
+      "presentation": "90g",
+      "unit": "UN",
+      "price": 5.9,
+      "normalPrice": null,
+      "ean": "7804650970286",
+      "category": "/Niños y Bebés/Alimentación del Bebé/Compotas, Colados y Galletas/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/compota-smiley-kids-manzana-y-ciruela-90g-990007/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/517575/Compota-Smiley-Kids-Manzana-y-Ciruela-90g-COMPOTA-SMILEY-KIDS-MAN-CIRUELA-90GR-1-176399.jpg?v=638467257987500000",
       "query": "manzana"
     },
     {
@@ -7391,7 +7421,7 @@
       "brand": "Sapolio",
       "presentation": "800g",
       "unit": "UN",
-      "price": 6.5,
+      "price": 6.4,
       "normalPrice": null,
       "ean": "7751851025348",
       "category": "/Limpieza/Limpieza de Cocina/Lavavajillas/",
@@ -7521,21 +7551,6 @@
       "query": "manzana"
     },
     {
-      "productId": "2777",
-      "name": "Manzana Verde Importada x kg",
-      "brand": "Genérico",
-      "presentation": "x kg",
-      "unit": "KG",
-      "price": 8.99,
-      "normalPrice": 9.89,
-      "ean": "2541390000006",
-      "category": "/Frutas y Verduras/Frutas/Manzanas, Peras y Membrillo/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/manzana-verde-importada-x-kg-67290/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/240087/Manzana-Verde-Importada-Wong-67290.jpg?v=638173826368570000",
-      "query": "manzana"
-    },
-    {
       "productId": "1015595",
       "name": "Manzana Americana Verde x kg",
       "brand": "Genérico",
@@ -7548,6 +7563,21 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/manzana-americana-verde-x-kg-11157/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/471154/MANZANA-AMERICANA-VERDE-X-KG-1-173606.jpg?v=638315659713430000",
+      "query": "manzana"
+    },
+    {
+      "productId": "2777",
+      "name": "Manzana Verde Importada x kg",
+      "brand": "Genérico",
+      "presentation": "x kg",
+      "unit": "KG",
+      "price": 8.99,
+      "normalPrice": 9.89,
+      "ean": "2541390000006",
+      "category": "/Frutas y Verduras/Frutas/Manzanas, Peras y Membrillo/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/manzana-verde-importada-x-kg-67290/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/240087/Manzana-Verde-Importada-Wong-67290.jpg?v=638173826368570000",
       "query": "manzana"
     },
     {
@@ -7686,18 +7716,18 @@
       "query": "manzana"
     },
     {
-      "productId": "940832",
-      "name": "Puré de Manzana Cuisine&Co Frasco 850 g",
-      "brand": "Cuisine & Co",
-      "presentation": "850 g",
+      "productId": "1090316",
+      "name": "Puré de Manzana Uchúa 460g",
+      "brand": "Uchua",
+      "presentation": "460g",
       "unit": "UN",
-      "price": 12.9,
-      "normalPrice": 13.9,
-      "ean": "2050044011546",
+      "price": 13.9,
+      "normalPrice": 15.9,
+      "ean": "7750542170046",
       "category": "/Abarrotes/Alimentos en Conserva/Frutas  en Conserva/",
-      "ownBrand": true,
-      "url": "https://www.metro.pe/pure-de-manzana-cuisine-co-frasco-850-g-2-2/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/515981/941360-1-22112.jpg?v=638455272798630000",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/pur-de-manzana-uch-a-460g-1054740/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/626516/Pur-de-Manzana-Uch-a-460g-1-357264.jpg?v=639026482774070000",
       "query": "manzana"
     },
     {
@@ -7706,7 +7736,7 @@
       "brand": "Sapolio",
       "presentation": "1.25 L",
       "unit": "UN",
-      "price": 14.5,
+      "price": 14.8,
       "normalPrice": null,
       "ean": "7751851025096",
       "category": "/Limpieza/Limpieza de Cocina/Lavavajillas/",
@@ -7728,36 +7758,6 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/cortador-de-manzana-bynd-992568/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/464089/Cortador-de-Manzana-Bynd-Cortador-de-Manzana-Bynd-1-351650332.jpg?v=638300128577130000",
-      "query": "manzana"
-    },
-    {
-      "productId": "1102545",
-      "name": "Yogurt Deslactosado Danlac Manzana y Pera 900g",
-      "brand": "Danlac",
-      "presentation": "900g",
-      "unit": "UN",
-      "price": 15.5,
-      "normalPrice": null,
-      "ean": "7750632008297",
-      "category": "/Lácteos/Yogures/Yogurt Probiótico y  Funcional/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/yogurt-deslactosado-danlac-manzana-y-pera-900g-1069800/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/654287/YOGURT-DESLAC-DANLAC-MANZANA-Y-PERA-900G-1-369251.jpg?v=639189669943030000",
-      "query": "manzana"
-    },
-    {
-      "productId": "1090316",
-      "name": "Puré de Manzana Uchúa 460g",
-      "brand": "Uchua",
-      "presentation": "460g",
-      "unit": "UN",
-      "price": 15.9,
-      "normalPrice": null,
-      "ean": "7750542170046",
-      "category": "/Abarrotes/Alimentos en Conserva/Frutas  en Conserva/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/pur-de-manzana-uch-a-460g-1054740/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/626516/Pur-de-Manzana-Uch-a-460g-1-357264.jpg?v=639026482774070000",
       "query": "manzana"
     },
     {
@@ -7791,6 +7791,36 @@
       "query": "manzana"
     },
     {
+      "productId": "1090317",
+      "name": "Puré de Manzana Uchúa 750g",
+      "brand": "Uchua",
+      "presentation": "750g",
+      "unit": "UN",
+      "price": 17.9,
+      "normalPrice": 20.9,
+      "ean": "7750542170053",
+      "category": "/Abarrotes/Alimentos en Conserva/Frutas  en Conserva/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/pur-de-manzana-uch-a-750g-1054741/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/626517/Pur-de-Manzana-Uch-a-750g-1-357265.jpg?v=639026482778100000",
+      "query": "manzana"
+    },
+    {
+      "productId": "946162",
+      "name": "Keke de Manzana con Canela 8 Porciones",
+      "brand": "Cuisine & Co",
+      "presentation": "",
+      "unit": "UN",
+      "price": 17.9,
+      "normalPrice": null,
+      "ean": "29746330",
+      "category": "/Panadería y Pastelería/Pastelería/Chifones y Kekes/",
+      "ownBrand": true,
+      "url": "https://www.metro.pe/keke-de-manzana-con-canela-8-porciones-2/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/419410/Cake-de-Manzana-con-Canela-Cuisine-Co-1-37541.jpg?v=638279873085330000",
+      "query": "manzana"
+    },
+    {
       "productId": "991756",
       "name": "Concentrado de Manzana Agro Selva 500g",
       "brand": "Agroselva",
@@ -7806,33 +7836,18 @@
       "query": "manzana"
     },
     {
-      "productId": "946162",
-      "name": "Keke de Manzana con Canela 8 Porciones",
-      "brand": "Cuisine & Co",
-      "presentation": "",
+      "productId": "1074212",
+      "name": "Avena con Manzana Instantánea Santa Catalina 350g",
+      "brand": "Santa Catalina",
+      "presentation": "350g",
       "unit": "UN",
-      "price": 18.9,
+      "price": 20,
       "normalPrice": null,
-      "ean": "29746330",
-      "category": "/Panadería y Pastelería/Pastelería/Chifones y Kekes/",
-      "ownBrand": true,
-      "url": "https://www.metro.pe/keke-de-manzana-con-canela-8-porciones-2/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/419410/Cake-de-Manzana-con-Canela-Cuisine-Co-1-37541.jpg?v=638279873085330000",
-      "query": "manzana"
-    },
-    {
-      "productId": "1090317",
-      "name": "Puré de Manzana Uchúa 750g",
-      "brand": "Uchua",
-      "presentation": "750g",
-      "unit": "UN",
-      "price": 20.9,
-      "normalPrice": null,
-      "ean": "7750542170053",
-      "category": "/Abarrotes/Alimentos en Conserva/Frutas  en Conserva/",
+      "ean": "7754159001496",
+      "category": "/Desayuno/Cereales y Avenas/Avenas Instantáneas/",
       "ownBrand": false,
-      "url": "https://www.metro.pe/pur-de-manzana-uch-a-750g-1054741/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/626517/Pur-de-Manzana-Uch-a-750g-1-357265.jpg?v=639026482778100000",
+      "url": "https://www.metro.pe/avena-con-manzana-instant-nea-santa-catalina-350g-1039648/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/663256/Avena-Instant-nea-con-Manzana-Santa-Catalina-350g-1-292633.jpg?v=639244210041900000",
       "query": "manzana"
     },
     {
@@ -8016,6 +8031,21 @@
       "query": "naranja"
     },
     {
+      "productId": "49646",
+      "name": "Artesco Resaltador Max Soft 48 Naranja",
+      "brand": "Artesco",
+      "presentation": "",
+      "unit": "UN",
+      "price": 3.4,
+      "normalPrice": null,
+      "ean": "7750082075900",
+      "category": "/Libros y Librería/Útiles Escolares y Oficina/Plumones y Resaltadores/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/artesco-resaltador-max-soft-48-naranja-705303/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/308023/Resaltador-Max-Soft-48-Artesco-1-153965.jpg?v=638179486854200000",
+      "query": "naranja"
+    },
+    {
       "productId": "1021887",
       "name": "Gelatina Umsha Sabor Naranja 130g",
       "brand": "Umsha",
@@ -8076,33 +8106,18 @@
       "query": "naranja"
     },
     {
-      "productId": "1094160",
-      "name": "Bebida de Naranja Gloria Zero Caja 1L",
-      "brand": "Gloria",
-      "presentation": "1L",
+      "productId": "11659",
+      "name": "Néctar de Naranja Selva Botella 300 ml",
+      "brand": "Selva",
+      "presentation": "300 ml",
       "unit": "UN",
-      "price": 3.9,
-      "normalPrice": 5,
-      "ean": "7751271038324",
+      "price": 4.5,
+      "normalPrice": null,
+      "ean": "7750632004787",
       "category": "/Aguas y Bebidas/Jugos y otras bebidas/Jugos Naturales/",
       "ownBrand": false,
-      "url": "https://www.metro.pe/bebida-de-naranja-gloria-zero-caja-1l-1059635002/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/629227/Bebida-de-Naranja-Gloria-Zero-Botella-1L-2-361030.jpg?v=639052293774500000",
-      "query": "naranja"
-    },
-    {
-      "productId": "1002588",
-      "name": "Masking Tape Naranja 48mm x 18m",
-      "brand": "Pegafan",
-      "presentation": "",
-      "unit": "UN",
-      "price": 4.41,
-      "normalPrice": null,
-      "ean": "7754005019873",
-      "category": "/Libros y Librería/Útiles Escolares y Oficina/Cinta Adhesiva y Pegamentos/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/masking-tape-naranja-48mm-x-18m-2/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/404306/Masking-Tape-Naranja-48mm-x-18m-1-351637513.jpg?v=638181135339200000",
+      "url": "https://www.metro.pe/nectar-de-naranja-selva-botella-300-ml-2/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/249014/542617004-01-40087.jpg?v=638173949335470000",
       "query": "naranja"
     },
     {
@@ -8163,36 +8178,6 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/bebida-de-naranja-gloria-caja-1-5l-759583001-2/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/659922/759583001-1-132484.jpg?v=639221637844200000",
-      "query": "naranja"
-    },
-    {
-      "productId": "1017262",
-      "name": "Limpiador Quitagrasa Home Care Naranja 500ml",
-      "brand": "Home Care",
-      "presentation": "500ml",
-      "unit": "UN",
-      "price": 5.3,
-      "normalPrice": null,
-      "ean": "2050044233535",
-      "category": "/Limpieza/Limpieza de Cocina/Sacagrasa/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/limpiador-quitagrasa-home-care-naranja-500ml-2/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/465032/Limpiador-Quitagrasa-Home-Care-Naranja-500ml-1-351649364.jpg?v=638300179110130000",
-      "query": "naranja"
-    },
-    {
-      "productId": "777",
-      "name": "Sacagrasa Sapolio Aroma Naranja Repuesto 500ml",
-      "brand": "Sapolio",
-      "presentation": "500ml",
-      "unit": "UN",
-      "price": 5.5,
-      "normalPrice": 6.5,
-      "ean": "7751851010672",
-      "category": "/Limpieza/Limpieza de Cocina/Sacagrasa/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/sacagrasa-sapolio-aroma-naranja-repuesto-500ml240003/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/238186/240003-01-7576.jpg?v=638173816194530000",
       "query": "naranja"
     },
     {
@@ -8286,33 +8271,18 @@
       "query": "naranja"
     },
     {
-      "productId": "49286",
-      "name": "Vinifan Folder Doble Tapa A4 Naranja",
-      "brand": "Vinifan",
+      "productId": "31416",
+      "name": "Folder con Fastener A4 Artesco Naranja",
+      "brand": "Artesco",
       "presentation": "",
       "unit": "UN",
       "price": 6.9,
       "normalPrice": null,
-      "ean": "7754807033909",
+      "ean": "7750082143067",
       "category": "/Libros y Librería/Útiles Escolares y Oficina/Cuadernos y Folders/",
       "ownBrand": false,
-      "url": "https://www.metro.pe/vinifan-folder-doble-tapa-a4-naranja-2/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/306251/Folder-Doble-Tapa-A4-Vinifan-Anaranjado-1-37981.jpg?v=638179483235670000",
-      "query": "naranja"
-    },
-    {
-      "productId": "1096780",
-      "name": "Bolsas de Papel Multiusos Cuadros Naranja Mecasa",
-      "brand": "Krea",
-      "presentation": "",
-      "unit": "UN",
-      "price": 6.99,
-      "normalPrice": null,
-      "ean": "2050044470763",
-      "category": "/Hogar y Bazar/Menaje de Mesa/Menaje Descartable/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/bolsas-de-papel-multiusos-cuadros-naranja-mecasa-1063178/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/637347/BOLSA-DE-PAPEL-6-CON-IMP-NARANJA-X10-Bolsas-de-Papel-Multiusos-Cuadros-Naranja-Mecasa-2-363604.jpg?v=639093765755130000",
+      "url": "https://www.metro.pe/folder-con-fastener-a4-artesco-naranja-2/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/276890/49325005-01-51237.jpg?v=638179303748600000",
       "query": "naranja"
     },
     {
@@ -8376,18 +8346,18 @@
       "query": "naranja"
     },
     {
-      "productId": "997571",
-      "name": "Jugo de Naranja Florida's Nature Lata 340ml",
-      "brand": "Floridas Natural",
-      "presentation": "340ml",
+      "productId": "563597",
+      "name": "Jugo de Naranja Natural Wong Botella 500ml",
+      "brand": "Genérico",
+      "presentation": "500ml",
       "unit": "UN",
       "price": 7.9,
-      "normalPrice": 9.9,
-      "ean": "16300149011",
-      "category": "/Aguas y Bebidas/Jugos y otras bebidas/Refrescos Preparados e Instantáneos/",
+      "normalPrice": null,
+      "ean": "7752705000788",
+      "category": "/Frutas y Verduras/Frutas/Jugos Naturales/",
       "ownBrand": false,
-      "url": "https://www.metro.pe/jugo-de-naranja-floridas-nature-lata-340ml-969839/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/541639/Jugo-de-Naranja-Florida-s-Nature-Lata-340ml-1-145207.jpg?v=638603121888100000",
+      "url": "https://www.metro.pe/jugo-de-naranja-natural-wong-botella-500ml-2/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/411453/Jugo-de-Naranja-Natural-Wong-Botella-500ml-1-56717.jpg?v=638181187012270000",
       "query": "naranja"
     },
     {
@@ -8421,6 +8391,21 @@
       "query": "naranja"
     },
     {
+      "productId": "1074312",
+      "name": "Sixpack x2 Galleta Tentación Naranja 43g",
+      "brand": "Tentacion",
+      "presentation": "x2",
+      "unit": "UN",
+      "price": 9.4,
+      "normalPrice": 10.8,
+      "ean": "2050044400135",
+      "category": "/Abarrotes/Galletas, Snacks y Golosinas/Galletas/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/sixpack-x2-galleta-tentaci-n-naranja-43g-1039762/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/583035/Sixpack-x2-Galleta-Tentaci-n-Naranja-43g-1-292746.jpg?v=638804325814200000",
+      "query": "naranja"
+    },
+    {
       "productId": "57094",
       "name": "Keke de Naranja Rectangular",
       "brand": "Cuisine & Co",
@@ -8436,6 +8421,36 @@
       "query": "naranja"
     },
     {
+      "productId": "1071656",
+      "name": "Chifón de Naranja Cuisine & Co 320g",
+      "brand": "Cuisine & Co",
+      "presentation": "320g",
+      "unit": "UN",
+      "price": 10.9,
+      "normalPrice": null,
+      "ean": "2050044391754",
+      "category": "/Panadería y Pastelería/Pastelería/Chifones y Kekes/",
+      "ownBrand": true,
+      "url": "https://www.metro.pe/chif-n-de-naranja-cuisine-co-320g-1037192/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/591542/Chif-n-de-Naranja-Cuisine-Co-320g-1-290785.jpg?v=638846553782800000",
+      "query": "naranja"
+    },
+    {
+      "productId": "13518",
+      "name": "Keke Naranja Bimbo Paquete 380 g",
+      "brand": "Bimbo",
+      "presentation": "380 g",
+      "unit": "UN",
+      "price": 11.2,
+      "normalPrice": null,
+      "ean": "7750727005668",
+      "category": "/Desayuno/Panetones, Kekes y Bizcochos Empacados/Kekes y Bizcochos/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/keke-naranja-bimbo-paquete-380-g-2/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/251886/29151-01-76823.jpg?v=638173962350630000",
+      "query": "naranja"
+    },
+    {
       "productId": "562070",
       "name": "Naranja para Jugo La Pecosita 2.5kg",
       "brand": "Metro",
@@ -8448,21 +8463,6 @@
       "ownBrand": true,
       "url": "https://www.metro.pe/naranja-para-jugo-la-pecosita-2-5kg-773456/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/548290/773456-01-65889.jpg?v=638642002194830000",
-      "query": "naranja"
-    },
-    {
-      "productId": "1073423",
-      "name": "Jugo de Naranja Natural Wong Botella 1L",
-      "brand": "Eco Fresh",
-      "presentation": "1L",
-      "unit": "UN",
-      "price": 12.49,
-      "normalPrice": null,
-      "ean": "7752705002843",
-      "category": "/Frutas y Verduras/Frutas/Procesados de Frutas/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/jugo-de-naranja-natural-wong-botella-1l-1038985/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/585113/Jugo-de-Naranja-Pasteurizada-Ecofresh-Botella-1L-1-291875.jpg?v=638814585660770000",
       "query": "naranja"
     },
     {
@@ -8541,6 +8541,21 @@
       "query": "naranja"
     },
     {
+      "productId": "1103417",
+      "name": "Tripack Sixpack Galletas Chomp Naranja 42g",
+      "brand": "Victoria",
+      "presentation": "42g",
+      "unit": "UN",
+      "price": 16.2,
+      "normalPrice": null,
+      "ean": "2050044498118",
+      "category": "/Abarrotes/Galletas, Snacks y Golosinas/Galletas/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/tripack-sixpack-galletas-chomp-naranja-42g-1070658/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/658577/Tripack-Sixpack-Galletas-Chomp-Naranja-42g-1-370115.jpg?v=639226814875770000",
+      "query": "naranja"
+    },
+    {
       "productId": "54782",
       "name": "Keke de Naranja Redondo",
       "brand": "Cuisine & Co",
@@ -8553,21 +8568,6 @@
       "ownBrand": true,
       "url": "https://www.metro.pe/keke-de-naranja-redondo-2-2/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/595997/456642-1.jpg?v=638878463461800000",
-      "query": "naranja"
-    },
-    {
-      "productId": "34905",
-      "name": "Keke de Naranja + Gaseosa Botella 1.5L",
-      "brand": "Cuisine & Co",
-      "presentation": "1.5L",
-      "unit": "UN",
-      "price": 17.9,
-      "normalPrice": 19.9,
-      "ean": "29752911",
-      "category": "/Panadería y Pastelería/Pastelería/Chifones y Kekes/",
-      "ownBrand": true,
-      "url": "https://www.metro.pe/keke-de-naranja-gaseosa-botella-15l-467229/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/286544/Cake-de-Naranja-Coca-Cola-1-5-Litro-1-169235.jpg?v=638179312859170000",
       "query": "naranja"
     },
     {
@@ -8586,18 +8586,18 @@
       "query": "naranja"
     },
     {
-      "productId": "1071654",
-      "name": "Chifón de Naranja Cuisine & Co 850g",
-      "brand": "Cuisine & Co",
-      "presentation": "850g",
+      "productId": "988799",
+      "name": "Jugo de Naranja Natural Ecofresh Botella 1.8L",
+      "brand": "Genérico",
+      "presentation": "1.8L",
       "unit": "UN",
-      "price": 20.9,
+      "price": 21.9,
       "normalPrice": null,
-      "ean": "2050044391723",
-      "category": "/Panadería y Pastelería/Pastelería/Chifones y Kekes/",
-      "ownBrand": true,
-      "url": "https://www.metro.pe/chif-n-de-naranja-cuisine-co-850g-1037189/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/591540/Chif-n-de-Naranja-Cuisine-Co-850g-1-290783.jpg?v=638846553775770000",
+      "ean": "7752705000542",
+      "category": "/Frutas y Verduras/Frutas/Jugos Naturales/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/jugo-de-naranja-natural-ecofresh-botella-1-8l-2-2/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/412544/Jugo-Natural-de-Naranja-Ecofresh-1-8L-1-56711.jpg?v=638279044512970000",
       "query": "naranja"
     },
     {
@@ -8616,18 +8616,33 @@
       "query": "naranja"
     },
     {
-      "productId": "1088078",
-      "name": "Queque de Arándanos y Naranja Momenti 500g",
-      "brand": "Momenti",
-      "presentation": "500g",
+      "productId": "1106171",
+      "name": "Taza Emboss Naranja Snoopy Hallowee 400ml",
+      "brand": "Snoopy",
+      "presentation": "400ml",
+      "unit": "UN",
+      "price": 24.9,
+      "normalPrice": null,
+      "ean": "2050044502938",
+      "category": "/Hogar y Bazar/Menaje de Mesa/Jarras, Garrafas y Mugs/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/taza-emboss-naranja-snoopy-hallowee-400ml-1073560/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/662006/Taza-Naranja-Snoopy-Halloween-400ml-1-372757.jpg?v=639238269962100000",
+      "query": "naranja"
+    },
+    {
+      "productId": "1080449",
+      "name": "Manta Transportable Pet's Fun Geo Naranja",
+      "brand": "Pet's Fun",
+      "presentation": "",
       "unit": "UN",
       "price": 29.9,
-      "normalPrice": null,
-      "ean": "7759934000992",
-      "category": "/Panadería y Pastelería/Pastelería/Chifones y Kekes/",
+      "normalPrice": 109.9,
+      "ean": "7800155604657",
+      "category": "/Mascotas/Para Perros/Camas para Perros/",
       "ownBrand": false,
-      "url": "https://www.metro.pe/queque-de-ar-ndanos-y-naranja-momenti-500g-1054100/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/622102/Queque-de-Ar-ndanos-y-Naranja-Momenti-500g-1-355022.jpg?v=639004989743500000",
+      "url": "https://www.metro.pe/manta-transportable-pets-fun-geo-naranja-1045685/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/644190/Manta-Transportable-Pet-s-Fun-Geo-Naranja-1-298632.jpg?v=639135129805900000",
       "query": "naranja"
     },
     {
@@ -8721,51 +8736,6 @@
       "query": "palta fuerte"
     },
     {
-      "productId": "2858",
-      "name": "Papa Blanca Canchán Procesada x kgs",
-      "brand": "Genérico",
-      "presentation": "x kg",
-      "unit": "KG",
-      "price": 3.59,
-      "normalPrice": 5.49,
-      "ean": "9541510000008",
-      "category": "/Frutas y Verduras/Verduras/Tubérculos y Raíces/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/papa-blanca-canchan-procesada-x-kgs-4182-2/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/240166/frontal-4.jpg?v=638173826735500000",
-      "query": "papa canchan"
-    },
-    {
-      "productId": "33988",
-      "name": "Papa Canchán Procesada Especial x kg",
-      "brand": "4M",
-      "presentation": "x kg",
-      "unit": "KG",
-      "price": 4.29,
-      "normalPrice": 5.29,
-      "ean": "2544510000000",
-      "category": "/Frutas y Verduras/Verduras/Tubérculos y Raíces/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/papa-canchan-procesada-especial-x-kg-2-2/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/278299/Papa-Canchan-Procesada-Especial-x-kg-1-74459.jpg?v=638179305243930000",
-      "query": "papa canchan"
-    },
-    {
-      "productId": "33616",
-      "name": "Papa Canchán Procesada x kg",
-      "brand": "Comcen",
-      "presentation": "x kg",
-      "unit": "KG",
-      "price": 4.69,
-      "normalPrice": 5.29,
-      "ean": "2545510000006",
-      "category": "/Frutas y Verduras/Verduras/Tubérculos y Raíces/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/papa-canchan-procesada-x-kg-2/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/544000/73450-1.jpg?v=638620988175400000",
-      "query": "papa canchan"
-    },
-    {
       "productId": "944757",
       "name": "Papa Canchán Procesada Agro Selecto 1Kg",
       "brand": "Agro Selecto",
@@ -8778,6 +8748,51 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/papa-canchan-procesada-agro-selecto-1kg-2-2/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/355385/Papa-Canch-n-Procesada-Agro-Selecto-Bolsa-1-Kg-1-160773176.jpg?v=638180580643430000",
+      "query": "papa canchan"
+    },
+    {
+      "productId": "33616",
+      "name": "Papa Canchán Procesada x kg",
+      "brand": "Comcen",
+      "presentation": "x kg",
+      "unit": "KG",
+      "price": 5.29,
+      "normalPrice": null,
+      "ean": "2545510000006",
+      "category": "/Frutas y Verduras/Verduras/Tubérculos y Raíces/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/papa-canchan-procesada-x-kg-2/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/544000/73450-1.jpg?v=638620988175400000",
+      "query": "papa canchan"
+    },
+    {
+      "productId": "33988",
+      "name": "Papa Canchán Procesada Especial x kg",
+      "brand": "4M",
+      "presentation": "x kg",
+      "unit": "KG",
+      "price": 5.29,
+      "normalPrice": null,
+      "ean": "2544510000000",
+      "category": "/Frutas y Verduras/Verduras/Tubérculos y Raíces/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/papa-canchan-procesada-especial-x-kg-2-2/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/278299/Papa-Canchan-Procesada-Especial-x-kg-1-74459.jpg?v=638179305243930000",
+      "query": "papa canchan"
+    },
+    {
+      "productId": "2858",
+      "name": "Papa Blanca Canchán Procesada x kgs",
+      "brand": "Genérico",
+      "presentation": "x kg",
+      "unit": "KG",
+      "price": 5.49,
+      "normalPrice": null,
+      "ean": "9541510000008",
+      "category": "/Frutas y Verduras/Verduras/Tubérculos y Raíces/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/papa-blanca-canchan-procesada-x-kgs-4182-2/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/240166/frontal-4.jpg?v=638173826735500000",
       "query": "papa canchan"
     },
     {
@@ -9111,6 +9126,36 @@
       "query": "queso fresco"
     },
     {
+      "productId": "3666",
+      "name": "Queso Fresco Light Cuisine & Co x kg",
+      "brand": "Cuisine & Co",
+      "presentation": "x kg",
+      "unit": "KG",
+      "price": 30.5,
+      "normalPrice": 35.9,
+      "ean": "2563140000005",
+      "category": "/Lácteos/La Quesería/Quesos Frescos/",
+      "ownBrand": true,
+      "url": "https://www.metro.pe/queso-fresco-light-cuisine-co-x-kg-404744/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/240967/frontal-2726.jpg?v=638173830887570000",
+      "query": "queso fresco"
+    },
+    {
+      "productId": "1017122",
+      "name": "Queso Fresco Light Cuisine & Co x kg",
+      "brand": "Cuisine & Co",
+      "presentation": "x kg",
+      "unit": "KG",
+      "price": 30.6,
+      "normalPrice": 36,
+      "ean": "2544130000007",
+      "category": "/Lácteos/La Quesería/Quesos Frescos/",
+      "ownBrand": true,
+      "url": "https://www.metro.pe/queso-fresco-light-cuisine-co-x-kg/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/461882/Queso-Fresco-Light-Cuisine-Co-x-kg-1-351653085.jpg?v=638285976798400000",
+      "query": "queso fresco"
+    },
+    {
       "productId": "3676",
       "name": "Queso Fresco Bonlé x kg",
       "brand": "Bonlé",
@@ -9126,18 +9171,18 @@
       "query": "queso fresco"
     },
     {
-      "productId": "3666",
-      "name": "Queso Fresco Light Cuisine & Co x kg",
-      "brand": "Cuisine & Co",
+      "productId": "1063487",
+      "name": "Queso Fresco Sin Lactosa Gloria Zero Lacto x kg (250g aprox)",
+      "brand": "Gloria",
       "presentation": "x kg",
       "unit": "KG",
-      "price": 35.9,
-      "normalPrice": null,
-      "ean": "2563140000005",
+      "price": 33.9,
+      "normalPrice": 42.5,
+      "ean": "7751271035262",
       "category": "/Lácteos/La Quesería/Quesos Frescos/",
-      "ownBrand": true,
-      "url": "https://www.metro.pe/queso-fresco-light-cuisine-co-x-kg-404744/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/240967/frontal-2726.jpg?v=638173830887570000",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/queso-fresco-sin-lactosa-gloria-zero-lacto-x-kg-250g-aprox-1028759/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/607591/Queso-Fresco-Sin-Lactosa-Gloria-Zero-Lacto-x-kg-250g-aprox-1-283565.jpg?v=638988138680230000",
       "query": "queso fresco"
     },
     {
@@ -9156,21 +9201,6 @@
       "query": "queso fresco"
     },
     {
-      "productId": "1017122",
-      "name": "Queso Fresco Light Cuisine & Co x kg",
-      "brand": "Cuisine & Co",
-      "presentation": "x kg",
-      "unit": "KG",
-      "price": 36,
-      "normalPrice": null,
-      "ean": "2544130000007",
-      "category": "/Lácteos/La Quesería/Quesos Frescos/",
-      "ownBrand": true,
-      "url": "https://www.metro.pe/queso-fresco-light-cuisine-co-x-kg/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/461882/Queso-Fresco-Light-Cuisine-Co-x-kg-1-351653085.jpg?v=638285976798400000",
-      "query": "queso fresco"
-    },
-    {
       "productId": "3694",
       "name": "Queso Fresco Gloria x kg",
       "brand": "Gloria",
@@ -9183,6 +9213,21 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/queso-fresco-gloria-x-kg-495730/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/607570/495730-01-64865.jpg?v=638938245884400000",
+      "query": "queso fresco"
+    },
+    {
+      "productId": "562096",
+      "name": "Queso Fresco Slim x kg",
+      "brand": "Gloria",
+      "presentation": "x kg",
+      "unit": "KG",
+      "price": 38.9,
+      "normalPrice": 48.5,
+      "ean": "2050043804477",
+      "category": "/Lácteos/La Quesería/Quesos Frescos/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/queso-fresco-slim-x-kg-900287/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/607575/900287-01-40715.jpg?v=638938245914670000",
       "query": "queso fresco"
     },
     {
@@ -9306,36 +9351,6 @@
       "query": "queso fresco"
     },
     {
-      "productId": "1063487",
-      "name": "Queso Fresco Sin Lactosa Gloria Zero Lacto x kg (250g aprox)",
-      "brand": "Gloria",
-      "presentation": "x kg",
-      "unit": "KG",
-      "price": 42.5,
-      "normalPrice": null,
-      "ean": "7751271035262",
-      "category": "/Lácteos/La Quesería/Quesos Frescos/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/queso-fresco-sin-lactosa-gloria-zero-lacto-x-kg-250g-aprox-1028759/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/607591/Queso-Fresco-Sin-Lactosa-Gloria-Zero-Lacto-x-kg-250g-aprox-1-283565.jpg?v=638988138680230000",
-      "query": "queso fresco"
-    },
-    {
-      "productId": "1100794",
-      "name": "Queso Fresco Deslactosado Duman x kg",
-      "brand": "Duman",
-      "presentation": "x kg",
-      "unit": "KG",
-      "price": 42.9,
-      "normalPrice": null,
-      "ean": "2561190000006",
-      "category": "/Lácteos/La Quesería/Quesos Frescos/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/queso-fresco-deslactosado-duman-x-kg-1067777/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/645569/QUESO-FRESCO-DESLAC-DUMAN-X-KG-1-367551.jpg?v=639142042230170000",
-      "query": "queso fresco"
-    },
-    {
       "productId": "1100795",
       "name": "Queso Fresco Light Duman x kg",
       "brand": "Duman",
@@ -9378,21 +9393,6 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/queso-fresco-andino-plusa-x-kg-2/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/514262/frontal-41837.jpg?v=638442741786670000",
-      "query": "queso fresco"
-    },
-    {
-      "productId": "562096",
-      "name": "Queso Fresco Slim x kg",
-      "brand": "Gloria",
-      "presentation": "x kg",
-      "unit": "KG",
-      "price": 47.9,
-      "normalPrice": 48.5,
-      "ean": "2050043804477",
-      "category": "/Lácteos/La Quesería/Quesos Frescos/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/queso-fresco-slim-x-kg-900287/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/607575/900287-01-40715.jpg?v=638938245914670000",
       "query": "queso fresco"
     },
     {
@@ -9546,36 +9546,6 @@
       "query": "spaghetti don vittorio"
     },
     {
-      "productId": "999302",
-      "name": "Fideos Codo Rayado Don Vittorio 225g",
-      "brand": "Don Vittorio",
-      "presentation": "225g",
-      "unit": "UN",
-      "price": 2.1,
-      "normalPrice": null,
-      "ean": "7750243073721",
-      "category": "/Abarrotes/Fideos, Pastas y Salsas/Fideos Cortos y Pastinas/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/fideos-codo-rayado-don-vittorio-225g-2/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/642525/977902001-1-165784.jpg?v=639123898117700000",
-      "query": "spaghetti don vittorio"
-    },
-    {
-      "productId": "51394",
-      "name": "Pastina Corbata Chica Don Vittorio 250g",
-      "brand": "Don Vittorio",
-      "presentation": "250g",
-      "unit": "UN",
-      "price": 2.1,
-      "normalPrice": null,
-      "ean": "7750243690249",
-      "category": "/Abarrotes/Fideos, Pastas y Salsas/Fideos Cortos y Pastinas/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/pastina-corbata-chica-don-vittorio-250g-49124003/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/642510/49124003-01-18704.jpg?v=639123898054000000",
-      "query": "spaghetti don vittorio"
-    },
-    {
       "productId": "2662",
       "name": "Pastina Caracol Chico Don Vittorio 235g",
       "brand": "Don Vittorio",
@@ -9618,6 +9588,36 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/pastina-codo-chico-don-vittorio-250g-49124016-2/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/641273/49124016-01-18711.jpg?v=639117093743570000",
+      "query": "spaghetti don vittorio"
+    },
+    {
+      "productId": "999302",
+      "name": "Fideos Codo Rayado Don Vittorio 225g",
+      "brand": "Don Vittorio",
+      "presentation": "225g",
+      "unit": "UN",
+      "price": 2.1,
+      "normalPrice": null,
+      "ean": "7750243073721",
+      "category": "/Abarrotes/Fideos, Pastas y Salsas/Fideos Cortos y Pastinas/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/fideos-codo-rayado-don-vittorio-225g-2/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/642525/977902001-1-165784.jpg?v=639123898117700000",
+      "query": "spaghetti don vittorio"
+    },
+    {
+      "productId": "51394",
+      "name": "Pastina Corbata Chica Don Vittorio 250g",
+      "brand": "Don Vittorio",
+      "presentation": "250g",
+      "unit": "UN",
+      "price": 2.1,
+      "normalPrice": null,
+      "ean": "7750243690249",
+      "category": "/Abarrotes/Fideos, Pastas y Salsas/Fideos Cortos y Pastinas/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/pastina-corbata-chica-don-vittorio-250g-49124003/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/642510/49124003-01-18704.jpg?v=639123898054000000",
       "query": "spaghetti don vittorio"
     },
     {
@@ -9666,21 +9666,6 @@
       "query": "spaghetti don vittorio"
     },
     {
-      "productId": "1000502",
-      "name": "Fideo Linguini Don Vittorio 500g",
-      "brand": "Don Vittorio",
-      "presentation": "500g",
-      "unit": "UN",
-      "price": 3.3,
-      "normalPrice": 3.8,
-      "ean": "7750243073035",
-      "category": "/Abarrotes/Fideos, Pastas y Salsas/Fideos Largos/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/fideo-linguini-don-vittorio-500g-962243/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/641964/962243-01-149467.jpg?v=639119901712300000",
-      "query": "spaghetti don vittorio"
-    },
-    {
       "productId": "552156",
       "name": "Pastina Tornillo Don Vittorio 500g",
       "brand": "Don Vittorio",
@@ -9696,18 +9681,18 @@
       "query": "spaghetti don vittorio"
     },
     {
-      "productId": "1000497",
-      "name": "Fideo Linguini Grosso Don Vittorio 500g",
+      "productId": "1000502",
+      "name": "Fideo Linguini Don Vittorio 500g",
       "brand": "Don Vittorio",
       "presentation": "500g",
       "unit": "UN",
       "price": 3.3,
       "normalPrice": 3.8,
-      "ean": "7750243073042",
+      "ean": "7750243073035",
       "category": "/Abarrotes/Fideos, Pastas y Salsas/Fideos Largos/",
       "ownBrand": false,
-      "url": "https://www.metro.pe/fideo-linguini-grosso-don-vittorio-500g-962244/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/642517/962244-01-149462.jpg?v=639123898083870000",
+      "url": "https://www.metro.pe/fideo-linguini-don-vittorio-500g-962243/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/641964/962243-01-149467.jpg?v=639119901712300000",
       "query": "spaghetti don vittorio"
     },
     {
@@ -9726,12 +9711,27 @@
       "query": "spaghetti don vittorio"
     },
     {
+      "productId": "1000497",
+      "name": "Fideo Linguini Grosso Don Vittorio 500g",
+      "brand": "Don Vittorio",
+      "presentation": "500g",
+      "unit": "UN",
+      "price": 3.3,
+      "normalPrice": 3.8,
+      "ean": "7750243073042",
+      "category": "/Abarrotes/Fideos, Pastas y Salsas/Fideos Largos/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/fideo-linguini-grosso-don-vittorio-500g-962244/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/642517/962244-01-149462.jpg?v=639123898083870000",
+      "query": "spaghetti don vittorio"
+    },
+    {
       "productId": "999875",
       "name": "Spaghetti Don Vittorio 950g",
       "brand": "Don Vittorio",
       "presentation": "950g",
       "unit": "UN",
-      "price": 5,
+      "price": 4.9,
       "normalPrice": 6.1,
       "ean": "7750243072588",
       "category": "/Abarrotes/Fideos, Pastas y Salsas/Fideos Largos/",
@@ -9746,7 +9746,7 @@
       "brand": "Don Vittorio",
       "presentation": "950g",
       "unit": "UN",
-      "price": 5,
+      "price": 4.9,
       "normalPrice": 6.1,
       "ean": "7750243072977",
       "category": "/Abarrotes/Fideos, Pastas y Salsas/Fideos Largos/",
@@ -9761,7 +9761,7 @@
       "brand": "Don Vittorio",
       "presentation": "950g",
       "unit": "UN",
-      "price": 5,
+      "price": 4.9,
       "normalPrice": 6.1,
       "ean": "7750243072960",
       "category": "/Abarrotes/Fideos, Pastas y Salsas/Fideos Largos/",
@@ -9816,36 +9816,6 @@
       "query": "spaghetti don vittorio"
     },
     {
-      "productId": "1099767",
-      "name": "Tripack Pastina Caracol Chico Don Vittorio 235g",
-      "brand": "Don Vittorio",
-      "presentation": "235g",
-      "unit": "UN",
-      "price": 6,
-      "normalPrice": null,
-      "ean": "2050044478554",
-      "category": "/Abarrotes/Fideos, Pastas y Salsas/Fideos Cortos y Pastinas/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/tripack-pastina-caracol-chico-don-vittorio-235g-1066395/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/641282/Tripack-Pastina-Caracol-Chico-Don-Vittorio-235g-1-366547.jpg?v=639117093795030000",
-      "query": "spaghetti don vittorio"
-    },
-    {
-      "productId": "1099768",
-      "name": "Tripack Pastina Codo Chico Don Vittorio 250g",
-      "brand": "Don Vittorio",
-      "presentation": "250g",
-      "unit": "UN",
-      "price": 6,
-      "normalPrice": null,
-      "ean": "2050044478578",
-      "category": "/Abarrotes/Fideos, Pastas y Salsas/Fideos Cortos y Pastinas/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/tripack-pastina-codo-chico-don-vittorio-250g-1066397/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/641284/Tripack-Pastina-Codo-Chico-Don-Vittorio-250g-1-366548.jpg?v=639117093804170000",
-      "query": "spaghetti don vittorio"
-    },
-    {
       "productId": "1099773",
       "name": "Tripack Pastina Canuto Rayado Don Vittorio 250g",
       "brand": "Don Vittorio",
@@ -9876,6 +9846,36 @@
       "query": "spaghetti don vittorio"
     },
     {
+      "productId": "1099767",
+      "name": "Tripack Pastina Caracol Chico Don Vittorio 235g",
+      "brand": "Don Vittorio",
+      "presentation": "235g",
+      "unit": "UN",
+      "price": 6,
+      "normalPrice": null,
+      "ean": "2050044478554",
+      "category": "/Abarrotes/Fideos, Pastas y Salsas/Fideos Cortos y Pastinas/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/tripack-pastina-caracol-chico-don-vittorio-235g-1066395/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/641282/Tripack-Pastina-Caracol-Chico-Don-Vittorio-235g-1-366547.jpg?v=639117093795030000",
+      "query": "spaghetti don vittorio"
+    },
+    {
+      "productId": "1099768",
+      "name": "Tripack Pastina Codo Chico Don Vittorio 250g",
+      "brand": "Don Vittorio",
+      "presentation": "250g",
+      "unit": "UN",
+      "price": 6,
+      "normalPrice": null,
+      "ean": "2050044478578",
+      "category": "/Abarrotes/Fideos, Pastas y Salsas/Fideos Cortos y Pastinas/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/tripack-pastina-codo-chico-don-vittorio-250g-1066397/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/641284/Tripack-Pastina-Codo-Chico-Don-Vittorio-250g-1-366548.jpg?v=639117093804170000",
+      "query": "spaghetti don vittorio"
+    },
+    {
       "productId": "7729",
       "name": "Salsa Roja Completa Don Vittorio 400g",
       "brand": "Don Vittorio",
@@ -9888,6 +9888,21 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/salsa-roja-completa-don-vittorio-400g-2/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/633398/frontal-29816.jpg?v=639062553953100000",
+      "query": "spaghetti don vittorio"
+    },
+    {
+      "productId": "1100092",
+      "name": "Tripack Pastina Rigatoni Don Vittorio 500g",
+      "brand": "Don Vittorio",
+      "presentation": "500g",
+      "unit": "UN",
+      "price": 8.9,
+      "normalPrice": 11.4,
+      "ean": "2050044481905",
+      "category": "/Abarrotes/Fideos, Pastas y Salsas/Fideos Cortos y Pastinas/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/tripack-pastina-rigatoni-don-vittorio-500g-1066898/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/641981/Tripack-Pastina-Rigatoni-Don-Vittorio-500g-PACK-X3-RIGATONI-DON-VITTORIO-500G-1-366866.jpg?v=639119901769930000",
       "query": "spaghetti don vittorio"
     },
     {
@@ -10011,6 +10026,21 @@
       "query": "spaghetti don vittorio"
     },
     {
+      "productId": "1100096",
+      "name": "Sixpack Pastina Tornillo Don Vittorio 500g",
+      "brand": "Don Vittorio",
+      "presentation": "500g",
+      "unit": "UN",
+      "price": 16.5,
+      "normalPrice": 22.8,
+      "ean": "2050044481950",
+      "category": "/Abarrotes/Fideos, Pastas y Salsas/Fideos Cortos y Pastinas/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/sixpack-pastina-tornillo-don-vittorio-500g-1066903/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/641986/Sixpack-Pastina-Tornillo-Don-Vittorio-500g-PACK-X6-TORNILLO-DON-VITTORIO-500G-1-366870.jpg?v=639119901788830000",
+      "query": "spaghetti don vittorio"
+    },
+    {
       "productId": "1087604",
       "name": "Mayonesa AlaCena 850g + Spaghetti Don Vittorio 950g",
       "brand": "AlaCena",
@@ -10056,6 +10086,51 @@
       "query": "spaghetti don vittorio"
     },
     {
+      "productId": "1080516",
+      "name": "Sixpack Spaghetti Don Vittorio 950g",
+      "brand": "Don Vittorio",
+      "presentation": "950g",
+      "unit": "UN",
+      "price": 27.5,
+      "normalPrice": 36,
+      "ean": "2050044419335",
+      "category": "/Abarrotes/Fideos, Pastas y Salsas/Fideos Largos/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/sixpack-spaghetti-don-vittorio-950g-1045717/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/596309/Sixpack-Spaghetti-Don-Vittorio-950g-1-298678.jpg?v=638881329684630000",
+      "query": "spaghetti don vittorio"
+    },
+    {
+      "productId": "1080517",
+      "name": "Sixpack Fettuccini Don Vittorio 950g",
+      "brand": "Don Vittorio",
+      "presentation": "950g",
+      "unit": "UN",
+      "price": 27.5,
+      "normalPrice": 36,
+      "ean": "2050044419342",
+      "category": "/Abarrotes/Fideos, Pastas y Salsas/Fideos Largos/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/sixpack-fettuccini-don-vittorio-950g-1045718/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/596310/Sixpack-Fettuccini-Don-Vittorio-950g-1-298697.jpg?v=638881329687470000",
+      "query": "spaghetti don vittorio"
+    },
+    {
+      "productId": "1080518",
+      "name": "Sixpack Linguini Grosso Don Vittorio 950g",
+      "brand": "Don Vittorio",
+      "presentation": "950g",
+      "unit": "UN",
+      "price": 27.5,
+      "normalPrice": 36,
+      "ean": "2050044419359",
+      "category": "/Abarrotes/Fideos, Pastas y Salsas/Fideos Largos/",
+      "ownBrand": false,
+      "url": "https://www.metro.pe/sixpack-linguini-grosso-don-vittorio-950g-1045719/p",
+      "image": "https://metroio.vteximg.com.br/arquivos/ids/596311/Sixpack-Linguini-Grosso-Don-Vittorio-950g-1-298693.jpg?v=638881329689800000",
+      "query": "spaghetti don vittorio"
+    },
+    {
       "productId": "33572",
       "name": "Tomate Italiano Metro x kg",
       "brand": "Metro",
@@ -10076,7 +10151,7 @@
       "brand": "Gloria",
       "presentation": "146g",
       "unit": "UN",
-      "price": 2.9,
+      "price": 3,
       "normalPrice": 3.7,
       "ean": "7751271149761",
       "category": "/Lácteos/Yogures/Yogurt Infantil/",
@@ -10091,7 +10166,7 @@
       "brand": "Gloria",
       "presentation": "x 146g",
       "unit": "UN",
-      "price": 2.9,
+      "price": 3,
       "normalPrice": null,
       "ean": "7751271030915",
       "category": "/Lácteos/Yogures/Yogurt Infantil/",
@@ -10136,7 +10211,7 @@
       "brand": "Genérico",
       "presentation": "x kg",
       "unit": "KG",
-      "price": 3.6,
+      "price": 3.99,
       "normalPrice": null,
       "ean": "2544010000004",
       "category": "/Frutas y Verduras/Verduras/Zanahorias y Granos Verdes/",
@@ -10368,21 +10443,6 @@
       "ownBrand": false,
       "url": "https://www.metro.pe/mixtura-arveja-y-zanahoria-precocida-practifood-1kg-1063156/p",
       "image": "https://metroio.vteximg.com.br/arquivos/ids/634309/ARVEJA-ZANAHORIA-X-1-KG-PRACTIFOOD-1-363629.jpg?v=639071301898000000",
-      "query": "zanahoria"
-    },
-    {
-      "productId": "1038590",
-      "name": "Ensalada de Zanahoria y Beterraga La Buena Pepa 450g",
-      "brand": "Buena Pepa",
-      "presentation": "450g",
-      "unit": "UN",
-      "price": 15.5,
-      "normalPrice": null,
-      "ean": "7753123000046",
-      "category": "/Frutas y Verduras/Verduras/Verduras Preparadas y Picadas/",
-      "ownBrand": false,
-      "url": "https://www.metro.pe/ensalada-de-zanahoria-y-beterraga-la-buena-pepa-450g-1007150/p",
-      "image": "https://metroio.vteximg.com.br/arquivos/ids/539882/EN-DE-ZANAH-Y-BET-X-450-GR-BUENA-PEPA-1-250579.jpg?v=638587462563830000",
       "query": "zanahoria"
     },
     {
