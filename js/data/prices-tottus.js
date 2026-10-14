@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-10-13T18:19:05.562Z",
+  "updatedAt": "2026-10-14T15:51:09.406Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -125,6 +125,13 @@ window.SCRAPED_PRICES["tottus"] = {
       "presentation": "1 Kg = 5 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115810260/zanahoria-tottus"
     },
+    "18": {
+      "price": 2.69,
+      "normalPrice": null,
+      "name": "Lechuga Romana Hidropónica Tottus",
+      "presentation": "Empaque 150 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113705800/lechuga-romana-hidroponica-tottus"
+    },
     "19": {
       "price": 5.4,
       "normalPrice": null,
@@ -139,6 +146,13 @@ window.SCRAPED_PRICES["tottus"] = {
       "presentation": "1 Kg = 6 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/130698837/naranja-de-jugo-premium-x-kg"
     },
+    "21": {
+      "price": 13.49,
+      "normalPrice": null,
+      "name": "Palta Fuerte Sin Madurar x Kg",
+      "presentation": "1 Kg = 4 Un Aprox",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/130698965/palta-fuerte-premium-x-kg"
+    },
     "22": {
       "price": 1.9,
       "normalPrice": null,
@@ -147,11 +161,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113710229/yogurt-gloria-frutado-fresa-120-g"
     },
     "23": {
-      "price": 10.6,
+      "price": 36.7,
       "normalPrice": null,
-      "name": "Queso Fresco Piamonte Empaque 200 g",
-      "presentation": "Empaque 200g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087791/queso-fresco-piamonte-empaque-200-g"
+      "name": "Queso Fresco Gloria Molde x Kg",
+      "presentation": "Empaque 300 g Aprox.",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/116973095/queso-fresco-gloria-molde-x-kg"
     },
     "24": {
       "price": 13.5,

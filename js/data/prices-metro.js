@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-10-13T18:20:10.147Z",
+  "updatedAt": "2026-10-14T15:52:11.410Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -36,15 +36,15 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/papa-canchan-procesada-x-kg-2/p"
     },
     "5": {
-      "price": 6.99,
-      "normalPrice": null,
+      "price": 6.4,
+      "normalPrice": 6.99,
       "name": "Tomate Italiano Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/tomate-italiano-metro-x-kg-2-2/p"
     },
     "6": {
-      "price": 9.9,
-      "normalPrice": null,
+      "price": 10.9,
+      "normalPrice": 12.9,
       "name": "Avena Precocida 3 Ositos 900g",
       "presentation": "900g",
       "url": "https://www.metro.pe/avena-premium-clasica-bolsa-1-kg-518456-2/p"
@@ -57,7 +57,7 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/leche-evaporada-entera-gloria-lata-390g-975695-2/p"
     },
     "8": {
-      "price": 3.49,
+      "price": 3.1,
       "normalPrice": 3.99,
       "name": "Platano de Seda x kg",
       "presentation": "x kg",
@@ -120,7 +120,7 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/chuleta-de-pierna-de-cerdo-con-piel-nacional-del-sur-x-kg-386202/p"
     },
     "17": {
-      "price": 3.99,
+      "price": 3.79,
       "normalPrice": null,
       "name": "Zanahoria Especial x kg",
       "presentation": "x kg",
@@ -155,7 +155,7 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/palta-fuerte-metro-x-kg-71554-2/p"
     },
     "22": {
-      "price": 6.1,
+      "price": 6.5,
       "normalPrice": 6.8,
       "name": "Yogurt Parcialmente Descremado Piña Gloria Botella 1 kg",
       "presentation": "1 kg",
@@ -211,7 +211,7 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/lej-a-clorox-tradicional-1kg-49127001/p"
     },
     "30": {
-      "price": 7.5,
+      "price": 7.9,
       "normalPrice": null,
       "name": "Papel Higiénico Doble Hoja Paracas Paquete 4 unid",
       "presentation": "4 unid",
