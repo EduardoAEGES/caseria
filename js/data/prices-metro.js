@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-10-14T15:52:11.410Z",
+  "updatedAt": "2026-10-15T15:38:07.270Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -15,15 +15,15 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/arroz-coste-o-a-ejo-extra-750g-1000183/p"
     },
     "2": {
-      "price": 8.9,
-      "normalPrice": null,
+      "price": 7.5,
+      "normalPrice": 8.9,
       "name": "Pollo Entero con Menudencia Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/pollo-entero-con-menudencia-metro-x-kg-26334-2/p"
     },
     "3": {
-      "price": 17.9,
-      "normalPrice": null,
+      "price": 15.9,
+      "normalPrice": 17.9,
       "name": "Huevos Pardos Metro 30un",
       "presentation": "30un",
       "url": "https://www.metro.pe/huevos-pardos-metro-30un-1009776/p"
@@ -43,8 +43,8 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/tomate-italiano-metro-x-kg-2-2/p"
     },
     "6": {
-      "price": 10.9,
-      "normalPrice": 12.9,
+      "price": 9.9,
+      "normalPrice": 11.9,
       "name": "Avena Precocida 3 Ositos 900g",
       "presentation": "900g",
       "url": "https://www.metro.pe/avena-premium-clasica-bolsa-1-kg-518456-2/p"
@@ -106,11 +106,11 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/carne-molida-economica-congelada-los-hierros-x-500-g/p"
     },
     "15": {
-      "price": 40.2,
-      "normalPrice": 43.9,
-      "name": "Bisteck de Paleta Nacional x kg",
+      "price": 43.9,
+      "normalPrice": null,
+      "name": "Bisteck de Tapa Nacional x kg",
       "presentation": "x kg",
-      "url": "https://www.metro.pe/bisteck-de-paleta-nacional-en-bandeja-x-kg-390618-2/p"
+      "url": "https://www.metro.pe/bisteck-de-tapa-nacional-en-bandeja-x-kg-390616-2/p"
     },
     "16": {
       "price": 19.9,
@@ -127,11 +127,11 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/zanahoria-especial-x-kg-2-2/p"
     },
     "18": {
-      "price": 1.99,
-      "normalPrice": null,
-      "name": "Lechuga Americana Metro x unid",
+      "price": 1.9,
+      "normalPrice": 2.7,
+      "name": "Lechuga Crespa Cuisine & Co",
       "presentation": "",
-      "url": "https://www.metro.pe/lechuga-americana-metro-x-unid-3/p"
+      "url": "https://www.metro.pe/lechuga-crespa-cuisine-co-959972-2/p"
     },
     "19": {
       "price": 4.99,

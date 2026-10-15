@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-10-14T15:51:09.406Z",
+  "updatedAt": "2026-10-15T15:37:07.366Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -14,7 +14,7 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/124763718/arroz-costeno-extra-anejo-bolsa-750-g"
     },
     "2": {
-      "price": 9.9,
+      "price": 10.5,
       "normalPrice": 11.5,
       "name": "Pollo Entero Trozado Redondos x Kg",
       "presentation": "2.15 kg Aprox",
@@ -22,10 +22,10 @@ window.SCRAPED_PRICES["tottus"] = {
     },
     "3": {
       "price": 17.9,
-      "normalPrice": 19.5,
-      "name": "Huevos Pardos La Calera Bandeja 30 Und",
+      "normalPrice": null,
+      "name": "Huevos Pardos Tottus Bandeja 30 Und",
       "presentation": "Bandeja 30 Und",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/130751327/huevos-pardos-la-calera-bandeja-30-und"
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/114518367/huevos-pardos-tottus-bandeja-30-und"
     },
     "4": {
       "price": 4.19,
@@ -63,8 +63,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115847468/platano-de-seda-extra-tottus-x-kg"
     },
     "9": {
-      "price": 3.89,
-      "normalPrice": 3.9,
+      "price": 3.99,
+      "normalPrice": null,
       "name": "Cebolla Roja Tottus",
       "presentation": "1 Kg = 8 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115805615/cebolla-roja-tottus"
@@ -77,8 +77,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706444/aceite-vegetal-primor-clasico-botella-900-ml"
     },
     "11": {
-      "price": 3.8,
-      "normalPrice": null,
+      "price": 3.4,
+      "normalPrice": 3.8,
       "name": "Pasta Trigo Fettuccini Don Vittorio Empaque 500 g",
       "presentation": "Empaque 500 g",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/142707030/pasta-trigo-fettuccini-don-vittorio-empaque-500-g"
@@ -155,17 +155,17 @@ window.SCRAPED_PRICES["tottus"] = {
     },
     "22": {
       "price": 1.9,
-      "normalPrice": null,
-      "name": "Yogurt Gloria Frutado Fresa Envase 120 g",
-      "presentation": "Envase 120 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113710229/yogurt-gloria-frutado-fresa-120-g"
+      "normalPrice": 1.95,
+      "name": "Yogurt Gloria Fresa Botella 180 g",
+      "presentation": "Botella 180 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/119493054/yogurt-gloria-fresa-botella-180-g"
     },
     "23": {
-      "price": 36.7,
+      "price": 10.6,
       "normalPrice": null,
-      "name": "Queso Fresco Gloria Molde x Kg",
-      "presentation": "Empaque 300 g Aprox.",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/116973095/queso-fresco-gloria-molde-x-kg"
+      "name": "Queso Fresco Piamonte Empaque 200 g",
+      "presentation": "Empaque 200g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087791/queso-fresco-piamonte-empaque-200-g"
     },
     "24": {
       "price": 13.5,
@@ -189,7 +189,7 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/116222008/gaseosa-inca-kola-botella-1-5-l"
     },
     "27": {
-      "price": 4.6,
+      "price": 4.5,
       "normalPrice": 5.5,
       "name": "Bebida Frugos Durazno Botella 1 L",
       "presentation": "Botella 1 L",
@@ -210,11 +210,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/123541837/lejia-tradicional-clorox-botella-1-kg"
     },
     "30": {
-      "price": 6.7,
+      "price": 4.49,
       "normalPrice": null,
-      "name": "Papel Higienico Soft Premium 40 metros Empaque 4 Und",
+      "name": "Papel Higiénico Suave Cuidado Completo Empaque 4 Und",
       "presentation": "Empaque 4 Und",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/149684383/papel-higienico-soft-premium-40-metros-empaque-4-und"
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113709043/papel-higienico-suave-cuidado-completo-empaque-4-rollos"
     }
   }
 };
