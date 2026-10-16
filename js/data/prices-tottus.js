@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-10-15T15:37:07.366Z",
+  "updatedAt": "2026-10-16T15:23:54.970Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -126,11 +126,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115810260/zanahoria-tottus"
     },
     "18": {
-      "price": 2.69,
+      "price": 2.59,
       "normalPrice": null,
-      "name": "Lechuga Romana Hidropónica Tottus",
-      "presentation": "Empaque 150 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113705800/lechuga-romana-hidroponica-tottus"
+      "name": "Lechuga Seda Hidropónica Tottus",
+      "presentation": "Empaque 160 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706390/lechuga-seda-hidroponica-tottus"
     },
     "19": {
       "price": 5.4,
