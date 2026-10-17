@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-10-16T15:23:54.970Z",
+  "updatedAt": "2026-10-17T14:14:08.910Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -21,8 +21,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115808216/pollo-entero-trozado-redondos-x-kg"
     },
     "3": {
-      "price": 17.9,
-      "normalPrice": null,
+      "price": 17.5,
+      "normalPrice": 17.9,
       "name": "Huevos Pardos Tottus Bandeja 30 Und",
       "presentation": "Bandeja 30 Und",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/114518367/huevos-pardos-tottus-bandeja-30-und"
@@ -112,11 +112,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115842749/bisteck-de-res"
     },
     "16": {
-      "price": 18.9,
-      "normalPrice": 20.9,
-      "name": "Chuleta De Brazuelo De Cerdo x Kg",
+      "price": 20.5,
+      "normalPrice": 21.9,
+      "name": "Chuleta Parrillera De Cerdo Tottus",
       "presentation": "1 Kg Aprox",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115817331/chuleta-de-brazuelo-de-cerdo-x-kg"
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115869612/chuleta-parrillera-de-cerdo-tottus"
     },
     "17": {
       "price": 4.19,
@@ -126,11 +126,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115810260/zanahoria-tottus"
     },
     "18": {
-      "price": 2.59,
+      "price": 2.69,
       "normalPrice": null,
-      "name": "Lechuga Seda Hidropónica Tottus",
-      "presentation": "Empaque 160 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706390/lechuga-seda-hidroponica-tottus"
+      "name": "Lechuga Romana Hidropónica Tottus",
+      "presentation": "Empaque 150 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113705800/lechuga-romana-hidroponica-tottus"
     },
     "19": {
       "price": 5.4,
