@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-10-17T14:15:14.824Z",
+  "updatedAt": "2026-10-18T14:36:08.815Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -29,11 +29,11 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/huevos-pardos-metro-30un-1009776/p"
     },
     "4": {
-      "price": 4.49,
-      "normalPrice": 5.29,
-      "name": "Papa Canchán Procesada Especial x kg",
+      "price": 5.29,
+      "normalPrice": null,
+      "name": "Papa Canchán Procesada x kg",
       "presentation": "x kg",
-      "url": "https://www.metro.pe/papa-canchan-procesada-especial-x-kg-2-2/p"
+      "url": "https://www.metro.pe/papa-canchan-procesada-x-kg-2/p"
     },
     "5": {
       "price": 6.4,
@@ -57,11 +57,11 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/leche-evaporada-entera-gloria-lata-390g-975695-2/p"
     },
     "8": {
-      "price": 3.49,
-      "normalPrice": 3.99,
-      "name": "Platano de Seda x kg",
+      "price": 2.99,
+      "normalPrice": 3.89,
+      "name": "Plátano de Seda Metro x kg",
       "presentation": "x kg",
-      "url": "https://www.metro.pe/platano-de-seda-x-kg-2/p"
+      "url": "https://www.metro.pe/platano-de-seda-metro-x-kg-2-2/p"
     },
     "9": {
       "price": 3.29,
@@ -148,7 +148,7 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/naranja-para-jugo-chanchamayo-x-kg-152606-2/p"
     },
     "21": {
-      "price": 10.99,
+      "price": 8.99,
       "normalPrice": 12.99,
       "name": "Palta Fuerte Metro x kg",
       "presentation": "x kg",

@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-10-17T14:14:08.910Z",
+  "updatedAt": "2026-10-18T14:35:15.643Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -42,8 +42,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115894677/tomate-italiano-tottus"
     },
     "6": {
-      "price": 7.9,
-      "normalPrice": 8.9,
+      "price": 8.9,
+      "normalPrice": null,
       "name": "Avena Tottus Bolsa 900 g",
       "presentation": "Bolsa 900 g  ",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/135553932/avena-tottus-bolsa-900-g"
@@ -77,8 +77,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706444/aceite-vegetal-primor-clasico-botella-900-ml"
     },
     "11": {
-      "price": 3.4,
-      "normalPrice": 3.8,
+      "price": 3.8,
+      "normalPrice": null,
       "name": "Pasta Trigo Fettuccini Don Vittorio Empaque 500 g",
       "presentation": "Empaque 500 g",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/142707030/pasta-trigo-fettuccini-don-vittorio-empaque-500-g"
@@ -91,15 +91,15 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/157271211/solido-de-atun-florida-en-aceite-de-girasol-caja-170-g"
     },
     "13": {
-      "price": 3.5,
+      "price": 4.2,
       "normalPrice": null,
       "name": "Azúcar Rubia Tottus Bolsa 1 Kg",
       "presentation": "Bolsa 1 Kg",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113705634/azucar-rubia-tottus-bolsa-1-kg"
     },
     "14": {
-      "price": 12.6,
-      "normalPrice": 12.9,
+      "price": 12.9,
+      "normalPrice": null,
       "name": "Carne Molida De Res x 500 g",
       "presentation": "Empaque 500 g Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113787352/carne-molida-de-res-x-500-g"
@@ -112,7 +112,7 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115842749/bisteck-de-res"
     },
     "16": {
-      "price": 20.5,
+      "price": 19.9,
       "normalPrice": 21.9,
       "name": "Chuleta Parrillera De Cerdo Tottus",
       "presentation": "1 Kg Aprox",
@@ -126,11 +126,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115810260/zanahoria-tottus"
     },
     "18": {
-      "price": 2.69,
+      "price": 2.59,
       "normalPrice": null,
-      "name": "Lechuga Romana Hidropónica Tottus",
-      "presentation": "Empaque 150 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113705800/lechuga-romana-hidroponica-tottus"
+      "name": "Lechuga Seda Hidropónica Tottus",
+      "presentation": "Empaque 160 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706390/lechuga-seda-hidroponica-tottus"
     },
     "19": {
       "price": 5.4,
@@ -155,10 +155,10 @@ window.SCRAPED_PRICES["tottus"] = {
     },
     "22": {
       "price": 1.9,
-      "normalPrice": 1.95,
-      "name": "Yogurt Gloria Fresa Botella 180 g",
-      "presentation": "Botella 180 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/119493054/yogurt-gloria-fresa-botella-180-g"
+      "normalPrice": null,
+      "name": "Yogurt Gloria Frutado Fresa Envase 120 g",
+      "presentation": "Envase 120 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113710229/yogurt-gloria-frutado-fresa-120-g"
     },
     "23": {
       "price": 10.6,
