@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-10-18T14:36:08.815Z",
+  "updatedAt": "2026-10-19T17:31:00.910Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -15,8 +15,8 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/arroz-coste-o-a-ejo-extra-750g-1000183/p"
     },
     "2": {
-      "price": 6.9,
-      "normalPrice": 8.9,
+      "price": 8.9,
+      "normalPrice": null,
       "name": "Pollo Entero con Menudencia Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/pollo-entero-con-menudencia-metro-x-kg-26334-2/p"
@@ -36,14 +36,14 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/papa-canchan-procesada-x-kg-2/p"
     },
     "5": {
-      "price": 6.4,
+      "price": 5.49,
       "normalPrice": 6.99,
       "name": "Tomate Italiano Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/tomate-italiano-metro-x-kg-2-2/p"
     },
     "6": {
-      "price": 9.9,
+      "price": 10.5,
       "normalPrice": 11.9,
       "name": "Avena Precocida 3 Ositos 900g",
       "presentation": "900g",
@@ -57,15 +57,15 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/leche-evaporada-entera-gloria-lata-390g-975695-2/p"
     },
     "8": {
-      "price": 2.99,
-      "normalPrice": 3.89,
-      "name": "Plátano de Seda Metro x kg",
+      "price": 3.49,
+      "normalPrice": 3.99,
+      "name": "Platano de Seda x kg",
       "presentation": "x kg",
-      "url": "https://www.metro.pe/platano-de-seda-metro-x-kg-2-2/p"
+      "url": "https://www.metro.pe/platano-de-seda-x-kg-2/p"
     },
     "9": {
-      "price": 3.29,
-      "normalPrice": 4.89,
+      "price": 4.89,
+      "normalPrice": null,
       "name": "Cebolla Roja Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/cebolla-roja-metro-x-kg-3/p"
@@ -106,8 +106,8 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/carne-molida-economica-congelada-los-hierros-x-500-g/p"
     },
     "15": {
-      "price": 38.9,
-      "normalPrice": 43.9,
+      "price": 43.9,
+      "normalPrice": null,
       "name": "Bisteck de Tapa Nacional x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/bisteck-de-tapa-nacional-en-bandeja-x-kg-390616-2/p"
@@ -120,18 +120,18 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/chuleta-de-pierna-de-cerdo-con-piel-nacional-del-sur-x-kg-386202/p"
     },
     "17": {
-      "price": 3.99,
+      "price": 6.79,
       "normalPrice": null,
       "name": "Zanahoria Especial x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/zanahoria-especial-x-kg-2-2/p"
     },
     "18": {
-      "price": 1.9,
-      "normalPrice": 2.7,
-      "name": "Lechuga Crespa Cuisine & Co",
+      "price": 1.99,
+      "normalPrice": null,
+      "name": "Lechuga Americana Metro x unid",
       "presentation": "",
-      "url": "https://www.metro.pe/lechuga-crespa-cuisine-co-959972-2/p"
+      "url": "https://www.metro.pe/lechuga-americana-metro-x-unid-3/p"
     },
     "19": {
       "price": 4.99,
@@ -148,25 +148,25 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/naranja-para-jugo-chanchamayo-x-kg-152606-2/p"
     },
     "21": {
-      "price": 8.99,
+      "price": 10.99,
       "normalPrice": 12.99,
       "name": "Palta Fuerte Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/palta-fuerte-metro-x-kg-71554-2/p"
     },
     "22": {
-      "price": 6.8,
-      "normalPrice": null,
+      "price": 5.9,
+      "normalPrice": 6.8,
       "name": "Yogurt Parcialmente Descremado Piña Gloria Botella 1 kg",
       "presentation": "1 kg",
       "url": "https://www.metro.pe/yogurt-parcialmente-descremado-pina-gloria-botella-1-kg-2-2/p"
     },
     "23": {
-      "price": 24.4,
-      "normalPrice": 36,
+      "price": 30.5,
+      "normalPrice": 35.9,
       "name": "Queso Fresco Cuisine & Co x kg",
       "presentation": "x kg",
-      "url": "https://www.metro.pe/queso-fresco-cuisine-co-x-kg-2/p"
+      "url": "https://www.metro.pe/queso-fresco-cuisine-co-x-kg-3/p"
     },
     "24": {
       "price": 15.9,
