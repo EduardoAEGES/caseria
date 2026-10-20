@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-10-19T17:30:01.409Z",
+  "updatedAt": "2026-10-20T15:40:35.595Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -128,9 +128,9 @@ window.SCRAPED_PRICES["tottus"] = {
     "18": {
       "price": 2.69,
       "normalPrice": null,
-      "name": "Lechuga Romana Hidropónica Tottus",
-      "presentation": "Empaque 150 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113705800/lechuga-romana-hidroponica-tottus"
+      "name": "Lechuga Crespa Verde Hidropónica Tottus",
+      "presentation": "Empaque 180 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113708446/lechuga-crespa-verde-hidroponica-tottus"
     },
     "19": {
       "price": 5.9,
@@ -154,18 +154,18 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115822635/palta-fuerte-organico-tottus"
     },
     "22": {
-      "price": 1.95,
+      "price": 1.9,
       "normalPrice": null,
-      "name": "Yogurt Gloria Fresa Botella 180 g",
-      "presentation": "Botella 180 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/119493054/yogurt-gloria-fresa-botella-180-g"
+      "name": "Yogurt Gloria Frutado Fresa Envase 120 g",
+      "presentation": "Envase 120 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113710229/yogurt-gloria-frutado-fresa-120-g"
     },
     "23": {
-      "price": 16.9,
+      "price": 10.6,
       "normalPrice": null,
-      "name": "Queso Fresco Serrano Del Establo Empaque 250 g",
-      "presentation": "Empaque 250 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/122585242/queso-fresco-serrano-del-establo-empaque-250-g"
+      "name": "Queso Fresco Piamonte Empaque 200 g",
+      "presentation": "Empaque 200g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087791/queso-fresco-piamonte-empaque-200-g"
     },
     "24": {
       "price": 13.5,

@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-10-19T17:31:00.910Z",
+  "updatedAt": "2026-10-20T15:41:38.181Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -71,8 +71,8 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/cebolla-roja-metro-x-kg-3/p"
     },
     "10": {
-      "price": 8.5,
-      "normalPrice": 10.1,
+      "price": 10.1,
+      "normalPrice": null,
       "name": "Aceite Vegetal Primor Clásico Botella 900ml",
       "presentation": "900ml",
       "url": "https://www.metro.pe/aceite-vegetal-primor-cl-sico-botella-900ml-3201-2/p"
@@ -99,8 +99,8 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/azucar-rubia-metro-1kg-116642/p"
     },
     "14": {
-      "price": 15.5,
-      "normalPrice": null,
+      "price": 13.5,
+      "normalPrice": 15.5,
       "name": "Carne Molida Económica Congelada Los Hierros x 500 g",
       "presentation": "x 500 g",
       "url": "https://www.metro.pe/carne-molida-economica-congelada-los-hierros-x-500-g/p"
@@ -120,7 +120,7 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/chuleta-de-pierna-de-cerdo-con-piel-nacional-del-sur-x-kg-386202/p"
     },
     "17": {
-      "price": 6.79,
+      "price": 3.99,
       "normalPrice": null,
       "name": "Zanahoria Especial x kg",
       "presentation": "x kg",
