@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-10-20T15:40:35.595Z",
+  "updatedAt": "2026-10-21T15:58:57.933Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -16,9 +16,9 @@ window.SCRAPED_PRICES["tottus"] = {
     "2": {
       "price": 9.9,
       "normalPrice": 11.5,
-      "name": "Pollo Entero Trozado Redondos x Kg",
-      "presentation": "2.15 kg Aprox",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115808216/pollo-entero-trozado-redondos-x-kg"
+      "name": "Pollo Entero Sin Menudencia Redondos x Kg",
+      "presentation": "2 kg Aprox",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115808410/pollo-entero-sin-menudencia-redondos-x-kg"
     },
     "3": {
       "price": 17.9,
@@ -34,16 +34,9 @@ window.SCRAPED_PRICES["tottus"] = {
       "presentation": "1 Kg = 6 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/129605787/papa-canchan-procesada-x-kg"
     },
-    "5": {
-      "price": 6.99,
-      "normalPrice": 7.79,
-      "name": "Tomate Italiano Tottus",
-      "presentation": "500 g = 3 Un Aprox",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115894677/tomate-italiano-tottus"
-    },
     "6": {
-      "price": 8.9,
-      "normalPrice": null,
+      "price": 7,
+      "normalPrice": 8.9,
       "name": "Avena Tottus Bolsa 900 g",
       "presentation": "Bolsa 900 g  ",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/135553932/avena-tottus-bolsa-900-g"
@@ -107,16 +100,16 @@ window.SCRAPED_PRICES["tottus"] = {
     "15": {
       "price": 42.9,
       "normalPrice": 43.9,
-      "name": "Bisteck De Res",
-      "presentation": "500 g Aprox",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115842749/bisteck-de-res"
+      "name": "Bisteck Tottus",
+      "presentation": "Empaque 700 g Aprox",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115845404/bisteck-tottus"
     },
     "16": {
-      "price": 19.9,
-      "normalPrice": 21.9,
-      "name": "Chuleta Parrillera De Cerdo Tottus",
+      "price": 18.9,
+      "normalPrice": 20.9,
+      "name": "Chuleta De Pierna De Cerdo Tottus",
       "presentation": "1 Kg Aprox",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115869612/chuleta-parrillera-de-cerdo-tottus"
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115897208/chuleta-de-pierna-de-cerdo-tottus"
     },
     "17": {
       "price": 3.99,
@@ -147,11 +140,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/130698837/naranja-de-jugo-premium-x-kg"
     },
     "21": {
-      "price": 17.9,
+      "price": 13.49,
       "normalPrice": null,
-      "name": "Palta Fuerte Orgánico Tottus",
+      "name": "Palta Fuerte Sin Madurar x Kg",
       "presentation": "1 Kg = 4 Un Aprox",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115822635/palta-fuerte-organico-tottus"
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/130698965/palta-fuerte-premium-x-kg"
     },
     "22": {
       "price": 1.9,
@@ -161,11 +154,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113710229/yogurt-gloria-frutado-fresa-120-g"
     },
     "23": {
-      "price": 10.6,
+      "price": 28.9,
       "normalPrice": null,
-      "name": "Queso Fresco Piamonte Empaque 200 g",
-      "presentation": "Empaque 200g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087791/queso-fresco-piamonte-empaque-200-g"
+      "name": "Queso Fresco Light Bonlé x Kg",
+      "presentation": "Empaque 250 g Aprox.",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/116503832/queso-fresco-light-bonle-x-kg"
     },
     "24": {
       "price": 13.5,
