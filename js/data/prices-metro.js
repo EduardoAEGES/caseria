@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-10-21T16:00:02.550Z",
+  "updatedAt": "2026-10-22T15:55:09.380Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -15,8 +15,8 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/arroz-coste-o-a-ejo-extra-750g-1000183/p"
     },
     "2": {
-      "price": 8.9,
-      "normalPrice": null,
+      "price": 6.9,
+      "normalPrice": 8.9,
       "name": "Pollo Entero con Menudencia Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/pollo-entero-con-menudencia-metro-x-kg-26334-2/p"
@@ -36,8 +36,8 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/papa-canchan-procesada-x-kg-2/p"
     },
     "5": {
-      "price": 6.99,
-      "normalPrice": null,
+      "price": 6.49,
+      "normalPrice": 6.99,
       "name": "Tomate Italiano Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/tomate-italiano-metro-x-kg-2-2/p"
@@ -64,7 +64,7 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/platano-de-seda-x-kg-2/p"
     },
     "9": {
-      "price": 4.89,
+      "price": 3.99,
       "normalPrice": null,
       "name": "Cebolla Roja Metro x kg",
       "presentation": "x kg",
@@ -78,8 +78,8 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/aceite-vegetal-primor-cl-sico-botella-900ml-3201-2/p"
     },
     "11": {
-      "price": 3.3,
-      "normalPrice": 3.8,
+      "price": 3.8,
+      "normalPrice": null,
       "name": "Spaghetti Don Vittorio 500g",
       "presentation": "500g",
       "url": "https://www.metro.pe/spaghetti-don-vittorio-500g-962239/p"
@@ -106,11 +106,11 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/carne-molida-economica-congelada-los-hierros-x-500-g/p"
     },
     "15": {
-      "price": 43.9,
-      "normalPrice": null,
-      "name": "Bisteck de Tapa Nacional x kg",
+      "price": 40.2,
+      "normalPrice": 43.9,
+      "name": "Bisteck Bola de Lomo Nacional x kg",
       "presentation": "x kg",
-      "url": "https://www.metro.pe/bisteck-de-tapa-nacional-en-bandeja-x-kg-390616-2/p"
+      "url": "https://www.metro.pe/bisteck-bola-de-lomo-nacional-en-bandeja-x-kg-390617-2/p"
     },
     "16": {
       "price": 19.9,
@@ -148,7 +148,7 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/naranja-para-jugo-chanchamayo-x-kg-152606-2/p"
     },
     "21": {
-      "price": 10.99,
+      "price": 8.99,
       "normalPrice": 12.99,
       "name": "Palta Fuerte Metro x kg",
       "presentation": "x kg",

@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-10-21T15:58:57.933Z",
+  "updatedAt": "2026-10-22T15:54:10.104Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -14,11 +14,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/124763718/arroz-costeno-extra-anejo-bolsa-750-g"
     },
     "2": {
-      "price": 9.9,
+      "price": 10.5,
       "normalPrice": 11.5,
-      "name": "Pollo Entero Sin Menudencia Redondos x Kg",
-      "presentation": "2 kg Aprox",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115808410/pollo-entero-sin-menudencia-redondos-x-kg"
+      "name": "Pollo Entero Trozado Redondos x Kg",
+      "presentation": "2.15 kg Aprox",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115808216/pollo-entero-trozado-redondos-x-kg"
     },
     "3": {
       "price": 17.9,
@@ -34,6 +34,13 @@ window.SCRAPED_PRICES["tottus"] = {
       "presentation": "1 Kg = 6 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/129605787/papa-canchan-procesada-x-kg"
     },
+    "5": {
+      "price": 6.99,
+      "normalPrice": 7.79,
+      "name": "Tomate Italiano Tottus",
+      "presentation": "500 g = 3 Un Aprox",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115894677/tomate-italiano-tottus"
+    },
     "6": {
       "price": 7,
       "normalPrice": 8.9,
@@ -42,8 +49,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/135553932/avena-tottus-bolsa-900-g"
     },
     "7": {
-      "price": 4.2,
-      "normalPrice": null,
+      "price": 4.1,
+      "normalPrice": 4.2,
       "name": "Leche Gloria Reconstituida Entera Lata 390 g",
       "presentation": "Lata 390 g  ",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087921/leche-gloria-reconstituida-entera-lata-390-g"
@@ -70,11 +77,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706444/aceite-vegetal-primor-clasico-botella-900-ml"
     },
     "11": {
-      "price": 3.8,
-      "normalPrice": null,
-      "name": "Pasta Trigo Fettuccini Don Vittorio Empaque 500 g",
-      "presentation": "Empaque 500 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/142707030/pasta-trigo-fettuccini-don-vittorio-empaque-500-g"
+      "price": 3.2,
+      "normalPrice": 3.8,
+      "name": "Pasta Rigatoni Don Vittorio Bolsa 500 g",
+      "presentation": "Bolsa 500 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113708308/pasta-rigatoni-don-vittorio-bolsa-500-g"
     },
     "12": {
       "price": 8.5,
@@ -91,25 +98,25 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113705634/azucar-rubia-tottus-bolsa-1-kg"
     },
     "14": {
-      "price": 12.2,
-      "normalPrice": 12.9,
+      "price": 12.9,
+      "normalPrice": null,
       "name": "Carne Molida De Res x 500 g",
       "presentation": "Empaque 500 g Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113787352/carne-molida-de-res-x-500-g"
     },
     "15": {
-      "price": 42.9,
-      "normalPrice": 43.9,
-      "name": "Bisteck Tottus",
-      "presentation": "Empaque 700 g Aprox",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115845404/bisteck-tottus"
+      "price": 43.9,
+      "normalPrice": null,
+      "name": "Bisteck De Res",
+      "presentation": "500 g Aprox",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115842749/bisteck-de-res"
     },
     "16": {
-      "price": 18.9,
-      "normalPrice": 20.9,
-      "name": "Chuleta De Pierna De Cerdo Tottus",
+      "price": 19.9,
+      "normalPrice": 21.9,
+      "name": "Chuleta Parrillera De Cerdo Tottus",
       "presentation": "1 Kg Aprox",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115897208/chuleta-de-pierna-de-cerdo-tottus"
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115869612/chuleta-parrillera-de-cerdo-tottus"
     },
     "17": {
       "price": 3.99,
@@ -119,11 +126,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115810260/zanahoria-tottus"
     },
     "18": {
-      "price": 2.69,
+      "price": 2.59,
       "normalPrice": null,
-      "name": "Lechuga Crespa Verde Hidropónica Tottus",
-      "presentation": "Empaque 180 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113708446/lechuga-crespa-verde-hidroponica-tottus"
+      "name": "Lechuga Seda Hidropónica Tottus",
+      "presentation": "Empaque 160 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706390/lechuga-seda-hidroponica-tottus"
     },
     "19": {
       "price": 5.9,
@@ -161,11 +168,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/116503832/queso-fresco-light-bonle-x-kg"
     },
     "24": {
-      "price": 13.5,
-      "normalPrice": null,
-      "name": "Mantequilla con Sal President Empaque 200 g",
+      "price": 12.24,
+      "normalPrice": 15.3,
+      "name": "Mantequilla Sin Sal Plusa Empaque 200 g",
       "presentation": "Empaque 200 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113930870/mantequill-con-sal"
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/137931121/mantequilla-sin-sal-plusa-empaque-200-g"
     },
     "25": {
       "price": 3.2,
@@ -175,8 +182,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/152010566/agua-san-luis-sin-gas-botella-3-l"
     },
     "26": {
-      "price": 7.6,
-      "normalPrice": null,
+      "price": 7.5,
+      "normalPrice": 7.6,
       "name": "Gaseosa Inca Kola Botella 1.5 L",
       "presentation": "Botella 1.5 L",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/116222008/gaseosa-inca-kola-botella-1-5-l"
