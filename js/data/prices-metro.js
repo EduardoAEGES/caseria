@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-10-22T15:55:09.380Z",
+  "updatedAt": "2026-10-23T15:47:04.948Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -15,7 +15,7 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/arroz-coste-o-a-ejo-extra-750g-1000183/p"
     },
     "2": {
-      "price": 6.9,
+      "price": 5.99,
       "normalPrice": 8.9,
       "name": "Pollo Entero con Menudencia Metro x kg",
       "presentation": "x kg",
@@ -43,7 +43,7 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/tomate-italiano-metro-x-kg-2-2/p"
     },
     "6": {
-      "price": 10.5,
+      "price": 9.9,
       "normalPrice": 11.9,
       "name": "Avena Precocida 3 Ositos 900g",
       "presentation": "900g",
@@ -108,9 +108,9 @@ window.SCRAPED_PRICES["metro"] = {
     "15": {
       "price": 40.2,
       "normalPrice": 43.9,
-      "name": "Bisteck Bola de Lomo Nacional x kg",
+      "name": "Bisteck de Paleta Nacional x kg",
       "presentation": "x kg",
-      "url": "https://www.metro.pe/bisteck-bola-de-lomo-nacional-en-bandeja-x-kg-390617-2/p"
+      "url": "https://www.metro.pe/bisteck-de-paleta-nacional-en-bandeja-x-kg-390618-2/p"
     },
     "16": {
       "price": 19.9,
@@ -148,7 +148,7 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/naranja-para-jugo-chanchamayo-x-kg-152606-2/p"
     },
     "21": {
-      "price": 8.99,
+      "price": 10.99,
       "normalPrice": 12.99,
       "name": "Palta Fuerte Metro x kg",
       "presentation": "x kg",
@@ -211,7 +211,7 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/lej-a-clorox-tradicional-1kg-49127001/p"
     },
     "30": {
-      "price": 7.9,
+      "price": 7.5,
       "normalPrice": null,
       "name": "Papel Higiénico Doble Hoja Paracas Paquete 4 unid",
       "presentation": "4 unid",

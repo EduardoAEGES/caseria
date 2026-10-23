@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-10-22T15:54:10.104Z",
+  "updatedAt": "2026-10-23T15:46:03.145Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -112,11 +112,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115842749/bisteck-de-res"
     },
     "16": {
-      "price": 19.9,
-      "normalPrice": 21.9,
-      "name": "Chuleta Parrillera De Cerdo Tottus",
-      "presentation": "1 Kg Aprox",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115869612/chuleta-parrillera-de-cerdo-tottus"
+      "price": 20.9,
+      "normalPrice": 22.9,
+      "name": "Chuleta De Lomo De Cerdo Tottus",
+      "presentation": "500 g Aprox",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115869614/chuleta-de-lomo-de-cerdo-tottus"
     },
     "17": {
       "price": 3.99,
@@ -168,11 +168,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/116503832/queso-fresco-light-bonle-x-kg"
     },
     "24": {
-      "price": 12.24,
-      "normalPrice": 15.3,
-      "name": "Mantequilla Sin Sal Plusa Empaque 200 g",
+      "price": 11.9,
+      "normalPrice": 13.5,
+      "name": "Mantequilla con Sal President Empaque 200 g",
       "presentation": "Empaque 200 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/137931121/mantequilla-sin-sal-plusa-empaque-200-g"
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113930870/mantequill-con-sal"
     },
     "25": {
       "price": 3.2,
