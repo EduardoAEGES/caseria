@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-10-23T15:47:04.948Z",
+  "updatedAt": "2026-10-24T14:34:26.904Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -15,25 +15,25 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/arroz-coste-o-a-ejo-extra-750g-1000183/p"
     },
     "2": {
-      "price": 5.99,
+      "price": 6.3,
       "normalPrice": 8.9,
       "name": "Pollo Entero con Menudencia Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/pollo-entero-con-menudencia-metro-x-kg-26334-2/p"
     },
     "3": {
-      "price": 15.9,
+      "price": 14.9,
       "normalPrice": 17.9,
       "name": "Huevos Pardos Metro 30un",
       "presentation": "30un",
       "url": "https://www.metro.pe/huevos-pardos-metro-30un-1009776/p"
     },
     "4": {
-      "price": 5.29,
-      "normalPrice": null,
-      "name": "Papa Canchán Procesada x kg",
+      "price": 4.29,
+      "normalPrice": 5.29,
+      "name": "Papa Canchán Procesada Especial x kg",
       "presentation": "x kg",
-      "url": "https://www.metro.pe/papa-canchan-procesada-x-kg-2/p"
+      "url": "https://www.metro.pe/papa-canchan-procesada-especial-x-kg-2-2/p"
     },
     "5": {
       "price": 6.49,
@@ -106,11 +106,11 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/carne-molida-economica-congelada-los-hierros-x-500-g/p"
     },
     "15": {
-      "price": 40.2,
+      "price": 38.5,
       "normalPrice": 43.9,
-      "name": "Bisteck de Paleta Nacional x kg",
+      "name": "Bisteck de Tapa Nacional x kg",
       "presentation": "x kg",
-      "url": "https://www.metro.pe/bisteck-de-paleta-nacional-en-bandeja-x-kg-390618-2/p"
+      "url": "https://www.metro.pe/bisteck-de-tapa-nacional-en-bandeja-x-kg-390616-2/p"
     },
     "16": {
       "price": 19.9,
@@ -134,8 +134,8 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/lechuga-americana-metro-x-unid-3/p"
     },
     "19": {
-      "price": 4.99,
-      "normalPrice": null,
+      "price": 3.99,
+      "normalPrice": 4.99,
       "name": "Manzana Israel Añawi Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/manzana-israel-anawi-metro-x-kg-2/p"
@@ -155,14 +155,14 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/palta-fuerte-metro-x-kg-71554-2/p"
     },
     "22": {
-      "price": 5.9,
-      "normalPrice": 6.8,
+      "price": 6.8,
+      "normalPrice": null,
       "name": "Yogurt Parcialmente Descremado Piña Gloria Botella 1 kg",
       "presentation": "1 kg",
       "url": "https://www.metro.pe/yogurt-parcialmente-descremado-pina-gloria-botella-1-kg-2-2/p"
     },
     "23": {
-      "price": 30.5,
+      "price": 25.6,
       "normalPrice": 35.9,
       "name": "Queso Fresco Cuisine & Co x kg",
       "presentation": "x kg",
@@ -174,13 +174,6 @@ window.SCRAPED_PRICES["metro"] = {
       "name": "Mantequilla Plusa Con Sal Barra 200 g",
       "presentation": "200 g",
       "url": "https://www.metro.pe/mantequilla-plusa-con-sal-barra-200-g/p"
-    },
-    "25": {
-      "price": 3,
-      "normalPrice": null,
-      "name": "Agua de Mesa Sin Gas San Luis Botella 3L",
-      "presentation": "3L",
-      "url": "https://www.metro.pe/agua-de-mesa-sin-gas-san-luis-botella-3l-59545002/p"
     },
     "26": {
       "price": 7.6,
