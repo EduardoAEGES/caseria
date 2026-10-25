@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-10-24T14:34:26.904Z",
+  "updatedAt": "2026-10-25T14:59:17.436Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -22,7 +22,7 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/pollo-entero-con-menudencia-metro-x-kg-26334-2/p"
     },
     "3": {
-      "price": 14.9,
+      "price": 16.9,
       "normalPrice": 17.9,
       "name": "Huevos Pardos Metro 30un",
       "presentation": "30un",
@@ -57,7 +57,7 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/leche-evaporada-entera-gloria-lata-390g-975695-2/p"
     },
     "8": {
-      "price": 3.49,
+      "price": 2.99,
       "normalPrice": 3.99,
       "name": "Platano de Seda x kg",
       "presentation": "x kg",
@@ -134,14 +134,14 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/lechuga-americana-metro-x-unid-3/p"
     },
     "19": {
-      "price": 3.99,
+      "price": 3.79,
       "normalPrice": 4.99,
       "name": "Manzana Israel Añawi Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/manzana-israel-anawi-metro-x-kg-2/p"
     },
     "20": {
-      "price": 2.99,
+      "price": 2.49,
       "normalPrice": 3.49,
       "name": "Naranja para Jugo Chanchamayo x kg",
       "presentation": "x kg",
@@ -174,6 +174,13 @@ window.SCRAPED_PRICES["metro"] = {
       "name": "Mantequilla Plusa Con Sal Barra 200 g",
       "presentation": "200 g",
       "url": "https://www.metro.pe/mantequilla-plusa-con-sal-barra-200-g/p"
+    },
+    "25": {
+      "price": 3,
+      "normalPrice": null,
+      "name": "Agua de Mesa Sin Gas San Luis Botella 3L",
+      "presentation": "3L",
+      "url": "https://www.metro.pe/agua-de-mesa-sin-gas-san-luis-botella-3l-59545002/p"
     },
     "26": {
       "price": 7.6,
