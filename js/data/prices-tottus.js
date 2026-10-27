@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-10-26T17:24:31.820Z",
+  "updatedAt": "2026-10-27T16:38:44.944Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -35,7 +35,7 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/129605787/papa-canchan-procesada-x-kg"
     },
     "5": {
-      "price": 6.99,
+      "price": 5.48,
       "normalPrice": 7.79,
       "name": "Tomate Italiano Tottus",
       "presentation": "500 g = 3 Un Aprox",
@@ -63,7 +63,7 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115847468/platano-de-seda-extra-tottus-x-kg"
     },
     "9": {
-      "price": 3.99,
+      "price": 3.37,
       "normalPrice": 4.1,
       "name": "Cebolla Roja Tottus",
       "presentation": "1 Kg = 8 Un Aprox",
@@ -161,11 +161,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/119493054/yogurt-gloria-fresa-botella-180-g"
     },
     "23": {
-      "price": 28.9,
-      "normalPrice": null,
-      "name": "Queso Fresco Light Bonlé x Kg",
-      "presentation": "Empaque 250 g Aprox.",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/116503832/queso-fresco-light-bonle-x-kg"
+      "price": 33.8,
+      "normalPrice": 35.2,
+      "name": "Queso Fresco Bonlé x Kg",
+      "presentation": "Empaque 400 g Aprox.",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/116971589/queso-fresco-bonle-x-kg"
     },
     "24": {
       "price": 11.9,
