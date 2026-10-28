@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-10-27T16:38:44.944Z",
+  "updatedAt": "2026-10-28T17:11:05.571Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -35,7 +35,7 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/129605787/papa-canchan-procesada-x-kg"
     },
     "5": {
-      "price": 5.48,
+      "price": 6.99,
       "normalPrice": 7.79,
       "name": "Tomate Italiano Tottus",
       "presentation": "500 g = 3 Un Aprox",
@@ -49,8 +49,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/135553932/avena-tottus-bolsa-900-g"
     },
     "7": {
-      "price": 4.1,
-      "normalPrice": 4.2,
+      "price": 4.2,
+      "normalPrice": null,
       "name": "Leche Gloria Reconstituida Entera Lata 390 g",
       "presentation": "Lata 390 g  ",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087921/leche-gloria-reconstituida-entera-lata-390-g"
@@ -63,7 +63,7 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115847468/platano-de-seda-extra-tottus-x-kg"
     },
     "9": {
-      "price": 3.37,
+      "price": 3.99,
       "normalPrice": 4.1,
       "name": "Cebolla Roja Tottus",
       "presentation": "1 Kg = 8 Un Aprox",
@@ -126,11 +126,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115810260/zanahoria-tottus"
     },
     "18": {
-      "price": 2.69,
+      "price": 2.59,
       "normalPrice": null,
-      "name": "Lechuga Crespa Verde Hidropónica Tottus",
-      "presentation": "Empaque 180 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113708446/lechuga-crespa-verde-hidroponica-tottus"
+      "name": "Lechuga Seda Hidropónica Tottus",
+      "presentation": "Empaque 160 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706390/lechuga-seda-hidroponica-tottus"
     },
     "19": {
       "price": 5.9,
@@ -161,11 +161,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/119493054/yogurt-gloria-fresa-botella-180-g"
     },
     "23": {
-      "price": 33.8,
-      "normalPrice": 35.2,
-      "name": "Queso Fresco Bonlé x Kg",
-      "presentation": "Empaque 400 g Aprox.",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/116971589/queso-fresco-bonle-x-kg"
+      "price": 10.6,
+      "normalPrice": null,
+      "name": "Queso Fresco Piamonte Empaque 200 g",
+      "presentation": "Empaque 200g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087791/queso-fresco-piamonte-empaque-200-g"
     },
     "24": {
       "price": 11.9,
@@ -196,8 +196,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113379569/bebida-frugos-durazno-botella-1-l"
     },
     "28": {
-      "price": 9.4,
-      "normalPrice": 9.5,
+      "price": 9.5,
+      "normalPrice": null,
       "name": "Detergente en Polvo Bolívar Cuidado Total Bolsa 730 g",
       "presentation": "Bolsa 730 g",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/130519777/detergente-en-polvo-bolivar-cuidado-total-bolsa-730-g"
