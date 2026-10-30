@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-10-29T17:28:05.673Z",
+  "updatedAt": "2026-10-30T17:03:04.883Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -64,7 +64,7 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/platano-de-seda-x-kg-2/p"
     },
     "9": {
-      "price": 3.39,
+      "price": 3.99,
       "normalPrice": null,
       "name": "Cebolla Roja Metro x kg",
       "presentation": "x kg",
@@ -174,13 +174,6 @@ window.SCRAPED_PRICES["metro"] = {
       "name": "Mantequilla Sin Lactosa Président Zero Lactosa 200g",
       "presentation": "200g",
       "url": "https://www.metro.pe/mantequilla-sin-lactosa-pr-sident-zero-lactosa-200g-1076053/p"
-    },
-    "25": {
-      "price": 3,
-      "normalPrice": null,
-      "name": "Agua de Mesa Sin Gas San Luis Botella 3L",
-      "presentation": "3L",
-      "url": "https://www.metro.pe/agua-de-mesa-sin-gas-san-luis-botella-3l-59545002/p"
     },
     "26": {
       "price": 7.6,
