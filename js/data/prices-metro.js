@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-10-30T17:03:04.883Z",
+  "updatedAt": "2026-10-31T16:07:55.188Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -42,13 +42,6 @@ window.SCRAPED_PRICES["metro"] = {
       "presentation": "x kg",
       "url": "https://www.metro.pe/tomate-italiano-metro-x-kg-2-2/p"
     },
-    "6": {
-      "price": 9.9,
-      "normalPrice": 11.9,
-      "name": "Avena Precocida 3 Ositos 900g",
-      "presentation": "900g",
-      "url": "https://www.metro.pe/avena-premium-clasica-bolsa-1-kg-518456-2/p"
-    },
     "7": {
       "price": 4.2,
       "normalPrice": null,
@@ -57,11 +50,11 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/leche-evaporada-entera-gloria-lata-390g-975695-2/p"
     },
     "8": {
-      "price": 3.49,
-      "normalPrice": 3.99,
-      "name": "Platano de Seda x kg",
+      "price": 2.99,
+      "normalPrice": 3.89,
+      "name": "Plátano de Seda Metro x kg",
       "presentation": "x kg",
-      "url": "https://www.metro.pe/platano-de-seda-x-kg-2/p"
+      "url": "https://www.metro.pe/platano-de-seda-metro-x-kg-2-2/p"
     },
     "9": {
       "price": 3.99,
@@ -106,7 +99,7 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/carne-molida-economica-congelada-los-hierros-x-500-g/p"
     },
     "15": {
-      "price": 37.9,
+      "price": 40.2,
       "normalPrice": 43.9,
       "name": "Bisteck de Tapa Nacional x kg",
       "presentation": "x kg",
@@ -126,13 +119,6 @@ window.SCRAPED_PRICES["metro"] = {
       "presentation": "x kg",
       "url": "https://www.metro.pe/zanahoria-especial-x-kg-2-2/p"
     },
-    "18": {
-      "price": 2.69,
-      "normalPrice": null,
-      "name": "Lechuga Crespa Cuisine & Co",
-      "presentation": "",
-      "url": "https://www.metro.pe/lechuga-crespa-cuisine-co-959972-2/p"
-    },
     "19": {
       "price": 4.69,
       "normalPrice": 4.99,
@@ -141,7 +127,7 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/manzana-israel-anawi-metro-x-kg-2/p"
     },
     "20": {
-      "price": 2.99,
+      "price": 2.49,
       "normalPrice": 3.49,
       "name": "Naranja para Jugo Chanchamayo x kg",
       "presentation": "x kg",
@@ -162,11 +148,11 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/yogurt-parcialmente-descremado-pina-gloria-botella-1-kg-2-2/p"
     },
     "23": {
-      "price": 29.9,
+      "price": 27.2,
       "normalPrice": 35.9,
-      "name": "Queso Fresco Cuisine & Co x kg",
+      "name": "Queso Fresco Light Cuisine & Co x kg",
       "presentation": "x kg",
-      "url": "https://www.metro.pe/queso-fresco-cuisine-co-x-kg-3/p"
+      "url": "https://www.metro.pe/queso-fresco-light-cuisine-co-x-kg-404744/p"
     },
     "24": {
       "price": 10.9,
@@ -174,6 +160,13 @@ window.SCRAPED_PRICES["metro"] = {
       "name": "Mantequilla Sin Lactosa Président Zero Lactosa 200g",
       "presentation": "200g",
       "url": "https://www.metro.pe/mantequilla-sin-lactosa-pr-sident-zero-lactosa-200g-1076053/p"
+    },
+    "25": {
+      "price": 3,
+      "normalPrice": null,
+      "name": "Agua de Mesa Sin Gas San Luis Botella 3L",
+      "presentation": "3L",
+      "url": "https://www.metro.pe/agua-de-mesa-sin-gas-san-luis-botella-3l-59545002/p"
     },
     "26": {
       "price": 7.6,
