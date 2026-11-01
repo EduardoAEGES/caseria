@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-10-31T16:06:50.297Z",
+  "updatedAt": "2026-11-01T17:09:01.548Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -14,15 +14,15 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/124763718/arroz-costeno-extra-anejo-bolsa-750-g"
     },
     "2": {
-      "price": 9.9,
+      "price": 8.4,
       "normalPrice": 11.5,
       "name": "Pollo Entero Trozado Redondos x Kg",
       "presentation": "2.15 kg Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115808216/pollo-entero-trozado-redondos-x-kg"
     },
     "3": {
-      "price": 17.5,
-      "normalPrice": 17.9,
+      "price": 17.9,
+      "normalPrice": null,
       "name": "Huevos Pardos Tottus Bandeja 30 Und",
       "presentation": "Bandeja 30 Und",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/114518367/huevos-pardos-tottus-bandeja-30-und"
@@ -42,8 +42,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115894677/tomate-italiano-tottus"
     },
     "6": {
-      "price": 7,
-      "normalPrice": 8.9,
+      "price": 8.9,
+      "normalPrice": null,
       "name": "Avena Tottus Bolsa 900 g",
       "presentation": "Bolsa 900 g  ",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/135553932/avena-tottus-bolsa-900-g"
@@ -70,15 +70,15 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115805615/cebolla-roja-tottus"
     },
     "10": {
-      "price": 8.4,
+      "price": 8.9,
       "normalPrice": 10,
       "name": "Aceite Vegetal Primor Clásico Botella 900 mL",
       "presentation": "Botella 900 mL",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706444/aceite-vegetal-primor-clasico-botella-900-ml"
     },
     "11": {
-      "price": 3.2,
-      "normalPrice": 3.8,
+      "price": 3.8,
+      "normalPrice": null,
       "name": "Pasta Trigo Fettuccini Don Vittorio Empaque 500 g",
       "presentation": "Empaque 500 g",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/142707030/pasta-trigo-fettuccini-don-vittorio-empaque-500-g"
@@ -98,22 +98,22 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113705634/azucar-rubia-tottus-bolsa-1-kg"
     },
     "14": {
-      "price": 12.9,
-      "normalPrice": null,
+      "price": 12.5,
+      "normalPrice": 12.9,
       "name": "Carne Molida De Res x 500 g",
       "presentation": "Empaque 500 g Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113787352/carne-molida-de-res-x-500-g"
     },
     "15": {
-      "price": 43.9,
-      "normalPrice": null,
-      "name": "Bisteck De Res",
-      "presentation": "500 g Aprox",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115842749/bisteck-de-res"
+      "price": 42.3,
+      "normalPrice": 52.9,
+      "name": "Bisteck De Res Tottus",
+      "presentation": "Empaque 500 g Aprox",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115851718/bisteck-de-res-tottus"
     },
     "16": {
       "price": 18.9,
-      "normalPrice": 20.9,
+      "normalPrice": null,
       "name": "Chuleta De Pierna De Cerdo Tottus",
       "presentation": "1 Kg Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115897208/chuleta-de-pierna-de-cerdo-tottus"
@@ -126,8 +126,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115810260/zanahoria-tottus"
     },
     "18": {
-      "price": 2.59,
-      "normalPrice": null,
+      "price": 2.1,
+      "normalPrice": 2.59,
       "name": "Lechuga Seda Hidropónica Tottus",
       "presentation": "Empaque 160 g",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706390/lechuga-seda-hidroponica-tottus"
@@ -140,8 +140,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115805738/manzana-israel-tottus"
     },
     "20": {
-      "price": 2.79,
-      "normalPrice": null,
+      "price": 2.2,
+      "normalPrice": 2.79,
       "name": "Naranja De Jugo Premium x Kg",
       "presentation": "1 Kg = 6 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/130698837/naranja-de-jugo-premium-x-kg"
@@ -191,9 +191,9 @@ window.SCRAPED_PRICES["tottus"] = {
     "27": {
       "price": 4.5,
       "normalPrice": 5.5,
-      "name": "Bebida Frugos Durazno Botella 1 L",
+      "name": "Bebida Frugos Naranja Botella 1 L",
       "presentation": "Botella 1 L",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113379569/bebida-frugos-durazno-botella-1-l"
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113368387/bebida-frugos-naranja-botella-1-l"
     },
     "28": {
       "price": 9.4,

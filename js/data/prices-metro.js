@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-10-31T16:07:55.188Z",
+  "updatedAt": "2026-11-01T17:10:01.625Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -15,25 +15,25 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/arroz-coste-o-a-ejo-extra-750g-1000183/p"
     },
     "2": {
-      "price": 8.9,
-      "normalPrice": null,
+      "price": 7.9,
+      "normalPrice": 8.9,
       "name": "Pollo Entero con Menudencia Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/pollo-entero-con-menudencia-metro-x-kg-26334-2/p"
     },
     "3": {
-      "price": 17.9,
-      "normalPrice": null,
+      "price": 14.9,
+      "normalPrice": 17.9,
       "name": "Huevos Pardos Metro 30un",
       "presentation": "30un",
       "url": "https://www.metro.pe/huevos-pardos-metro-30un-1009776/p"
     },
     "4": {
-      "price": 5.29,
-      "normalPrice": null,
-      "name": "Papa Canchán Procesada x kg",
+      "price": 4.29,
+      "normalPrice": 5.29,
+      "name": "Papa Canchán Procesada Especial x kg",
       "presentation": "x kg",
-      "url": "https://www.metro.pe/papa-canchan-procesada-x-kg-2/p"
+      "url": "https://www.metro.pe/papa-canchan-procesada-especial-x-kg-2-2/p"
     },
     "5": {
       "price": 6.49,
@@ -41,6 +41,13 @@ window.SCRAPED_PRICES["metro"] = {
       "name": "Tomate Italiano Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/tomate-italiano-metro-x-kg-2-2/p"
+    },
+    "6": {
+      "price": 9.9,
+      "normalPrice": 11.9,
+      "name": "Avena Precocida 3 Ositos 900g",
+      "presentation": "900g",
+      "url": "https://www.metro.pe/avena-premium-clasica-bolsa-1-kg-518456-2/p"
     },
     "7": {
       "price": 4.2,
@@ -118,6 +125,13 @@ window.SCRAPED_PRICES["metro"] = {
       "name": "Zanahoria Especial x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/zanahoria-especial-x-kg-2-2/p"
+    },
+    "18": {
+      "price": 2.69,
+      "normalPrice": null,
+      "name": "Lechuga Crespa Cuisine & Co",
+      "presentation": "",
+      "url": "https://www.metro.pe/lechuga-crespa-cuisine-co-959972-2/p"
     },
     "19": {
       "price": 4.69,
