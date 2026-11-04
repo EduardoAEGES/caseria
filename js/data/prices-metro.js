@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-11-03T18:28:36.902Z",
+  "updatedAt": "2026-11-04T18:40:22.453Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -133,13 +133,6 @@ window.SCRAPED_PRICES["metro"] = {
       "presentation": "",
       "url": "https://www.metro.pe/lechuga-crespa-cuisine-co-959972-2/p"
     },
-    "19": {
-      "price": 4.69,
-      "normalPrice": 4.99,
-      "name": "Manzana Israel Añawi Metro x kg",
-      "presentation": "x kg",
-      "url": "https://www.metro.pe/manzana-israel-anawi-metro-x-kg-2/p"
-    },
     "20": {
       "price": 2.99,
       "normalPrice": 3.49,
@@ -156,7 +149,7 @@ window.SCRAPED_PRICES["metro"] = {
     },
     "22": {
       "price": 6.1,
-      "normalPrice": 6.2,
+      "normalPrice": 6.8,
       "name": "Yogurt Parcialmente Descremado Piña Gloria Botella 1 kg",
       "presentation": "1 kg",
       "url": "https://www.metro.pe/yogurt-parcialmente-descremado-pina-gloria-botella-1-kg-2-2/p"
@@ -169,11 +162,11 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/queso-fresco-cuisine-co-x-kg-3/p"
     },
     "24": {
-      "price": 10.9,
-      "normalPrice": 16.9,
-      "name": "Mantequilla Sin Lactosa Président Zero Lactosa 200g",
-      "presentation": "200g",
-      "url": "https://www.metro.pe/mantequilla-sin-lactosa-pr-sident-zero-lactosa-200g-1076053/p"
+      "price": 15.9,
+      "normalPrice": null,
+      "name": "Mantequilla Plusa Con Sal Barra 200 g",
+      "presentation": "200 g",
+      "url": "https://www.metro.pe/mantequilla-plusa-con-sal-barra-200-g/p"
     },
     "25": {
       "price": 3,

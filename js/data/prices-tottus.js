@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-11-03T18:27:41.942Z",
+  "updatedAt": "2026-11-04T18:39:21.165Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -28,15 +28,15 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/114518367/huevos-pardos-tottus-bandeja-30-und"
     },
     "4": {
-      "price": 4.39,
-      "normalPrice": null,
+      "price": 1.8,
+      "normalPrice": 2.99,
       "name": "Papa Canchan Procesada x Kg",
       "presentation": "1 Kg = 6 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/129605787/papa-canchan-procesada-x-kg"
     },
     "5": {
-      "price": 6.9,
-      "normalPrice": null,
+      "price": 4.4,
+      "normalPrice": 5.48,
       "name": "Tomate Italiano Tottus",
       "presentation": "500 g = 3 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115894677/tomate-italiano-tottus"
@@ -51,20 +51,20 @@ window.SCRAPED_PRICES["tottus"] = {
     "7": {
       "price": 4.2,
       "normalPrice": null,
-      "name": "Leche Gloria Evaporada Entera 390 g",
-      "presentation": "Envase x 390 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087939/leche-gloria-evaporada-entera-390-g"
+      "name": "Leche Gloria Reconstituida Entera Lata 390 g",
+      "presentation": "Lata 390 g  ",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087921/leche-gloria-reconstituida-entera-lata-390-g"
     },
     "8": {
-      "price": 3.8,
+      "price": 2.4,
       "normalPrice": 3.99,
       "name": "Plátano De Seda Extra Tottus x Kg",
       "presentation": "1 Kg = 5 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115847468/platano-de-seda-extra-tottus-x-kg"
     },
     "9": {
-      "price": 3.99,
-      "normalPrice": null,
+      "price": 2.4,
+      "normalPrice": 3.37,
       "name": "Cebolla Roja Tottus",
       "presentation": "1 Kg = 8 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115805615/cebolla-roja-tottus"
@@ -98,11 +98,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113705634/azucar-rubia-tottus-bolsa-1-kg"
     },
     "14": {
-      "price": 12.5,
-      "normalPrice": 12.9,
-      "name": "Carne Molida De Res x 500 g",
+      "price": 32.9,
+      "normalPrice": null,
+      "name": "Carne Molida Tottus",
       "presentation": "Empaque 500 g Aprox",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113787352/carne-molida-de-res-x-500-g"
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115851716/carne-molida-tottus"
     },
     "15": {
       "price": 42.9,
@@ -119,8 +119,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115897208/chuleta-de-pierna-de-cerdo-tottus"
     },
     "17": {
-      "price": 4.49,
-      "normalPrice": null,
+      "price": 3.1,
+      "normalPrice": 3.99,
       "name": "Zanahoria Tottus",
       "presentation": "1 Kg = 5 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115810260/zanahoria-tottus"
@@ -133,22 +133,22 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706390/lechuga-seda-hidroponica-tottus"
     },
     "19": {
-      "price": 5.9,
-      "normalPrice": null,
+      "price": 4.1,
+      "normalPrice": 5.9,
       "name": "Manzana Delicia Tottus",
       "presentation": "1 Kg Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115809331/manzana-delicia-tottus"
     },
     "20": {
-      "price": 1.67,
-      "normalPrice": 2.79,
+      "price": 2.79,
+      "normalPrice": null,
       "name": "Naranja De Jugo Premium x Kg",
       "presentation": "1 Kg = 6 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/130698837/naranja-de-jugo-premium-x-kg"
     },
     "21": {
-      "price": 10.99,
-      "normalPrice": null,
+      "price": 7.6,
+      "normalPrice": 10.99,
       "name": "Palta Fuerte Sin Madurar x Kg",
       "presentation": "1 Kg = 4 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/130698965/palta-fuerte-premium-x-kg"
@@ -196,8 +196,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113368387/bebida-frugos-naranja-botella-1-l"
     },
     "28": {
-      "price": 9.4,
-      "normalPrice": 9.5,
+      "price": 9.5,
+      "normalPrice": null,
       "name": "Detergente en Polvo Bolívar Cuidado Total Bolsa 730 g",
       "presentation": "Bolsa 730 g",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/130519777/detergente-en-polvo-bolivar-cuidado-total-bolsa-730-g"
