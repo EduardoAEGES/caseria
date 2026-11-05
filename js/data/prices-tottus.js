@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-11-04T18:39:21.165Z",
+  "updatedAt": "2026-11-05T18:46:02.713Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -28,8 +28,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/114518367/huevos-pardos-tottus-bandeja-30-und"
     },
     "4": {
-      "price": 1.8,
-      "normalPrice": 2.99,
+      "price": 4.39,
+      "normalPrice": null,
       "name": "Papa Canchan Procesada x Kg",
       "presentation": "1 Kg = 6 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/129605787/papa-canchan-procesada-x-kg"
@@ -51,9 +51,9 @@ window.SCRAPED_PRICES["tottus"] = {
     "7": {
       "price": 4.2,
       "normalPrice": null,
-      "name": "Leche Gloria Reconstituida Entera Lata 390 g",
-      "presentation": "Lata 390 g  ",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087921/leche-gloria-reconstituida-entera-lata-390-g"
+      "name": "Leche Gloria Evaporada Entera 390 g",
+      "presentation": "Envase x 390 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087939/leche-gloria-evaporada-entera-390-g"
     },
     "8": {
       "price": 2.4,
@@ -98,11 +98,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113705634/azucar-rubia-tottus-bolsa-1-kg"
     },
     "14": {
-      "price": 32.9,
-      "normalPrice": null,
-      "name": "Carne Molida Tottus",
+      "price": 12.5,
+      "normalPrice": 12.9,
+      "name": "Carne Molida De Res x 500 g",
       "presentation": "Empaque 500 g Aprox",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115851716/carne-molida-tottus"
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113787352/carne-molida-de-res-x-500-g"
     },
     "15": {
       "price": 42.9,
@@ -133,7 +133,7 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706390/lechuga-seda-hidroponica-tottus"
     },
     "19": {
-      "price": 4.1,
+      "price": 5.8,
       "normalPrice": 5.9,
       "name": "Manzana Delicia Tottus",
       "presentation": "1 Kg Aprox",
@@ -182,8 +182,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/152010566/agua-san-luis-sin-gas-botella-3-l"
     },
     "26": {
-      "price": 7.5,
-      "normalPrice": 7.6,
+      "price": 7.6,
+      "normalPrice": null,
       "name": "Gaseosa Inca Kola Botella 1.5 L",
       "presentation": "Botella 1.5 L",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/116222008/gaseosa-inca-kola-botella-1-5-l"
@@ -196,8 +196,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113368387/bebida-frugos-naranja-botella-1-l"
     },
     "28": {
-      "price": 9.5,
-      "normalPrice": null,
+      "price": 9.4,
+      "normalPrice": 9.5,
       "name": "Detergente en Polvo Bolívar Cuidado Total Bolsa 730 g",
       "presentation": "Bolsa 730 g",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/130519777/detergente-en-polvo-bolivar-cuidado-total-bolsa-730-g"
