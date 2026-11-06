@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-11-05T18:47:02.590Z",
+  "updatedAt": "2026-11-06T17:59:30.122Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -22,22 +22,22 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/pollo-entero-con-menudencia-metro-x-kg-26334-2/p"
     },
     "3": {
-      "price": 14.95,
-      "normalPrice": 17.9,
+      "price": 17.9,
+      "normalPrice": null,
       "name": "Huevos Pardos Metro 30un",
       "presentation": "30un",
       "url": "https://www.metro.pe/huevos-pardos-metro-30un-1009776/p"
     },
     "4": {
-      "price": 5.49,
-      "normalPrice": null,
-      "name": "Papa Canchán Procesada x kg",
+      "price": 4.99,
+      "normalPrice": 5.49,
+      "name": "Papa Canchán Procesada Especial x kg",
       "presentation": "x kg",
-      "url": "https://www.metro.pe/papa-canchan-procesada-x-kg-2/p"
+      "url": "https://www.metro.pe/papa-canchan-procesada-especial-x-kg-2-2/p"
     },
     "5": {
-      "price": 6.99,
-      "normalPrice": null,
+      "price": 6.49,
+      "normalPrice": 6.99,
       "name": "Tomate Italiano Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/tomate-italiano-metro-x-kg-2-2/p"
@@ -65,7 +65,7 @@ window.SCRAPED_PRICES["metro"] = {
     },
     "9": {
       "price": 2.99,
-      "normalPrice": 3.49,
+      "normalPrice": 4.99,
       "name": "Cebolla Roja Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/cebolla-roja-metro-x-kg-3/p"
@@ -127,8 +127,8 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/zanahoria-especial-x-kg-2-2/p"
     },
     "18": {
-      "price": 2.69,
-      "normalPrice": null,
+      "price": 1.88,
+      "normalPrice": 2.9,
       "name": "Lechuga Crespa Cuisine & Co",
       "presentation": "",
       "url": "https://www.metro.pe/lechuga-crespa-cuisine-co-959972-2/p"
