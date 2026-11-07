@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-11-06T17:58:35.139Z",
+  "updatedAt": "2026-11-07T16:51:29.455Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -98,15 +98,15 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113705634/azucar-rubia-tottus-bolsa-1-kg"
     },
     "14": {
-      "price": 10.3,
-      "normalPrice": 12.9,
+      "price": 12.9,
+      "normalPrice": null,
       "name": "Carne Molida De Res x 500 g",
       "presentation": "Empaque 500 g Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113787352/carne-molida-de-res-x-500-g"
     },
     "15": {
-      "price": 35.1,
-      "normalPrice": 43.9,
+      "price": 43.9,
+      "normalPrice": null,
       "name": "Bisteck De Res",
       "presentation": "500 g Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115842749/bisteck-de-res"
@@ -161,11 +161,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113710229/yogurt-gloria-frutado-fresa-120-g"
     },
     "23": {
-      "price": 32.9,
-      "normalPrice": 36.7,
-      "name": "Queso Fresco Gloria Molde x Kg",
-      "presentation": "Empaque 300 g Aprox.",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/116973095/queso-fresco-gloria-molde-x-kg"
+      "price": 26.27,
+      "normalPrice": 30.9,
+      "name": "Queso Fresco Tottus x Kg",
+      "presentation": "Empaque 400 g Aprox.",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115836152/queso-fresco-tottus-x-kg"
     },
     "24": {
       "price": 13.5,
@@ -175,14 +175,14 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113930870/mantequill-con-sal"
     },
     "25": {
-      "price": 3.2,
-      "normalPrice": null,
+      "price": 3,
+      "normalPrice": 3.2,
       "name": "Agua San Luis Sin Gas Botella 3 L",
       "presentation": "Botella 3 L",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/152010566/agua-san-luis-sin-gas-botella-3-l"
     },
     "26": {
-      "price": 7.5,
+      "price": 7.22,
       "normalPrice": 7.6,
       "name": "Gaseosa Inca Kola Botella 1.5 L",
       "presentation": "Botella 1.5 L",
