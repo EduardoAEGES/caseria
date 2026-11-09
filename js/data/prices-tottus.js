@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-11-08T17:04:30.485Z",
+  "updatedAt": "2026-11-09T21:27:13.472Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -14,15 +14,15 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/124763718/arroz-costeno-extra-anejo-bolsa-750-g"
     },
     "2": {
-      "price": 8.4,
+      "price": 9.9,
       "normalPrice": 11.5,
       "name": "Pollo Entero Trozado Redondos x Kg",
       "presentation": "2.15 kg Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115808216/pollo-entero-trozado-redondos-x-kg"
     },
     "3": {
-      "price": 14.9,
-      "normalPrice": 17.9,
+      "price": 17.9,
+      "normalPrice": null,
       "name": "Huevos Pardos Tottus Bandeja 30 Und",
       "presentation": "Bandeja 30 Und",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/114518367/huevos-pardos-tottus-bandeja-30-und"
@@ -35,15 +35,15 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/129605787/papa-canchan-procesada-x-kg"
     },
     "5": {
-      "price": 6.9,
+      "price": 6.5,
       "normalPrice": null,
       "name": "Tomate Italiano Tottus",
       "presentation": "500 g = 3 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115894677/tomate-italiano-tottus"
     },
     "6": {
-      "price": 8.9,
-      "normalPrice": null,
+      "price": 7.9,
+      "normalPrice": 8.9,
       "name": "Avena Tottus Bolsa 900 g",
       "presentation": "Bolsa 900 g  ",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/135553932/avena-tottus-bolsa-900-g"
@@ -55,9 +55,16 @@ window.SCRAPED_PRICES["tottus"] = {
       "presentation": "Envase x 390 g",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087939/leche-gloria-evaporada-entera-390-g"
     },
+    "8": {
+      "price": 3.8,
+      "normalPrice": 3.99,
+      "name": "Plátano De Seda Extra Tottus x Kg",
+      "presentation": "1 Kg = 5 Un Aprox",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115847468/platano-de-seda-extra-tottus-x-kg"
+    },
     "9": {
-      "price": 3.99,
-      "normalPrice": null,
+      "price": 2.9,
+      "normalPrice": 3.37,
       "name": "Cebolla Roja Tottus",
       "presentation": "1 Kg = 8 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115805615/cebolla-roja-tottus"
@@ -70,8 +77,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706444/aceite-vegetal-primor-clasico-botella-900-ml"
     },
     "11": {
-      "price": 3.8,
-      "normalPrice": null,
+      "price": 3.2,
+      "normalPrice": 3.8,
       "name": "Pasta Trigo Fettuccini Don Vittorio Empaque 500 g",
       "presentation": "Empaque 500 g",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/142707030/pasta-trigo-fettuccini-don-vittorio-empaque-500-g"
@@ -133,8 +140,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115809331/manzana-delicia-tottus"
     },
     "20": {
-      "price": 2,
-      "normalPrice": 2.79,
+      "price": 2.99,
+      "normalPrice": null,
       "name": "Naranja De Jugo Premium x Kg",
       "presentation": "1 Kg = 6 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/130698837/naranja-de-jugo-premium-x-kg"
@@ -154,11 +161,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113710229/yogurt-gloria-frutado-fresa-120-g"
     },
     "23": {
-      "price": 9.5,
-      "normalPrice": 10.6,
-      "name": "Queso Fresco Piamonte Empaque 200 g",
-      "presentation": "Empaque 200g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087791/queso-fresco-piamonte-empaque-200-g"
+      "price": 34.7,
+      "normalPrice": 41.2,
+      "name": "Queso Fresco de Vaca Duman Taper x Kg",
+      "presentation": "Empaque 400 g Aprox.",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/131844533/queso-fresco-de-vaca-duman-taper-x-kg"
     },
     "24": {
       "price": 13.5,
@@ -168,14 +175,14 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113930870/mantequill-con-sal"
     },
     "25": {
-      "price": 3,
-      "normalPrice": 3.2,
+      "price": 3.2,
+      "normalPrice": null,
       "name": "Agua San Luis Sin Gas Botella 3 L",
       "presentation": "Botella 3 L",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/152010566/agua-san-luis-sin-gas-botella-3-l"
     },
     "26": {
-      "price": 7.22,
+      "price": 7.5,
       "normalPrice": 7.6,
       "name": "Gaseosa Inca Kola Botella 1.5 L",
       "presentation": "Botella 1.5 L",
