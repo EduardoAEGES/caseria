@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-11-09T21:28:11.371Z",
+  "updatedAt": "2026-11-10T18:42:26.142Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -36,7 +36,7 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/papa-canchan-procesada-x-kg-2/p"
     },
     "5": {
-      "price": 6.5,
+      "price": 6.99,
       "normalPrice": null,
       "name": "Tomate Italiano Metro x kg",
       "presentation": "x kg",
@@ -64,7 +64,7 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/platano-de-seda-x-kg-2/p"
     },
     "9": {
-      "price": 4.99,
+      "price": 3.99,
       "normalPrice": null,
       "name": "Cebolla Roja Metro x kg",
       "presentation": "x kg",
@@ -85,8 +85,8 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/spaghetti-don-vittorio-500g-962239/p"
     },
     "12": {
-      "price": 8.9,
-      "normalPrice": null,
+      "price": 8.2,
+      "normalPrice": 8.9,
       "name": "Sólido de Atún en Aceite de Girasol Florida 170g",
       "presentation": "170g",
       "url": "https://www.metro.pe/s-lido-de-at-n-en-aceite-de-girasol-florida-170g-1069317/p"
@@ -120,8 +120,8 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/chuleta-de-pierna-de-cerdo-con-piel-nacional-del-sur-x-kg-386202/p"
     },
     "17": {
-      "price": 8.79,
-      "normalPrice": null,
+      "price": 5.89,
+      "normalPrice": 8.79,
       "name": "Zanahoria Especial x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/zanahoria-especial-x-kg-2-2/p"
@@ -148,7 +148,7 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/naranja-para-jugo-chanchamayo-x-kg-152606-2/p"
     },
     "21": {
-      "price": 12.99,
+      "price": 12.69,
       "normalPrice": null,
       "name": "Palta Fuerte Metro x kg",
       "presentation": "x kg",
@@ -183,7 +183,7 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/agua-de-mesa-sin-gas-san-luis-botella-3l-59545002/p"
     },
     "26": {
-      "price": 7.6,
+      "price": 7.9,
       "normalPrice": null,
       "name": "Gaseosa Inca Kola Botella 1.5L",
       "presentation": "1.5L",

@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-11-09T21:27:13.472Z",
+  "updatedAt": "2026-11-10T18:41:23.802Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -77,11 +77,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706444/aceite-vegetal-primor-clasico-botella-900-ml"
     },
     "11": {
-      "price": 3.2,
-      "normalPrice": 3.8,
-      "name": "Pasta Trigo Fettuccini Don Vittorio Empaque 500 g",
-      "presentation": "Empaque 500 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/142707030/pasta-trigo-fettuccini-don-vittorio-empaque-500-g"
+      "price": 3.8,
+      "normalPrice": null,
+      "name": "Pasta Rigatoni Don Vittorio Bolsa 500 g",
+      "presentation": "Bolsa 500 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113708308/pasta-rigatoni-don-vittorio-bolsa-500-g"
     },
     "12": {
       "price": 8.5,
