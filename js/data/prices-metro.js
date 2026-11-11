@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-11-10T18:42:26.142Z",
+  "updatedAt": "2026-11-11T18:43:45.534Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -106,8 +106,8 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/carne-molida-economica-congelada-los-hierros-x-500-g/p"
     },
     "15": {
-      "price": 43.9,
-      "normalPrice": null,
+      "price": 40.2,
+      "normalPrice": 43.9,
       "name": "Bisteck de Tapa Nacional x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/bisteck-de-tapa-nacional-en-bandeja-x-kg-390616-2/p"
@@ -162,11 +162,11 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/yogurt-parcialmente-descremado-pina-gloria-botella-1-kg-2-2/p"
     },
     "23": {
-      "price": 35.9,
-      "normalPrice": null,
-      "name": "Queso Fresco Cuisine & Co x kg",
+      "price": 31.9,
+      "normalPrice": 37.5,
+      "name": "Queso Fresco Light Cuisine & Co x kg",
       "presentation": "x kg",
-      "url": "https://www.metro.pe/queso-fresco-cuisine-co-x-kg-3/p"
+      "url": "https://www.metro.pe/queso-fresco-light-cuisine-co-x-kg/p"
     },
     "24": {
       "price": 15.9,
@@ -211,7 +211,7 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/lej-a-clorox-tradicional-1kg-49127001/p"
     },
     "30": {
-      "price": 7.3,
+      "price": 7.4,
       "normalPrice": null,
       "name": "Papel Higiénico Doble Hoja Paracas Paquete 4 unid",
       "presentation": "4 unid",

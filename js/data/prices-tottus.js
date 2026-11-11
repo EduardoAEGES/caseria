@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-11-10T18:41:23.802Z",
+  "updatedAt": "2026-11-11T18:42:51.197Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -79,9 +79,9 @@ window.SCRAPED_PRICES["tottus"] = {
     "11": {
       "price": 3.8,
       "normalPrice": null,
-      "name": "Pasta Rigatoni Don Vittorio Bolsa 500 g",
-      "presentation": "Bolsa 500 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113708308/pasta-rigatoni-don-vittorio-bolsa-500-g"
+      "name": "Pasta Trigo Fettuccini Don Vittorio Empaque 500 g",
+      "presentation": "Empaque 500 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/142707030/pasta-trigo-fettuccini-don-vittorio-empaque-500-g"
     },
     "12": {
       "price": 8.5,
@@ -196,8 +196,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113368387/bebida-frugos-naranja-botella-1-l"
     },
     "28": {
-      "price": 9.4,
-      "normalPrice": 9.5,
+      "price": 9.5,
+      "normalPrice": null,
       "name": "Detergente en Polvo Bolívar Cuidado Total Bolsa 730 g",
       "presentation": "Bolsa 730 g",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/130519777/detergente-en-polvo-bolivar-cuidado-total-bolsa-730-g"
