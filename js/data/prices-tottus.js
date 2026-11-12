@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-11-11T18:42:51.197Z",
+  "updatedAt": "2026-11-12T18:55:59.696Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -14,7 +14,7 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/124763718/arroz-costeno-extra-anejo-bolsa-750-g"
     },
     "2": {
-      "price": 9.9,
+      "price": 10.5,
       "normalPrice": 11.5,
       "name": "Pollo Entero Trozado Redondos x Kg",
       "presentation": "2.15 kg Aprox",
@@ -35,15 +35,15 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/129605787/papa-canchan-procesada-x-kg"
     },
     "5": {
-      "price": 6.5,
+      "price": 6.9,
       "normalPrice": null,
       "name": "Tomate Italiano Tottus",
       "presentation": "500 g = 3 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115894677/tomate-italiano-tottus"
     },
     "6": {
-      "price": 7.9,
-      "normalPrice": 8.9,
+      "price": 8.9,
+      "normalPrice": null,
       "name": "Avena Tottus Bolsa 900 g",
       "presentation": "Bolsa 900 g  ",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/135553932/avena-tottus-bolsa-900-g"
@@ -63,22 +63,22 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115847468/platano-de-seda-extra-tottus-x-kg"
     },
     "9": {
-      "price": 2.9,
-      "normalPrice": 3.37,
+      "price": 4.39,
+      "normalPrice": null,
       "name": "Cebolla Roja Tottus",
       "presentation": "1 Kg = 8 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115805615/cebolla-roja-tottus"
     },
     "10": {
-      "price": 8.9,
+      "price": 8.5,
       "normalPrice": 10,
       "name": "Aceite Vegetal Primor Clásico Botella 900 mL",
       "presentation": "Botella 900 mL",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706444/aceite-vegetal-primor-clasico-botella-900-ml"
     },
     "11": {
-      "price": 3.8,
-      "normalPrice": null,
+      "price": 3.5,
+      "normalPrice": 3.8,
       "name": "Pasta Trigo Fettuccini Don Vittorio Empaque 500 g",
       "presentation": "Empaque 500 g",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/142707030/pasta-trigo-fettuccini-don-vittorio-empaque-500-g"
@@ -155,17 +155,17 @@ window.SCRAPED_PRICES["tottus"] = {
     },
     "22": {
       "price": 1.9,
-      "normalPrice": null,
-      "name": "Yogurt Gloria Frutado Fresa Envase 120 g",
-      "presentation": "Envase 120 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113710229/yogurt-gloria-frutado-fresa-120-g"
+      "normalPrice": 1.95,
+      "name": "Yogurt Gloria Fresa Botella 180 g",
+      "presentation": "Botella 180 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/119493054/yogurt-gloria-fresa-botella-180-g"
     },
     "23": {
-      "price": 34.7,
-      "normalPrice": 41.2,
-      "name": "Queso Fresco de Vaca Duman Taper x Kg",
-      "presentation": "Empaque 400 g Aprox.",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/131844533/queso-fresco-de-vaca-duman-taper-x-kg"
+      "price": 10.6,
+      "normalPrice": null,
+      "name": "Queso Fresco Piamonte Empaque 200 g",
+      "presentation": "Empaque 200g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087791/queso-fresco-piamonte-empaque-200-g"
     },
     "24": {
       "price": 13.5,
@@ -196,18 +196,18 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113368387/bebida-frugos-naranja-botella-1-l"
     },
     "28": {
-      "price": 9.5,
-      "normalPrice": null,
+      "price": 9.4,
+      "normalPrice": 9.5,
       "name": "Detergente en Polvo Bolívar Cuidado Total Bolsa 730 g",
       "presentation": "Bolsa 730 g",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/130519777/detergente-en-polvo-bolivar-cuidado-total-bolsa-730-g"
     },
     "29": {
-      "price": 4.6,
-      "normalPrice": null,
-      "name": "Lejía Tradicional Clorox Botella 1 Kg",
-      "presentation": "Botella 1 Kg",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/123541837/lejia-tradicional-clorox-botella-1-kg"
+      "price": 5.6,
+      "normalPrice": 6.6,
+      "name": "Lejía Clorox Tradicional Botella 2 Kg",
+      "presentation": "Botella 2 Kg",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113708106/lejia-clorox-tradicional-botella-2-kg"
     },
     "30": {
       "price": 4.49,

@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-11-11T18:43:45.534Z",
+  "updatedAt": "2026-11-12T18:56:54.124Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -22,8 +22,8 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/pollo-entero-con-menudencia-metro-x-kg-26334-2/p"
     },
     "3": {
-      "price": 15.8,
-      "normalPrice": 17.9,
+      "price": 17.9,
+      "normalPrice": null,
       "name": "Huevos Pardos Metro 30un",
       "presentation": "30un",
       "url": "https://www.metro.pe/huevos-pardos-metro-30un-1009776/p"
@@ -36,8 +36,8 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/papa-canchan-procesada-x-kg-2/p"
     },
     "5": {
-      "price": 6.99,
-      "normalPrice": null,
+      "price": 5.99,
+      "normalPrice": 6.99,
       "name": "Tomate Italiano Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/tomate-italiano-metro-x-kg-2-2/p"
@@ -57,7 +57,7 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/leche-evaporada-entera-gloria-lata-390g-975695-2/p"
     },
     "8": {
-      "price": 3.49,
+      "price": 3.39,
       "normalPrice": 3.99,
       "name": "Platano de Seda x kg",
       "presentation": "x kg",
@@ -120,15 +120,15 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/chuleta-de-pierna-de-cerdo-con-piel-nacional-del-sur-x-kg-386202/p"
     },
     "17": {
-      "price": 5.89,
-      "normalPrice": 8.79,
+      "price": 8.79,
+      "normalPrice": null,
       "name": "Zanahoria Especial x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/zanahoria-especial-x-kg-2-2/p"
     },
     "18": {
-      "price": 2.2,
-      "normalPrice": 2.9,
+      "price": 2.69,
+      "normalPrice": null,
       "name": "Lechuga Crespa Cuisine & Co",
       "presentation": "",
       "url": "https://www.metro.pe/lechuga-crespa-cuisine-co-959972-2/p"
@@ -148,14 +148,14 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/naranja-para-jugo-chanchamayo-x-kg-152606-2/p"
     },
     "21": {
-      "price": 12.69,
-      "normalPrice": null,
+      "price": 10.69,
+      "normalPrice": 12.69,
       "name": "Palta Fuerte Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/palta-fuerte-metro-x-kg-71554-2/p"
     },
     "22": {
-      "price": 5.9,
+      "price": 6,
       "normalPrice": 6.8,
       "name": "Yogurt Parcialmente Descremado Piña Gloria Botella 1 kg",
       "presentation": "1 kg",
