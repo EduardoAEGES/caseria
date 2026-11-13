@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-11-12T18:55:59.696Z",
+  "updatedAt": "2026-11-13T18:32:43.802Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -156,9 +156,9 @@ window.SCRAPED_PRICES["tottus"] = {
     "22": {
       "price": 1.9,
       "normalPrice": 1.95,
-      "name": "Yogurt Gloria Fresa Botella 180 g",
+      "name": "Yogurt Gloria Vainilla Botella 180 g",
       "presentation": "Botella 180 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/119493054/yogurt-gloria-fresa-botella-180-g"
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/119331881/gloria-yog-par-desc-vainilla-x180g"
     },
     "23": {
       "price": 10.6,

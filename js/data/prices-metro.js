@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-11-12T18:56:54.124Z",
+  "updatedAt": "2026-11-13T18:33:44.688Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -22,14 +22,14 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/pollo-entero-con-menudencia-metro-x-kg-26334-2/p"
     },
     "3": {
-      "price": 17.9,
-      "normalPrice": null,
+      "price": 16.1,
+      "normalPrice": 17.9,
       "name": "Huevos Pardos Metro 30un",
       "presentation": "30un",
       "url": "https://www.metro.pe/huevos-pardos-metro-30un-1009776/p"
     },
     "4": {
-      "price": 5.49,
+      "price": 5.79,
       "normalPrice": null,
       "name": "Papa Canchán Procesada x kg",
       "presentation": "x kg",
@@ -141,15 +141,15 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/manzana-israel-anawi-metro-x-kg-2/p"
     },
     "20": {
-      "price": 3.49,
+      "price": 3.3,
       "normalPrice": null,
       "name": "Naranja para Jugo Chanchamayo x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/naranja-para-jugo-chanchamayo-x-kg-152606-2/p"
     },
     "21": {
-      "price": 10.69,
-      "normalPrice": 12.69,
+      "price": 12.69,
+      "normalPrice": null,
       "name": "Palta Fuerte Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/palta-fuerte-metro-x-kg-71554-2/p"
@@ -162,11 +162,11 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/yogurt-parcialmente-descremado-pina-gloria-botella-1-kg-2-2/p"
     },
     "23": {
-      "price": 31.9,
-      "normalPrice": 37.5,
-      "name": "Queso Fresco Light Cuisine & Co x kg",
+      "price": 35.9,
+      "normalPrice": null,
+      "name": "Queso Fresco Cuisine & Co x kg",
       "presentation": "x kg",
-      "url": "https://www.metro.pe/queso-fresco-light-cuisine-co-x-kg/p"
+      "url": "https://www.metro.pe/queso-fresco-cuisine-co-x-kg-3/p"
     },
     "24": {
       "price": 15.9,
@@ -211,7 +211,7 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/lej-a-clorox-tradicional-1kg-49127001/p"
     },
     "30": {
-      "price": 7.4,
+      "price": 7.3,
       "normalPrice": null,
       "name": "Papel Higiénico Doble Hoja Paracas Paquete 4 unid",
       "presentation": "4 unid",
