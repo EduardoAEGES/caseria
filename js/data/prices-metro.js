@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-11-13T18:33:44.688Z",
+  "updatedAt": "2026-11-14T17:08:23.766Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -15,25 +15,25 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/arroz-coste-o-a-ejo-extra-750g-1000183/p"
     },
     "2": {
-      "price": 8.9,
-      "normalPrice": null,
+      "price": 7.9,
+      "normalPrice": 8.9,
       "name": "Pollo Entero con Menudencia Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/pollo-entero-con-menudencia-metro-x-kg-26334-2/p"
     },
     "3": {
-      "price": 16.1,
-      "normalPrice": 17.9,
+      "price": 17.9,
+      "normalPrice": null,
       "name": "Huevos Pardos Metro 30un",
       "presentation": "30un",
       "url": "https://www.metro.pe/huevos-pardos-metro-30un-1009776/p"
     },
     "4": {
-      "price": 5.79,
-      "normalPrice": null,
-      "name": "Papa Canchán Procesada x kg",
+      "price": 4.19,
+      "normalPrice": 5.79,
+      "name": "Papa Canchán Procesada Especial x kg",
       "presentation": "x kg",
-      "url": "https://www.metro.pe/papa-canchan-procesada-x-kg-2/p"
+      "url": "https://www.metro.pe/papa-canchan-procesada-especial-x-kg-2-2/p"
     },
     "5": {
       "price": 5.99,
@@ -106,7 +106,7 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/carne-molida-economica-congelada-los-hierros-x-500-g/p"
     },
     "15": {
-      "price": 40.2,
+      "price": 41.8,
       "normalPrice": 43.9,
       "name": "Bisteck de Tapa Nacional x kg",
       "presentation": "x kg",
@@ -120,11 +120,11 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/chuleta-de-pierna-de-cerdo-con-piel-nacional-del-sur-x-kg-386202/p"
     },
     "17": {
-      "price": 8.79,
-      "normalPrice": null,
-      "name": "Zanahoria Especial x kg",
+      "price": 7.99,
+      "normalPrice": 8.99,
+      "name": "Zanahoria x kg",
       "presentation": "x kg",
-      "url": "https://www.metro.pe/zanahoria-especial-x-kg-2-2/p"
+      "url": "https://www.metro.pe/zanahoria-x-kg-4047-2/p"
     },
     "18": {
       "price": 2.69,
@@ -162,11 +162,11 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/yogurt-parcialmente-descremado-pina-gloria-botella-1-kg-2-2/p"
     },
     "23": {
-      "price": 35.9,
-      "normalPrice": null,
+      "price": 27.9,
+      "normalPrice": 37.5,
       "name": "Queso Fresco Cuisine & Co x kg",
       "presentation": "x kg",
-      "url": "https://www.metro.pe/queso-fresco-cuisine-co-x-kg-3/p"
+      "url": "https://www.metro.pe/queso-fresco-cuisine-co-x-kg-2/p"
     },
     "24": {
       "price": 15.9,
