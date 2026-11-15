@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-11-14T17:08:23.766Z",
+  "updatedAt": "2026-11-15T17:44:59.479Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -134,22 +134,22 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/lechuga-crespa-cuisine-co-959972-2/p"
     },
     "19": {
-      "price": 4.69,
+      "price": 3.99,
       "normalPrice": 4.99,
       "name": "Manzana Israel Añawi Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/manzana-israel-anawi-metro-x-kg-2/p"
     },
     "20": {
-      "price": 3.3,
-      "normalPrice": null,
+      "price": 2.49,
+      "normalPrice": 3.3,
       "name": "Naranja para Jugo Chanchamayo x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/naranja-para-jugo-chanchamayo-x-kg-152606-2/p"
     },
     "21": {
-      "price": 12.69,
-      "normalPrice": null,
+      "price": 9.99,
+      "normalPrice": 12.69,
       "name": "Palta Fuerte Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/palta-fuerte-metro-x-kg-71554-2/p"

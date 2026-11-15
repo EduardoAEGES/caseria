@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-11-14T17:07:31.522Z",
+  "updatedAt": "2026-11-15T17:44:06.864Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -84,11 +84,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/142707030/pasta-trigo-fettuccini-don-vittorio-empaque-500-g"
     },
     "12": {
-      "price": 8.5,
-      "normalPrice": null,
-      "name": "Sólido de Atún Florida en Aceite de Girasol Caja 170 g",
-      "presentation": "Caja 170 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/157271211/solido-de-atun-florida-en-aceite-de-girasol-caja-170-g"
+      "price": 5.7,
+      "normalPrice": 6.6,
+      "name": "Trozos de Atún Florida Aceite Vegetal Lata 140 g",
+      "presentation": "Lata 140 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/116029481/trozos-de-atun-florida-aceite-vegetal-lata-140-g"
     },
     "13": {
       "price": 4.2,
@@ -106,10 +106,10 @@ window.SCRAPED_PRICES["tottus"] = {
     },
     "15": {
       "price": 43.9,
-      "normalPrice": 44.9,
-      "name": "Bisteck Tottus",
-      "presentation": "Empaque 700 g Aprox",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115845404/bisteck-tottus"
+      "normalPrice": null,
+      "name": "Bisteck De Res",
+      "presentation": "500 g Aprox",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115842749/bisteck-de-res"
     },
     "16": {
       "price": 18.9,
@@ -126,11 +126,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115810260/zanahoria-tottus"
     },
     "18": {
-      "price": 2.69,
+      "price": 2.59,
       "normalPrice": null,
-      "name": "Lechuga Crespa Verde Hidropónica Tottus",
-      "presentation": "Empaque 180 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113708446/lechuga-crespa-verde-hidroponica-tottus"
+      "name": "Lechuga Seda Hidropónica Tottus",
+      "presentation": "Empaque 160 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706390/lechuga-seda-hidroponica-tottus"
     },
     "19": {
       "price": 3.99,
@@ -156,16 +156,16 @@ window.SCRAPED_PRICES["tottus"] = {
     "22": {
       "price": 2,
       "normalPrice": null,
-      "name": "Yogurt Gloria Vainilla Botella 180 g",
+      "name": "Yogurt Gloria Fresa Botella 180 g",
       "presentation": "Botella 180 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/119331881/gloria-yog-par-desc-vainilla-x180g"
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/119493054/yogurt-gloria-fresa-botella-180-g"
     },
     "23": {
-      "price": 10.6,
-      "normalPrice": null,
-      "name": "Queso Fresco Piamonte Empaque 200 g",
-      "presentation": "Empaque 200g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087791/queso-fresco-piamonte-empaque-200-g"
+      "price": 33.5,
+      "normalPrice": 35.2,
+      "name": "Queso Fresco Bonlé x Kg",
+      "presentation": "Empaque 400 g Aprox.",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/116971589/queso-fresco-bonle-x-kg"
     },
     "24": {
       "price": 13.5,
@@ -196,8 +196,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113368387/bebida-frugos-naranja-botella-1-l"
     },
     "28": {
-      "price": 9.4,
-      "normalPrice": 9.5,
+      "price": 9.5,
+      "normalPrice": null,
       "name": "Detergente en Polvo Bolívar Cuidado Total Bolsa 730 g",
       "presentation": "Bolsa 730 g",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/130519777/detergente-en-polvo-bolivar-cuidado-total-bolsa-730-g"
