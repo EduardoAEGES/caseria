@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-11-15T17:44:59.479Z",
+  "updatedAt": "2026-11-16T21:03:24.605Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -15,15 +15,15 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/arroz-coste-o-a-ejo-extra-750g-1000183/p"
     },
     "2": {
-      "price": 7.9,
+      "price": 7.5,
       "normalPrice": 8.9,
       "name": "Pollo Entero con Menudencia Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/pollo-entero-con-menudencia-metro-x-kg-26334-2/p"
     },
     "3": {
-      "price": 17.9,
-      "normalPrice": null,
+      "price": 15.9,
+      "normalPrice": 17.9,
       "name": "Huevos Pardos Metro 30un",
       "presentation": "30un",
       "url": "https://www.metro.pe/huevos-pardos-metro-30un-1009776/p"
@@ -36,8 +36,8 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/papa-canchan-procesada-especial-x-kg-2-2/p"
     },
     "5": {
-      "price": 5.99,
-      "normalPrice": 6.99,
+      "price": 6.99,
+      "normalPrice": null,
       "name": "Tomate Italiano Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/tomate-italiano-metro-x-kg-2-2/p"
@@ -57,15 +57,15 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/leche-evaporada-entera-gloria-lata-390g-975695-2/p"
     },
     "8": {
-      "price": 3.39,
-      "normalPrice": 3.99,
-      "name": "Platano de Seda x kg",
+      "price": 3.89,
+      "normalPrice": null,
+      "name": "Plátano de Seda Metro x kg",
       "presentation": "x kg",
-      "url": "https://www.metro.pe/platano-de-seda-x-kg-2/p"
+      "url": "https://www.metro.pe/platano-de-seda-metro-x-kg-2-2/p"
     },
     "9": {
-      "price": 3.99,
-      "normalPrice": null,
+      "price": 4.89,
+      "normalPrice": 5.89,
       "name": "Cebolla Roja Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/cebolla-roja-metro-x-kg-3/p"
@@ -78,7 +78,7 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/aceite-vegetal-primor-cl-sico-botella-900ml-3201-2/p"
     },
     "11": {
-      "price": 3.4,
+      "price": 3,
       "normalPrice": 3.8,
       "name": "Spaghetti Don Vittorio 500g",
       "presentation": "500g",
@@ -106,8 +106,8 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/carne-molida-economica-congelada-los-hierros-x-500-g/p"
     },
     "15": {
-      "price": 41.8,
-      "normalPrice": 43.9,
+      "price": 43.9,
+      "normalPrice": null,
       "name": "Bisteck de Tapa Nacional x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/bisteck-de-tapa-nacional-en-bandeja-x-kg-390616-2/p"
@@ -120,36 +120,36 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/chuleta-de-pierna-de-cerdo-con-piel-nacional-del-sur-x-kg-386202/p"
     },
     "17": {
-      "price": 7.99,
-      "normalPrice": 8.99,
-      "name": "Zanahoria x kg",
+      "price": 7.79,
+      "normalPrice": 8.79,
+      "name": "Zanahoria Especial x kg",
       "presentation": "x kg",
-      "url": "https://www.metro.pe/zanahoria-x-kg-4047-2/p"
+      "url": "https://www.metro.pe/zanahoria-especial-x-kg-2-2/p"
     },
     "18": {
-      "price": 2.69,
-      "normalPrice": null,
+      "price": 1.7,
+      "normalPrice": 2.9,
       "name": "Lechuga Crespa Cuisine & Co",
       "presentation": "",
       "url": "https://www.metro.pe/lechuga-crespa-cuisine-co-959972-2/p"
     },
     "19": {
-      "price": 3.99,
-      "normalPrice": 4.99,
+      "price": 4.99,
+      "normalPrice": null,
       "name": "Manzana Israel Añawi Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/manzana-israel-anawi-metro-x-kg-2/p"
     },
     "20": {
-      "price": 2.49,
-      "normalPrice": 3.3,
+      "price": 3.3,
+      "normalPrice": null,
       "name": "Naranja para Jugo Chanchamayo x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/naranja-para-jugo-chanchamayo-x-kg-152606-2/p"
     },
     "21": {
-      "price": 9.99,
-      "normalPrice": 12.69,
+      "price": 13.89,
+      "normalPrice": null,
       "name": "Palta Fuerte Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/palta-fuerte-metro-x-kg-71554-2/p"

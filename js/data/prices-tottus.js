@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-11-15T17:44:06.864Z",
+  "updatedAt": "2026-11-16T21:02:32.605Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -14,15 +14,15 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/124763718/arroz-costeno-extra-anejo-bolsa-750-g"
     },
     "2": {
-      "price": 10.5,
+      "price": 9.9,
       "normalPrice": 11.5,
       "name": "Pollo Entero Trozado Redondos x Kg",
       "presentation": "2.15 kg Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115808216/pollo-entero-trozado-redondos-x-kg"
     },
     "3": {
-      "price": 16.8,
-      "normalPrice": 17.9,
+      "price": 17.9,
+      "normalPrice": null,
       "name": "Huevos Pardos Tottus Bandeja 30 Und",
       "presentation": "Bandeja 30 Und",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/114518367/huevos-pardos-tottus-bandeja-30-und"
@@ -42,8 +42,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115894677/tomate-italiano-tottus"
     },
     "6": {
-      "price": 7.5,
-      "normalPrice": 8.9,
+      "price": 8.9,
+      "normalPrice": null,
       "name": "Avena Tottus Bolsa 900 g",
       "presentation": "Bolsa 900 g  ",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/135553932/avena-tottus-bolsa-900-g"
@@ -98,15 +98,15 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113705634/azucar-rubia-tottus-bolsa-1-kg"
     },
     "14": {
-      "price": 12.9,
-      "normalPrice": null,
+      "price": 12.8,
+      "normalPrice": 12.9,
       "name": "Carne Molida De Res x 500 g",
       "presentation": "Empaque 500 g Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113787352/carne-molida-de-res-x-500-g"
     },
     "15": {
-      "price": 43.9,
-      "normalPrice": null,
+      "price": 42.9,
+      "normalPrice": 43.9,
       "name": "Bisteck De Res",
       "presentation": "500 g Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115842749/bisteck-de-res"
@@ -119,22 +119,22 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115897208/chuleta-de-pierna-de-cerdo-tottus"
     },
     "17": {
-      "price": 6.49,
+      "price": 6.99,
       "normalPrice": null,
       "name": "Zanahoria Tottus",
       "presentation": "1 Kg = 5 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115810260/zanahoria-tottus"
     },
     "18": {
-      "price": 2.59,
+      "price": 2.69,
       "normalPrice": null,
-      "name": "Lechuga Seda Hidropónica Tottus",
-      "presentation": "Empaque 160 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706390/lechuga-seda-hidroponica-tottus"
+      "name": "Lechuga Romana Hidropónica Tottus",
+      "presentation": "Empaque 150 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113705800/lechuga-romana-hidroponica-tottus"
     },
     "19": {
-      "price": 3.99,
-      "normalPrice": 4.49,
+      "price": 4.49,
+      "normalPrice": null,
       "name": "Manzana Israel Tottus",
       "presentation": "1 Kg = 6 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115805738/manzana-israel-tottus"
@@ -156,16 +156,16 @@ window.SCRAPED_PRICES["tottus"] = {
     "22": {
       "price": 2,
       "normalPrice": null,
-      "name": "Yogurt Gloria Fresa Botella 180 g",
+      "name": "Yogurt Gloria Vainilla Botella 180 g",
       "presentation": "Botella 180 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/119493054/yogurt-gloria-fresa-botella-180-g"
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/119331881/gloria-yog-par-desc-vainilla-x180g"
     },
     "23": {
-      "price": 33.5,
-      "normalPrice": 35.2,
-      "name": "Queso Fresco Bonlé x Kg",
+      "price": 30.9,
+      "normalPrice": null,
+      "name": "Queso Fresco Tottus x Kg",
       "presentation": "Empaque 400 g Aprox.",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/116971589/queso-fresco-bonle-x-kg"
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115836152/queso-fresco-tottus-x-kg"
     },
     "24": {
       "price": 13.5,
@@ -198,9 +198,9 @@ window.SCRAPED_PRICES["tottus"] = {
     "28": {
       "price": 9.5,
       "normalPrice": null,
-      "name": "Detergente en Polvo Bolívar Cuidado Total Bolsa 730 g",
+      "name": "Detergente en Polvo Bolivar Cuidado Suavidad Bolsa 730 g",
       "presentation": "Bolsa 730 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/130519777/detergente-en-polvo-bolivar-cuidado-total-bolsa-730-g"
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/130519787/detergente-bolivar-cuidado-suavidad-730g"
     },
     "29": {
       "price": 5.59,
