@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-11-18T19:25:29.344Z",
+  "updatedAt": "2026-11-19T19:29:57.099Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -14,15 +14,15 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/124763718/arroz-costeno-extra-anejo-bolsa-750-g"
     },
     "2": {
-      "price": 9.9,
+      "price": 11.4,
       "normalPrice": 11.5,
-      "name": "Pollo Entero Trozado Redondos x Kg",
-      "presentation": "2.15 kg Aprox",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115808216/pollo-entero-trozado-redondos-x-kg"
+      "name": "Pollo Entero Sin Menudencia Redondos x Kg",
+      "presentation": "2 kg Aprox",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115808410/pollo-entero-sin-menudencia-redondos-x-kg"
     },
     "3": {
-      "price": 17.9,
-      "normalPrice": null,
+      "price": 15.9,
+      "normalPrice": 17.9,
       "name": "Huevos Pardos Tottus Bandeja 30 Und",
       "presentation": "Bandeja 30 Und",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/114518367/huevos-pardos-tottus-bandeja-30-und"
@@ -35,8 +35,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/129605787/papa-canchan-procesada-x-kg"
     },
     "5": {
-      "price": 7.79,
-      "normalPrice": null,
+      "price": 7.19,
+      "normalPrice": 7.79,
       "name": "Tomate Italiano Tottus",
       "presentation": "500 g = 3 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115894677/tomate-italiano-tottus"
@@ -84,7 +84,7 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/142707030/pasta-trigo-fettuccini-don-vittorio-empaque-500-g"
     },
     "12": {
-      "price": 5.7,
+      "price": 5.8,
       "normalPrice": 6.6,
       "name": "Trozos de Atún Florida Aceite Vegetal Lata 140 g",
       "presentation": "Lata 140 g",
@@ -98,7 +98,7 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113705634/azucar-rubia-tottus-bolsa-1-kg"
     },
     "14": {
-      "price": 12.8,
+      "price": 12.4,
       "normalPrice": 12.9,
       "name": "Carne Molida De Res x 500 g",
       "presentation": "Empaque 500 g Aprox",
@@ -156,9 +156,9 @@ window.SCRAPED_PRICES["tottus"] = {
     "22": {
       "price": 2,
       "normalPrice": null,
-      "name": "Yogurt Gloria Vainilla Botella 180 g",
+      "name": "Yogurt Gloria Fresa Botella 180 g",
       "presentation": "Botella 180 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/119331881/gloria-yog-par-desc-vainilla-x180g"
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/119493054/yogurt-gloria-fresa-botella-180-g"
     },
     "23": {
       "price": 10.6,
@@ -198,9 +198,9 @@ window.SCRAPED_PRICES["tottus"] = {
     "28": {
       "price": 9.5,
       "normalPrice": null,
-      "name": "Detergente en Polvo Bolívar Cuidado Total Bolsa 730 g",
+      "name": "Detergente en Polvo Bolivar Cuidado Suavidad Bolsa 730 g",
       "presentation": "Bolsa 730 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/130519777/detergente-en-polvo-bolivar-cuidado-total-bolsa-730-g"
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/130519787/detergente-bolivar-cuidado-suavidad-730g"
     },
     "29": {
       "price": 6,
