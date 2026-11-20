@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-11-19T19:29:57.099Z",
+  "updatedAt": "2026-11-20T19:07:08.630Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -35,8 +35,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/129605787/papa-canchan-procesada-x-kg"
     },
     "5": {
-      "price": 7.19,
-      "normalPrice": 7.79,
+      "price": 7.79,
+      "normalPrice": null,
       "name": "Tomate Italiano Tottus",
       "presentation": "500 g = 3 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115894677/tomate-italiano-tottus"
@@ -140,15 +140,15 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115805738/manzana-israel-tottus"
     },
     "20": {
-      "price": 2.99,
-      "normalPrice": null,
+      "price": 2.89,
+      "normalPrice": 2.99,
       "name": "Naranja De Jugo Premium x Kg",
       "presentation": "1 Kg = 6 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/130698837/naranja-de-jugo-premium-x-kg"
     },
     "21": {
-      "price": 12.99,
-      "normalPrice": null,
+      "price": 12.19,
+      "normalPrice": 12.99,
       "name": "Palta Fuerte Sin Madurar x Kg",
       "presentation": "1 Kg = 4 Un Aprox",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/130698965/palta-fuerte-premium-x-kg"
@@ -161,11 +161,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/119493054/yogurt-gloria-fresa-botella-180-g"
     },
     "23": {
-      "price": 10.6,
-      "normalPrice": null,
-      "name": "Queso Fresco Piamonte Empaque 200 g",
-      "presentation": "Empaque 200g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087791/queso-fresco-piamonte-empaque-200-g"
+      "price": 33.5,
+      "normalPrice": 35.2,
+      "name": "Queso Fresco Bonlé x Kg",
+      "presentation": "Empaque 400 g Aprox.",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/116971589/queso-fresco-bonle-x-kg"
     },
     "24": {
       "price": 13.9,
@@ -182,7 +182,7 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/152010566/agua-san-luis-sin-gas-botella-3-l"
     },
     "26": {
-      "price": 7.2,
+      "price": 7.8,
       "normalPrice": 7.9,
       "name": "Gaseosa Inca Kola Botella 1.5 L",
       "presentation": "Botella 1.5 L",
@@ -196,8 +196,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113368387/bebida-frugos-naranja-botella-1-l"
     },
     "28": {
-      "price": 9.5,
-      "normalPrice": null,
+      "price": 9.4,
+      "normalPrice": 9.5,
       "name": "Detergente en Polvo Bolivar Cuidado Suavidad Bolsa 730 g",
       "presentation": "Bolsa 730 g",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/130519787/detergente-bolivar-cuidado-suavidad-730g"
