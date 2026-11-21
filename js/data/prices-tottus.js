@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-11-20T19:07:08.630Z",
+  "updatedAt": "2026-11-21T17:59:15.224Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -14,11 +14,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/124763718/arroz-costeno-extra-anejo-bolsa-750-g"
     },
     "2": {
-      "price": 11.4,
+      "price": 10.5,
       "normalPrice": 11.5,
-      "name": "Pollo Entero Sin Menudencia Redondos x Kg",
-      "presentation": "2 kg Aprox",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115808410/pollo-entero-sin-menudencia-redondos-x-kg"
+      "name": "Pollo Entero Trozado Redondos x Kg",
+      "presentation": "2.15 kg Aprox",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115808216/pollo-entero-trozado-redondos-x-kg"
     },
     "3": {
       "price": 15.9,
@@ -84,11 +84,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/142707030/pasta-trigo-fettuccini-don-vittorio-empaque-500-g"
     },
     "12": {
-      "price": 5.8,
-      "normalPrice": 6.6,
-      "name": "Trozos de Atún Florida Aceite Vegetal Lata 140 g",
-      "presentation": "Lata 140 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/116029481/trozos-de-atun-florida-aceite-vegetal-lata-140-g"
+      "price": 8.5,
+      "normalPrice": null,
+      "name": "Sólido de Atún Florida en Aceite de Girasol Caja 170 g",
+      "presentation": "Caja 170 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/157271211/solido-de-atun-florida-en-aceite-de-girasol-caja-170-g"
     },
     "13": {
       "price": 4.2,
@@ -168,11 +168,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/116971589/queso-fresco-bonle-x-kg"
     },
     "24": {
-      "price": 13.9,
+      "price": 11.9,
       "normalPrice": null,
-      "name": "Mantequilla Del Establo Con Sal Empaque 200 g",
+      "name": "Mantequilla Braedt con Sal Empaque 200 g",
       "presentation": "Empaque 200 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115878229/mantequilla-del-establo-con-sal-empaque-200-g"
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/159533603/mantequilla-braedt-con-sal-empaque-200-g"
     },
     "25": {
       "price": 3.2,
@@ -198,12 +198,12 @@ window.SCRAPED_PRICES["tottus"] = {
     "28": {
       "price": 9.4,
       "normalPrice": 9.5,
-      "name": "Detergente en Polvo Bolivar Cuidado Suavidad Bolsa 730 g",
+      "name": "Detergente en Polvo Bolívar Cuidado Total Bolsa 730 g",
       "presentation": "Bolsa 730 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/130519787/detergente-bolivar-cuidado-suavidad-730g"
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/130519777/detergente-en-polvo-bolivar-cuidado-total-bolsa-730-g"
     },
     "29": {
-      "price": 6,
+      "price": 5.59,
       "normalPrice": 6.6,
       "name": "Lejía Clorox Tradicional Botella 2 Kg",
       "presentation": "Botella 2 Kg",
