@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["mass"] = {
   "store": "mass",
   "source": "https://www.tiendasmass.com.pe/catalogos/precio-bajo-y-alta-calidad-12/",
-  "updatedAt": "2026-11-21T18:00:18.432Z",
+  "updatedAt": "2026-11-22T18:32:04.505Z",
   "partial": true,
   "city": "AREQUIPA",
   "title": "Precio bajo y Alta calidad",

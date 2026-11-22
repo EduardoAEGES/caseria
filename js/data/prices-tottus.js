@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-11-21T17:59:15.224Z",
+  "updatedAt": "2026-11-22T18:31:07.606Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -51,9 +51,9 @@ window.SCRAPED_PRICES["tottus"] = {
     "7": {
       "price": 4.19,
       "normalPrice": 4.2,
-      "name": "Leche Gloria Evaporada Entera 390 g",
-      "presentation": "Envase x 390 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087939/leche-gloria-evaporada-entera-390-g"
+      "name": "Leche Gloria Reconstituida Entera Lata 390 g",
+      "presentation": "Lata 390 g  ",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087921/leche-gloria-reconstituida-entera-lata-390-g"
     },
     "8": {
       "price": 3.99,
@@ -79,9 +79,9 @@ window.SCRAPED_PRICES["tottus"] = {
     "11": {
       "price": 3.5,
       "normalPrice": 3.8,
-      "name": "Pasta Trigo Fettuccini Don Vittorio Empaque 500 g",
-      "presentation": "Empaque 500 g",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/142707030/pasta-trigo-fettuccini-don-vittorio-empaque-500-g"
+      "name": "Pasta Rigatoni Don Vittorio Bolsa 500 g",
+      "presentation": "Bolsa 500 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113708308/pasta-rigatoni-don-vittorio-bolsa-500-g"
     },
     "12": {
       "price": 8.5,
@@ -203,11 +203,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/130519777/detergente-en-polvo-bolivar-cuidado-total-bolsa-730-g"
     },
     "29": {
-      "price": 5.59,
-      "normalPrice": 6.6,
-      "name": "Lejía Clorox Tradicional Botella 2 Kg",
-      "presentation": "Botella 2 Kg",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113708106/lejia-clorox-tradicional-botella-2-kg"
+      "price": 4.6,
+      "normalPrice": null,
+      "name": "Lejía Tradicional Clorox Botella 1 Kg",
+      "presentation": "Botella 1 Kg",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/123541837/lejia-tradicional-clorox-botella-1-kg"
     },
     "30": {
       "price": 4.49,
