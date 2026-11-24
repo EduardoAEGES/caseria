@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-11-23T22:40:54.132Z",
+  "updatedAt": "2026-11-24T21:13:12.358Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -22,22 +22,22 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/pollo-entero-con-menudencia-metro-x-kg-26334-2/p"
     },
     "3": {
-      "price": 17.9,
-      "normalPrice": null,
+      "price": 15.9,
+      "normalPrice": 17.9,
       "name": "Huevos Pardos Metro 30un",
       "presentation": "30un",
       "url": "https://www.metro.pe/huevos-pardos-metro-30un-1009776/p"
     },
     "4": {
-      "price": 4.59,
+      "price": 3.29,
       "normalPrice": 5.79,
       "name": "Papa Canchán Procesada Especial x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/papa-canchan-procesada-especial-x-kg-2-2/p"
     },
     "5": {
-      "price": 5.49,
-      "normalPrice": 6.49,
+      "price": 6.49,
+      "normalPrice": null,
       "name": "Tomate Italiano Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/tomate-italiano-metro-x-kg-2-2/p"
@@ -64,8 +64,8 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/platano-de-seda-metro-x-kg-2-2/p"
     },
     "9": {
-      "price": 4.69,
-      "normalPrice": 5.89,
+      "price": 3.99,
+      "normalPrice": null,
       "name": "Cebolla Roja Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/cebolla-roja-metro-x-kg-3/p"
@@ -78,8 +78,8 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/aceite-vegetal-primor-cl-sico-botella-900ml-3201-2/p"
     },
     "11": {
-      "price": 3.5,
-      "normalPrice": null,
+      "price": 3.4,
+      "normalPrice": 3.5,
       "name": "Spaghetti Don Vittorio 500g",
       "presentation": "500g",
       "url": "https://www.metro.pe/spaghetti-don-vittorio-500g-962239/p"
@@ -120,8 +120,8 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/chuleta-de-pierna-de-cerdo-con-piel-nacional-del-sur-x-kg-386202/p"
     },
     "17": {
-      "price": 8.59,
-      "normalPrice": 9.79,
+      "price": 9.79,
+      "normalPrice": null,
       "name": "Zanahoria Especial x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/zanahoria-especial-x-kg-2-2/p"
@@ -148,7 +148,7 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/naranja-para-jugo-chanchamayo-x-kg-152606-2/p"
     },
     "21": {
-      "price": 12.29,
+      "price": 11.29,
       "normalPrice": null,
       "name": "Palta Fuerte Metro x kg",
       "presentation": "x kg",

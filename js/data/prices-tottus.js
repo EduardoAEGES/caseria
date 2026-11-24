@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-11-23T22:40:00.592Z",
+  "updatedAt": "2026-11-24T21:12:13.301Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -14,11 +14,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/124763718/arroz-costeno-extra-anejo-bolsa-750-g"
     },
     "2": {
-      "price": 11.4,
+      "price": 9.9,
       "normalPrice": 11.5,
-      "name": "Pollo Entero Sin Menudencia Redondos x Kg",
-      "presentation": "2 kg Aprox",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115808410/pollo-entero-sin-menudencia-redondos-x-kg"
+      "name": "Pollo Entero Trozado Redondos x Kg",
+      "presentation": "2.15 kg Aprox",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115808216/pollo-entero-trozado-redondos-x-kg"
     },
     "3": {
       "price": 16.9,
@@ -55,15 +55,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "presentation": "Envase x 390 g",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087939/leche-gloria-evaporada-entera-390-g"
     },
-    "8": {
-      "price": 3.99,
-      "normalPrice": null,
-      "name": "Plátano De Seda Extra Tottus x Kg",
-      "presentation": "1 Kg = 5 Un Aprox",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115847468/platano-de-seda-extra-tottus-x-kg"
-    },
     "9": {
-      "price": 4.89,
+      "price": 4.99,
       "normalPrice": null,
       "name": "Cebolla Roja Tottus",
       "presentation": "1 Kg = 8 Un Aprox",
@@ -112,7 +105,7 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115842749/bisteck-de-res"
     },
     "16": {
-      "price": 19.9,
+      "price": 18.9,
       "normalPrice": null,
       "name": "Chuleta De Pierna De Cerdo Tottus",
       "presentation": "1 Kg Aprox",
@@ -126,11 +119,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115810260/zanahoria-tottus"
     },
     "18": {
-      "price": 3.49,
+      "price": 3.29,
       "normalPrice": null,
-      "name": "Lechuga Americana Tottus",
-      "presentation": "Unidad",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113707320/lechuga-americana-tottus"
+      "name": "Lechuga Romana Tottus",
+      "presentation": "Bolsa 200 g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/113706226/lechuga-romana-tottus"
     },
     "19": {
       "price": 4.49,
