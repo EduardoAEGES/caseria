@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["tottus"] = {
   "store": "tottus",
   "source": "https://www.tottus.com.pe/tottus-pe",
-  "updatedAt": "2026-11-24T21:12:13.301Z",
+  "updatedAt": "2026-11-25T20:29:48.413Z",
   "locationId": "25a46912-b7cd-483c-8257-d365c63071d6",
   "items": {
     "1": {
@@ -21,8 +21,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/115808216/pollo-entero-trozado-redondos-x-kg"
     },
     "3": {
-      "price": 16.9,
-      "normalPrice": 17.9,
+      "price": 17.9,
+      "normalPrice": null,
       "name": "Huevos Pardos Tottus Bandeja 30 Und",
       "presentation": "Bandeja 30 Und",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/114518367/huevos-pardos-tottus-bandeja-30-und"
@@ -54,6 +54,13 @@ window.SCRAPED_PRICES["tottus"] = {
       "name": "Leche Gloria Evaporada Entera 390 g",
       "presentation": "Envase x 390 g",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087939/leche-gloria-evaporada-entera-390-g"
+    },
+    "8": {
+      "price": 3.99,
+      "normalPrice": null,
+      "name": "Plátano De Seda Extra Tottus x Kg",
+      "presentation": "1 Kg = 5 Un Aprox",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115847468/platano-de-seda-extra-tottus-x-kg"
     },
     "9": {
       "price": 4.99,
@@ -154,11 +161,11 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/119493054/yogurt-gloria-fresa-botella-180-g"
     },
     "23": {
-      "price": 30.9,
+      "price": 10.6,
       "normalPrice": null,
-      "name": "Queso Fresco Tottus x Kg",
-      "presentation": "Empaque 400 g Aprox.",
-      "url": "https://www.tottus.com.pe/tottus-pe/articulo/115836152/queso-fresco-tottus-x-kg"
+      "name": "Queso Fresco Piamonte Empaque 200 g",
+      "presentation": "Empaque 200g",
+      "url": "https://www.tottus.com.pe/tottus-pe/articulo/129087791/queso-fresco-piamonte-empaque-200-g"
     },
     "24": {
       "price": 11.9,
@@ -189,8 +196,8 @@ window.SCRAPED_PRICES["tottus"] = {
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/113368387/bebida-frugos-naranja-botella-1-l"
     },
     "28": {
-      "price": 9.4,
-      "normalPrice": 9.5,
+      "price": 9.5,
+      "normalPrice": null,
       "name": "Detergente en Polvo Bolívar Cuidado Total Bolsa 730 g",
       "presentation": "Bolsa 730 g",
       "url": "https://www.tottus.com.pe/tottus-pe/articulo/130519777/detergente-en-polvo-bolivar-cuidado-total-bolsa-730-g"
