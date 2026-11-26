@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-11-25T20:30:41.073Z",
+  "updatedAt": "2026-11-26T20:12:23.327Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -22,8 +22,8 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/pollo-entero-con-menudencia-metro-x-kg-26334-2/p"
     },
     "3": {
-      "price": 17.9,
-      "normalPrice": null,
+      "price": 16.7,
+      "normalPrice": 17.9,
       "name": "Huevos Pardos Metro 30un",
       "presentation": "30un",
       "url": "https://www.metro.pe/huevos-pardos-metro-30un-1009776/p"
@@ -57,8 +57,8 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/leche-evaporada-entera-gloria-lata-390g-975695-2/p"
     },
     "8": {
-      "price": 3.89,
-      "normalPrice": null,
+      "price": 3.39,
+      "normalPrice": 3.89,
       "name": "Plátano de Seda Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/platano-de-seda-metro-x-kg-2-2/p"
@@ -71,8 +71,8 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/cebolla-roja-metro-x-kg-3/p"
     },
     "10": {
-      "price": 10.1,
-      "normalPrice": null,
+      "price": 8.9,
+      "normalPrice": 10.1,
       "name": "Aceite Vegetal Primor Clásico Botella 900ml",
       "presentation": "900ml",
       "url": "https://www.metro.pe/aceite-vegetal-primor-cl-sico-botella-900ml-3201-2/p"
@@ -106,8 +106,8 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/carne-molida-economica-congelada-los-hierros-x-500-g/p"
     },
     "15": {
-      "price": 40.2,
-      "normalPrice": 43.9,
+      "price": 43.9,
+      "normalPrice": null,
       "name": "Bisteck de Tapa Nacional x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/bisteck-de-tapa-nacional-en-bandeja-x-kg-390616-2/p"
@@ -120,15 +120,15 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/chuleta-de-pierna-de-cerdo-con-piel-nacional-del-sur-x-kg-386202/p"
     },
     "17": {
-      "price": 9.79,
-      "normalPrice": null,
+      "price": 4.49,
+      "normalPrice": 9.79,
       "name": "Zanahoria Especial x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/zanahoria-especial-x-kg-2-2/p"
     },
     "18": {
-      "price": 2,
-      "normalPrice": 3.5,
+      "price": 3.5,
+      "normalPrice": null,
       "name": "Lechuga Crespa Cuisine & Co",
       "presentation": "",
       "url": "https://www.metro.pe/lechuga-crespa-cuisine-co-959972-2/p"
@@ -141,15 +141,15 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/manzana-israel-anawi-metro-x-kg-2/p"
     },
     "20": {
-      "price": 2.89,
+      "price": 3.19,
       "normalPrice": 3.69,
       "name": "Naranja para Jugo Chanchamayo x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/naranja-para-jugo-chanchamayo-x-kg-152606-2/p"
     },
     "21": {
-      "price": 11.29,
-      "normalPrice": null,
+      "price": 8.9,
+      "normalPrice": 10.9,
       "name": "Palta Fuerte Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/palta-fuerte-metro-x-kg-71554-2/p"
