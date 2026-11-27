@@ -3,7 +3,7 @@ window.SCRAPED_PRICES = window.SCRAPED_PRICES || {};
 window.SCRAPED_PRICES["metro"] = {
   "store": "metro",
   "source": "https://www.metro.pe",
-  "updatedAt": "2026-11-26T20:12:23.327Z",
+  "updatedAt": "2026-11-27T19:58:28.674Z",
   "postalCode": "04008",
   "regionId": "v2.7438A81909089B23C1D846969E78E748",
   "items": {
@@ -57,14 +57,14 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/leche-evaporada-entera-gloria-lata-390g-975695-2/p"
     },
     "8": {
-      "price": 3.39,
-      "normalPrice": 3.89,
+      "price": 3.89,
+      "normalPrice": null,
       "name": "Plátano de Seda Metro x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/platano-de-seda-metro-x-kg-2-2/p"
     },
     "9": {
-      "price": 3.99,
+      "price": 3.9,
       "normalPrice": null,
       "name": "Cebolla Roja Metro x kg",
       "presentation": "x kg",
@@ -142,7 +142,7 @@ window.SCRAPED_PRICES["metro"] = {
     },
     "20": {
       "price": 3.19,
-      "normalPrice": 3.69,
+      "normalPrice": 3.3,
       "name": "Naranja para Jugo Chanchamayo x kg",
       "presentation": "x kg",
       "url": "https://www.metro.pe/naranja-para-jugo-chanchamayo-x-kg-152606-2/p"
@@ -155,11 +155,11 @@ window.SCRAPED_PRICES["metro"] = {
       "url": "https://www.metro.pe/palta-fuerte-metro-x-kg-71554-2/p"
     },
     "22": {
-      "price": 4.9,
-      "normalPrice": null,
-      "name": "Yogurt Bebible Gloria Fresa Botella 500g",
-      "presentation": "500g",
-      "url": "https://www.metro.pe/yogurt-bebible-gloria-fresa-botella-500g-40873/p"
+      "price": 5.3,
+      "normalPrice": 5.4,
+      "name": "Yogurt Parcialmente Descremado Piña Gloria Botella 1 kg",
+      "presentation": "1 kg",
+      "url": "https://www.metro.pe/yogurt-parcialmente-descremado-pina-gloria-botella-1-kg-2-2/p"
     },
     "23": {
       "price": 28.72,
